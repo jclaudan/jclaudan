@@ -258,12 +258,12 @@ Les microservices sont une architecture logicielle où une application est déco
 5. **Monitoring** : Détection d'intrusion, audit logs
 
 #### Outils de Sécurité
-| **Outil** | **Fonction** | **Licence** | **Niveau** |
-|-----------|--------------|-------------|------------|
-| **OWASP ZAP** | Tests de sécurité | Apache 2.0 | ⭐⭐⭐⭐⭐ |
-| **SonarQube** | Analyse de code | Propriétaire | ⭐⭐⭐⭐ |
-| **Snyk** | Vulnérabilités | Propriétaire | ⭐⭐⭐⭐ |
-| **Trivy** | Scan de conteneurs | Apache 2.0 | ⭐⭐⭐⭐ |
+| **Outil** | **Fonction** | **Licence** |
+|-----------|--------------|-------------|
+| **OWASP ZAP** | Tests de sécurité | Apache 2.0 |
+| **SonarQube** | Analyse de code | Propriétaire |
+| **Snyk** | Vulnérabilités | Propriétaire |
+| **Trivy** | Scan de conteneurs | Apache 2.0 |
 
 ### 📊 Monitoring et Observabilité
 

@@ -50,14 +50,14 @@
 
 ### 🎯 Éléments de Titre
 
-| Élément | Description | Hiérarchie | Accessibilité |
-|---------|-------------|------------|---------------|
-| **`<h1>`** | Titre principal | Niveau 1 | Titre de page unique |
-| **`<h2>`** | Sous-titre | Niveau 2 | Section principale |
-| **`<h3>`** | Sous-sous-titre | Niveau 3 | Sous-section |
-| **`<h4>`** | Titre niveau 4 | Niveau 4 | Détail de section |
-| **`<h5>`** | Titre niveau 5 | Niveau 5 | Sous-détail |
-| **`<h6>`** | Titre niveau 6 | Niveau 6 | Détail mineur |
+| Élément | Description | Accessibilité |
+|---------|-------------|---------------|
+| **`<h1>`** | Titre principal | Titre de page unique |
+| **`<h2>`** | Sous-titre | Section principale |
+| **`<h3>`** | Sous-sous-titre | Sous-section |
+| **`<h4>`** | Titre niveau 4 | Détail de section |
+| **`<h5>`** | Titre niveau 5 | Sous-détail |
+| **`<h6>`** | Titre niveau 6 | Détail mineur |
 
 ### 🎯 Éléments de Liste
 

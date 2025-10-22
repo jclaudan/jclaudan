@@ -111,16 +111,16 @@
 
 ### 🎯 Plugins Essentiels
 
-| Plugin | Description | Utilisation | Niveau |
-|--------|-------------|-------------|--------|
-| **Figma to Code** | Génération de code | CSS, React, Vue | Intermédiaire |
-| **Content Reel** | Données de test | Lorem ipsum, avatars | Débutant |
-| **Iconify** | Bibliothèque d'icônes | Icônes vectorielles | Débutant |
-| **Figma to HTML** | Export HTML | Code HTML/CSS | Intermédiaire |
-| **Auto Layout** | Layout automatique | Responsive design | Confirmé |
-| **Design System Organizer** | Organisation | Gestion des composants | Senior |
-| **Figma to React** | Code React | Composants React | Senior |
-| **Figma to Flutter** | Code Flutter | Applications mobiles | Expert |
+| Plugin | Description | Utilisation |
+|--------|-------------|-------------|
+| **Figma to Code** | Génération de code | CSS, React, Vue |
+| **Content Reel** | Données de test | Lorem ipsum, avatars |
+| **Iconify** | Bibliothèque d'icônes | Icônes vectorielles |
+| **Figma to HTML** | Export HTML | Code HTML/CSS |
+| **Auto Layout** | Layout automatique | Responsive design |
+| **Design System Organizer** | Organisation | Gestion des composants |
+| **Figma to React** | Code React | Composants React |
+| **Figma to Flutter** | Code Flutter | Applications mobiles |
 
 ---
 

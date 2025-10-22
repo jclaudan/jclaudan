@@ -18,12 +18,12 @@ Cette section regroupe tous les outils et frameworks de test essentiels pour le 
 
 ### 🎯 Outils de Test par Catégorie
 
-| Catégorie | Outil | Niveau | Description |
-|-----------|-------|--------|-------------|
-| **Tests Unitaires** | Jest | ⭐⭐⭐⭐⭐ | Framework de test JavaScript complet |
-| **Tests Unitaires** | Vitest | ⭐⭐⭐⭐ | Framework de test ultra-rapide pour Vite |
-| **Tests E2E** | Playwright | ⭐⭐⭐⭐ | Tests E2E cross-browser automatisés |
-| **Tests E2E** | Cypress | ⭐⭐⭐⭐ | Tests E2E modernes et interactifs |
+| Catégorie | Outil | Description |
+|-----------|-------|-------------|
+| **Tests Unitaires** | Jest | Framework de test JavaScript complet |
+| **Tests Unitaires** | Vitest | Framework de test ultra-rapide pour Vite |
+| **Tests E2E** | Playwright | Tests E2E cross-browser automatisés |
+| **Tests E2E** | Cypress | Tests E2E modernes et interactifs |
 
 ### 🎯 Choix de l'outil de test
 

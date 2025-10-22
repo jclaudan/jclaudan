@@ -16,12 +16,12 @@ Cette section regroupe tous les outils et pratiques essentiels pour l'automatisa
 
 ### 🎯 Outils DevOps par Catégorie
 
-| Catégorie | Outil | Niveau | Description |
-|-----------|-------|--------|-------------|
-| **Automatisation** | Ansible | ⭐⭐⭐⭐⭐ | Automatisation de la configuration et du déploiement |
-| **Infrastructure as Code** | Terraform | ⭐⭐⭐⭐⭐ | Provisioning et gestion de l'infrastructure |
-| **Conteneurisation** | Docker | ⭐⭐⭐⭐⭐ | Conteneurisation d'applications |
-| **Orchestration** | Kubernetes | ⭐⭐⭐⭐ | Orchestration de conteneurs |
+| Catégorie | Outil | Description |
+|-----------|-------|-------------|
+| **Automatisation** | Ansible | Automatisation de la configuration et du déploiement |
+| **Infrastructure as Code** | Terraform | Provisioning et gestion de l'infrastructure |
+| **Conteneurisation** | Docker | Conteneurisation d'applications |
+| **Orchestration** | Kubernetes | Orchestration de conteneurs |
 
 ### 🎯 Workflow DevOps
 

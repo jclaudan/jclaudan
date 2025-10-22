@@ -252,12 +252,12 @@
 
 ### 🎯 Niveaux d'Isolement
 
-| Niveau | Description | Problèmes résolus |
-|--------|-------------|-------------------|
-| **READ UNCOMMITTED** | Lecture non validée | Aucun |
-| **READ COMMITTED** | Lecture validée | Dirty read |
-| **REPEATABLE READ** | Lecture répétable | Dirty read, Non-repeatable read |
-| **SERIALIZABLE** | Sérialisable | Dirty read, Non-repeatable read, Phantom read |
+| Niveau | Description |
+|--------|-------------|
+| **READ UNCOMMITTED** | Lecture non validée |
+| **READ COMMITTED** | Lecture validée |
+| **REPEATABLE READ** | Lecture répétable |
+| **SERIALIZABLE** | Sérialisable |
 
 ---
 

@@ -13,30 +13,26 @@
 
 ## 🎯 Stack Technique
 
-<div align="center">
+#### 🎨 Frontend
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?logo=nuxt.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 
-### 🎨 Frontend
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+#### 🚀 Backend
+![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
+![NestJS](https://img.shields.io/badge/-NestJS-ea2845?logo=nestjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?logo=express&logoColor=white)
 
-### 🚀 Backend
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
+#### 🗄️ Databases
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)
 
-### 🗄️ Databases
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-
-### 🛠️ DevOps & Tools
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-
-</div>
+#### 🛠️ DevOps & Tools
+![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
 
 
 <div align="center">
@@ -63,28 +59,15 @@
 
 ### 🎯 **Navigation Rapide**
 
-🟢 [Structure de base](./docs/frontend/html5.md#-structure-et-éléments-de-base)
-🟢 [Sélecteurs et propriétés](./docs/frontend/css3.md#-sélecteurs-et-propriétés-de-base)
-🟢 [Installation](./docs/frontend/tailwind.md#-installation-et-classes-de-base)
-🟢 [Introduction](./docs/vuejs/README.md#introduction)
-🟢 [Types de base](./docs/typescript/README.md#types-primitifs)
-🟢 [Première application](./docs/nodejs/README.md#introduction)
-🟢 [Premier test](./docs/testing/jest.md#premier-test)
-🟢 [Interface de base](./docs/design/figma.md#interface-et-outils)
-🟡 [Composition API](./docs/vuejs/README.md#composition-api)
-🟡 [Types avancés](./docs/typescript/README.md#types-avancés)
-🟡 [Architecture](./docs/nestjs/README.md#architecture)
-🟡 [Patterns courants](./docs/patterns/README.md#patterns-courants)
-🟠 [Patterns avancés](./docs/vuejs/README.md#patterns-avancés)
-🟠 [Principes SOLID](./docs/typescript/README.md#principes-solid)
-🟠 [Performance](./docs/nodejs/README.md#performance-et-optimisation)
-🟠 [Patterns de communication](./docs/microservices/README.md#patterns-de-communication)
-🔴 [Implémentation](./docs/architecture/README.md#implémentation)
-🔴 [Production](./docs/docker/README.md#production)
-🔴 [Agents complexes](./docs/ai/README.md#agents-ia-complexes)
-⚫ [Types conditionnels](./docs/typescript/README.md#types-conditionnels)
-⚫ [Patterns avancés](./docs/nestjs/README.md#patterns-avancés)
-⚫ [Multi-cloud](./docs/devops/terraform.md#patterns-avancés)
+| 🎨 **Frontend** | 🚀 **Backend** | 🗄️ **Databases** | 🧪 **Tests** | 🏗️ **Architecture** | 🤖 **IA** | 🛠️ **DevOps** |
+|----------------|----------------|-------------------|--------------|---------------------|-----------|---------------|
+| 🟢 [HTML5 Structure](./docs/frontend/html5.md#-structure-et-éléments-de-base) | 🟢 [Node.js Intro](./docs/nodejs/README.md#introduction) | 🟢 [PostgreSQL](./docs/databases/postgresql.md) | 🟢 [Jest Premier test](./docs/testing/jest.md#premier-test) | 🟢 [Patterns courants](./docs/patterns/README.md#patterns-courants) | 🟢 [LangChain](./docs/ai/README.md) | 🟢 [Git](./docs/git/README.md) |
+| 🟢 [CSS3 Sélecteurs](./docs/frontend/css3.md#-sélecteurs-et-propriétés-de-base) | 🟡 [NestJS Architecture](./docs/nestjs/README.md#architecture) | 🟡 [MongoDB](./docs/databases/mongodb.md) | 🟡 [Vitest](./docs/testing/vitest.md) | 🟡 [Microservices](./docs/microservices/README.md) | 🟡 [RAG Systems](./docs/ai/rag-systems.md) | 🟡 [Docker](./docs/docker/README.md) |
+| 🟢 [Tailwind Installation](./docs/frontend/tailwind.md#-installation-et-classes-de-base) | 🟠 [Performance](./docs/nodejs/README.md#performance-et-optimisation) | | 🟠 [Playwright](./docs/testing/playwright.md) | 🟠 [Architecture Hexagonale](./docs/architecture/README.md#implémentation) | 🟠 [Prompt Engineering](./docs/ai/prompt-engineering.md) | 🟠 [Terraform](./docs/devops/terraform.md) |
+| 🟡 [Vue.js Composition API](./docs/vuejs/README.md#composition-api) | 🔴 [Patterns avancés](./docs/nestjs/README.md#patterns-avancés) | | 🔴 [Cypress](./docs/testing/cypress.md) | 🔴 [Production](./docs/docker/README.md#production) | 🔴 [Agents complexes](./docs/ai/README.md#agents-ia-complexes) | 🔴 [Ansible](./docs/devops/ansible.md) |
+| 🟡 [TypeScript Types avancés](./docs/typescript/README.md#types-avancés) | | | | ⚫ [Multi-cloud](./docs/devops/terraform.md#patterns-avancés) | | |
+| 🟠 [Patterns avancés](./docs/vuejs/README.md#patterns-avancés) | | | | | | |
+| 🔴 [Types conditionnels](./docs/typescript/README.md#types-conditionnels) | | | | | | |
 
 
 ## 🎯 **Table des Matières**
@@ -194,25 +177,21 @@
 
 ## 📊 Statistiques GitHub
 
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=jclaudan&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D4FF&icon_color=00D4FF&text_color=FFFFFF&include_all_commits=true&count_private=true" alt="Statistiques GitHub" />
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jclaudan&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D4FF&text_color=FFFFFF&langs_count=8" alt="Langages les plus utilisés" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=jclaudan&theme=tokyonight&hide_border=true&background=0D1117&stroke=00D4FF&ring=00D4FF&fire=00D4FF&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=FFFFFF" alt="Streak GitHub" />
-
-</div>
+<p align="center">
+  <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api?username=jclaudan&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide=issues,contribs&bg_color=00000000">
+  <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jclaudan&layout=compact&hide_border=true&theme=tokyonight&bg_color=00000000&langs_count=8">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jclaudan&theme=tokyonight&hide_border=true&background=FFFFFF00">
+</p>
 
 ---
 
-<div align="center">
+<p align="center">
 
 ### 🏆 Trophées GitHub
 
 <img src="https://github-profile-trophy.vercel.app/?username=jclaudan&theme=tokyonight&no-frame=true&column=7&margin-w=15&margin-h=15" alt="Trophées GitHub" />
 
-</div>
+</p>
 
 ---
 

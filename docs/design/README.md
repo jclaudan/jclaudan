@@ -15,12 +15,12 @@ Cette section regroupe tous les outils et ressources essentiels pour le design d
 
 ### 🎯 Outils de Design par Catégorie
 
-| Catégorie | Outil | Niveau | Description |
-|-----------|-------|--------|-------------|
-| **Design UI/UX** | Figma | ⭐⭐⭐⭐⭐ | Outil de design collaboratif en ligne |
-| **Prototypage** | Figma | ⭐⭐⭐⭐⭐ | Création d'interactions et animations |
-| **Design Systems** | Figma | ⭐⭐⭐⭐⭐ | Gestion centralisée des composants |
-| **Collaboration** | Figma | ⭐⭐⭐⭐⭐ | Travail en équipe en temps réel |
+| Catégorie | Outil | Description |
+|-----------|-------|-------------|
+| **Design UI/UX** | Figma | Outil de design collaboratif en ligne |
+| **Prototypage** | Figma | Création d'interactions et animations |
+| **Design Systems** | Figma | Gestion centralisée des composants |
+| **Collaboration** | Figma | Travail en équipe en temps réel |
 
 ### 🎯 Workflow de Design
 
