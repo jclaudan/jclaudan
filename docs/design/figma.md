@@ -9,8 +9,8 @@
 - [🟢 Interface et Outils](#-débutant---interface-et-outils)
 - [🟡 Composants et Variants](#-intermédiaire---composants-et-variants)
 - [🟠 Design Systems et Prototypage](#-confirmé---design-systems-et-prototypage)
-- [🔴 Senior - Collaboration et Workflow](#-senior---collaboration-et-workflow)
-- [⚫ Expert - Plugins et Automatisation](#-expert---plugins-et-automatisation)
+- [🔴 Collaboration et Workflow](#-senior---collaboration-et-workflow)
+- [⚫ Plugins et Automatisation](#-expert---plugins-et-automatisation)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -489,7 +489,7 @@ Figma est un outil de design vectoriel basé sur le web qui permet aux équipes 
 
 ---
 
-## 🔴 Senior - Collaboration et Workflow
+## 🔴 Collaboration et Workflow
 
 ### Gestion d'équipe
 
@@ -584,7 +584,7 @@ Figma est un outil de design vectoriel basé sur le web qui permet aux équipes 
 
 ---
 
-## ⚫ Expert - Plugins et Automatisation
+## ⚫ Plugins et Automatisation
 
 ### Plugins avancés
 

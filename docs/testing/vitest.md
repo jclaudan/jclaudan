@@ -9,8 +9,8 @@
 - [🟢 Premiers Tests](#-débutant---premiers-tests)
 - [🟡 Tests Avancés](#-intermédiaire---tests-avancés)
 - [🟠 Migration et Optimisation](#-confirmé---migration-et-optimisation)
-- [🔴 Senior - Tests Complexes](#-senior---tests-complexes)
-- [⚫ Expert - Performance et CI/CD](#-expert---performance-et-cicd)
+- [🔴 Tests Complexes](#-senior---tests-complexes)
+- [⚫ Performance et CI/CD](#-expert---performance-et-cicd)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -763,7 +763,7 @@ export default defineConfig({
 
 ---
 
-## 🔴 Senior - Tests Complexes
+## 🔴 Tests Complexes
 
 ### Tests de performance
 
@@ -926,7 +926,7 @@ describe('Integration Tests', () => {
 
 ---
 
-## ⚫ Expert - Performance et CI/CD
+## ⚫ Performance et CI/CD
 
 ### Configuration optimisée
 

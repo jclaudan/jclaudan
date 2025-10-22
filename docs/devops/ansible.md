@@ -9,8 +9,8 @@
 - [🟢 Premiers Pas](#-débutant---premiers-pas)
 - [🟡 Playbooks et Inventaires](#-intermédiaire---playbooks-et-inventaires)
 - [🟠 Roles et Collections](#-confirmé---roles-et-collections)
-- [🔴 Senior - Patterns Avancés](#-senior---patterns-avancés)
-- [⚫ Expert - Automatisation et CI/CD](#-expert---automatisation-et-cicd)
+- [🔴 Patterns Avancés](#-senior---patterns-avancés)
+- [⚫ Automatisation et CI/CD](#-expert---automatisation-et-cicd)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -636,7 +636,7 @@ roles:
 
 ---
 
-## 🔴 Senior - Patterns Avancés
+## 🔴 Patterns Avancés
 
 ### Ansible Vault
 
@@ -800,7 +800,7 @@ vault_api_keys:
 
 ---
 
-## ⚫ Expert - Automatisation et CI/CD
+## ⚫ Automatisation et CI/CD
 
 ### Configuration avancée
 

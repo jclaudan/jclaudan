@@ -8,8 +8,8 @@
 - [🟢 Sélecteurs et Propriétés de Base](#-débutant---sélecteurs-et-propriétés-de-base)
 - [🟡 Layout et Responsive](#-intermédiaire---layout-et-responsive)
 - [🟠 Animations et Transitions](#-confirmé---animations-et-transitions)
-- [🔴 Senior - Performance et Accessibilité](#-senior---performance-et-accessibilité)
-- [⚫ Expert - CSS Avancé et Techniques Modernes](#-expert---css-avancé-et-techniques-modernes)
+- [🔴 Performance et Accessibilité](#-senior---performance-et-accessibilité)
+- [⚫ CSS Avancé et Techniques Modernes](#-expert---css-avancé-et-techniques-modernes)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -1133,7 +1133,7 @@ pre {
 
 ---
 
-## 🔴 Senior - Performance et Accessibilité
+## 🔴 Performance et Accessibilité
 
 ### Optimisation des performances
 
@@ -1493,7 +1493,7 @@ pre {
 
 ---
 
-## ⚫ Expert - CSS Avancé et Techniques Modernes
+## ⚫ CSS Avancé et Techniques Modernes
 
 ### CSS Custom Properties avancées
 

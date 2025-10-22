@@ -9,8 +9,8 @@
 - [🟢 Premiers Tests](#-débutant---premiers-tests)
 - [🟡 Tests Avancés](#-intermédiaire---tests-avancés)
 - [🟠 Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
-- [🔴 Senior - Tests Complexes](#-senior---tests-complexes)
-- [⚫ Expert - Performance et CI/CD](#-expert---performance-et-cicd)
+- [🔴 Tests Complexes](#-senior---tests-complexes)
+- [⚫ Performance et CI/CD](#-expert---performance-et-cicd)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -644,7 +644,7 @@ test('test with cleanup', async ({ page }) => {
 
 ---
 
-## 🔴 Senior - Tests Complexes
+## 🔴 Tests Complexes
 
 ### Tests de performance
 
@@ -805,7 +805,7 @@ test('user can register and data is saved to database', async ({ page }) => {
 
 ---
 
-## ⚫ Expert - Performance et CI/CD
+## ⚫ Performance et CI/CD
 
 ### Configuration optimisée
 

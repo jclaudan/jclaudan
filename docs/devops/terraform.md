@@ -9,8 +9,8 @@
 - [🟢 Premiers Pas](#-débutant---premiers-pas)
 - [🟡 Ressources et Modules](#-intermédiaire---ressources-et-modules)
 - [🟠 State et Workspaces](#-confirmé---state-et-workspaces)
-- [🔴 Senior - Patterns Avancés](#-senior---patterns-avancés)
-- [⚫ Expert - Multi-Cloud et CI/CD](#-expert---multi-cloud-et-cicd)
+- [🔴 Patterns Avancés](#-senior---patterns-avancés)
+- [⚫ Multi-Cloud et CI/CD](#-expert---multi-cloud-et-cicd)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -686,7 +686,7 @@ desired_capacity = 1
 
 ---
 
-## 🔴 Senior - Patterns Avancés
+## 🔴 Patterns Avancés
 
 ### Modules réutilisables
 
@@ -908,7 +908,7 @@ locals {
 
 ---
 
-## ⚫ Expert - Multi-Cloud et CI/CD
+## ⚫ Multi-Cloud et CI/CD
 
 ### Configuration multi-cloud
 

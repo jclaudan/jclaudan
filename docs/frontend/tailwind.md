@@ -8,8 +8,8 @@
 - [🟢 Installation et Classes de Base](#-débutant---installation-et-classes-de-base)
 - [🟡 Layout et Responsive](#-intermédiaire---layout-et-responsive)
 - [🟠 Personnalisation et Components](#-confirmé---personnalisation-et-components)
-- [🔴 Senior - Optimisation et Production](#-senior---optimisation-et-production)
-- [⚫ Expert - Plugins et Architecture](#-expert---plugins-et-architecture)
+- [🔴 Optimisation et Production](#-senior---optimisation-et-production)
+- [⚫ Plugins et Architecture](#-expert---plugins-et-architecture)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -466,7 +466,7 @@ module.exports = {
 
 ---
 
-## 🔴 Senior - Optimisation et Production
+## 🔴 Optimisation et Production
 
 ### Configuration de Production
 
@@ -503,7 +503,7 @@ module.exports = {
 
 ---
 
-## ⚫ Expert - Plugins et Architecture
+## ⚫ Plugins et Architecture
 
 ### Plugin Personnalisé
 

@@ -9,8 +9,8 @@
 - [🟢 Premiers Tests](#-débutant---premiers-tests)
 - [🟡 Tests Avancés](#-intermédiaire---tests-avancés)
 - [🟠 Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
-- [🔴 Senior - Tests Complexes](#-senior---tests-complexes)
-- [⚫ Expert - Optimisation et Performance](#-expert---optimisation-et-performance)
+- [🔴 Tests Complexes](#-senior---tests-complexes)
+- [⚫ Optimisation et Performance](#-expert---optimisation-et-performance)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -663,7 +663,7 @@ describe('UserRepository', () => {
 
 ---
 
-## 🔴 Senior - Tests Complexes
+## 🔴 Tests Complexes
 
 ### Tests de performance
 
@@ -795,7 +795,7 @@ describe('Regression Tests', () => {
 
 ---
 
-## ⚫ Expert - Optimisation et Performance
+## ⚫ Optimisation et Performance
 
 ### Configuration avancée
 

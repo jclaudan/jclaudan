@@ -8,8 +8,8 @@
 - [🟢 Types de Base](#-débutant---types-de-base)
 - [🟡 Types Avancés](#-intermédiaire---types-avancés)
 - [🟠 Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
-- [🔴 Senior - Architecture et SOLID](#-senior---architecture-et-solid)
-- [⚫ Expert - Types Conditionnels et Avancés](#-expert---types-conditionnels-et-avancés)
+- [🔴 Architecture et SOLID](#-senior---architecture-et-solid)
+- [⚫ Types Conditionnels et Avancés](#-expert---types-conditionnels-et-avancés)
 - [📚 Ressources](#-ressources)
 
 ---

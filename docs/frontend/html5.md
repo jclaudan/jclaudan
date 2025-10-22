@@ -8,8 +8,8 @@
 - [🟢 Structure et Éléments de Base](#-débutant---structure-et-éléments-de-base)
 - [🟡 Sémantique et Accessibilité](#-intermédiaire---sémantique-et-accessibilité)
 - [🟠 Formulaires et API](#-confirmé---formulaires-et-api)
-- [🔴 Senior - Performance et SEO](#-senior---performance-et-seo)
-- [⚫ Expert - Web Components et PWA](#-expert---web-components-et-pwa)
+- [🔴 Performance et SEO](#-senior---performance-et-seo)
+- [⚫ Web Components et PWA](#-expert---web-components-et-pwa)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -739,7 +739,7 @@ function hello() {
 
 ---
 
-## 🔴 Senior - Performance et SEO
+## 🔴 Performance et SEO
 
 ### Optimisation des métadonnées
 
@@ -880,7 +880,7 @@ function hello() {
 
 ---
 
-## ⚫ Expert - Web Components et PWA
+## ⚫ Web Components et PWA
 
 ### Web Components personnalisés
 
