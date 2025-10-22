@@ -92,73 +92,73 @@
 ### 🎨 **Frontend & UI/UX**
 | Technologie | Description | Documentation |
 |-------------|-------------|---------------|
-| **Vue.js** | Framework JavaScript progressif pour interfaces utilisateur | [Notes personnelles](./docs/vuejs/README.md) |
-| **Pinia** | State management officiel Vue 3 | [Notes personnelles](./docs/vuejs/pinia.md) |
-| **Vue Router** | Routing officiel Vue 3 | [Notes personnelles](./docs/vuejs/vue-router.md) |
-| **VueUse** | Collection de composables Vue | [Notes personnelles](./docs/vuejs/vueuse.md) |
-| **Nuxt.js** | Framework full-stack Vue | [Notes personnelles](./docs/vuejs/nuxtjs.md) |
-| **Zod** | Validation de schémas TypeScript | [Notes personnelles](./docs/vuejs/zod.md) |
-| **TypeScript** | JavaScript typé pour un développement robuste | [Notes personnelles](./docs/typescript/README.md) |
-| **HTML5** | Langage de balisage sémantique et accessible | [Notes personnelles](./docs/frontend/html5.md) |
-| **CSS3** | Langage de style moderne et responsive | [Notes personnelles](./docs/frontend/css3.md) |
-| **Tailwind CSS** | Framework CSS utility-first pour designs rapides | [Notes personnelles](./docs/frontend/tailwind.md) |
-| **TanStack Query** | Data fetching et caching | [Notes personnelles](./docs/frontend/tanstack-query.md) |
-| **TanStack Table** | Tables performantes et flexibles | [Notes personnelles](./docs/frontend/tanstack-table.md) |
-| **Figma** | Outil de design UI/UX collaboratif | [Notes personnelles](./docs/design/figma.md) |
+| **Vue.js** | Framework JavaScript progressif pour interfaces utilisateur | [Notes](./docs/vuejs/README.md) |
+| **Pinia** | State management officiel Vue 3 | [Notes](./docs/vuejs/pinia.md) |
+| **Vue Router** | Routing officiel Vue 3 | [Notes](./docs/vuejs/vue-router.md) |
+| **VueUse** | Collection de composables Vue | [Notes](./docs/vuejs/vueuse.md) |
+| **Nuxt.js** | Framework full-stack Vue | [Notes](./docs/vuejs/nuxtjs.md) |
+| **Zod** | Validation de schémas TypeScript | [Notes](./docs/vuejs/zod.md) |
+| **TypeScript** | JavaScript typé pour un développement robuste | [Notes](./docs/typescript/README.md) |
+| **HTML5** | Langage de balisage sémantique et accessible | [Notes](./docs/frontend/html5.md) |
+| **CSS3** | Langage de style moderne et responsive | [Notes](./docs/frontend/css3.md) |
+| **Tailwind CSS** | Framework CSS utility-first pour designs rapides | [Notes](./docs/frontend/tailwind.md) |
+| **TanStack Query** | Data fetching et caching | [Notes](./docs/frontend/tanstack-query.md) |
+| **TanStack Table** | Tables performantes et flexibles | [Notes](./docs/frontend/tanstack-table.md) |
+| **Figma** | Outil de design UI/UX collaboratif | [Notes](./docs/design/figma.md) |
 
 ### 🚀 **Backend & APIs**
 | Technologie | Description | Documentation |
 |-------------|-------------|---------------|
-| **Node.js** | Runtime JavaScript pour applications serveur | [Notes personnelles](./docs/nodejs/README.md) |
-| **ESNext Evolution** | Évolution JavaScript ES5 à ES2024 | [Notes personnelles](./docs/nodejs/esnext-evolution.md) |
-| **NestJS** | Framework Node.js avec architecture hexagonale | [Notes personnelles](./docs/nestjs/README.md) |
-| **Stripe** | Intégration paiements et abonnements | [Notes personnelles](./docs/nodejs/stripe.md) |
+| **Node.js** | Runtime JavaScript pour applications serveur | [Notes](./docs/nodejs/README.md) |
+| **ESNext Evolution** | Évolution JavaScript ES5 à ES2024 | [Notes](./docs/nodejs/esnext-evolution.md) |
+| **NestJS** | Framework Node.js avec architecture hexagonale | [Notes](./docs/nestjs/README.md) |
+| **Stripe** | Intégration paiements et abonnements | [Notes](./docs/nodejs/stripe.md) |
 
 ### 🗄️ **Bases de Données**
 | Technologie | Description | Documentation |
 |-------------|-------------|---------------|
-| **PostgreSQL** | Base de données relationnelle avancée | [Notes personnelles](./docs/databases/postgresql.md) |
-| **MongoDB** | Base de données NoSQL orientée documents | [Notes personnelles](./docs/databases/mongodb.md) |
+| **PostgreSQL** | Base de données relationnelle avancée | [Notes](./docs/databases/postgresql.md) |
+| **MongoDB** | Base de données NoSQL orientée documents | [Notes](./docs/databases/mongodb.md) |
 
 ### 🧪 **Tests & Qualité**
 | Technologie | Description | Documentation |
 |-------------|-------------|---------------|
-| **Jest** | Framework de test JavaScript complet | [Notes personnelles](./docs/testing/jest.md) |
-| **Vitest** | Framework de test rapide pour Vite | [Notes personnelles](./docs/testing/vitest.md) |
-| **Playwright** | Tests E2E cross-browser automatisés | [Notes personnelles](./docs/testing/playwright.md) |
-| **Cypress** | Tests E2E modernes et interactifs | [Notes personnelles](./docs/testing/cypress.md) |
+| **Jest** | Framework de test JavaScript complet | [Notes](./docs/testing/jest.md) |
+| **Vitest** | Framework de test rapide pour Vite | [Notes](./docs/testing/vitest.md) |
+| **Playwright** | Tests E2E cross-browser automatisés | [Notes](./docs/testing/playwright.md) |
+| **Cypress** | Tests E2E modernes et interactifs | [Notes](./docs/testing/cypress.md) |
 
 ### 🏗️ **Architecture & Patterns**
 | Technologie | Description | Documentation |
 |-------------|-------------|---------------|
-| **Architecture Hexagonale** | Principes d'architecture et SOLID | [Notes personnelles](./docs/architecture/README.md) |
-| **Design Patterns** | Patterns de conception modernes | [Notes personnelles](./docs/patterns/README.md) |
-| **Arbres de Décision** | Guides pour choisir les bonnes architectures | [Notes personnelles](./docs/architecture/decision-trees/) |
-| **Microservices** | Architecture microservices et outils | [Notes personnelles](./docs/microservices/README.md) |
+| **Architecture Hexagonale** | Principes d'architecture et SOLID | [Notes](./docs/architecture/README.md) |
+| **Design Patterns** | Patterns de conception modernes | [Notes](./docs/patterns/README.md) |
+| **Arbres de Décision** | Guides pour choisir les bonnes architectures | [Notes](./docs/architecture/decision-trees/) |
+| **Microservices** | Architecture microservices et outils | [Notes](./docs/microservices/README.md) |
 
 ### 🤖 **Intelligence Artificielle**
 | Technologie | Description | Documentation |
 |-------------|-------------|---------------|
-| **LangChain.js** | Framework pour applications IA | [Notes personnelles](./docs/ai/README.md) |
-| **RAG Systems** | Retrieval-Augmented Generation | [Notes personnelles](./docs/ai/rag-systems.md) |
-| **Prompt Engineering** | Ingénierie de prompts avancée | [Notes personnelles](./docs/ai/prompt-engineering.md) |
+| **LangChain.js** | Framework pour applications IA | [Notes](./docs/ai/README.md) |
+| **RAG Systems** | Retrieval-Augmented Generation | [Notes](./docs/ai/rag-systems.md) |
+| **Prompt Engineering** | Ingénierie de prompts avancée | [Notes](./docs/ai/prompt-engineering.md) |
 
 ### 🛠️ **DevOps & Infrastructure**
 | Technologie | Description | Documentation |
 |-------------|-------------|---------------|
-| **Git** | Système de contrôle de version | [Notes personnelles](./docs/git/README.md) |
-| **Docker** | Conteneurisation et orchestration | [Notes personnelles](./docs/docker/README.md) |
-| **Ansible** | Automatisation et configuration | [Notes personnelles](./docs/devops/ansible.md) |
-| **GitHub Actions** | CI/CD et automatisation | [Notes personnelles](./docs/github-actions/README.md) |
-| **Terraform** | Infrastructure as Code | [Notes personnelles](./docs/devops/terraform.md) |
+| **Git** | Système de contrôle de version | [Notes](./docs/git/README.md) |
+| **Docker** | Conteneurisation et orchestration | [Notes](./docs/docker/README.md) |
+| **Ansible** | Automatisation et configuration | [Notes](./docs/devops/ansible.md) |
+| **GitHub Actions** | CI/CD et automatisation | [Notes](./docs/github-actions/README.md) |
+| **Terraform** | Infrastructure as Code | [Notes](./docs/devops/terraform.md) |
 
 ### ⚡ **Performance & Optimisation**
 | Technologie | Description | Documentation |
 |-------------|-------------|---------------|
-| **Frontend Performance** | Optimisation Vue/JS et bundle | [Notes personnelles](./docs/performance/frontend-optimization.md) |
-| **Backend Performance** | Optimisation Node.js et APIs | [Notes personnelles](./docs/performance/backend-optimization.md) |
-| **Database Performance** | Optimisation requêtes et index | [Notes personnelles](./docs/performance/database-optimization.md) |
-| **Monitoring** | Métriques et outils de surveillance | [Notes personnelles](./docs/performance/monitoring.md) |
+| **Frontend Performance** | Optimisation Vue/JS et bundle | [Notes](./docs/performance/frontend-optimization.md) |
+| **Backend Performance** | Optimisation Node.js et APIs | [Notes](./docs/performance/backend-optimization.md) |
+| **Database Performance** | Optimisation requêtes et index | [Notes](./docs/performance/database-optimization.md) |
+| **Monitoring** | Métriques et outils de surveillance | [Notes](./docs/performance/monitoring.md) |
 
 
 ## 🎯 **Concepts Clés par Catégorie**
