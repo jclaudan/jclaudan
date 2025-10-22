@@ -11,12 +11,6 @@
 
 </div>
 
-<div align="center">
-
-![Profile Banner](https://github.com/jclaudan/jclaudan/blob/main/profile-banner.svg)
-
-</div>
-
 ## 🎯 Stack Technique
 
 <div align="center">
@@ -240,20 +234,10 @@
 
 ### 🌟 Merci de votre visite !
 
-**N'hésitez pas à explorer mes notes personnelles et à me contacter pour discuter de projets passionnants !** 🚀
-
-
-![Snake Game](https://github.com/jclaudan/jclaudan/blob/main/github-contribution-grid-snake.svg)
-
 </div>
-
-
-## 🕐 Temps réel
 
 <div align="center">
 
-![Horloge](https://github.com/jclaudan/jclaudan/blob/main/clock.svg)
-
-**Dernière mise à jour :** ![Dernière mise à jour](https://github.com/jclaudan/jclaudan/workflows/Update%20README/badge.svg)
+![Dernière mise à jour](https://github.com/jclaudan/jclaudan/workflows/Update%20README/badge.svg)
 
 </div>

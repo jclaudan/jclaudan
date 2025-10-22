@@ -6,9 +6,9 @@
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-figma)
 - [🚀 Introduction](#-introduction)
 - [⚙️ Installation et Configuration](#️-installation-et-configuration)
-- [🟢 Débutant - Interface et Outils](#-débutant---interface-et-outils)
-- [🟡 Intermédiaire - Composants et Variants](#-intermédiaire---composants-et-variants)
-- [🟠 Confirmé - Design Systems et Prototypage](#-confirmé---design-systems-et-prototypage)
+- [🟢 Interface et Outils](#-débutant---interface-et-outils)
+- [🟡 Composants et Variants](#-intermédiaire---composants-et-variants)
+- [🟠 Design Systems et Prototypage](#-confirmé---design-systems-et-prototypage)
 - [🔴 Senior - Collaboration et Workflow](#-senior---collaboration-et-workflow)
 - [⚫ Expert - Plugins et Automatisation](#-expert---plugins-et-automatisation)
 - [📚 Ressources](#-ressources)
@@ -213,7 +213,7 @@ Figma est un outil de design vectoriel basé sur le web qui permet aux équipes 
 
 ---
 
-## 🟢 Débutant - Interface et Outils
+## 🟢 Interface et Outils
 
 ### Interface de base
 
@@ -301,7 +301,7 @@ Figma est un outil de design vectoriel basé sur le web qui permet aux équipes 
 
 ---
 
-## 🟡 Intermédiaire - Composants et Variants
+## 🟡 Composants et Variants
 
 ### Création de composants
 
@@ -401,7 +401,7 @@ Figma est un outil de design vectoriel basé sur le web qui permet aux équipes 
 
 ---
 
-## 🟠 Confirmé - Design Systems et Prototypage
+## 🟠 Design Systems et Prototypage
 
 ### Design System
 

@@ -6,9 +6,9 @@
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-vitest)
 - [🚀 Introduction](#-introduction)
 - [⚙️ Installation et Configuration](#️-installation-et-configuration)
-- [🟢 Débutant - Premiers Tests](#-débutant---premiers-tests)
-- [🟡 Intermédiaire - Tests Avancés](#-intermédiaire---tests-avancés)
-- [🟠 Confirmé - Migration et Optimisation](#-confirmé---migration-et-optimisation)
+- [🟢 Premiers Tests](#-débutant---premiers-tests)
+- [🟡 Tests Avancés](#-intermédiaire---tests-avancés)
+- [🟠 Migration et Optimisation](#-confirmé---migration-et-optimisation)
 - [🔴 Senior - Tests Complexes](#-senior---tests-complexes)
 - [⚫ Expert - Performance et CI/CD](#-expert---performance-et-cicd)
 - [📚 Ressources](#-ressources)
@@ -228,7 +228,7 @@ afterEach(() => {
 
 ---
 
-## 🟢 Débutant - Premiers Tests
+## 🟢 Premiers Tests
 
 ### Premier test simple
 
@@ -399,7 +399,7 @@ describe('ApiService', () => {
 
 ---
 
-## 🟡 Intermédiaire - Tests Avancés
+## 🟡 Tests Avancés
 
 ### Tests de composants Vue.js
 
@@ -621,7 +621,7 @@ describe('generateUserCard', () => {
 
 ---
 
-## 🟠 Confirmé - Migration et Optimisation
+## 🟠 Migration et Optimisation
 
 ### Migration depuis Jest
 

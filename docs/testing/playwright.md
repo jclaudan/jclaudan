@@ -6,9 +6,9 @@
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-playwright)
 - [🚀 Introduction](#-introduction)
 - [⚙️ Installation et Configuration](#️-installation-et-configuration)
-- [🟢 Débutant - Premiers Tests](#-débutant---premiers-tests)
-- [🟡 Intermédiaire - Tests Avancés](#-intermédiaire---tests-avancés)
-- [🟠 Confirmé - Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
+- [🟢 Premiers Tests](#-débutant---premiers-tests)
+- [🟡 Tests Avancés](#-intermédiaire---tests-avancés)
+- [🟠 Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
 - [🔴 Senior - Tests Complexes](#-senior---tests-complexes)
 - [⚫ Expert - Performance et CI/CD](#-expert---performance-et-cicd)
 - [📚 Ressources](#-ressources)
@@ -279,7 +279,7 @@ export default defineConfig({
 
 ---
 
-## 🟢 Débutant - Premiers Tests
+## 🟢 Premiers Tests
 
 ### Premier test simple
 
@@ -358,7 +358,7 @@ test('user can navigate through the app', async ({ page }) => {
 
 ---
 
-## 🟡 Intermédiaire - Tests Avancés
+## 🟡 Tests Avancés
 
 ### Tests avec fixtures
 
@@ -462,7 +462,7 @@ test('user can upload a file', async ({ page }) => {
 
 ---
 
-## 🟠 Confirmé - Patterns et Bonnes Pratiques
+## 🟠 Patterns et Bonnes Pratiques
 
 ### Page Object Model
 

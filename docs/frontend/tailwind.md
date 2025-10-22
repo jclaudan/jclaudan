@@ -5,9 +5,9 @@
 ## 📋 Table des matières
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-tailwind-css)
 - [🚀 Introduction](#-introduction)
-- [🟢 Débutant - Installation et Classes de Base](#-débutant---installation-et-classes-de-base)
-- [🟡 Intermédiaire - Layout et Responsive](#-intermédiaire---layout-et-responsive)
-- [🟠 Confirmé - Personnalisation et Components](#-confirmé---personnalisation-et-components)
+- [🟢 Installation et Classes de Base](#-débutant---installation-et-classes-de-base)
+- [🟡 Layout et Responsive](#-intermédiaire---layout-et-responsive)
+- [🟠 Personnalisation et Components](#-confirmé---personnalisation-et-components)
 - [🔴 Senior - Optimisation et Production](#-senior---optimisation-et-production)
 - [⚫ Expert - Plugins et Architecture](#-expert---plugins-et-architecture)
 - [📚 Ressources](#-ressources)
@@ -186,7 +186,7 @@ Tailwind CSS est un framework CSS qui fournit des classes utilitaires de bas niv
 
 ---
 
-## 🟢 Débutant - Installation et Classes de Base
+## 🟢 Installation et Classes de Base
 
 ### Installation avec NPM
 
@@ -265,7 +265,7 @@ module.exports = {
 
 ---
 
-## 🟡 Intermédiaire - Layout et Responsive
+## 🟡 Layout et Responsive
 
 ### Navigation Responsive
 
@@ -395,7 +395,7 @@ module.exports = {
 
 ---
 
-## 🟠 Confirmé - Personnalisation et Components
+## 🟠 Personnalisation et Components
 
 ### Configuration Avancée
 

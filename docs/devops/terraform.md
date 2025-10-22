@@ -6,9 +6,9 @@
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-terraform)
 - [🚀 Introduction](#-introduction)
 - [⚙️ Installation et Configuration](#️-installation-et-configuration)
-- [🟢 Débutant - Premiers Pas](#-débutant---premiers-pas)
-- [🟡 Intermédiaire - Ressources et Modules](#-intermédiaire---ressources-et-modules)
-- [🟠 Confirmé - State et Workspaces](#-confirmé---state-et-workspaces)
+- [🟢 Premiers Pas](#-débutant---premiers-pas)
+- [🟡 Ressources et Modules](#-intermédiaire---ressources-et-modules)
+- [🟠 State et Workspaces](#-confirmé---state-et-workspaces)
 - [🔴 Senior - Patterns Avancés](#-senior---patterns-avancés)
 - [⚫ Expert - Multi-Cloud et CI/CD](#-expert---multi-cloud-et-cicd)
 - [📚 Ressources](#-ressources)
@@ -258,7 +258,7 @@ terraform {
 
 ---
 
-## 🟢 Débutant - Premiers Pas
+## 🟢 Premiers Pas
 
 ### Premier fichier Terraform
 
@@ -407,7 +407,7 @@ resource "aws_route_table_association" "public" {
 
 ---
 
-## 🟡 Intermédiaire - Ressources et Modules
+## 🟡 Ressources et Modules
 
 ### Modules personnalisés
 
@@ -585,7 +585,7 @@ locals {
 
 ---
 
-## 🟠 Confirmé - State et Workspaces
+## 🟠 State et Workspaces
 
 ### Gestion du state
 

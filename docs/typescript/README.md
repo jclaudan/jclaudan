@@ -5,9 +5,9 @@
 ## 📋 Table des matières
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-typescript)
 - [🚀 Introduction](#-introduction)
-- [🟢 Débutant - Types de Base](#-débutant---types-de-base)
-- [🟡 Intermédiaire - Types Avancés](#-intermédiaire---types-avancés)
-- [🟠 Confirmé - Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
+- [🟢 Types de Base](#-débutant---types-de-base)
+- [🟡 Types Avancés](#-intermédiaire---types-avancés)
+- [🟠 Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
 - [🔴 Senior - Architecture et SOLID](#-senior---architecture-et-solid)
 - [⚫ Expert - Types Conditionnels et Avancés](#-expert---types-conditionnels-et-avancés)
 - [📚 Ressources](#-ressources)

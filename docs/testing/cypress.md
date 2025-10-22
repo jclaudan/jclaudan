@@ -6,9 +6,9 @@
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-cypress)
 - [🚀 Introduction](#-introduction)
 - [⚙️ Installation et Configuration](#️-installation-et-configuration)
-- [🟢 Débutant - Premiers Tests](#-débutant---premiers-tests)
-- [🟡 Intermédiaire - Tests Avancés](#-intermédiaire---tests-avancés)
-- [🟠 Confirmé - Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
+- [🟢 Premiers Tests](#-débutant---premiers-tests)
+- [🟡 Tests Avancés](#-intermédiaire---tests-avancés)
+- [🟠 Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
 - [🔴 Senior - Tests Complexes](#-senior---tests-complexes)
 - [⚫ Expert - Performance et CI/CD](#-expert---performance-et-cicd)
 - [📚 Ressources](#-ressources)
@@ -247,7 +247,7 @@ Cypress.Commands.add('deleteUser', (userId) => {
 
 ---
 
-## 🟢 Débutant - Premiers Tests
+## 🟢 Premiers Tests
 
 ### Premier test simple
 
@@ -313,7 +313,7 @@ describe('Contact Form', () => {
 
 ---
 
-## 🟡 Intermédiaire - Tests Avancés
+## 🟡 Tests Avancés
 
 ### Tests avec commandes personnalisées
 
@@ -459,7 +459,7 @@ describe('Using Fixtures', () => {
 
 ---
 
-## 🟠 Confirmé - Patterns et Bonnes Pratiques
+## 🟠 Patterns et Bonnes Pratiques
 
 ### Page Object Model
 

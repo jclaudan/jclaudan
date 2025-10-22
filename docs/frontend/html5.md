@@ -5,9 +5,9 @@
 ## 📋 Table des matières
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-html5)
 - [🚀 Introduction](#-introduction)
-- [🟢 Débutant - Structure et Éléments de Base](#-débutant---structure-et-éléments-de-base)
-- [🟡 Intermédiaire - Sémantique et Accessibilité](#-intermédiaire---sémantique-et-accessibilité)
-- [🟠 Confirmé - Formulaires et API](#-confirmé---formulaires-et-api)
+- [🟢 Structure et Éléments de Base](#-débutant---structure-et-éléments-de-base)
+- [🟡 Sémantique et Accessibilité](#-intermédiaire---sémantique-et-accessibilité)
+- [🟠 Formulaires et API](#-confirmé---formulaires-et-api)
 - [🔴 Senior - Performance et SEO](#-senior---performance-et-seo)
 - [⚫ Expert - Web Components et PWA](#-expert---web-components-et-pwa)
 - [📚 Ressources](#-ressources)
@@ -218,7 +218,7 @@ HTML5 est un langage de balisage qui structure le contenu des pages web. Il intr
 
 ---
 
-## 🟢 Débutant - Structure et Éléments de Base
+## 🟢 Structure et Éléments de Base
 
 ### Structure de base d'un document HTML5
 
@@ -323,7 +323,7 @@ function hello() {
 
 ---
 
-## 🟡 Intermédiaire - Sémantique et Accessibilité
+## 🟡 Sémantique et Accessibilité
 
 ### Structure sémantique avancée
 
@@ -469,7 +469,7 @@ function hello() {
 
 ---
 
-## 🟠 Confirmé - Formulaires et API
+## 🟠 Formulaires et API
 
 ### Formulaires avancés avec validation
 

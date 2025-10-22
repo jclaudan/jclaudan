@@ -6,9 +6,9 @@
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-ansible)
 - [🚀 Introduction](#-introduction)
 - [⚙️ Installation et Configuration](#️-installation-et-configuration)
-- [🟢 Débutant - Premiers Pas](#-débutant---premiers-pas)
-- [🟡 Intermédiaire - Playbooks et Inventaires](#-intermédiaire---playbooks-et-inventaires)
-- [🟠 Confirmé - Roles et Collections](#-confirmé---roles-et-collections)
+- [🟢 Premiers Pas](#-débutant---premiers-pas)
+- [🟡 Playbooks et Inventaires](#-intermédiaire---playbooks-et-inventaires)
+- [🟠 Roles et Collections](#-confirmé---roles-et-collections)
 - [🔴 Senior - Patterns Avancés](#-senior---patterns-avancés)
 - [⚫ Expert - Automatisation et CI/CD](#-expert---automatisation-et-cicd)
 - [📚 Ressources](#-ressources)
@@ -218,7 +218,7 @@ Host server2
 
 ---
 
-## 🟢 Débutant - Premiers Pas
+## 🟢 Premiers Pas
 
 ### Premier inventaire
 
@@ -305,7 +305,7 @@ ansible-playbook playbooks/hello-world.yml --limit webservers
 
 ---
 
-## 🟡 Intermédiaire - Playbooks et Inventaires
+## 🟡 Playbooks et Inventaires
 
 ### Inventaire avancé
 
@@ -494,7 +494,7 @@ ssl_key_path: "/etc/ssl/private/{{ app_name }}.key"
 
 ---
 
-## 🟠 Confirmé - Roles et Collections
+## 🟠 Roles et Collections
 
 ### Structure d'un role
 

@@ -6,9 +6,9 @@
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-jest)
 - [🚀 Introduction](#-introduction)
 - [⚙️ Installation et Configuration](#️-installation-et-configuration)
-- [🟢 Débutant - Premiers Tests](#-débutant---premiers-tests)
-- [🟡 Intermédiaire - Tests Avancés](#-intermédiaire---tests-avancés)
-- [🟠 Confirmé - Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
+- [🟢 Premiers Tests](#-débutant---premiers-tests)
+- [🟡 Tests Avancés](#-intermédiaire---tests-avancés)
+- [🟠 Patterns et Bonnes Pratiques](#-confirmé---patterns-et-bonnes-pratiques)
 - [🔴 Senior - Tests Complexes](#-senior---tests-complexes)
 - [⚫ Expert - Optimisation et Performance](#-expert---optimisation-et-performance)
 - [📚 Ressources](#-ressources)
@@ -178,7 +178,7 @@ module.exports = {
 
 ---
 
-## 🟢 Débutant - Premiers Tests
+## 🟢 Premiers Tests
 
 ### Premier test simple
 
@@ -287,7 +287,7 @@ describe('Async functions', () => {
 
 ---
 
-## 🟡 Intermédiaire - Tests Avancés
+## 🟡 Tests Avancés
 
 ### Mocking de fonctions
 
@@ -452,7 +452,7 @@ describe('createUserCard', () => {
 
 ---
 
-## 🟠 Confirmé - Patterns et Bonnes Pratiques
+## 🟠 Patterns et Bonnes Pratiques
 
 ### Tests de composants React
 

@@ -5,9 +5,9 @@
 ## 📋 Table des matières
 - [🎯 Tableaux de Référence](#-tableaux-de-référence-complète-css3)
 - [🚀 Introduction](#-introduction)
-- [🟢 Débutant - Sélecteurs et Propriétés de Base](#-débutant---sélecteurs-et-propriétés-de-base)
-- [🟡 Intermédiaire - Layout et Responsive](#-intermédiaire---layout-et-responsive)
-- [🟠 Confirmé - Animations et Transitions](#-confirmé---animations-et-transitions)
+- [🟢 Sélecteurs et Propriétés de Base](#-débutant---sélecteurs-et-propriétés-de-base)
+- [🟡 Layout et Responsive](#-intermédiaire---layout-et-responsive)
+- [🟠 Animations et Transitions](#-confirmé---animations-et-transitions)
 - [🔴 Senior - Performance et Accessibilité](#-senior---performance-et-accessibilité)
 - [⚫ Expert - CSS Avancé et Techniques Modernes](#-expert---css-avancé-et-techniques-modernes)
 - [📚 Ressources](#-ressources)
@@ -230,7 +230,7 @@ CSS3 est un langage de style qui décrit la présentation des documents HTML. Il
 
 ---
 
-## 🟢 Débutant - Sélecteurs et Propriétés de Base
+## 🟢 Sélecteurs et Propriétés de Base
 
 ### Structure de base CSS
 
@@ -464,7 +464,7 @@ pre {
 
 ---
 
-## 🟡 Intermédiaire - Layout et Responsive
+## 🟡 Layout et Responsive
 
 ### Flexbox Layout
 
@@ -759,7 +759,7 @@ pre {
 
 ---
 
-## 🟠 Confirmé - Animations et Transitions
+## 🟠 Animations et Transitions
 
 ### Transitions CSS
 
