@@ -1,0 +1,74 @@
+name: Update README
+
+on:
+  schedule:
+    # Mise à jour toutes les heures
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update clock
+        run: |
+          # Générer l'horloge avec l'heure actuelle
+          current_time=$(date '+%H:%M:%S')
+          current_date=$(date '+%Y-%m-%d')
+          
+          cat > clock.svg << EOF
+          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+            <defs>
+              <linearGradient id="clockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#0099CC;stop-opacity:1" />
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge> 
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            
+            <!-- Cercle extérieur -->
+            <circle cx="100" cy="100" r="90" fill="none" stroke="url(#clockGradient)" stroke-width="4" filter="url(#glow)"/>
+            
+            <!-- Marques des heures -->
+            <g stroke="#00D4FF" stroke-width="2">
+              <line x1="100" y1="20" x2="100" y2="30"/>
+              <line x1="100" y1="170" x2="100" y2="180"/>
+              <line x1="20" y1="100" x2="30" y2="100"/>
+              <line x1="170" y1="100" x2="180" y2="100"/>
+            </g>
+            
+            <!-- Centre de l'horloge -->
+            <circle cx="100" cy="100" r="8" fill="#00D4FF"/>
+            
+            <!-- Aiguille des heures -->
+            <line x1="100" y1="100" x2="100" y2="60" stroke="#00D4FF" stroke-width="6" stroke-linecap="round"/>
+            
+            <!-- Aiguille des minutes -->
+            <line x1="100" y1="100" x2="130" y2="100" stroke="#00D4FF" stroke-width="4" stroke-linecap="round"/>
+            
+            <!-- Texte de l'heure -->
+            <text x="100" y="160" text-anchor="middle" fill="#00D4FF" font-family="monospace" font-size="14" font-weight="bold">
+              $current_time
+            </text>
+            <text x="100" y="180" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="10">
+              $current_date
+            </text>
+          </svg>
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add clock.svg
+          git diff --staged --quiet || git commit -m "🕐 Update clock - $current_time"
+          git push
