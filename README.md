@@ -97,9 +97,6 @@
 | 🟠 [Patterns avancés](./docs/fr/vuejs/README.md) | | | | | | |
 | 🔴 [Types conditionnels](./docs/fr/typescript/README.md) | | | | | | |
 
-
-## 🎯 **Table des Matières**
-
 ### 🎨 **Frontend & UI/UX**
 <div align="center">
 
@@ -127,6 +124,8 @@
 
 
 ### 🚀 **Backend & APIs**
+<div align="center">
+
 | Technologie | Description |
 |-------------|-------------|
 | [**Node.js**](./docs/fr/nodejs/README.md) | Runtime JavaScript pour applications serveur |
@@ -135,13 +134,19 @@
 | [**Stripe**](./docs/fr/nodejs/README.md) | Intégration paiements et abonnements |
 
 ### 🗄️ **Bases de Données**
+<div align="center">
+
 | Technologie | Description |
 |-------------|-------------|
 | [**PostgreSQL**](./docs/fr/databases/postgresql.md) | Base de données relationnelle avancée |
 | [**MongoDB**](./docs/fr/databases/mongodb.md) | Base de données NoSQL orientée documents |
 | [**Prisma**](./docs/fr/databases/prisma.md) | ORM moderne pour TypeScript et JavaScript |
 
+</div>
+
 ### 🧪 **Tests & Qualité**
+<div align="center">
+
 | Technologie | Description |
 |-------------|-------------|
 | [**Jest**](./docs/fr/testing/jest.md) | Framework de test JavaScript complet |
@@ -149,7 +154,11 @@
 | [**Playwright**](./docs/fr/testing/playwright.md) | Tests E2E cross-browser automatisés |
 | [**Cypress**](./docs/fr/testing/cypress.md) | Tests E2E modernes et interactifs |
 
+</div>
+
 ### 🏗️ **Architecture & Patterns**
+<div align="center">
+
 | Technologie | Description |
 |-------------|-------------|
 | [**Architecture Hexagonale**](./docs/fr/architecture/README.md) | Principes d'architecture et SOLID |
@@ -157,14 +166,22 @@
 | [**Arbres de Décision**](./docs/fr/architecture/decision-trees/database-architecture.md) | Guides pour choisir les bonnes architectures |
 | [**Microservices**](./docs/fr/architecture/microservices-complete-guide.md) | Architecture microservices et outils |
 
+</div>
+
 ### 🤖 **Intelligence Artificielle**
+<div align="center">
+
 | Technologie | Description |
 |-------------|-------------|
 | [**LangChain.js**](./docs/fr/ai/README.md) | Framework pour applications IA |
 | [**RAG Systems**](./docs/fr/ai/rag-systems.md) | Retrieval-Augmented Generation |
 | [**Prompt Engineering**](./docs/fr/ai/prompt-engineering.md) | Ingénierie de prompts avancée |
 
+</div>
+
 ### 🛠️ **DevOps & Infrastructure**
+<div align="center">
+
 | Technologie | Description |
 |-------------|-------------|
 | [**Git**](./docs/fr/git/README.md) | Système de contrôle de version avec workflows avancés |
@@ -173,7 +190,11 @@
 | [**GitHub Actions**](./docs/fr/devops/README.md) | CI/CD et automatisation |
 | [**Terraform**](./docs/fr/devops/terraform.md) | Infrastructure as Code |
 
+</div>
+
 ### ⚡ **Performance & Optimisation**
+<div align="center">
+
 | Technologie | Description |
 |-------------|-------------|
 | [**Frontend Performance**](./docs/fr/nodejs/README.md) | Optimisation Vue/JS et bundle |
@@ -181,10 +202,13 @@
 | [**Database Performance**](./docs/fr/databases/postgresql.md) | Optimisation requêtes et index |
 | [**Monitoring**](./docs/fr/devops/README.md) | Métriques et outils de surveillance |
 
+</div>
 
 ## 🎯 **Concepts Clés par Catégorie**
 
 ### 🎨 **Frontend**
+<div align="center">
+
 - **Réactivité** : [Vue.js Composition API](./docs/fr/vuejs/README.md#composition-api), [refs](./docs/fr/vuejs/README.md#refs-et-reactive), [computed](./docs/fr/vuejs/README.md#computed-properties)
 - **Typage** : [TypeScript interfaces](./docs/fr/typescript/README.md#interfaces), [génériques](./docs/fr/typescript/README.md#generics), [types utilitaires](./docs/fr/typescript/README.md#utility-types)
 - **HTML5** : [Structure sémantique](./docs/fr/frontend/html5.md#structure-sémantique), [accessibilité](./docs/fr/frontend/accessibility.md), [Web Components](./docs/fr/frontend/html5.md#web-components), [PWA](./docs/fr/frontend/html5.md#pwa)
@@ -193,24 +217,38 @@
 - **Design** : [Figma components](./docs/fr/design/figma.md#components), [variants](./docs/fr/design/figma.md#variants), [design systems](./docs/fr/design/figma.md#design-systems)
 - **Tests** : [Jest unit tests](./docs/fr/testing/jest.md), [Vitest performance](./docs/fr/testing/vitest.md), [Playwright E2E](./docs/fr/testing/playwright.md)
 
+</div>
+
 ### 🚀 **Backend**
+<div align="center">
+
 - **Architecture** : [Hexagonale](./docs/fr/architecture/README.md#architecture-hexagonale), [SOLID](./docs/fr/architecture/README.md#principes-solid), [Clean Code](./docs/fr/architecture/README.md#clean-code)
 - **APIs** : [REST](./docs/fr/nestjs/README.md#rest-apis), [GraphQL](./docs/fr/nestjs/README.md#graphql), [microservices](./docs/fr/architecture/microservices-complete-guide.md)
 - **Performance** : [Caching](./docs/fr/nodejs/README.md#caching), [optimization](./docs/fr/nodejs/README.md#performance), [monitoring](./docs/fr/nodejs/README.md#monitoring)
 - **Sécurité** : [Authentication](./docs/fr/nestjs/README.md#authentication), [authorization](./docs/fr/nestjs/README.md#authorization), [validation](./docs/fr/nestjs/README.md#validation)
 
+</div>
+
+
 ### 🗄️ **Données**
+<div align="center">
+
 - **Relationnel** : [PostgreSQL](./docs/fr/databases/postgresql.md), [requêtes complexes](./docs/fr/databases/postgresql.md#requêtes-complexes), [indexation](./docs/fr/databases/postgresql.md#indexation)
 - **NoSQL** : [MongoDB](./docs/fr/databases/mongodb.md), [agrégations](./docs/fr/databases/mongodb.md#agrégations), [sharding](./docs/fr/databases/mongodb.md#sharding)
 - **Cache** : [Redis](./docs/fr/databases/README.md#redis), [stratégies de cache](./docs/fr/databases/README.md#stratégies-de-cache)
 - **Migration** : [Versioning](./docs/fr/databases/prisma.md#migrations), [rollback](./docs/fr/databases/prisma.md#rollback), [CI/CD](./docs/fr/devops/gitlab-ci.md)
 
+</div>
+
 ### 🏗️ **Architecture**
+<div align="center">
+
 - **Patterns** : [Singleton](./docs/fr/patterns/oop-functional/creational-patterns.md#singleton), [Factory](./docs/fr/patterns/oop-functional/creational-patterns.md#factory), [Observer](./docs/fr/patterns/oop-functional/creational-patterns.md#observer), [Strategy](./docs/fr/patterns/oop-functional/creational-patterns.md#strategy)
 - **Microservices** : [Communication](./docs/fr/architecture/microservices-complete-guide.md#communication), [service discovery](./docs/fr/architecture/microservices-complete-guide.md#service-discovery), [circuit breaker](./docs/fr/architecture/microservices-complete-guide.md#circuit-breaker)
 - **DevOps** : [Docker](./docs/fr/docker/README.md), [Ansible](./docs/fr/devops/ansible.md), [Terraform](./docs/fr/devops/terraform.md), [CI/CD](./docs/fr/devops/gitlab-ci.md)
 - **Monitoring** : [Logs](./docs/fr/nodejs/README.md#logging), [métriques](./docs/fr/nodejs/README.md#metrics), [tracing](./docs/fr/nodejs/README.md#tracing), [alerting](./docs/fr/nodejs/README.md#alerting)
 
+</div>
 ---
 
 ## 📊 Statistiques GitHub
@@ -219,16 +257,6 @@
   <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api?username=jclaudan&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide=issues,contribs&bg_color=00000000">
   <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jclaudan&layout=compact&hide_border=true&theme=tokyonight&bg_color=00000000&langs_count=8">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=jclaudan&theme=tokyonight&hide_border=true&background=FFFFFF00">
-</p>
-
----
-
-<p align="center">
-
-### 🏆 Trophées GitHub
-
-<img src="https://github-profile-trophy.vercel.app/?username=jclaudan&theme=tokyonight&no-frame=true&column=7&margin-w=15&margin-h=15" alt="Trophées GitHub" />
-
 </p>
 
 ---
@@ -250,11 +278,5 @@
 <div align="center">
 
 ### 🌟 Merci de votre visite !
-
-</div>
-
-<div align="center">
-
-![Dernière mise à jour](https://github.com/jclaudan/jclaudan/workflows/Update%20README/badge.svg)
 
 </div>
