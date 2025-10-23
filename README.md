@@ -55,17 +55,12 @@
 </table>
 </div>
 
-<div align="center">
 
-### 📊 Statistiques du Profil
-
-<img src="https://komarev.com/ghpvc/?username=jclaudan&style=for-the-badge&color=00D4FF&label=Profile+Views" alt="Profile Views" />
-
-<img src="https://img.shields.io/github/followers/jclaudan?label=Followers&style=for-the-badge&color=4FC08D" alt="GitHub Followers" />
-
-<img src="https://img.shields.io/github/stars/jclaudan?label=Stars&style=for-the-badge&color=E0234E" alt="GitHub Stars" />
-
-</div>
+<p align="center">
+  <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api?username=jclaudan&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide=issues,contribs&bg_color=00000000">
+  <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jclaudan&layout=compact&hide_border=true&theme=tokyonight&bg_color=00000000&langs_count=8">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jclaudan&theme=tokyonight&hide_border=true&background=FFFFFF00">
+</p>
 
 
 <div align="center">
@@ -254,17 +249,6 @@
 - **DevOps** : [Docker](./docs/fr/docker/README.md), [Ansible](./docs/fr/devops/ansible.md), [Terraform](./docs/fr/devops/terraform.md), [CI/CD](./docs/fr/devops/gitlab-ci.md)
 - **Monitoring** : [Logs](./docs/fr/nodejs/README.md#logging), [métriques](./docs/fr/nodejs/README.md#metrics), [tracing](./docs/fr/nodejs/README.md#tracing), [alerting](./docs/fr/nodejs/README.md#alerting)
 
----
-
-## 📊 Statistiques GitHub
-
-<p align="center">
-  <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api?username=jclaudan&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide=issues,contribs&bg_color=00000000">
-  <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jclaudan&layout=compact&hide_border=true&theme=tokyonight&bg_color=00000000&langs_count=8">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jclaudan&theme=tokyonight&hide_border=true&background=FFFFFF00">
-</p>
-
----
 
 <div align="center">
 
