@@ -61,87 +61,87 @@
 
 | 🎨 **Frontend** | 🚀 **Backend** | 🗄️ **Databases** | 🧪 **Tests** | 🏗️ **Architecture** | 🤖 **IA** | 🛠️ **DevOps** |
 |----------------|----------------|-------------------|--------------|---------------------|-----------|---------------|
-| 🟢 [HTML5 Structure](./docs/frontend/html5.md#-structure-et-éléments-de-base) | 🟢 [Node.js Intro](./docs/nodejs/README.md#introduction) | 🟢 [PostgreSQL](./docs/databases/postgresql.md) | 🟢 [Jest Premier test](./docs/testing/jest.md#premier-test) | 🟢 [Patterns courants](./docs/patterns/README.md#patterns-courants) | 🟢 [LangChain](./docs/ai/README.md) | 🟢 [Git](./docs/git/README.md) |
-| 🟢 [CSS3 Sélecteurs](./docs/frontend/css3.md#-sélecteurs-et-propriétés-de-base) | 🟡 [NestJS Architecture](./docs/nestjs/README.md#architecture) | 🟡 [MongoDB](./docs/databases/mongodb.md) | 🟡 [Vitest](./docs/testing/vitest.md) | 🟡 [Microservices](./docs/microservices/README.md) | 🟡 [RAG Systems](./docs/ai/rag-systems.md) | 🟡 [Docker](./docs/docker/README.md) |
-| 🟢 [Tailwind Installation](./docs/frontend/tailwind.md#-installation-et-classes-de-base) | 🟠 [Performance](./docs/nodejs/README.md#performance-et-optimisation) | | 🟠 [Playwright](./docs/testing/playwright.md) | 🟠 [Architecture Hexagonale](./docs/architecture/README.md#implémentation) | 🟠 [Prompt Engineering](./docs/ai/prompt-engineering.md) | 🟠 [Terraform](./docs/devops/terraform.md) |
-| 🟡 [Vue.js Composition API](./docs/vuejs/README.md#composition-api) | 🔴 [Patterns avancés](./docs/nestjs/README.md#patterns-avancés) | | 🔴 [Cypress](./docs/testing/cypress.md) | 🔴 [Production](./docs/docker/README.md#production) | 🔴 [Agents complexes](./docs/ai/README.md#agents-ia-complexes) | 🔴 [Ansible](./docs/devops/ansible.md) |
-| 🟡 [TypeScript Types avancés](./docs/typescript/README.md#types-avancés) | | | | ⚫ [Multi-cloud](./docs/devops/terraform.md#patterns-avancés) | | |
-| 🟠 [Patterns avancés](./docs/vuejs/README.md#patterns-avancés) | | | | | | |
-| 🔴 [Types conditionnels](./docs/typescript/README.md#types-conditionnels) | | | | | | |
+| 🟢 [HTML5 Structure](./docs/fr/frontend/html5.md) | 🟢 [Node.js Intro](./docs/fr/nodejs/README.md) | 🟢 [PostgreSQL](./docs/fr/databases/postgresql.md) | 🟢 [Jest Premier test](./docs/fr/testing/jest.md) | 🟢 [Patterns courants](./docs/fr/patterns/README.md) | 🟢 [LangChain](./docs/fr/ai/README.md) | 🟢 [Git](./docs/fr/git/README.md) |
+| 🟢 [CSS3 Sélecteurs](./docs/fr/frontend/css3.md) | 🟡 [NestJS Architecture](./docs/fr/nestjs/README.md) | 🟡 [MongoDB](./docs/fr/databases/mongodb.md) | 🟡 [Vitest](./docs/fr/testing/vitest.md) | 🟡 [Microservices](./docs/fr/architecture/microservices-complete-guide.md) | 🟡 [RAG Systems](./docs/fr/ai/rag-systems.md) | 🟡 [Docker](./docs/fr/docker/README.md) |
+| 🟢 [Tailwind Installation](./docs/fr/frontend/tailwind.md) | 🟠 [Performance](./docs/fr/nodejs/README.md) | | 🟠 [Playwright](./docs/fr/testing/playwright.md) | 🟠 [Architecture Hexagonale](./docs/fr/architecture/README.md) | 🟠 [Prompt Engineering](./docs/fr/ai/prompt-engineering.md) | 🟠 [Terraform](./docs/fr/devops/terraform.md) |
+| 🟡 [Vue.js Composition API](./docs/fr/vuejs/README.md) | 🔴 [Patterns avancés](./docs/fr/nestjs/README.md) | | 🔴 [Cypress](./docs/fr/testing/cypress.md) | 🔴 [Production](./docs/fr/docker/README.md) | 🔴 [Agents complexes](./docs/fr/ai/ai-agents.md) | 🔴 [Ansible](./docs/fr/devops/ansible.md) |
+| 🟡 [TypeScript Types avancés](./docs/fr/typescript/README.md) | | | | ⚫ [Multi-cloud](./docs/fr/devops/terraform.md) | | |
+| 🟠 [Patterns avancés](./docs/fr/vuejs/README.md) | | | | | | |
+| 🔴 [Types conditionnels](./docs/fr/typescript/README.md) | | | | | | |
 
 
 ## 🎯 **Table des Matières**
 
 ### 🎨 **Frontend & UI/UX**
-| Technologie | Description | Documentation |
-|-------------|-------------|---------------|
-| **Vue.js** | Framework JavaScript progressif pour interfaces utilisateur | [Notes](./docs/vuejs/README.md) |
-| **Pinia** | State management officiel Vue 3 | [Notes](./docs/vuejs/pinia.md) |
-| **Vue Router** | Routing officiel Vue 3 | [Notes](./docs/vuejs/vue-router.md) |
-| **VueUse** | Collection de composables Vue | [Notes](./docs/vuejs/vueuse.md) |
-| **Nuxt.js** | Framework full-stack Vue | [Notes](./docs/vuejs/nuxtjs.md) |
-| **Zod** | Validation de schémas TypeScript | [Notes](./docs/vuejs/zod.md) |
-| **TypeScript** | JavaScript typé pour un développement robuste | [Notes](./docs/typescript/README.md) |
-| **HTML5** | Langage de balisage sémantique et accessible | [Notes](./docs/frontend/html5.md) |
-| **CSS3** | Langage de style moderne et responsive | [Notes](./docs/frontend/css3.md) |
-| **Tailwind CSS** | Framework CSS utility-first pour designs rapides | [Notes](./docs/frontend/tailwind.md) |
-| **TanStack Query** | Data fetching et caching | [Notes](./docs/frontend/tanstack-query.md) |
-| **TanStack Table** | Tables performantes et flexibles | [Notes](./docs/frontend/tanstack-table.md) |
-| **Figma** | Outil de design UI/UX collaboratif | [Notes](./docs/design/figma.md) |
+| Technologie | Description |
+|-------------|-------------|
+| [**Vue.js**](./docs/fr/vuejs/README.md) | Framework JavaScript progressif pour interfaces utilisateur |
+| [**Pinia**](./docs/fr/vuejs/pinia.md) | State management officiel Vue 3 |
+| [**Vue Router**](./docs/fr/vuejs/vue-router.md) | Routing officiel Vue 3 |
+| [**VueUse**](./docs/fr/vuejs/vueuse.md) | Collection de composables Vue |
+| [**Nuxt.js**](./docs/fr/vuejs/nuxtjs.md) | Framework full-stack Vue |
+| [**Zod**](./docs/fr/vuejs/zod.md) | Validation de schémas TypeScript |
+| [**TypeScript**](./docs/fr/typescript/README.md) | JavaScript typé pour un développement robuste |
+| [**HTML5**](./docs/fr/frontend/html5.md) | Langage de balisage sémantique et accessible |
+| [**CSS3**](./docs/fr/frontend/css3.md) | Langage de style moderne et responsive |
+| [**Tailwind CSS**](./docs/fr/frontend/tailwind.md) | Framework CSS utility-first pour designs rapides |
+| [**TanStack Query**](./docs/fr/frontend/README.md) | Data fetching et caching |
+| [**TanStack Table**](./docs/fr/frontend/README.md) | Tables performantes et flexibles |
+| [**Figma**](./docs/fr/design/figma.md) | Outil de design UI/UX collaboratif |
 
 ### 🚀 **Backend & APIs**
-| Technologie | Description | Documentation |
-|-------------|-------------|---------------|
-| **Node.js** | Runtime JavaScript pour applications serveur | [Notes](./docs/nodejs/README.md) |
-| **ESNext Evolution** | Évolution JavaScript ES5 à ES2024 | [Notes](./docs/nodejs/esnext-evolution.md) |
-| **NestJS** | Framework Node.js avec architecture hexagonale | [Notes](./docs/nestjs/README.md) |
-| **Stripe** | Intégration paiements et abonnements | [Notes](./docs/nodejs/stripe.md) |
+| Technologie | Description |
+|-------------|-------------|
+| [**Node.js**](./docs/fr/nodejs/README.md) | Runtime JavaScript pour applications serveur |
+| [**ESNext Evolution**](./docs/fr/nodejs/esnext-evolution.md) | Évolution JavaScript ES5 à ES2024 |
+| [**NestJS**](./docs/fr/nestjs/README.md) | Framework Node.js avec architecture hexagonale |
+| [**Stripe**](./docs/fr/nodejs/README.md) | Intégration paiements et abonnements |
 
 ### 🗄️ **Bases de Données**
-| Technologie | Description | Documentation |
-|-------------|-------------|---------------|
-| **PostgreSQL** | Base de données relationnelle avancée | [Notes](./docs/databases/postgresql.md) |
-| **MongoDB** | Base de données NoSQL orientée documents | [Notes](./docs/databases/mongodb.md) |
+| Technologie | Description |
+|-------------|-------------|
+| [**PostgreSQL**](./docs/fr/databases/postgresql.md) | Base de données relationnelle avancée |
+| [**MongoDB**](./docs/fr/databases/mongodb.md) | Base de données NoSQL orientée documents |
 
 ### 🧪 **Tests & Qualité**
-| Technologie | Description | Documentation |
-|-------------|-------------|---------------|
-| **Jest** | Framework de test JavaScript complet | [Notes](./docs/testing/jest.md) |
-| **Vitest** | Framework de test rapide pour Vite | [Notes](./docs/testing/vitest.md) |
-| **Playwright** | Tests E2E cross-browser automatisés | [Notes](./docs/testing/playwright.md) |
-| **Cypress** | Tests E2E modernes et interactifs | [Notes](./docs/testing/cypress.md) |
+| Technologie | Description |
+|-------------|-------------|
+| [**Jest**](./docs/fr/testing/jest.md) | Framework de test JavaScript complet |
+| [**Vitest**](./docs/fr/testing/vitest.md) | Framework de test rapide pour Vite |
+| [**Playwright**](./docs/fr/testing/playwright.md) | Tests E2E cross-browser automatisés |
+| [**Cypress**](./docs/fr/testing/cypress.md) | Tests E2E modernes et interactifs |
 
 ### 🏗️ **Architecture & Patterns**
-| Technologie | Description | Documentation |
-|-------------|-------------|---------------|
-| **Architecture Hexagonale** | Principes d'architecture et SOLID | [Notes](./docs/architecture/README.md) |
-| **Design Patterns** | Patterns de conception modernes | [Notes](./docs/patterns/README.md) |
-| **Arbres de Décision** | Guides pour choisir les bonnes architectures | [Notes](./docs/architecture/decision-trees/) |
-| **Microservices** | Architecture microservices et outils | [Notes](./docs/microservices/README.md) |
+| Technologie | Description |
+|-------------|-------------|
+| [**Architecture Hexagonale**](./docs/fr/architecture/README.md) | Principes d'architecture et SOLID |
+| [**Design Patterns**](./docs/fr/patterns/README.md) | Patterns de conception modernes |
+| [**Arbres de Décision**](./docs/fr/architecture/decision-trees/database-architecture.md) | Guides pour choisir les bonnes architectures |
+| [**Microservices**](./docs/fr/architecture/microservices-complete-guide.md) | Architecture microservices et outils |
 
 ### 🤖 **Intelligence Artificielle**
-| Technologie | Description | Documentation |
-|-------------|-------------|---------------|
-| **LangChain.js** | Framework pour applications IA | [Notes](./docs/ai/README.md) |
-| **RAG Systems** | Retrieval-Augmented Generation | [Notes](./docs/ai/rag-systems.md) |
-| **Prompt Engineering** | Ingénierie de prompts avancée | [Notes](./docs/ai/prompt-engineering.md) |
+| Technologie | Description |
+|-------------|-------------|
+| [**LangChain.js**](./docs/fr/ai/README.md) | Framework pour applications IA |
+| [**RAG Systems**](./docs/fr/ai/rag-systems.md) | Retrieval-Augmented Generation |
+| [**Prompt Engineering**](./docs/fr/ai/prompt-engineering.md) | Ingénierie de prompts avancée |
 
 ### 🛠️ **DevOps & Infrastructure**
-| Technologie | Description | Documentation |
-|-------------|-------------|---------------|
-| **Git** | Système de contrôle de version | [Notes](./docs/git/README.md) |
-| **Docker** | Conteneurisation et orchestration | [Notes](./docs/docker/README.md) |
-| **Ansible** | Automatisation et configuration | [Notes](./docs/devops/ansible.md) |
-| **GitHub Actions** | CI/CD et automatisation | [Notes](./docs/github-actions/README.md) |
-| **Terraform** | Infrastructure as Code | [Notes](./docs/devops/terraform.md) |
+| Technologie | Description |
+|-------------|-------------|
+| [**Git**](./docs/fr/git/README.md) | Système de contrôle de version |
+| [**Docker**](./docs/fr/docker/README.md) | Conteneurisation et orchestration |
+| [**Ansible**](./docs/fr/devops/ansible.md) | Automatisation et configuration |
+| [**GitHub Actions**](./docs/fr/devops/README.md) | CI/CD et automatisation |
+| [**Terraform**](./docs/fr/devops/terraform.md) | Infrastructure as Code |
 
 ### ⚡ **Performance & Optimisation**
-| Technologie | Description | Documentation |
-|-------------|-------------|---------------|
-| **Frontend Performance** | Optimisation Vue/JS et bundle | [Notes](./docs/performance/frontend-optimization.md) |
-| **Backend Performance** | Optimisation Node.js et APIs | [Notes](./docs/performance/backend-optimization.md) |
-| **Database Performance** | Optimisation requêtes et index | [Notes](./docs/performance/database-optimization.md) |
-| **Monitoring** | Métriques et outils de surveillance | [Notes](./docs/performance/monitoring.md) |
+| Technologie | Description |
+|-------------|-------------|
+| [**Frontend Performance**](./docs/fr/nodejs/README.md) | Optimisation Vue/JS et bundle |
+| [**Backend Performance**](./docs/fr/nodejs/README.md) | Optimisation Node.js et APIs |
+| [**Database Performance**](./docs/fr/databases/postgresql.md) | Optimisation requêtes et index |
+| [**Monitoring**](./docs/fr/devops/README.md) | Métriques et outils de surveillance |
 
 
 ## 🎯 **Concepts Clés par Catégorie**
