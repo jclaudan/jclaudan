@@ -15,7 +15,7 @@
 
 <table>
 <tr>
-<td width="50%">
+<td width="25%">
 
 #### 🎨 Frontend
 - ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white)
@@ -24,7 +24,7 @@
 - ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 
 </td>
-<td width="50%">
+<td width="27%">
 
 #### 🚀 Backend
 - ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
@@ -32,9 +32,8 @@
 - ![Express.js](https://img.shields.io/badge/Express.js-404D59?logo=express&logoColor=white)
 
 </td>
-</tr>
-<tr>
-<td width="50%">
+
+<td width="27%">
 
 #### 🗄️ Databases
 - ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
@@ -42,7 +41,8 @@
 - ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)
 
 </td>
-<td width="50%">
+
+<td width="30%">
 
 #### 🛠️ DevOps & Tools
 - ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
@@ -50,6 +50,7 @@
 - ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
 
 </td>
+
 </tr>
 </table>
 
