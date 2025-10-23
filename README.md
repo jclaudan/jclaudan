@@ -209,7 +209,6 @@
 ## 🎯 **Concepts Clés par Catégorie**
 
 ### 🎨 **Frontend**
-<div align="center">
 
 - **Réactivité** : [Vue.js Composition API](./docs/fr/vuejs/README.md#composition-api), [refs](./docs/fr/vuejs/README.md#refs-et-reactive), [computed](./docs/fr/vuejs/README.md#computed-properties)
 - **Typage** : [TypeScript interfaces](./docs/fr/typescript/README.md#interfaces), [génériques](./docs/fr/typescript/README.md#generics), [types utilitaires](./docs/fr/typescript/README.md#utility-types)
@@ -219,38 +218,29 @@
 - **Design** : [Figma components](./docs/fr/design/figma.md#components), [variants](./docs/fr/design/figma.md#variants), [design systems](./docs/fr/design/figma.md#design-systems)
 - **Tests** : [Jest unit tests](./docs/fr/testing/jest.md), [Vitest performance](./docs/fr/testing/vitest.md), [Playwright E2E](./docs/fr/testing/playwright.md)
 
-</div>
-
 ### 🚀 **Backend**
-<div align="center">
 
 - **Architecture** : [Hexagonale](./docs/fr/architecture/README.md#architecture-hexagonale), [SOLID](./docs/fr/architecture/README.md#principes-solid), [Clean Code](./docs/fr/architecture/README.md#clean-code)
 - **APIs** : [REST](./docs/fr/nestjs/README.md#rest-apis), [GraphQL](./docs/fr/nestjs/README.md#graphql), [microservices](./docs/fr/architecture/microservices-complete-guide.md)
 - **Performance** : [Caching](./docs/fr/nodejs/README.md#caching), [optimization](./docs/fr/nodejs/README.md#performance), [monitoring](./docs/fr/nodejs/README.md#monitoring)
 - **Sécurité** : [Authentication](./docs/fr/nestjs/README.md#authentication), [authorization](./docs/fr/nestjs/README.md#authorization), [validation](./docs/fr/nestjs/README.md#validation)
 
-</div>
-
 
 ### 🗄️ **Données**
-<div align="center">
 
 - **Relationnel** : [PostgreSQL](./docs/fr/databases/postgresql.md), [requêtes complexes](./docs/fr/databases/postgresql.md#requêtes-complexes), [indexation](./docs/fr/databases/postgresql.md#indexation)
 - **NoSQL** : [MongoDB](./docs/fr/databases/mongodb.md), [agrégations](./docs/fr/databases/mongodb.md#agrégations), [sharding](./docs/fr/databases/mongodb.md#sharding)
 - **Cache** : [Redis](./docs/fr/databases/README.md#redis), [stratégies de cache](./docs/fr/databases/README.md#stratégies-de-cache)
 - **Migration** : [Versioning](./docs/fr/databases/prisma.md#migrations), [rollback](./docs/fr/databases/prisma.md#rollback), [CI/CD](./docs/fr/devops/gitlab-ci.md)
 
-</div>
 
 ### 🏗️ **Architecture**
-<div align="center">
 
 - **Patterns** : [Singleton](./docs/fr/patterns/oop-functional/creational-patterns.md#singleton), [Factory](./docs/fr/patterns/oop-functional/creational-patterns.md#factory), [Observer](./docs/fr/patterns/oop-functional/creational-patterns.md#observer), [Strategy](./docs/fr/patterns/oop-functional/creational-patterns.md#strategy)
 - **Microservices** : [Communication](./docs/fr/architecture/microservices-complete-guide.md#communication), [service discovery](./docs/fr/architecture/microservices-complete-guide.md#service-discovery), [circuit breaker](./docs/fr/architecture/microservices-complete-guide.md#circuit-breaker)
 - **DevOps** : [Docker](./docs/fr/docker/README.md), [Ansible](./docs/fr/devops/ansible.md), [Terraform](./docs/fr/devops/terraform.md), [CI/CD](./docs/fr/devops/gitlab-ci.md)
 - **Monitoring** : [Logs](./docs/fr/nodejs/README.md#logging), [métriques](./docs/fr/nodejs/README.md#metrics), [tracing](./docs/fr/nodejs/README.md#tracing), [alerting](./docs/fr/nodejs/README.md#alerting)
 
-</div>
 ---
 
 ## 📊 Statistiques GitHub
