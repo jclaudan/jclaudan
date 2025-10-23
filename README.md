@@ -133,6 +133,8 @@
 | [**NestJS**](./docs/fr/nestjs/README.md) | Framework Node.js avec architecture hexagonale |
 | [**Stripe**](./docs/fr/nodejs/README.md) | Intégration paiements et abonnements |
 
+</div>
+
 ### 🗄️ **Bases de Données**
 <div align="center">
 
