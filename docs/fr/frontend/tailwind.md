@@ -1,4 +1,4 @@
-# ⚡ Tailwind CSS - Guide Complet
+﻿# ⚡ Tailwind CSS - Guide Complet
 
 > **Tailwind CSS** est un framework CSS utility-first qui permet de créer rapidement des interfaces personnalisées en composant des classes utilitaires directement dans le HTML.
 
@@ -554,3 +554,12 @@ module.exports = {
 ---
 
 *Dernière mise à jour : Janvier 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

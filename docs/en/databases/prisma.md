@@ -1,4 +1,4 @@
-# 🔷 Prisma ORM - Complete Guide
+﻿# 🔷 Prisma ORM - Complete Guide
 
 > **Prisma** is a modern ORM (Object-Relational Mapping) for TypeScript and Node.js that simplifies database access with strong typing and an intuitive API.
 
@@ -1300,3 +1300,12 @@ const users = await prisma.user.findMany({
 ---
 
 *This documentation covers the essential aspects of Prisma ORM for developing modern Node.js applications with strong typing and efficient database management.*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

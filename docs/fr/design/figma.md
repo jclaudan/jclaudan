@@ -1,4 +1,4 @@
-# 🎨 Figma - Guide Complet
+﻿# 🎨 Figma - Guide Complet
 
 > **Figma** est un outil de design UI/UX collaboratif en ligne qui permet de créer, prototyper et partager des designs d'interfaces utilisateur de manière intuitive et efficace.
 
@@ -833,3 +833,12 @@ jobs:
 ---
 
 *Dernière mise à jour : Janvier 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

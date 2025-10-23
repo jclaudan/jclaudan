@@ -1,4 +1,4 @@
-# Vue.js CMS Integration Guide
+﻿# Vue.js CMS Integration Guide
 
 ## Introduction
 
@@ -888,3 +888,12 @@ This guide covers the essential aspects of CMS integration with Vue.js:
 - **Best practices**: Error handling, monitoring and configuration
 
 These practices ensure a robust and maintainable architecture for Vue.js applications integrated with CMSs.
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

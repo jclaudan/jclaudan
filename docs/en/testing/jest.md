@@ -1,4 +1,4 @@
-# 🧪 Jest - Complete Guide
+﻿# 🧪 Jest - Complete Guide
 
 > **Jest** is a comprehensive JavaScript testing framework developed by Facebook. It offers an all-in-one solution for unit, integration, and snapshot testing with minimal configuration.
 
@@ -1042,3 +1042,12 @@ describe('Monitoring and Observability', () => {
 ---
 
 *Last updated: January 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

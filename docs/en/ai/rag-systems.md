@@ -1,4 +1,4 @@
-# 🔍 RAG Systems - Complete Guide
+﻿# 🔍 RAG Systems - Complete Guide
 
 ## 📋 Complete RAG Reference Tables
 
@@ -310,3 +310,11 @@ console.log(response.text);
 ---
 
 *Last updated: January 2024*
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

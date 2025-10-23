@@ -1,4 +1,4 @@
-# Vue 3 Component Patterns
+﻿# Vue 3 Component Patterns
 
 ## 1. Composition Pattern
 
@@ -170,3 +170,12 @@ defineProps(['items'])
 2. **Tight Coupling**: Avoid strong coupling between components
 3. **Over-engineering**: Don't over-complicate
 4. **Missing Validation**: Always validate props
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

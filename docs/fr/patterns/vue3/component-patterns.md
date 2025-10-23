@@ -1,4 +1,4 @@
-# Patterns de Composants Vue 3
+﻿# Patterns de Composants Vue 3
 
 ## 1. Composition Pattern
 
@@ -170,3 +170,12 @@ defineProps(['items'])
 2. **Tight Coupling** : Éviter le couplage fort entre composants
 3. **Over-engineering** : Ne pas sur-complexifier
 4. **Missing Validation** : Toujours valider les props
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

@@ -1,4 +1,4 @@
-# 🚀 Universal NoSQL Database Architecture Model
+﻿# 🚀 Universal NoSQL Database Architecture Model
 
 ## 🗂️ General Information
 **Project Name:**  
@@ -245,3 +245,12 @@ Prepare system evolution and migration.
 - **Over-normalization**: Excessive normalization
 - **Under-indexing**: Insufficient indexes
 - **Hot Spots**: Poorly chosen partition keys
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

@@ -1,4 +1,4 @@
-# 🧩 Universal Relational Database Architecture Model
+﻿# 🧩 Universal Relational Database Architecture Model
 
 ## 🗂️ General Information
 **Project Name:**  
@@ -182,3 +182,12 @@ Visualize and validate the overall structure before implementation.
 - **Soft Delete**: `deleted_at` column instead of physical deletion
 - **Audit Trail**: History tables to track modifications
 - **UUID vs Auto-increment**: Choice based on scalability needs
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

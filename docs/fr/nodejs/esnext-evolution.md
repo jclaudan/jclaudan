@@ -1,4 +1,4 @@
-# ESNext Evolution - De Vanilla JS à ES2024
+﻿# ESNext Evolution - De Vanilla JS à ES2024
 
 ## 🎯 Objectif
 Guide complet de l'évolution de JavaScript depuis ES5 jusqu'à ES2024, avec exemples pratiques et patterns modernes.
@@ -1125,3 +1125,12 @@ Vérifier l'adoption des fonctionnalités modernes.
 3. **Performance** : Mesurez l'impact sur les performances
 4. **Compatibilité** : Vérifiez la compatibilité des navigateurs
 5. **Formation** : Formez l'équipe aux nouvelles fonctionnalités
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

@@ -1,4 +1,4 @@
-# 🔧 Ansible - Complete Guide
+﻿# 🔧 Ansible - Complete Guide
 
 > **Ansible** is an open-source automation tool that allows you to manage configuration, deployment, and orchestration of IT infrastructure in a simple and efficient way.
 
@@ -1009,3 +1009,12 @@ extra_vars: |
 ---
 
 *Last updated: January 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

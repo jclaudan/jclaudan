@@ -1,4 +1,4 @@
-# 🚀 Modèle universel d'architecture de base de données NoSQL
+﻿# 🚀 Modèle universel d'architecture de base de données NoSQL
 
 ## 🗂️ Informations générales
 **Nom du projet :**  
@@ -245,3 +245,12 @@ Préparer l'évolution et la migration du système.
 - **Over-normalization** : Normalisation excessive
 - **Under-indexing** : Index insuffisants
 - **Hot Spots** : Clés de partitionnement mal choisies
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

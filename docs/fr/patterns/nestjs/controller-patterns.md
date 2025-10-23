@@ -1,4 +1,4 @@
-# Patterns de Contrôleurs NestJS
+﻿# Patterns de Contrôleurs NestJS
 
 ## 1. REST Controller Patterns
 
@@ -439,3 +439,12 @@ export class UsersModule implements NestModule {
 3. **Poor error handling** : Éviter une mauvaise gestion d'erreur
 4. **Inconsistent responses** : Éviter les réponses incohérentes
 5. **Security vulnerabilities** : Éviter les vulnérabilités de sécurité
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

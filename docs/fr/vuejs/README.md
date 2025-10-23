@@ -1,3 +1,9 @@
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/🏠_Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../README.md)
+
+</div>
+
 # 🟢 Vue.js - Guide Complet
 
 > **Vue.js** est un framework JavaScript progressif pour construire des interfaces utilisateur modernes. Il se distingue par sa simplicité d'apprentissage, sa flexibilité et ses performances exceptionnelles.
@@ -1934,6 +1940,14 @@ app.directive('pin', {
 - [Vue.js Style Guide](https://vuejs.org/style-guide/)
 - [Vue 3 Best Practices](https://vuejs.org/guide/best-practices/performance.html)
 - [Composition API Patterns](https://vuejs.org/guide/reusability/composables.html)
+
+---
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/🏠_Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../README.md)
+
+</div>
 
 ---
 

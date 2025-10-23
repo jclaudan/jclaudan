@@ -1,4 +1,4 @@
-# TypeScript Typing Patterns
+﻿# TypeScript Typing Patterns
 
 ## 1. Type Guards Pattern
 
@@ -402,3 +402,12 @@ getUser(productId) // Error: Type 'ProductId' is not assignable to type 'UserId'
 2. **Type assertions**: Avoid unsafe type assertions
 3. **Complex conditional types**: Avoid overly complex conditional types
 4. **Circular references**: Avoid circular references
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

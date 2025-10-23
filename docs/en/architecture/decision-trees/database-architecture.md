@@ -1,4 +1,4 @@
-# 🧩 Complete Database Architecture Model
+﻿# 🧩 Complete Database Architecture Model
 
 ## 🎯 Objective
 Complete guide for designing a relational database architecture with concrete PostgreSQL and MongoDB examples.
@@ -451,3 +451,12 @@ utilisateur (1)───<(N) commande (1)───<(N) ligne_commande >(1)──
 - **Backup** : Daily backup strategy and replication
 - **Monitoring** : Performance metrics and alerts
 - **Tests** : Test data and development environments
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

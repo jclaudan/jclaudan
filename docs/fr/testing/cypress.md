@@ -1,4 +1,4 @@
-# 🎯 Cypress - Guide Complet
+﻿# 🎯 Cypress - Guide Complet
 
 > **Cypress** est un framework de test E2E moderne qui offre une expérience de développement exceptionnelle avec un runner interactif, des tests en temps réel et une API intuitive pour tester des applications web.
 
@@ -952,3 +952,12 @@ jobs:
 ---
 
 *Dernière mise à jour : Janvier 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

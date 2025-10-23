@@ -1,4 +1,4 @@
-# Creational Patterns
+﻿# Creational Patterns
 
 ## 1. Singleton Pattern
 
@@ -394,3 +394,11 @@ class ConnectionPool {
 2. **Complex inheritance**: Avoid complex inheritance
 3. **Tight coupling**: Avoid tight coupling
 4. **Performance issues**: Watch out for performance issues
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

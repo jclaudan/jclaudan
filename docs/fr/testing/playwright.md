@@ -1,4 +1,4 @@
-# 🎭 Playwright - Guide Complet
+﻿# 🎭 Playwright - Guide Complet
 
 > **Playwright** est un framework de test E2E (End-to-End) moderne qui permet de tester des applications web sur plusieurs navigateurs (Chrome, Firefox, Safari) avec une API unifiée et des fonctionnalités avancées.
 
@@ -1033,3 +1033,12 @@ jobs:
 ---
 
 *Dernière mise à jour : Janvier 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

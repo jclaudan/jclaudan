@@ -1,4 +1,4 @@
-# 🐘 PostgreSQL - Complete Guide
+﻿# 🐘 PostgreSQL - Complete Guide
 
 ## 📋 Complete PostgreSQL Reference Tables
 
@@ -691,3 +691,12 @@ export class SecureUserService {
 ---
 
 *Last updated: January 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

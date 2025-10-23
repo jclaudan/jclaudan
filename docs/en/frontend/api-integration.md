@@ -1,4 +1,4 @@
-# API Integration Guide - Frontend
+﻿# API Integration Guide - Frontend
 
 ## Introduction
 
@@ -731,3 +731,12 @@ This guide covers the essential aspects of API integration in frontend applicati
 - **Best practices**: Configuration, types, testing and performance
 
 These practices ensure robust API integration and optimal user experience.
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

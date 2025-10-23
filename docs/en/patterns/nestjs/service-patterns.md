@@ -1,4 +1,4 @@
-# NestJS Service Patterns
+﻿# NestJS Service Patterns
 
 ## 1. Service Patterns
 
@@ -481,3 +481,12 @@ describe('UsersService', () => {
 3. **Circular dependencies**: Avoid circular dependencies
 4. **Missing error handling**: Don't forget error handling
 5. **Poor separation of concerns**: Avoid poor separation of concerns
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

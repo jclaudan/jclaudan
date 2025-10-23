@@ -1,4 +1,4 @@
-# Pinia - State Management Vue 3
+﻿# Pinia - State Management Vue 3
 
 ## Installation
 
@@ -344,3 +344,12 @@ describe('Counter Store', () => {
 2. **Stores trop gros** : Diviser en stores plus petits
 3. **État global** : Éviter l'état global quand le local suffit
 4. **Circular dependencies** : Attention aux dépendances circulaires
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

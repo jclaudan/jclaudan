@@ -1,4 +1,4 @@
-# ⚡ Vitest - Guide Complet
+﻿# ⚡ Vitest - Guide Complet
 
 > **Vitest** est un framework de test ultra-rapide construit sur Vite. Il offre une expérience de développement moderne avec un hot reload instantané, une configuration minimale et une compatibilité Jest.
 
@@ -1177,3 +1177,12 @@ jobs:
 ---
 
 *Dernière mise à jour : Janvier 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

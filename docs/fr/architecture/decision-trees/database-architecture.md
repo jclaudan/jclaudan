@@ -1,4 +1,4 @@
-# 🧩 Modèle complet d'architecture de base de données
+﻿# 🧩 Modèle complet d'architecture de base de données
 
 ## 🎯 Objectif
 Guide complet pour concevoir une architecture de base de données relationnelle avec des exemples concrets PostgreSQL et MongoDB.
@@ -451,3 +451,12 @@ utilisateur (1)───<(N) commande (1)───<(N) ligne_commande >(1)──
 - **Backup** : Stratégie de sauvegarde quotidienne et réplication
 - **Monitoring** : Métriques de performance et alertes
 - **Tests** : Données de test et environnements de développement
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

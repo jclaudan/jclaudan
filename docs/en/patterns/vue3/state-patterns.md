@@ -1,4 +1,4 @@
-# Vue 3 State Patterns
+﻿# Vue 3 State Patterns
 
 ## 1. Local State Pattern
 
@@ -383,3 +383,12 @@ export function useStateMachine(machine: StateMachine) {
 2. **Circular Dependencies**: Avoid circular dependencies
 3. **Over-normalization**: Don't over-normalize state
 4. **State in Components**: Avoid global state in components
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

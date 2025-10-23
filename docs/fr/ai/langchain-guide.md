@@ -1,4 +1,4 @@
-# 🔗 LangChain.js - Guide Complet
+﻿# 🔗 LangChain.js - Guide Complet
 
 ## 📋 Tableaux de Référence Complète LangChain.js
 
@@ -597,3 +597,12 @@ for await (const chunk of stream) {
 ---
 
 *Dernière mise à jour : Janvier 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

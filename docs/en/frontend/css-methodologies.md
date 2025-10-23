@@ -1,4 +1,4 @@
-# 🎨 CSS Methodologies and Architecture
+﻿# 🎨 CSS Methodologies and Architecture
 
 > **CSS methodologies** are systematic approaches to organizing, structuring, and maintaining CSS code. They help create maintainable, scalable, and collaborative stylesheets.
 
@@ -1217,3 +1217,12 @@ div > ul > li > a { }
 ---
 
 *This documentation covers the main CSS methodologies for creating maintainable, scalable, and collaborative stylesheets in your web projects.*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

@@ -1,4 +1,4 @@
-# Vue 3 Reactivity Patterns
+﻿# Vue 3 Reactivity Patterns
 
 ## 1. Reactive State Pattern
 
@@ -244,3 +244,12 @@ const store = new CounterStore()
 2. **Creating reactive inside reactive**: Avoid creating reactive inside reactive
 3. **Memory leaks with watchers**: Avoid memory leaks with watchers
 4. **Overusing watchEffect**: Don't overuse `watchEffect()`
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

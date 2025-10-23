@@ -1,4 +1,4 @@
-# 🌐 HTML5 - Complete Guide
+﻿# 🌐 HTML5 - Complete Guide
 
 > **HTML5** is the latest version of the standard markup language used to structure web content. It introduces new semantic elements and enhanced APIs, making it easier to create accessible and performant websites.
 
@@ -1196,3 +1196,12 @@ function hello() {
 ---
 
 *Last updated: January 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

@@ -1,4 +1,4 @@
-# ♿ Accessibilité Web - Guide RAWeb/WCAG
+﻿# ♿ Accessibilité Web - Guide RAWeb/WCAG
 
 > **L'accessibilité web** est l'art de rendre les sites web utilisables par tous, indépendamment de leurs capacités physiques, cognitives ou techniques. Le référentiel RAWeb (Référentiel Général d'Amélioration de l'Accessibilité) est le standard français basé sur WCAG.
 
@@ -1409,3 +1409,12 @@ console.log('Problèmes d\'accessibilité:', accessibilityAudit());
 ---
 
 *Cette documentation couvre les aspects essentiels de l'accessibilité web selon les standards RAWeb/WCAG pour créer des sites web inclusifs et conformes aux réglementations françaises.*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

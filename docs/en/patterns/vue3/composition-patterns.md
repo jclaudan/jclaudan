@@ -1,4 +1,4 @@
-# Vue 3 Composition Patterns
+﻿# Vue 3 Composition Patterns
 
 ## 1. Composables Pattern
 
@@ -305,3 +305,12 @@ export function useSorting<T>(items: Ref<T[]>) {
 2. **Global State in Composables**: Avoid global state in composables
 3. **Over-nesting**: Don't over-nest composables
 4. **Memory Leaks**: Clean up listeners and timers
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

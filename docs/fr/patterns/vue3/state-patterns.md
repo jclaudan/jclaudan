@@ -1,4 +1,4 @@
-# Patterns d'État Vue 3
+﻿# Patterns d'État Vue 3
 
 ## 1. Local State Pattern
 
@@ -383,3 +383,12 @@ export function useStateMachine(machine: StateMachine) {
 2. **Circular Dependencies** : Éviter les dépendances circulaires
 3. **Over-normalization** : Ne pas sur-normaliser l'état
 4. **State in Components** : Éviter l'état global dans les composants
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

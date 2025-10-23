@@ -1,4 +1,4 @@
-# 🟢 Vue 3 Composition API - Design Patterns
+﻿# 🟢 Vue 3 Composition API - Design Patterns
 
 ## 📋 Complete Vue 3 Patterns Reference Tables
 
@@ -1008,3 +1008,11 @@ const UserListWithLoadingAndError = withError(withLoading(UserList))
 ---
 
 *Last updated: January 2024*
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

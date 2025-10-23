@@ -1,4 +1,4 @@
-# VueUse - Collection de Composables Vue
+﻿# VueUse - Collection de Composables Vue
 
 ## Installation
 
@@ -580,3 +580,12 @@ describe('useCounter', () => {
 2. **Memory leaks** : Nettoyer les listeners
 3. **Reactivity** : Comprendre la réactivité Vue
 4. **Performance** : Attention aux performances avec beaucoup de composables
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

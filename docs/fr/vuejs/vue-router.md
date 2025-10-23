@@ -1,4 +1,4 @@
-# Vue Router - Routing Vue 3
+﻿# Vue Router - Routing Vue 3
 
 ## Installation
 
@@ -529,3 +529,12 @@ describe('Router', () => {
 2. **État partagé** : Éviter l'état dans les routes
 3. **Navigation conditionnelle** : Vérifier les conditions avant navigation
 4. **Memory leaks** : Nettoyer les listeners dans les guards
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

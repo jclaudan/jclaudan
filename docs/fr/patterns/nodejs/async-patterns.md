@@ -1,4 +1,4 @@
-# Patterns Asynchrones Node.js
+﻿# Patterns Asynchrones Node.js
 
 ## 1. Callback Patterns
 
@@ -363,3 +363,12 @@ const result = await retry(() => fetchData())
 3. **Mixing callbacks and promises** : Éviter de mélanger callbacks et promesses
 4. **Blocking the event loop** : Ne pas bloquer la boucle d'événements
 5. **Memory leaks** : Éviter les fuites mémoire
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

@@ -1,4 +1,4 @@
-# Zod - Validation de schémas TypeScript
+﻿# Zod - Validation de schémas TypeScript
 
 ## Installation
 
@@ -535,3 +535,12 @@ describe('User Schema', () => {
 2. **Messages d'erreur** : Éviter les messages d'erreur génériques
 3. **Performance** : Attention aux validations async
 4. **Types** : Vérifier la cohérence des types générés
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

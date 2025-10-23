@@ -1,4 +1,4 @@
-# 🧩 Arbre de décision : POO vs Programmation Fonctionnelle
+﻿# 🧩 Arbre de décision : POO vs Programmation Fonctionnelle
 
 ## 🎯 Objectif
 Décider quand utiliser la Programmation Orientée Objet (POO) vs la Programmation Fonctionnelle (PF) selon le contexte et les besoins du projet.
@@ -465,3 +465,12 @@ class UserProcessor {
 3. **Formez l'équipe** : Investissez dans la formation
 4. **Mesurez l'impact** : Performance, maintenabilité, productivité
 5. **Adaptez selon le contexte** : Pas de solution universelle
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

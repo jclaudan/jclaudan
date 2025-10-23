@@ -1,4 +1,4 @@
-# 🧩 Modèle universel d'architecture de base de données relationnelle
+﻿# 🧩 Modèle universel d'architecture de base de données relationnelle
 
 ## 🗂️ Informations générales
 **Nom du projet :**  
@@ -182,3 +182,12 @@ Visualiser et valider la structure globale avant la mise en œuvre.
 - **Soft Delete** : Colonne `deleted_at` au lieu de suppression physique
 - **Audit Trail** : Tables d'historique pour tracer les modifications
 - **UUID vs Auto-increment** : Choix selon les besoins de scalabilité
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

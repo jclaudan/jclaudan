@@ -1,4 +1,4 @@
-# Guide d'Intégration API - Frontend
+﻿# Guide d'Intégration API - Frontend
 
 ## Introduction
 
@@ -731,3 +731,12 @@ Ce guide couvre les aspects essentiels de l'intégration API dans les applicatio
 - **Bonnes pratiques** : Configuration, types, tests et performance
 
 Ces pratiques garantissent une intégration API robuste et une expérience utilisateur optimale.
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

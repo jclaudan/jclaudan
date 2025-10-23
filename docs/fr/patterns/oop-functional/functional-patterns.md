@@ -1,4 +1,4 @@
-# Patterns de Programmation Fonctionnelle
+﻿# Patterns de Programmation Fonctionnelle
 
 ## 1. Pure Functions Pattern
 
@@ -377,3 +377,12 @@ const result = addThenSquareThenDouble(3, 4) // ((3 + 4)²) * 2 = 98
 2. **Performance issues** : Attention aux performances
 3. **Complexity** : Éviter la complexité excessive
 4. **Mutating data** : Ne pas muter les données
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

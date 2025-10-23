@@ -1,4 +1,4 @@
-# 🌐 HTML5 - Guide Complet
+﻿# 🌐 HTML5 - Guide Complet
 
 > **HTML5** est la dernière version du langage de balisage standard utilisé pour structurer le contenu web. Il introduit de nouveaux éléments sémantiques et des API améliorées, facilitant la création de sites web accessibles et performants.
 
@@ -1196,3 +1196,12 @@ function hello() {
 ---
 
 *Dernière mise à jour : Janvier 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

@@ -1,4 +1,4 @@
-# Patterns de Composition Vue 3
+﻿# Patterns de Composition Vue 3
 
 ## 1. Composables Pattern
 
@@ -305,3 +305,12 @@ export function useSorting<T>(items: Ref<T[]>) {
 2. **Global State in Composables** : Éviter l'état global dans les composables
 3. **Over-nesting** : Ne pas sur-imbriquer les composables
 4. **Memory Leaks** : Nettoyer les listeners et timers
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

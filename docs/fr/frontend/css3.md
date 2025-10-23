@@ -1,4 +1,4 @@
-# 🎨 CSS3 - Guide Complet
+﻿# 🎨 CSS3 - Guide Complet
 
 > **CSS3** est la dernière évolution du langage de feuilles de style en cascade, offrant de nouvelles fonctionnalités pour le design et la mise en page des sites web modernes avec un focus sur l'accessibilité et les performances.
 
@@ -1896,3 +1896,12 @@ pre {
 ---
 
 *Dernière mise à jour : Janvier 2024*
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

@@ -1,4 +1,4 @@
-# 🧩 Decision Tree: OOP vs Functional Programming
+﻿# 🧩 Decision Tree: OOP vs Functional Programming
 
 ## 🎯 Objective
 Decide when to use Object-Oriented Programming (OOP) vs Functional Programming (FP) based on context and project needs.
@@ -465,3 +465,12 @@ class UserProcessor {
 3. **Train the team** : Invest in training
 4. **Measure impact** : Performance, maintainability, productivity
 5. **Adapt to context** : No universal solution
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../../README.md)
+
+</div>
+

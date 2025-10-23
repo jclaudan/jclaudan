@@ -1,4 +1,4 @@
-# Nuxt.js - Framework Full-Stack Vue
+﻿# Nuxt.js - Framework Full-Stack Vue
 
 ## Installation
 
@@ -611,3 +611,12 @@ describe('Index Page', () => {
 3. **Performance** : Ne pas sur-optimiser
 4. **SEO** : Ne pas oublier les meta tags
 5. **State** : Gérer correctement l'état côté serveur et client
+
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

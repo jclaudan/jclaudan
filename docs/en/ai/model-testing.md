@@ -1,4 +1,4 @@
-# 🧪 Model Testing - Complete Guide
+﻿# 🧪 Model Testing - Complete Guide
 
 ## 📋 Complete Model Testing Reference Tables
 
@@ -433,3 +433,11 @@ console.log("Throughput Results:", throughputResults);
 ---
 
 *Last updated: January 2024*
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+

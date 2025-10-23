@@ -1,4 +1,4 @@
-# 🔵 TypeScript - Design Patterns & Paradigms
+﻿# 🔵 TypeScript - Design Patterns & Paradigms
 
 ## 📋 Table of Contents
 
@@ -950,3 +950,11 @@ console.log(pool.size) // 2
 ---
 
 *Last updated: January 2024*
+
+
+<div align="center">
+
+[![Retour au Profil](https://img.shields.io/badge/ðŸ _Retour_au_Profil-000000?style=for-the-badge&logo=github&logoColor=white)](../../../../../../../../README.md)
+
+</div>
+
