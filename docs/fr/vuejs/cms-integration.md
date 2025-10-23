@@ -655,7 +655,7 @@ CMD ["npm", "run", "serve"]
 ```
 
 ```yaml
-# docker-compose.yml
+# compose.yml
 version: '3.8'
 
 services:

@@ -55,6 +55,51 @@
 </table>
 </div>
 
+## 🎯 **Méthodologie Complète de Conception et d'Architecture**
+
+### 🚀 **Guide Complet pour Créer, Implémenter et Architecturer une Stack Technique**
+
+<div align="center">
+
+[![Méthodologie](https://img.shields.io/badge/📋_Méthodologie_Complète-00D4FF?style=for-the-badge&logo=book&logoColor=white)](./docs/fr/methodology/README.md)
+
+**Une méthodologie complète qui vous guide de la conception à l'implémentation d'une stack technique robuste et évolutive.**
+
+</div>
+
+### 📋 **Ce que vous trouverez dans cette méthodologie :**
+
+| Phase | Description | Livrables |
+|-------|-------------|-----------|
+| **🎯 Conception** | Recueil des besoins, analyse et user stories | Documents de spécifications, backlog priorisé |
+| **🌳 Arbres de Décision** | Guides pour choisir paradigme, DB, backend, frontend, infrastructure | Choix techniques justifiés |
+| **🏗️ Architecture** | Conception globale, backend, frontend, base de données | Schémas d'architecture, patterns |
+| **⚙️ Implémentation** | Setup projet, standards, tests, sécurité | Code structuré, tests automatisés |
+| **🎯 Cas d'Usage** | E-commerce, SaaS B2B, Mobile, Content, Fintech, Startup MVP | Architectures adaptées au contexte |
+
+### 🎯 **Cas d'Usage Couverts :**
+
+- **🛒 E-commerce** : Paiements, gestion des stocks, catalogues
+- **🏢 SaaS B2B** : Multi-tenancy, facturation, intégrations
+- **📱 Mobile Backend** : API, notifications push, synchronisation
+- **📄 Plateforme de Contenu** : CMS headless, SEO, performance
+- **💰 Fintech** : Conformité, sécurité renforcée, audit
+- **🚀 Startup MVP** : Rapidité, coûts optimisés, scalabilité
+
+### 🚀 **Démarrage Rapide :**
+
+1. **Identifiez votre contexte** : Consultez les [cas d'usage](./docs/fr/methodology/05-use-cases/)
+2. **Recueillez les besoins** : Suivez le [guide de recueil](./docs/fr/methodology/01-conception/requirements-gathering.md)
+3. **Prenez vos décisions** : Utilisez les [arbres de décision](./docs/fr/methodology/02-decision-trees/)
+4. **Concevez l'architecture** : Consultez les [guides d'architecture](./docs/fr/methodology/03-architecture/)
+5. **Implémentez** : Suivez les [guides d'implémentation](./docs/fr/methodology/04-implementation/)
+
+<div align="center">
+
+[![Commencer maintenant](./docs/fr/methodology/README.md)](./docs/fr/methodology/README.md)
+
+</div>
+
 
 <p align="center">
   <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api?username=jclaudan&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide=issues,contribs&bg_color=00000000">

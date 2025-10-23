@@ -1227,16 +1227,16 @@ export IMAGE_TAG=$IMAGE_TAG
 # Backup de la base de données
 if [ "$ENVIRONMENT" = "production" ]; then
     echo "📦 Creating database backup..."
-    docker-compose -f docker-compose.yml -f docker-compose.prod.yml exec postgres pg_dump -U $POSTGRES_USER $POSTGRES_DB > backup_$(date +%Y%m%d_%H%M%S).sql
+    docker compose -f docker-compose.yml -f docker-compose.prod.yml exec postgres pg_dump -U $POSTGRES_USER $POSTGRES_DB > backup_$(date +%Y%m%d_%H%M%S).sql
 fi
 
 # Pull de la nouvelle image
 echo "⬇️ Pulling new image..."
-docker-compose -f docker-compose.yml -f docker-compose.$ENVIRONMENT.yml pull
+docker compose -f docker-compose.yml -f docker-compose.$ENVIRONMENT.yml pull
 
 # Déploiement avec zéro downtime
 echo "🔄 Deploying with zero downtime..."
-docker-compose -f docker-compose.yml -f docker-compose.$ENVIRONMENT.yml up -d --no-deps app
+docker compose -f docker-compose.yml -f docker-compose.$ENVIRONMENT.yml up -d --no-deps app
 
 # Attendre que l'application soit prête
 echo "⏳ Waiting for application to be ready..."
@@ -1252,10 +1252,10 @@ if curl -f http://localhost:3000/api/health; then
     docker image prune -f
     
     # Redémarrer les autres services si nécessaire
-    docker-compose -f docker-compose.yml -f docker-compose.$ENVIRONMENT.yml restart nginx
+    docker compose -f docker-compose.yml -f docker-compose.$ENVIRONMENT.yml restart nginx
 else
     echo "❌ Deployment failed! Rolling back..."
-    docker-compose -f docker-compose.yml -f docker-compose.$ENVIRONMENT.yml rollback app
+    docker compose -f docker-compose.yml -f docker-compose.$ENVIRONMENT.yml rollback app
     exit 1
 fi
 ```
