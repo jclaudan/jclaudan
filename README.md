@@ -18,36 +18,36 @@
 <td width="25%">
 
 #### 🎨 Frontend
-- ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white)
-- ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
-- ![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?logo=nuxt.js&logoColor=white)
-- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+- ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white) - [📚 Docs](https://vuejs.org/)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white) - [📚 Docs](https://www.typescriptlang.org/)
+- ![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?logo=nuxt.js&logoColor=white) - [📚 Docs](https://nuxt.com/)
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white) - [📚 Docs](https://tailwindcss.com/)
 
 </td>
 <td width="25%">
 
 #### 🚀 Backend
-- ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
-- ![NestJS](https://img.shields.io/badge/-NestJS-ea2845?logo=nestjs&logoColor=white)
-- ![Express.js](https://img.shields.io/badge/Express.js-404D59?logo=express&logoColor=white)
+- ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white) - [📚 Docs](https://nodejs.org/)
+- ![NestJS](https://img.shields.io/badge/-NestJS-ea2845?logo=nestjs&logoColor=white) - [📚 Docs](https://nestjs.com/)
+- ![Express.js](https://img.shields.io/badge/Express.js-404D59?logo=express&logoColor=white) - [📚 Docs](https://expressjs.com/)
 
 </td>
 
 <td width="25%">
 
 #### 🗄️ Databases
-- ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
-- ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
-- ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white) - [📚 Docs](https://www.mongodb.com/docs/)
+- ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white) - [📚 Docs](https://www.postgresql.org/docs/)
+- ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white) - [📚 Docs](https://supabase.com/docs)
 
 </td>
 
 <td width="25%">
 
 #### 🛠️ DevOps & Tools
-- ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
-- ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
-- ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
+- ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white) - [📚 Docs](https://docs.docker.com/)
+- ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white) - [📚 Docs](https://git-scm.com/doc)
+- ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white) - [📚 Docs](https://docs.github.com/en/actions)
 
 </td>
 
@@ -64,7 +64,7 @@
 </div>
 
 ## 🚀 Contributions
-
+<div align="center">
 <table>
 <tr>
 <td width="50%">
@@ -81,7 +81,7 @@
 </td>
 </tr>
 </table>
-
+</div>
 ## 📚 Notes
 
 ### 🎯 **Navigation Rapide**
