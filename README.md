@@ -15,7 +15,7 @@
 
 <table>
 <tr>
-<td width="27%">
+<td width="25%">
 
 #### 🎨 Frontend
 - ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white)
@@ -33,7 +33,7 @@
 
 </td>
 
-<td width="30%">
+<td width="25%">
 
 #### 🗄️ Databases
 - ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
