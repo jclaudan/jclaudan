@@ -33,7 +33,7 @@
 
 </td>
 
-<td width="27%">
+<td width="30%">
 
 #### 🗄️ Databases
 - ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
@@ -42,7 +42,7 @@
 
 </td>
 
-<td width="27%">
+<td width="30%">
 
 #### 🛠️ DevOps & Tools
 - ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
