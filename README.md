@@ -12,7 +12,7 @@
 </div>
 
 ## 🎯 Stack Technique
-
+<div align="center">
 <table>
 <tr>
 <td width="20%">
@@ -53,7 +53,7 @@
 
 </tr>
 </table>
-
+</div>
 
 <div align="center">
 
