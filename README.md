@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👋 jclaudan
+<img src="assets/banner.png" alt="Banner" width="100%">
 
 ### 🚀 Développeur Full-Stack JS
 
