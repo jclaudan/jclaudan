@@ -15,7 +15,7 @@
 
 <table>
 <tr>
-<td width="25%">
+<td width="20%">
 
 #### 🎨 Frontend
 - ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white)
@@ -24,7 +24,7 @@
 - ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 
 </td>
-<td width="27%">
+<td width="20%">
 
 #### 🚀 Backend
 - ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
@@ -33,7 +33,7 @@
 
 </td>
 
-<td width="25%">
+<td width="20%">
 
 #### 🗄️ Databases
 - ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
