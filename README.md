@@ -15,7 +15,7 @@
 <div align="center">
 <table>
 <tr>
-<td width="20%">
+<td width="25%">
 
 #### 🎨 Frontend
 - ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white)
@@ -24,7 +24,7 @@
 - ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 
 </td>
-<td width="20%">
+<td width="25%">
 
 #### 🚀 Backend
 - ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
@@ -33,7 +33,7 @@
 
 </td>
 
-<td width="20%">
+<td width="25%">
 
 #### 🗄️ Databases
 - ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
@@ -42,7 +42,7 @@
 
 </td>
 
-<td width="30%">
+<td width="25%">
 
 #### 🛠️ DevOps & Tools
 - ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
