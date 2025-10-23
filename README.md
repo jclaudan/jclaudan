@@ -249,10 +249,9 @@
 - **DevOps** : [Docker](./docs/fr/docker/README.md), [Ansible](./docs/fr/devops/ansible.md), [Terraform](./docs/fr/devops/terraform.md), [CI/CD](./docs/fr/devops/gitlab-ci.md)
 - **Monitoring** : [Logs](./docs/fr/nodejs/README.md#logging), [métriques](./docs/fr/nodejs/README.md#metrics), [tracing](./docs/fr/nodejs/README.md#tracing), [alerting](./docs/fr/nodejs/README.md#alerting)
 
+---
 
 <div align="center">
-
-### 📊 Statistiques du Profil
 
 <img src="https://komarev.com/ghpvc/?username=jclaudan&style=for-the-badge&color=00D4FF&label=Profile+Views" alt="Profile Views" />
 
