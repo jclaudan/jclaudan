@@ -14,7 +14,7 @@
 
 ## 🚀 Introduction
 
-This guide covers the complete Artificial Intelligence ecosystem for JavaScript/TypeScript development, including LangChain.js, RAG systems, prompt engineering, and design patterns to create complex and performant AI agents.
+This guide covers the complete Artificial Intelligence ecosystem for JavaScript/TypeScript development, including LangChain.js, RAG systems, prompt engineering, and design patterns for creating complex and performant AI agents.
 
 ### Objectives
 - **Master** LangChain.js and its ecosystem
@@ -61,7 +61,7 @@ This guide covers the complete Artificial Intelligence ecosystem for JavaScript/
 
 | Component | Description | Tools | Example |
 |-----------|-------------|-------|---------|
-| **Retrieval** | Retrieval of relevant documents | VectorStore, Embeddings | `vectorStore.similaritySearch(query)` |
+| **Retrieval** | Retrieving relevant documents | VectorStore, Embeddings | `vectorStore.similaritySearch(query)` |
 | **Augmentation** | Context enrichment | PromptTemplate, Context | `prompt.format({ context, question })` |
 | **Generation** | Response generation | LLM, ChatModel | `llm.generate([prompt])` |
 | **Vector Store** | Vector storage | Chroma, Pinecone, Weaviate | `new Chroma(embeddings)` |
@@ -72,11 +72,11 @@ This guide covers the complete Artificial Intelligence ecosystem for JavaScript/
 
 ### RAG Patterns
 
-| Pattern | Description | Use Case |
-|---------|-------------|----------|
+| Pattern | Description | Use Cases |
+|---------|-------------|-----------|
 | **Basic RAG** | Simple RAG with retrieval and generation | Basic Q&A |
 | **Multi-Step RAG** | RAG with multiple retrieval steps | Complex search |
-| **Hybrid RAG** | Combination of vector + textual search | Hybrid search |
+| **Hybrid RAG** | Vector + textual search combination | Hybrid search |
 | **Self-RAG** | RAG with self-evaluation | Response quality |
 | **Agentic RAG** | RAG with agents for decisions | Intelligent search |
 
@@ -115,7 +115,7 @@ This guide covers the complete Artificial Intelligence ecosystem for JavaScript/
 |---------|-------------|----------------|
 | **Strategy** | Interchangeable algorithm | `class PromptStrategy` |
 | **Factory** | Agent creation | `class AgentFactory` |
-| **Builder** | Complex agent building | `class AgentBuilder` |
+| **Builder** | Complex agent construction | `class AgentBuilder` |
 | **Observer** | Event notification | `class EventObserver` |
 | **Command** | Action encapsulation | `class AICommand` |
 | **Chain of Responsibility** | Processing pipeline | `class ProcessingChain` |
@@ -130,7 +130,7 @@ This guide covers the complete Artificial Intelligence ecosystem for JavaScript/
 |---------|-------------|-------|
 | **Agent Pattern** | Autonomous agent with tools | Complex agents |
 | **RAG Pattern** | Retrieval-Augmented Generation | Contextual Q&A |
-| **Pipeline Pattern** | Pipeline processing | Data flow |
+| **Pipeline Pattern** | Pipeline processing | Data flows |
 | **Event Sourcing** | Event storage | Action history |
 | **CQRS** | Read/write separation | Performance |
 | **Saga Pattern** | Distributed transactions | Complex workflows |
@@ -139,14 +139,14 @@ This guide covers the complete Artificial Intelligence ecosystem for JavaScript/
 
 ### Agent Types
 
-| Type | Description | Tools | Use Case |
-|------|-------------|-------|----------|
+| Type | Description | Tools | Use Cases |
+|------|-------------|-------|-----------|
 | **ReAct Agent** | Reasoning + Acting | Calculator, Search, Code | Problem solving |
 | **Conversational Agent** | Chat with memory | Memory, Tools | Conversational assistant |
 | **Tool-Using Agent** | Agent with tools | Custom Tools | Automation |
 | **Multi-Agent** | Agent system | Communication | Collaboration |
 | **Planning Agent** | Planning | Planner, Executor | Complex tasks |
-| **Research Agent** | Information research | Web Search, Database | In-depth research |
+| **Research Agent** | Information search | Web Search, Database | In-depth research |
 
 ### Agent Architecture
 
@@ -179,12 +179,12 @@ interface Agent {
 
 | Test Type | Description | Framework |
 |-----------|-------------|-----------|
-| **Unit Tests** | Unit tests | Jest, Mocha |
-| **Integration Tests** | Integration tests | Supertest |
-| **E2E Tests** | End-to-end tests | Playwright |
-| **Load Tests** | Load tests | Artillery |
-| **A/B Tests** | Comparative tests | Custom Framework |
-| **Regression Tests** | Regression tests | Jest Snapshot |
+| **Unit Tests** | Unit testing | Jest, Mocha |
+| **Integration Tests** | Integration testing | Supertest |
+| **E2E Tests** | End-to-end testing | Playwright |
+| **Load Tests** | Load testing | Artillery |
+| **A/B Tests** | Comparative testing | Custom Framework |
+| **Regression Tests** | Regression testing | Jest Snapshot |
 
 ## 🎯 Tools and Ecosystem
 
@@ -212,19 +212,19 @@ interface Agent {
 
 ## 📚 Resources
 
-### Official Documentation
+### Official documentation
 - [LangChain.js Documentation](https://js.langchain.com/)
 - [OpenAI API Documentation](https://platform.openai.com/docs)
 - [Anthropic Claude API](https://docs.anthropic.com/)
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers/)
 
-### Tools and Frameworks
+### Tools and frameworks
 - [LangSmith](https://smith.langchain.com/) - Debugging and monitoring
 - [Weights & Biases](https://wandb.ai/) - ML experimentation
 - [MLflow](https://mlflow.org/) - Model management
 - [Pinecone](https://www.pinecone.io/) - Vector database
 
-### Communities and Resources
+### Communities and resources
 - [LangChain Discord](https://discord.gg/langchain)
 - [OpenAI Community](https://community.openai.com/)
 - [Hugging Face Hub](https://huggingface.co/)

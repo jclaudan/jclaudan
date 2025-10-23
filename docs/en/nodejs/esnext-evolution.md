@@ -778,6 +778,332 @@ async function safeFetchUser(id) {
 
 ---
 
+## 🔍 Advanced Concepts
+
+### ⬆️ Hoisting
+
+Hoisting is a JavaScript behavior where variable and function declarations are "moved" to the beginning of their scope.
+
+#### Variable Hoisting
+
+```javascript
+// ✅ Good: Behavior with var
+console.log(x); // undefined (no error)
+var x = 5;
+
+// Equivalent to:
+var x;
+console.log(x); // undefined
+x = 5;
+
+// ❌ Error: Behavior with let/const
+console.log(y); // ReferenceError: Cannot access 'y' before initialization
+let y = 10;
+
+console.log(z); // ReferenceError: Cannot access 'z' before initialization
+const z = 15;
+```
+
+#### Function Hoisting
+
+```javascript
+// ✅ Function declaration (hoisted)
+console.log(greet("John")); // "Hello, John"
+
+function greet(name) {
+  return "Hello, " + name;
+}
+
+// ❌ Function expression (not hoisted)
+console.log(sayHi("Jane")); // TypeError: sayHi is not a function
+
+var sayHi = function(name) {
+  return "Hi, " + name;
+};
+
+// ❌ Arrow function (not hoisted)
+console.log(wave("Bob")); // TypeError: wave is not a function
+
+var wave = (name) => {
+  return "Wave to " + name;
+};
+```
+
+#### Temporal Dead Zone (TDZ)
+
+```javascript
+// Temporal dead zone with let/const
+function example() {
+  console.log(typeof x); // ReferenceError: Cannot access 'x' before initialization
+  
+  let x = 42;
+  console.log(x); // 42
+}
+
+// Comparison with var
+function exampleVar() {
+  console.log(typeof y); // "undefined" (no error)
+  
+  var y = 42;
+  console.log(y); // 42
+}
+```
+
+### 🎯 Scoping
+
+#### Function Scope (var)
+
+```javascript
+function example() {
+  if (true) {
+    var x = 10;
+    console.log(x); // 10
+  }
+  console.log(x); // 10 (accessible throughout function)
+}
+
+// Function scope with loops
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i); // 3, 3, 3 (classic problem)
+  }, 100);
+}
+```
+
+#### Block Scope (let/const)
+
+```javascript
+function example() {
+  if (true) {
+    let x = 10;
+    const y = 20;
+    console.log(x, y); // 10, 20
+  }
+  console.log(x); // ReferenceError: x is not defined
+  console.log(y); // ReferenceError: y is not defined
+}
+
+// Block scope with loops
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i); // 0, 1, 2 (expected behavior)
+  }, 100);
+}
+```
+
+#### Lexical Scope
+
+```javascript
+function outer() {
+  const outerVar = "I'm outer";
+  
+  function inner() {
+    const innerVar = "I'm inner";
+    console.log(outerVar); // Access to external variable
+    console.log(innerVar); // Access to local variable
+  }
+  
+  inner();
+}
+
+// Closure with lexical scope
+function createCounter() {
+  let count = 0;
+  
+  return function() {
+    count++;
+    return count;
+  };
+}
+
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+```
+
+### 📊 Array Methods Comparison
+
+#### forEach vs map vs reduce
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+
+// forEach - Executes a function for each element
+// Returns: undefined
+numbers.forEach(num => {
+  console.log(num * 2); // 2, 4, 6, 8, 10
+});
+
+// map - Transforms each element
+// Returns: new array
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]
+
+// reduce - Reduces array to a single value
+// Returns: accumulated value
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log(sum); // 15
+```
+
+#### filter vs find vs some/every
+
+```javascript
+const users = [
+  { id: 1, name: "John", age: 25, active: true },
+  { id: 2, name: "Jane", age: 30, active: false },
+  { id: 3, name: "Bob", age: 35, active: true }
+];
+
+// filter - Filters elements that pass the test
+// Returns: new array
+const activeUsers = users.filter(user => user.active);
+console.log(activeUsers); // [{ id: 1, name: "John", age: 25, active: true }, { id: 3, name: "Bob", age: 35, active: true }]
+
+// find - Finds first element that passes the test
+// Returns: element or undefined
+const user = users.find(user => user.age > 30);
+console.log(user); // { id: 2, name: "Jane", age: 30, active: false }
+
+// some - Checks if at least one element passes the test
+// Returns: boolean
+const hasActiveUser = users.some(user => user.active);
+console.log(hasActiveUser); // true
+
+// every - Checks if all elements pass the test
+// Returns: boolean
+const allAdults = users.every(user => user.age >= 18);
+console.log(allAdults); // true
+```
+
+#### Performance and Use Cases
+
+```javascript
+const largeArray = Array.from({ length: 1000000 }, (_, i) => i);
+
+// Performance: for > forEach > map > filter > reduce
+console.time('for loop');
+for (let i = 0; i < largeArray.length; i++) {
+  largeArray[i] * 2;
+}
+console.timeEnd('for loop'); // ~2ms
+
+console.time('forEach');
+largeArray.forEach(num => num * 2);
+console.timeEnd('forEach'); // ~15ms
+
+console.time('map');
+largeArray.map(num => num * 2);
+console.timeEnd('map'); // ~20ms
+
+// When to use each method
+const data = [1, 2, 3, 4, 5];
+
+// forEach - Side effects only
+data.forEach(num => console.log(num));
+
+// map - Data transformation
+const squared = data.map(num => num * num);
+
+// filter - Data selection
+const evenNumbers = data.filter(num => num % 2 === 0);
+
+// reduce - Data aggregation
+const total = data.reduce((sum, num) => sum + num, 0);
+
+// find - Element search
+const found = data.find(num => num > 3);
+
+// some/every - Condition tests
+const hasEven = data.some(num => num % 2 === 0);
+const allPositive = data.every(num => num > 0);
+```
+
+### 🔄 Advanced Async Patterns
+
+#### Error Handling with Async/Await
+
+```javascript
+// Pattern with try/catch
+async function fetchUserData(userId) {
+  try {
+    const response = await fetch(`/api/users/${userId}`);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const userData = await response.json();
+    return userData;
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    throw error; // Re-throw for caller to handle
+  }
+}
+
+// Pattern with Promise.allSettled
+async function fetchMultipleUsers(userIds) {
+  const promises = userIds.map(id => fetchUserData(id));
+  const results = await Promise.allSettled(promises);
+  
+  const successful = results
+    .filter(result => result.status === 'fulfilled')
+    .map(result => result.value);
+    
+  const failed = results
+    .filter(result => result.status === 'rejected')
+    .map(result => result.reason);
+    
+  return { successful, failed };
+}
+
+// Pattern with retry
+async function fetchWithRetry(url, maxRetries = 3) {
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      const response = await fetch(url);
+      return await response.json();
+    } catch (error) {
+      if (i === maxRetries - 1) throw error;
+      
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1)));
+    }
+  }
+}
+```
+
+#### Timeout Management
+
+```javascript
+// Promise with timeout
+function fetchWithTimeout(url, timeout = 5000) {
+  return Promise.race([
+    fetch(url),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('Timeout')), timeout)
+    )
+  ]);
+}
+
+// Async/await with timeout
+async function getDataWithTimeout(url) {
+  try {
+    const response = await fetchWithTimeout(url, 3000);
+    return await response.json();
+  } catch (error) {
+    if (error.message === 'Timeout') {
+      console.log('Request timed out');
+    } else {
+      console.log('Other error:', error);
+    }
+    throw error;
+  }
+}
+```
+
+---
+
 ## ✅ Migration Checklist
 
 ### 🎯 Objective

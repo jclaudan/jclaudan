@@ -13,13 +13,18 @@
 
 ### 🚀 Développement Backend
 - [🔵 Node.js](./nodejs/README.md) - Guide complet avec architecture, patterns et meilleures pratiques
+- [🔵 ESNext Evolution](./nodejs/esnext-evolution.md) - Guide complet JavaScript moderne (ES5 à ES2024)
 - [🟢 NestJS](./nestjs/README.md) - Framework Node.js avec architecture modulaire
 - [🐳 Docker](./docker/README.md) - Containerisation et orchestration
-- [🗄️ Bases de Données](./databases/) - MongoDB, PostgreSQL et modèles architecturaux
+- [🗄️ Bases de Données](./databases/) - MongoDB, PostgreSQL, Prisma et modèles architecturaux
 
 ### 🎨 Développement Frontend
 - [💚 Vue.js](./vuejs/README.md) - Framework progressif avec Composition API
+- [💚 Vue.js CMS Integration](./vuejs/cms-integration.md) - Guide d'intégration CMS (SPA vs micro-apps)
 - [🎨 Frontend](./frontend/) - HTML5, CSS3, Tailwind CSS
+- [🎨 CSS Methodologies](./frontend/css-methodologies.md) - Guide des méthodologies CSS (BEM, SMACSS, OOCSS)
+- [♿ Accessibility](./frontend/accessibility.md) - Guide d'accessibilité web (RAWeb/WCAG)
+- [🔗 API Integration](./frontend/api-integration.md) - Guide d'intégration API (fetch vs axios)
 - [🔵 TypeScript](./typescript/README.md) - Typage statique pour JavaScript
 
 ### 🧪 Tests et Qualité
@@ -34,7 +39,7 @@
 - [⚙️ DevOps](./devops/) - Ansible, Terraform, CI/CD
 
 ### 🛠️ Outils et Méthodologies
-- [📝 Git](./git/) - Contrôle de version et workflows
+- [📝 Git](./git/) - Contrôle de version et workflows avancés (cherry-pick, merge vs rebase)
 - [🎨 Design](./design/) - Figma et design UI/UX
 
 ---

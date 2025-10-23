@@ -13,26 +13,45 @@
 
 ## 🎯 Stack Technique
 
+<table>
+<tr>
+<td width="50%">
+
 #### 🎨 Frontend
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
-![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?logo=nuxt.js&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+- ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+- ![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?logo=nuxt.js&logoColor=white)
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+
+</td>
+<td width="50%">
 
 #### 🚀 Backend
-![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
-![NestJS](https://img.shields.io/badge/-NestJS-ea2845?logo=nestjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?logo=express&logoColor=white)
+- ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
+- ![NestJS](https://img.shields.io/badge/-NestJS-ea2845?logo=nestjs&logoColor=white)
+- ![Express.js](https://img.shields.io/badge/Express.js-404D59?logo=express&logoColor=white)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
 
 #### 🗄️ Databases
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
+- ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
+- ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)
+
+</td>
+<td width="50%">
 
 #### 🛠️ DevOps & Tools
-![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
+- ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
+- ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+- ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
+
+</td>
+</tr>
+</table>
 
 
 <div align="center">
@@ -45,15 +64,22 @@
 
 ## 🚀 Contributions
 
-### 🚗 Candilib v2
+<table>
+<tr>
+<td width="50%">
+
+#### 🚗 Candilib v2
 - [Repository GitHub](https://github.com/LAB-MI/candilibV2)
 
-### 🍃 Mongoose
+</td>
+<td width="50%">
+
+#### 🍃 Mongoose
 - [Pull Request GitHub](https://github.com/Automattic/mongoose/pull/10768)
 
-
----
-
+</td>
+</tr>
+</table>
 
 ## 📚 Notes
 
@@ -65,6 +91,7 @@
 | 🟢 [CSS3 Sélecteurs](./docs/fr/frontend/css3.md) | 🟡 [NestJS Architecture](./docs/fr/nestjs/README.md) | 🟡 [MongoDB](./docs/fr/databases/mongodb.md) | 🟡 [Vitest](./docs/fr/testing/vitest.md) | 🟡 [Microservices](./docs/fr/architecture/microservices-complete-guide.md) | 🟡 [RAG Systems](./docs/fr/ai/rag-systems.md) | 🟡 [Docker](./docs/fr/docker/README.md) |
 | 🟢 [Tailwind Installation](./docs/fr/frontend/tailwind.md) | 🟠 [Performance](./docs/fr/nodejs/README.md) | | 🟠 [Playwright](./docs/fr/testing/playwright.md) | 🟠 [Architecture Hexagonale](./docs/fr/architecture/README.md) | 🟠 [Prompt Engineering](./docs/fr/ai/prompt-engineering.md) | 🟠 [Terraform](./docs/fr/devops/terraform.md) |
 | 🟡 [Vue.js Composition API](./docs/fr/vuejs/README.md) | 🔴 [Patterns avancés](./docs/fr/nestjs/README.md) | | 🔴 [Cypress](./docs/fr/testing/cypress.md) | 🔴 [Production](./docs/fr/docker/README.md) | 🔴 [Agents complexes](./docs/fr/ai/ai-agents.md) | 🔴 [Ansible](./docs/fr/devops/ansible.md) |
+|| 🔵 [GitLab CI](./docs/fr/devops/gitlab-ci.md) | | | | | | |
 | 🟡 [TypeScript Types avancés](./docs/fr/typescript/README.md) | | | | ⚫ [Multi-cloud](./docs/fr/devops/terraform.md) | | |
 | 🟠 [Patterns avancés](./docs/fr/vuejs/README.md) | | | | | | |
 | 🔴 [Types conditionnels](./docs/fr/typescript/README.md) | | | | | | |
@@ -73,9 +100,12 @@
 ## 🎯 **Table des Matières**
 
 ### 🎨 **Frontend & UI/UX**
+<div align="center">
+
 | Technologie | Description |
 |-------------|-------------|
 | [**Vue.js**](./docs/fr/vuejs/README.md) | Framework JavaScript progressif pour interfaces utilisateur |
+| [**Vue.js CMS Integration**](./docs/fr/vuejs/cms-integration.md) | Guide d'intégration CMS Vue.js (SPA vs micro-apps) |
 | [**Pinia**](./docs/fr/vuejs/pinia.md) | State management officiel Vue 3 |
 | [**Vue Router**](./docs/fr/vuejs/vue-router.md) | Routing officiel Vue 3 |
 | [**VueUse**](./docs/fr/vuejs/vueuse.md) | Collection de composables Vue |
@@ -85,9 +115,15 @@
 | [**HTML5**](./docs/fr/frontend/html5.md) | Langage de balisage sémantique et accessible |
 | [**CSS3**](./docs/fr/frontend/css3.md) | Langage de style moderne et responsive |
 | [**Tailwind CSS**](./docs/fr/frontend/tailwind.md) | Framework CSS utility-first pour designs rapides |
+| [**CSS Methodologies**](./docs/fr/frontend/css-methodologies.md) | Guide des méthodologies CSS (BEM, SMACSS, OOCSS) |
+| [**Accessibility (RAWeb/WCAG)**](./docs/fr/frontend/accessibility.md) | Guide d'accessibilité web et standards WCAG |
+| [**API Integration**](./docs/fr/frontend/api-integration.md) | Guide d'intégration API (fetch vs axios, auth, CORS) |
 | [**TanStack Query**](./docs/fr/frontend/README.md) | Data fetching et caching |
 | [**TanStack Table**](./docs/fr/frontend/README.md) | Tables performantes et flexibles |
 | [**Figma**](./docs/fr/design/figma.md) | Outil de design UI/UX collaboratif |
+
+</div>
+
 
 ### 🚀 **Backend & APIs**
 | Technologie | Description |
@@ -102,6 +138,7 @@
 |-------------|-------------|
 | [**PostgreSQL**](./docs/fr/databases/postgresql.md) | Base de données relationnelle avancée |
 | [**MongoDB**](./docs/fr/databases/mongodb.md) | Base de données NoSQL orientée documents |
+| [**Prisma**](./docs/fr/databases/prisma.md) | ORM moderne pour TypeScript et JavaScript |
 
 ### 🧪 **Tests & Qualité**
 | Technologie | Description |
@@ -129,7 +166,7 @@
 ### 🛠️ **DevOps & Infrastructure**
 | Technologie | Description |
 |-------------|-------------|
-| [**Git**](./docs/fr/git/README.md) | Système de contrôle de version |
+| [**Git**](./docs/fr/git/README.md) | Système de contrôle de version avec workflows avancés |
 | [**Docker**](./docs/fr/docker/README.md) | Conteneurisation et orchestration |
 | [**Ansible**](./docs/fr/devops/ansible.md) | Automatisation et configuration |
 | [**GitHub Actions**](./docs/fr/devops/README.md) | CI/CD et automatisation |
@@ -147,31 +184,31 @@
 ## 🎯 **Concepts Clés par Catégorie**
 
 ### 🎨 **Frontend**
-- **Réactivité** : Vue.js Composition API, refs, computed
-- **Typage** : TypeScript interfaces, génériques, types utilitaires
-- **HTML5** : Structure sémantique, accessibilité, Web Components, PWA
-- **CSS3** : Flexbox, Grid, animations, responsive design
-- **Tailwind CSS** : Utility-first, composants personnalisés, optimisation
-- **Design** : Figma components, variants, design systems
-- **Tests** : Jest unit tests, Vitest performance, Playwright E2E
+- **Réactivité** : [Vue.js Composition API](./docs/fr/vuejs/README.md#composition-api), [refs](./docs/fr/vuejs/README.md#refs-et-reactive), [computed](./docs/fr/vuejs/README.md#computed-properties)
+- **Typage** : [TypeScript interfaces](./docs/fr/typescript/README.md#interfaces), [génériques](./docs/fr/typescript/README.md#generics), [types utilitaires](./docs/fr/typescript/README.md#utility-types)
+- **HTML5** : [Structure sémantique](./docs/fr/frontend/html5.md#structure-sémantique), [accessibilité](./docs/fr/frontend/accessibility.md), [Web Components](./docs/fr/frontend/html5.md#web-components), [PWA](./docs/fr/frontend/html5.md#pwa)
+- **CSS3** : [Flexbox](./docs/fr/frontend/css3.md#flexbox), [Grid](./docs/fr/frontend/css3.md#grid-layout), [animations](./docs/fr/frontend/css3.md#animations), [responsive design](./docs/fr/frontend/css3.md#responsive-design)
+- **Tailwind CSS** : [Utility-first](./docs/fr/frontend/tailwind.md#utility-first), [composants personnalisés](./docs/fr/frontend/tailwind.md#components), [optimisation](./docs/fr/frontend/tailwind.md#optimisation)
+- **Design** : [Figma components](./docs/fr/design/figma.md#components), [variants](./docs/fr/design/figma.md#variants), [design systems](./docs/fr/design/figma.md#design-systems)
+- **Tests** : [Jest unit tests](./docs/fr/testing/jest.md), [Vitest performance](./docs/fr/testing/vitest.md), [Playwright E2E](./docs/fr/testing/playwright.md)
 
 ### 🚀 **Backend**
-- **Architecture** : Hexagonale, SOLID, Clean Code
-- **APIs** : REST, GraphQL, microservices
-- **Performance** : Caching, optimization, monitoring
-- **Sécurité** : Authentication, authorization, validation
+- **Architecture** : [Hexagonale](./docs/fr/architecture/README.md#architecture-hexagonale), [SOLID](./docs/fr/architecture/README.md#principes-solid), [Clean Code](./docs/fr/architecture/README.md#clean-code)
+- **APIs** : [REST](./docs/fr/nestjs/README.md#rest-apis), [GraphQL](./docs/fr/nestjs/README.md#graphql), [microservices](./docs/fr/architecture/microservices-complete-guide.md)
+- **Performance** : [Caching](./docs/fr/nodejs/README.md#caching), [optimization](./docs/fr/nodejs/README.md#performance), [monitoring](./docs/fr/nodejs/README.md#monitoring)
+- **Sécurité** : [Authentication](./docs/fr/nestjs/README.md#authentication), [authorization](./docs/fr/nestjs/README.md#authorization), [validation](./docs/fr/nestjs/README.md#validation)
 
 ### 🗄️ **Données**
-- **Relationnel** : PostgreSQL, requêtes complexes, indexation
-- **NoSQL** : MongoDB, agrégations, sharding
-- **Cache** : Redis, stratégies de cache
-- **Migration** : Versioning, rollback, CI/CD
+- **Relationnel** : [PostgreSQL](./docs/fr/databases/postgresql.md), [requêtes complexes](./docs/fr/databases/postgresql.md#requêtes-complexes), [indexation](./docs/fr/databases/postgresql.md#indexation)
+- **NoSQL** : [MongoDB](./docs/fr/databases/mongodb.md), [agrégations](./docs/fr/databases/mongodb.md#agrégations), [sharding](./docs/fr/databases/mongodb.md#sharding)
+- **Cache** : [Redis](./docs/fr/databases/README.md#redis), [stratégies de cache](./docs/fr/databases/README.md#stratégies-de-cache)
+- **Migration** : [Versioning](./docs/fr/databases/prisma.md#migrations), [rollback](./docs/fr/databases/prisma.md#rollback), [CI/CD](./docs/fr/devops/gitlab-ci.md)
 
 ### 🏗️ **Architecture**
-- **Patterns** : Singleton, Factory, Observer, Strategy
-- **Microservices** : Communication, service discovery, circuit breaker
-- **DevOps** : Docker, Ansible, Terraform, CI/CD
-- **Monitoring** : Logs, métriques, tracing, alerting
+- **Patterns** : [Singleton](./docs/fr/patterns/oop-functional/creational-patterns.md#singleton), [Factory](./docs/fr/patterns/oop-functional/creational-patterns.md#factory), [Observer](./docs/fr/patterns/oop-functional/creational-patterns.md#observer), [Strategy](./docs/fr/patterns/oop-functional/creational-patterns.md#strategy)
+- **Microservices** : [Communication](./docs/fr/architecture/microservices-complete-guide.md#communication), [service discovery](./docs/fr/architecture/microservices-complete-guide.md#service-discovery), [circuit breaker](./docs/fr/architecture/microservices-complete-guide.md#circuit-breaker)
+- **DevOps** : [Docker](./docs/fr/docker/README.md), [Ansible](./docs/fr/devops/ansible.md), [Terraform](./docs/fr/devops/terraform.md), [CI/CD](./docs/fr/devops/gitlab-ci.md)
+- **Monitoring** : [Logs](./docs/fr/nodejs/README.md#logging), [métriques](./docs/fr/nodejs/README.md#metrics), [tracing](./docs/fr/nodejs/README.md#tracing), [alerting](./docs/fr/nodejs/README.md#alerting)
 
 ---
 

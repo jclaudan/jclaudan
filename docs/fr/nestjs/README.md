@@ -959,6 +959,649 @@ export class CacheService {
 }
 ```
 
+## 🧩 Modules et Injection de Dépendances
+
+### Modules
+
+```typescript
+// users.module.ts
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersController } from './users.controller';
+import { UsersService } from './users.service';
+import { User } from './entities/user.entity';
+
+@Module({
+  imports: [TypeOrmModule.forFeature([User])],
+  controllers: [UsersController],
+  providers: [UsersService],
+  exports: [UsersService], // Exporté pour être utilisé dans d'autres modules
+})
+export class UsersModule {}
+
+// app.module.ts
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
+import { UsersModule } from './users/users.module';
+
+@Module({
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true, // Disponible dans toute l'application
+    }),
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: process.env.DB_HOST,
+      port: parseInt(process.env.DB_PORT),
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
+      entities: [User],
+      synchronize: process.env.NODE_ENV === 'development',
+    }),
+    UsersModule,
+  ],
+})
+export class AppModule {}
+```
+
+### Injection de Dépendances
+
+```typescript
+// Constructor Injection (recommandé)
+@Injectable()
+export class UsersService {
+  constructor(
+    @InjectRepository(User)
+    private readonly userRepository: Repository<User>,
+    @Inject('CONFIG_OPTIONS')
+    private readonly configOptions: ConfigOptions,
+    @Optional() @Inject('CACHE_MANAGER')
+    private readonly cacheManager: Cache,
+  ) {}
+}
+
+// Property Injection
+@Injectable()
+export class UsersService {
+  @InjectRepository(User)
+  private readonly userRepository: Repository<User>;
+}
+
+// Method Injection
+@Injectable()
+export class UsersService {
+  private userRepository: Repository<User>;
+
+  @InjectRepository(User)
+  setUserRepository(repository: Repository<User>) {
+    this.userRepository = repository;
+  }
+}
+```
+
+### Providers personnalisés
+
+```typescript
+// Factory Provider
+@Module({
+  providers: [
+    {
+      provide: 'DATABASE_CONNECTION',
+      useFactory: async (): Promise<Connection> => {
+        return await createConnection({
+          type: 'postgres',
+          host: process.env.DB_HOST,
+          port: parseInt(process.env.DB_PORT),
+          username: process.env.DB_USERNAME,
+          password: process.env.DB_PASSWORD,
+          database: process.env.DB_DATABASE,
+        });
+      },
+    },
+  ],
+})
+export class DatabaseModule {}
+
+// Value Provider
+@Module({
+  providers: [
+    {
+      provide: 'API_KEY',
+      useValue: process.env.API_KEY,
+    },
+  ],
+})
+export class ConfigModule {}
+
+// Class Provider
+@Module({
+  providers: [
+    {
+      provide: 'UserRepository',
+      useClass: TypeOrmUserRepository,
+    },
+  ],
+})
+export class UsersModule {}
+```
+
+## 🧪 Tests
+
+### Tests Unitaires
+
+```typescript
+// users.service.spec.ts
+import { Test, TestingModule } from '@nestjs/testing';
+import { getRepositoryToken } from '@nestjs/typeorm';
+import { UsersService } from './users.service';
+import { User } from './entities/user.entity';
+
+describe('UsersService', () => {
+  let service: UsersService;
+  let repository: Repository<User>;
+
+  const mockRepository = {
+    find: jest.fn(),
+    findOne: jest.fn(),
+    save: jest.fn(),
+    update: jest.fn(),
+    delete: jest.fn(),
+  };
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      providers: [
+        UsersService,
+        {
+          provide: getRepositoryToken(User),
+          useValue: mockRepository,
+        },
+      ],
+    }).compile();
+
+    service = module.get<UsersService>(UsersService);
+    repository = module.get<Repository<User>>(getRepositoryToken(User));
+  });
+
+  it('should be defined', () => {
+    expect(service).toBeDefined();
+  });
+
+  describe('findAll', () => {
+    it('should return an array of users', async () => {
+      const users = [{ id: 1, name: 'John', email: 'john@example.com' }];
+      mockRepository.find.mockResolvedValue(users);
+
+      const result = await service.findAll();
+      expect(result).toEqual(users);
+      expect(mockRepository.find).toHaveBeenCalled();
+    });
+  });
+
+  describe('create', () => {
+    it('should create a user', async () => {
+      const createUserDto = { name: 'John', email: 'john@example.com' };
+      const user = { id: 1, ...createUserDto };
+      mockRepository.save.mockResolvedValue(user);
+
+      const result = await service.create(createUserDto);
+      expect(result).toEqual(user);
+      expect(mockRepository.save).toHaveBeenCalledWith(createUserDto);
+    });
+  });
+});
+```
+
+### Tests d'Intégration
+
+```typescript
+// users.e2e-spec.ts
+import { Test, TestingModule } from '@nestjs/testing';
+import { INestApplication } from '@nestjs/common';
+import * as request from 'supertest';
+import { AppModule } from '../src/app.module';
+
+describe('UsersController (e2e)', () => {
+  let app: INestApplication;
+
+  beforeEach(async () => {
+    const moduleFixture: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
+
+    app = moduleFixture.createNestApplication();
+    await app.init();
+  });
+
+  afterEach(async () => {
+    await app.close();
+  });
+
+  it('/users (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/users')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toBeInstanceOf(Array);
+      });
+  });
+
+  it('/users (POST)', () => {
+    const createUserDto = {
+      name: 'John',
+      email: 'john@example.com',
+    };
+
+    return request(app.getHttpServer())
+      .post('/users')
+      .send(createUserDto)
+      .expect(201)
+      .expect((res) => {
+        expect(res.body.name).toBe(createUserDto.name);
+        expect(res.body.email).toBe(createUserDto.email);
+      });
+  });
+});
+```
+
+### Tests de Contrôleur
+
+```typescript
+// users.controller.spec.ts
+import { Test, TestingModule } from '@nestjs/testing';
+import { UsersController } from './users.controller';
+import { UsersService } from './users.service';
+
+describe('UsersController', () => {
+  let controller: UsersController;
+  let service: UsersService;
+
+  const mockUsersService = {
+    findAll: jest.fn(),
+    findOne: jest.fn(),
+    create: jest.fn(),
+    update: jest.fn(),
+    remove: jest.fn(),
+  };
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      controllers: [UsersController],
+      providers: [
+        {
+          provide: UsersService,
+          useValue: mockUsersService,
+        },
+      ],
+    }).compile();
+
+    controller = module.get<UsersController>(UsersController);
+    service = module.get<UsersService>(UsersService);
+  });
+
+  it('should be defined', () => {
+    expect(controller).toBeDefined();
+  });
+
+  describe('findAll', () => {
+    it('should return an array of users', async () => {
+      const users = [{ id: 1, name: 'John', email: 'john@example.com' }];
+      mockUsersService.findAll.mockResolvedValue(users);
+
+      const result = await controller.findAll();
+      expect(result).toEqual(users);
+      expect(service.findAll).toHaveBeenCalled();
+    });
+  });
+});
+```
+
+## 🛡️ Guards
+
+### Guard d'Authentification
+
+```typescript
+// auth.guard.ts
+import { Injectable, CanActivate, ExecutionContext, UnauthorizedException } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
+import { Request } from 'express';
+
+@Injectable()
+export class AuthGuard implements CanActivate {
+  constructor(private readonly jwtService: JwtService) {}
+
+  async canActivate(context: ExecutionContext): Promise<boolean> {
+    const request = context.switchToHttp().getRequest<Request>();
+    const token = this.extractTokenFromHeader(request);
+
+    if (!token) {
+      throw new UnauthorizedException('Token not found');
+    }
+
+    try {
+      const payload = await this.jwtService.verifyAsync(token);
+      request['user'] = payload;
+    } catch {
+      throw new UnauthorizedException('Invalid token');
+    }
+
+    return true;
+  }
+
+  private extractTokenFromHeader(request: Request): string | undefined {
+    const [type, token] = request.headers.authorization?.split(' ') ?? [];
+    return type === 'Bearer' ? token : undefined;
+  }
+}
+```
+
+### Guard de Rôles
+
+```typescript
+// roles.guard.ts
+import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
+
+@Injectable()
+export class RolesGuard implements CanActivate {
+  constructor(private reflector: Reflector) {}
+
+  canActivate(context: ExecutionContext): boolean {
+    const requiredRoles = this.reflector.getAllAndOverride<string[]>('roles', [
+      context.getHandler(),
+      context.getClass(),
+    ]);
+
+    if (!requiredRoles) {
+      return true;
+    }
+
+    const { user } = context.switchToHttp().getRequest();
+    return requiredRoles.some((role) => user.roles?.includes(role));
+  }
+}
+
+// Décorateur pour les rôles
+import { SetMetadata } from '@nestjs/common';
+
+export const Roles = (...roles: string[]) => SetMetadata('roles', roles);
+
+// Utilisation
+@Post()
+@Roles('admin', 'user')
+@UseGuards(AuthGuard, RolesGuard)
+async create(@Body() createUserDto: CreateUserDto) {
+  return this.usersService.create(createUserDto);
+}
+```
+
+### Guard de Throttling
+
+```typescript
+// throttler.guard.ts
+import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
+import { ThrottlerGuard } from '@nestjs/throttler';
+
+@Injectable()
+export class CustomThrottlerGuard extends ThrottlerGuard {
+  protected async getTracker(req: Record<string, any>): Promise<string> {
+    return req.user?.id || req.ip;
+  }
+}
+
+// Utilisation
+@UseGuards(CustomThrottlerGuard)
+@Throttle(10, 60) // 10 requêtes par minute
+@Get()
+async findAll() {
+  return this.usersService.findAll();
+}
+```
+
+## 🔄 Interceptors
+
+### Intercepteur de Logging
+
+```typescript
+// logging.interceptor.ts
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler, Logger } from '@nestjs/common';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+
+@Injectable()
+export class LoggingInterceptor implements NestInterceptor {
+  private readonly logger = new Logger(LoggingInterceptor.name);
+
+  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+    const request = context.switchToHttp().getRequest();
+    const { method, url } = request;
+    const now = Date.now();
+
+    return next.handle().pipe(
+      tap(() => {
+        const response = context.switchToHttp().getResponse();
+        const { statusCode } = response;
+        const contentLength = response.get('content-length');
+        
+        this.logger.log(
+          `${method} ${url} ${statusCode} ${contentLength} - ${Date.now() - now}ms`
+        );
+      })
+    );
+  }
+}
+```
+
+### Intercepteur de Transformation
+
+```typescript
+// transform.interceptor.ts
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+export interface Response<T> {
+  data: T;
+  statusCode: number;
+  message: string;
+  timestamp: string;
+}
+
+@Injectable()
+export class TransformInterceptor<T> implements NestInterceptor<T, Response<T>> {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<Response<T>> {
+    const response = context.switchToHttp().getResponse();
+    const statusCode = response.statusCode;
+
+    return next.handle().pipe(
+      map(data => ({
+        data,
+        statusCode,
+        message: 'Success',
+        timestamp: new Date().toISOString(),
+      }))
+    );
+  }
+}
+```
+
+### Intercepteur de Cache
+
+```typescript
+// cache.interceptor.ts
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';
+import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { Cache } from 'cache-manager';
+import { CACHE_MANAGER, Inject } from '@nestjs/cache-manager';
+
+@Injectable()
+export class CacheInterceptor implements NestInterceptor {
+  constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {}
+
+  async intercept(context: ExecutionContext, next: CallHandler): Promise<Observable<any>> {
+    const request = context.switchToHttp().getRequest();
+    const cacheKey = this.generateCacheKey(request);
+    
+    const cachedData = await this.cacheManager.get(cacheKey);
+    if (cachedData) {
+      return of(cachedData);
+    }
+
+    return next.handle().pipe(
+      tap(async (data) => {
+        await this.cacheManager.set(cacheKey, data, 300); // Cache for 5 minutes
+      })
+    );
+  }
+
+  private generateCacheKey(request: any): string {
+    const { method, url, query } = request;
+    return `${method}:${url}:${JSON.stringify(query)}`;
+  }
+}
+```
+
+### Intercepteur de Timeout
+
+```typescript
+// timeout.interceptor.ts
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler, RequestTimeoutException } from '@nestjs/common';
+import { Observable, throwError, TimeoutError } from 'rxjs';
+import { timeout, catchError } from 'rxjs/operators';
+
+@Injectable()
+export class TimeoutInterceptor implements NestInterceptor {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+    return next.handle().pipe(
+      timeout(5000), // 5 seconds timeout
+      catchError(err => {
+        if (err instanceof TimeoutError) {
+          return throwError(() => new RequestTimeoutException());
+        }
+        return throwError(() => err);
+      })
+    );
+  }
+}
+```
+
+## 🔧 Pipes
+
+### Pipe de Validation Personnalisé
+
+```typescript
+// validation.pipe.ts
+import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
+import { validate } from 'class-validator';
+import { plainToClass } from 'class-transformer';
+
+@Injectable()
+export class CustomValidationPipe implements PipeTransform<any> {
+  async transform(value: any, { metatype }: ArgumentMetadata) {
+    if (!metatype || !this.toValidate(metatype)) {
+      return value;
+    }
+
+    const object = plainToClass(metatype, value);
+    const errors = await validate(object);
+
+    if (errors.length > 0) {
+      const errorMessages = errors.map(error => 
+        Object.values(error.constraints || {}).join(', ')
+      );
+      throw new BadRequestException(errorMessages);
+    }
+
+    return value;
+  }
+
+  private toValidate(metatype: Function): boolean {
+    const types: Function[] = [String, Boolean, Number, Array, Object];
+    return !types.includes(metatype);
+  }
+}
+```
+
+### Pipe de Transformation
+
+```typescript
+// parse-int.pipe.ts
+import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
+
+@Injectable()
+export class ParseIntPipe implements PipeTransform<string, number> {
+  transform(value: string, metadata: ArgumentMetadata): number {
+    const val = parseInt(value, 10);
+    
+    if (isNaN(val)) {
+      throw new BadRequestException(`Validation failed. "${value}" is not an integer.`);
+    }
+    
+    return val;
+  }
+}
+
+// Utilisation
+@Get(':id')
+async findOne(@Param('id', ParseIntPipe) id: number) {
+  return this.usersService.findOne(id);
+}
+```
+
+### Pipe de Transformation de Date
+
+```typescript
+// parse-date.pipe.ts
+import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
+
+@Injectable()
+export class ParseDatePipe implements PipeTransform<string, Date> {
+  transform(value: string, metadata: ArgumentMetadata): Date {
+    const date = new Date(value);
+    
+    if (isNaN(date.getTime())) {
+      throw new BadRequestException(`Validation failed. "${value}" is not a valid date.`);
+    }
+    
+    return date;
+  }
+}
+```
+
+### Pipe de Transformation de Fichier
+
+```typescript
+// file-validation.pipe.ts
+import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
+
+@Injectable()
+export class FileValidationPipe implements PipeTransform {
+  constructor(
+    private readonly maxSize: number = 1024 * 1024, // 1MB
+    private readonly allowedTypes: string[] = ['image/jpeg', 'image/png']
+  ) {}
+
+  transform(file: Express.Multer.File, metadata: ArgumentMetadata) {
+    if (!file) {
+      throw new BadRequestException('No file provided');
+    }
+
+    if (file.size > this.maxSize) {
+      throw new BadRequestException(`File size exceeds ${this.maxSize} bytes`);
+    }
+
+    if (!this.allowedTypes.includes(file.mimetype)) {
+      throw new BadRequestException(`File type ${file.mimetype} not allowed`);
+    }
+
+    return file;
+  }
+}
+```
+
 ## 📚 Référence Complète NestJS
 
 ### 🆕 Améliorations NestJS 2024

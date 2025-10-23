@@ -48,551 +48,218 @@
 
 | Type | Import | Description | Example |
 |------|--------|-------------|---------|
-| **LLMChain** | `import { LLMChain } from "langchain/chains"` | Simple LLM chain | `new LLMChain({ llm, prompt })` |
+| **LLMChain** | `import { LLMChain } from "langchain/chains"` | Basic LLM chain | `new LLMChain({ llm, prompt })` |
 | **ConversationChain** | `import { ConversationChain } from "langchain/chains"` | Conversational chain | `new ConversationChain({ llm, memory })` |
-| **RetrievalQAChain** | `import { RetrievalQAChain } from "langchain/chains"` | Q&A chain with retrieval | `RetrievalQAChain.fromLLM(llm, retriever)` |
-| **MapReduceChain** | `import { MapReduceChain } from "langchain/chains"` | Map-reduce chain | `MapReduceChain.fromLLM(llm, mapPrompt, reducePrompt)` |
-| **StuffDocumentsChain** | `import { StuffDocumentsChain } from "langchain/chains"` | Document chain | `StuffDocumentsChain.fromLLM(llm, documentPrompt)` |
-| **RefineDocumentsChain** | `import { RefineDocumentsChain } from "langchain/chains"` | Refinement chain | `RefineDocumentsChain.fromLLM(llm, questionPrompt, refinePrompt)` |
-
-### 🎯 Agents
-
-| Type | Import | Description | Example |
-|------|--------|-------------|---------|
-| **ReAct Agent** | `import { initializeAgent } from "langchain/agents"` | Reasoning + Acting agent | `initializeAgent(tools, llm, "react-docstore")` |
-| **Conversational Agent** | `import { initializeAgent } from "langchain/agents"` | Conversational agent | `initializeAgent(tools, llm, "conversational-react-description")` |
-| **Self Ask With Search** | `import { initializeAgent } from "langchain/agents"` | Self-questioning agent | `initializeAgent(tools, llm, "self-ask-with-search")` |
-| **Chat Agent** | `import { initializeAgent } from "langchain/agents"` | Chat agent | `initializeAgent(tools, llm, "chat-zero-shot-react-description")` |
-| **Plan and Execute** | `import { initializeAgent } from "langchain/agents"` | Planning agent | `initializeAgent(tools, llm, "plan-and-execute")` |
-
-### 🎯 Tools
-
-| Tool | Import | Description | Example |
-|------|--------|-------------|---------|
-| **Calculator** | `import { Calculator } from "langchain/tools"` | Calculator | `new Calculator()` |
-| **Web Search** | `import { SerpAPI } from "langchain/tools"` | Web search | `new SerpAPI()` |
-| **Wikipedia** | `import { WikipediaQueryRun } from "langchain/tools"` | Wikipedia | `new WikipediaQueryRun()` |
-| **DuckDuckGo** | `import { DuckDuckGoSearch } from "langchain/tools"` | DuckDuckGo search | `new DuckDuckGoSearch()` |
-| **Code Execution** | `import { PythonREPLTool } from "langchain/tools"` | Python execution | `new PythonREPLTool()` |
-| **File System** | `import { ReadFileTool } from "langchain/tools"` | File reading | `new ReadFileTool()` |
-| **Custom Tool** | `import { Tool } from "langchain/tools"` | Custom tool | `new Tool({ name, description, func })` |
+| **RetrievalQAChain** | `import { RetrievalQAChain } from "langchain/chains"` | RAG chain | `RetrievalQAChain.fromLLM(llm, retriever)` |
+| **MapReduceDocumentsChain** | `import { MapReduceDocumentsChain } from "langchain/chains"` | Document processing | `new MapReduceDocumentsChain(...)` |
+| **StuffDocumentsChain** | `import { StuffDocumentsChain } from "langchain/chains"` | Document stuffing | `new StuffDocumentsChain(...)` |
+| **RefineDocumentsChain** | `import { RefineDocumentsChain } from "langchain/chains"` | Document refinement | `new RefineDocumentsChain(...)` |
 
 ### 🎯 Memory Types
 
-| Type | Import | Description | Example |
-|------|--------|-------------|---------|
-| **BufferMemory** | `import { BufferMemory } from "langchain/memory"` | Buffer memory | `new BufferMemory()` |
-| **ConversationBufferMemory** | `import { ConversationBufferMemory } from "langchain/memory"` | Conversational memory | `new ConversationBufferMemory()` |
-| **ConversationSummaryMemory** | `import { ConversationSummaryMemory } from "langchain/memory"` | Memory with summary | `new ConversationSummaryMemory({ llm })` |
-| **ConversationTokenBufferMemory** | `import { ConversationTokenBufferMemory } from "langchain/memory"` | Memory with token limit | `new ConversationTokenBufferMemory({ llm, maxTokenLimit: 2000 })` |
-| **VectorStoreRetrieverMemory** | `import { VectorStoreRetrieverMemory } from "langchain/memory"` | Vector memory | `new VectorStoreRetrieverMemory({ retriever })` |
-| **EntityMemory** | `import { EntityMemory } from "langchain/memory"` | Entity memory | `new EntityMemory({ llm })` |
+| Type | Import | Description | Use Case |
+|------|--------|-------------|----------|
+| **BufferMemory** | `import { BufferMemory } from "langchain/memory"` | Simple conversation buffer | Basic chat |
+| **ConversationBufferWindowMemory** | `import { ConversationBufferWindowMemory } from "langchain/memory"` | Limited conversation buffer | Recent context only |
+| **ConversationSummaryMemory** | `import { ConversationSummaryMemory } from "langchain/memory"` | Summarized conversation | Long conversations |
+| **ConversationTokenBufferMemory** | `import { ConversationTokenBufferMemory } from "langchain/memory"` | Token-limited buffer | Token management |
+| **VectorStoreRetrieverMemory** | `import { VectorStoreRetrieverMemory } from "langchain/memory"` | Vector-based memory | Semantic search |
 
 ### 🎯 Vector Stores
 
-| Type | Import | Description | Example |
-|------|--------|-------------|---------|
-| **Chroma** | `import { Chroma } from "langchain/vectorstores/chroma"` | Chroma vector database | `new Chroma(embeddings, config)` |
-| **Pinecone** | `import { PineconeStore } from "langchain/vectorstores/pinecone"` | Pinecone vector database | `PineconeStore.fromExistingIndex(index, embeddings)` |
-| **Weaviate** | `import { WeaviateStore } from "langchain/vectorstores/weaviate"` | Weaviate vector database | `new WeaviateStore(embeddings, config)` |
-| **FAISS** | `import { FAISS } from "langchain/vectorstores/faiss"` | FAISS vector database | `new FAISS(embeddings, config)` |
-| **HnswLib** | `import { HnswLib } from "langchain/vectorstores/hnswlib"` | HnswLib vector database | `new HnswLib(embeddings, config)` |
-| **Qdrant** | `import { QdrantVectorStore } from "langchain/vectorstores/qdrant"` | Qdrant vector database | `new QdrantVectorStore(embeddings, config)` |
+| Type | Import | Description | Use Case |
+|------|--------|-------------|----------|
+| **Chroma** | `import { Chroma } from "langchain/vectorstores/chroma"` | ChromaDB vector store | Local development |
+| **Pinecone** | `import { PineconeStore } from "langchain/vectorstores/pinecone"` | Pinecone vector store | Production scale |
+| **Weaviate** | `import { WeaviateStore } from "langchain/vectorstores/weaviate"` | Weaviate vector store | Enterprise |
+| **FAISS** | `import { FAISS } from "langchain/vectorstores/faiss"` | FAISS vector store | Research/experiments |
+| **HNSWLib** | `import { HNSWLib } from "langchain/vectorstores/hnswlib"` | HNSWLib vector store | Local vector search |
 
-### 🎯 Embeddings
-
-| Type | Import | Description | Example |
-|------|--------|-------------|---------|
-| **OpenAI** | `import { OpenAIEmbeddings } from "langchain/embeddings/openai"` | OpenAI embeddings | `new OpenAIEmbeddings()` |
-| **Cohere** | `import { CohereEmbeddings } from "langchain/embeddings/cohere"` | Cohere embeddings | `new CohereEmbeddings()` |
-| **Hugging Face** | `import { HuggingFaceInferenceEmbeddings } from "langchain/embeddings/hf"` | Hugging Face embeddings | `new HuggingFaceInferenceEmbeddings()` |
-| **Google** | `import { GooglePaLMEmbeddings } from "langchain/embeddings/googlepalm"` | Google PaLM embeddings | `new GooglePaLMEmbeddings()` |
-| **Local** | `import { LocalEmbeddings } from "langchain/embeddings/local"` | Local embeddings | `new LocalEmbeddings()` |
-
-### 🎯 Text Splitters
+### 🎯 Tools
 
 | Type | Import | Description | Example |
 |------|--------|-------------|---------|
-| **RecursiveCharacterTextSplitter** | `import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"` | Recursive splitter | `new RecursiveCharacterTextSplitter()` |
-| **CharacterTextSplitter** | `import { CharacterTextSplitter } from "langchain/text_splitter"` | Character splitter | `new CharacterTextSplitter()` |
-| **TokenTextSplitter** | `import { TokenTextSplitter } from "langchain/text_splitter"` | Token splitter | `new TokenTextSplitter()` |
-| **MarkdownHeaderTextSplitter** | `import { MarkdownHeaderTextSplitter } from "langchain/text_splitter"` | Markdown splitter | `new MarkdownHeaderTextSplitter()` |
-| **PythonCodeTextSplitter** | `import { PythonCodeTextSplitter } from "langchain/text_splitter"` | Python splitter | `new PythonCodeTextSplitter()` |
-| **NLTKTextSplitter** | `import { NLTKTextSplitter } from "langchain/text_splitter"` | NLTK splitter | `new NLTKTextSplitter()` |
+| **Calculator** | `import { Calculator } from "langchain/tools"` | Math calculations | `new Calculator()` |
+| **SerpAPI** | `import { SerpAPI } from "langchain/tools"` | Web search | `new SerpAPI({ apiKey })` |
+| **WikipediaQueryRun** | `import { WikipediaQueryRun } from "langchain/tools"` | Wikipedia search | `new WikipediaQueryRun()` |
+| **BashProcess** | `import { BashProcess } from "langchain/tools"` | Bash commands | `new BashProcess()` |
+| **DynamicTool** | `import { DynamicTool } from "langchain/tools"` | Custom tool | `new DynamicTool({ name, description, func })` |
 
-### 🎯 Document Loaders
+## 🚀 Quick Start Examples
 
-| Type | Import | Description | Example |
-|------|--------|-------------|---------|
-| **TextLoader** | `import { TextLoader } from "langchain/document_loaders/fs/text"` | Text loader | `new TextLoader("path/to/file.txt")` |
-| **CSVLoader** | `import { CSVLoader } from "langchain/document_loaders/fs/csv"` | CSV loader | `new CSVLoader("path/to/file.csv")` |
-| **PDFLoader** | `import { PDFLoader } from "langchain/document_loaders/fs/pdf"` | PDF loader | `new PDFLoader("path/to/file.pdf")` |
-| **DirectoryLoader** | `import { DirectoryLoader } from "langchain/document_loaders/fs/directory"` | Directory loader | `new DirectoryLoader("path/to/dir")` |
-| **WebBaseLoader** | `import { WebBaseLoader } from "langchain/document_loaders/web/web_base"` | Web loader | `new WebBaseLoader("https://example.com")` |
-| **YoutubeLoader** | `import { YoutubeLoader } from "langchain/document_loaders/web/youtube"` | YouTube loader | `new YoutubeLoader("video_id")` |
-| **NotionLoader** | `import { NotionLoader } from "langchain/document_loaders/fs/notion"` | Notion loader | `new NotionLoader("path/to/notion")` |
-
-### 🎯 Output Parsers
-
-| Type | Import | Description | Example |
-|------|--------|-------------|---------|
-| **CommaSeparatedListOutputParser** | `StandardOutputParser } from "langchain/output_parsers"` | Comma-separated list parser | `new CommaSeparatedListOutputParser()` |
-| **StructuredOutputParser** | `import { StructuredOutputParser } from "langchain/output_parsers"` | Structured parser | `StructuredOutputParser.fromZodSchema(schema)` |
-| **PydanticOutputParser** | `import { PydanticOutputParser } from "langchain/output_parsers"` | Pydantic parser | `new PydanticOutputParser(pydanticObject)` |
-| **RegexParser** | `import { RegexParser } from "langchain/output_parsers"` | Regex parser | `new RegexParser(pattern, outputKeys)` |
-| **OutputFixingParser** | `import { OutputFixingParser } from "langchain/output_parsers"` | Fixing parser | `new OutputFixingParser(parser, llm)` |
-
-### 🎯 Callbacks
-
-| Type | Import | Description | Example |
-|------|--------|-------------|---------|
-| **BaseCallbackHandler** | `import { BaseCallbackHandler } from "langchain/callbacks"` | Base handler | `class CustomHandler extends BaseCallbackHandler` |
-| **ConsoleCallbackHandler** | `import { ConsoleCallbackHandler } from "langchain/callbacks"` | Console handler | `new ConsoleCallbackHandler()` |
-| **FileCallbackHandler** | `import { FileCallbackHandler } from "langchain/callbacks"` | File handler | `new FileCallbackHandler("path/to/file")` |
-| **LangChainTracer** | `import { LangChainTracer } from "langchain/callbacks"` | LangChain tracer | `new LangChainTracer()` |
-| **WandbCallbackHandler** | `import { WandbCallbackHandler } from "langchain/callbacks"` | Weights & Biases handler | `new WandbCallbackHandler()` |
-
----
-
-## 🚀 Introduction
-
-LangChain.js is a JavaScript/TypeScript library for building applications with language models. It provides abstractions and modular components to create sophisticated AI applications.
-
-## 🎯 Installation and Configuration
-
-### Installation
-
-```bash
-# Basic installation
-npm install langchain
-
-# Installation with specific providers
-npm install @langchain/openai @langchain/anthropic @langchain/cohere
-
-# Installation with vector stores
-npm install @langchain/pinecone @langchain/weaviate @langchain/chroma
-
-# Installation with tools
-npm install @langchain/community
-```
-
-### Configuration
+### Basic LLM Usage
 
 ```typescript
-// OpenAI configuration
-import { ChatOpenAI } from "langchain/chat_models/openai"
-
-const llm = new ChatOpenAI({
-  openAIApiKey: process.env.OPENAI_API_KEY,
-  modelName: "gpt-4",
-  temperature: 0.7,
-  maxTokens: 1000,
-})
-
-// Anthropic configuration
-import { ChatAnthropic } from "langchain/chat_models/anthropic"
-
-const claude = new ChatAnthropic({
-  anthropicApiKey: process.env.ANTHROPIC_API_KEY,
-  modelName: "claude-3-sonnet-20240229",
-  temperature: 0.7,
-})
-```
-
-## 🎯 Basic Usage
-
-### Simple LLM
-
-```typescript
-import { OpenAI } from "langchain/llms/openai"
+import { OpenAI } from "langchain/llms/openai";
 
 const llm = new OpenAI({
-  openAIApiKey: process.env.OPENAI_API_KEY,
   temperature: 0.7,
-})
+  openAIApiKey: process.env.OPENAI_API_KEY,
+});
 
-const response = await llm.call("What is the capital of France?")
-console.log(response) // "The capital of France is Paris."
+const response = await llm.predict("What is the capital of France?");
+console.log(response);
 ```
 
-### Chat Model
+### Chat Model with Memory
 
 ```typescript
-import { ChatOpenAI } from "langchain/chat_models/openai"
-import { HumanMessage, SystemMessage } from "langchain/schema"
+import { ChatOpenAI } from "langchain/chat_models/openai";
+import { ConversationChain } from "langchain/chains";
+import { BufferMemory } from "langchain/memory";
 
 const chat = new ChatOpenAI({
+  temperature: 0.7,
   openAIApiKey: process.env.OPENAI_API_KEY,
-  modelName: "gpt-4",
-})
+});
 
-const messages = [
-  new SystemMessage("You are a helpful assistant."),
-  new HumanMessage("What is the weather like today?")
-]
+const memory = new BufferMemory();
 
-const response = await chat.call(messages)
-console.log(response.content)
+const chain = new ConversationChain({
+  llm: chat,
+  memory: memory,
+});
+
+const response = await chain.call({
+  input: "Hello, my name is John."
+});
+console.log(response.response);
+
+const followUp = await chain.call({
+  input: "What's my name?"
+});
+console.log(followUp.response); // "Your name is John."
 ```
 
-### Prompt Templates
+### RAG System
 
 ```typescript
-import { PromptTemplate } from "langchain/prompts"
+import { ChatOpenAI } from "langchain/chat_models/openai";
+import { OpenAIEmbeddings } from "langchain/embeddings/openai";
+import { Chroma } from "langchain/vectorstores/chroma";
+import { RetrievalQAChain } from "langchain/chains";
 
-const prompt = PromptTemplate.fromTemplate(
-  "What is a {adjective} way to describe a {noun}?"
-)
-
-const formattedPrompt = await prompt.format({
-  adjective: "funny",
-  noun: "cat"
-})
-
-console.log(formattedPrompt)
-// "What is a funny way to describe a cat?"
-```
-
-### Chains
-
-```typescript
-import { LLMChain } from "langchain/chains"
-import { PromptTemplate } from "langchain/prompts"
-import { OpenAI } from "langchain/llms/openai"
-
-const llm = new OpenAI({ openAIApiKey: process.env.OPENAI_API_KEY })
-const prompt = PromptTemplate.fromTemplate("What is a {adjective} way to describe a {noun}?")
-const chain = new LLMChain({ llm, prompt })
-
-const result = await chain.call({
-  adjective: "funny",
-  noun: "cat"
-})
-
-console.log(result.text)
-```
-
-## 🎯 Agents and Tools
-
-### Simple Agent
-
-```typescript
-import { initializeAgent } from "langchain/agents"
-import { Tool } from "langchain/tools"
-import { ChatOpenAI } from "langchain/chat_models/openai"
-
+// Initialize components
 const llm = new ChatOpenAI({
+  temperature: 0,
   openAIApiKey: process.env.OPENAI_API_KEY,
-  temperature: 0
-})
+});
 
-const tools = [
-  new Tool({
-    name: "calculator",
-    description: "Useful for doing math",
-    func: (input: string) => {
-      try {
-        return eval(input).toString()
-      } catch (error) {
-        return "Error: Invalid math expression"
-      }
-    }
-  })
-]
-
-const agent = initializeAgent(tools, llm, "zero-shot-react-description")
-
-const result = await agent.call({
-  input: "What is 15 * 3?"
-})
-
-console.log(result.output)
-```
-
-### Agent with Memory
-
-```typescript
-import { initializeAgent } from "langchain/agents"
-import { BufferMemory } from "langchain/memory"
-import { ChatOpenAI } from "langchain/chat_models/openai"
-
-const llm = new ChatOpenAI({
+const embeddings = new OpenAIEmbeddings({
   openAIApiKey: process.env.OPENAI_API_KEY,
-  temperature: 0
-})
+});
 
-const memory = new BufferMemory({
-  memoryKey: "chat_history",
-  returnMessages: true
-})
+// Create vector store
+const vectorStore = await Chroma.fromDocuments(
+  documents,
+  embeddings,
+  {
+    collectionName: "my-collection",
+  }
+);
 
-const agent = initializeAgent(
-  tools,
-  llm,
-  "conversational-react-description",
-  { memory }
-)
-
-const result = await agent.call({
-  input: "My name is John. What is my name?"
-})
-
-console.log(result.output)
-```
-
-## 🎯 RAG Systems
-
-### Simple RAG
-
-```typescript
-import { RetrievalQAChain } from "langchain/chains"
-import { ChatOpenAI } from "langchain/chat_models/openai"
-import { OpenAIEmbeddings } from "langchain/embeddings/openai"
-import { Chroma } from "langchain/vectorstores/chroma"
-import { TextLoader } from "langchain/document_loaders/fs/text"
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
-
-// Load and split documents
-const loader = new TextLoader("path/to/document.txt")
-const documents = await loader.load()
-
-const textSplitter = new RecursiveCharacterTextSplitter({
-  chunkSize: 1000,
-  chunkOverlap: 200
-})
-
-const texts = await textSplitter.splitDocuments(documents)
-
-// Create embeddings and vector store
-const embeddings = new OpenAIEmbeddings()
-const vectorStore = await Chroma.fromDocuments(texts, embeddings)
+// Create retriever
+const retriever = vectorStore.asRetriever();
 
 // Create RAG chain
-const llm = new ChatOpenAI({ openAIApiKey: process.env.OPENAI_API_KEY })
-const retriever = vectorStore.asRetriever()
-const chain = RetrievalQAChain.fromLLM(llm, retriever)
+const chain = RetrievalQAChain.fromLLM(llm, retriever);
 
-// Ask a question
-const result = await chain.call({
-  query: "What is the main topic of the document?"
-})
+const response = await chain.call({
+  query: "What is the main topic of the documents?",
+});
 
-console.log(result.text)
+console.log(response.text);
 ```
 
-### RAG with Custom Prompt
+### Agent with Tools
 
 ```typescript
-import { RetrievalQAChain } from "langchain/chains"
-import { PromptTemplate } from "langchain/prompts"
-import { ChatOpenAI } from "langchain/chat_models/openai"
-
-const llm = new ChatOpenAI({ openAIApiKey: process.env.OPENAI_API_KEY })
-
-const promptTemplate = new PromptTemplate({
-  template: `Use the following pieces of context to answer the question at the end.
-If you don't know the answer, just say that you don't know, don't try to make up an answer.
-
-Context:
-{context}
-
-Question: {question}
-Answer:`,
-  inputVariables: ["context", "question"]
-})
-
-const chain = RetrievalQAChain.fromLLM(llm, retriever, {
-  prompt: promptTemplate
-})
-
-const result = await chain.call({
-  query: "What is the main topic of the document?"
-})
-```
-
-## 🎯 NestJS Integration
-
-### LangChain Service
-
-```typescript
-// langchain.service.ts
-import { Injectable } from '@nestjs/common'
-import { ChatOpenAI } from 'langchain/chat_models/openai'
-import { PromptTemplate } from 'langchain/prompts'
-import { LLMChain } from 'langchain/chains'
-
-@Injectable()
-export class LangChainService {
-  private llm: ChatOpenAI
-  private prompt: PromptTemplate
-
-  constructor() {
-    this.llm = new ChatOpenAI({
-      openAIApiKey: process.env.OPENAI_API_KEY,
-      modelName: 'gpt-4',
-      temperature: 0.7
-    })
-
-    this.prompt = PromptTemplate.fromTemplate(
-      'You are a helpful assistant. Answer the following question: {question}'
-    )
-  }
-
-  async generateResponse(question: string): Promise<string> {
-    const chain = new LLMChain({
-      llm: this.llm,
-      prompt: this.prompt
-    })
-
-    const result = await chain.call({ question })
-    return result.text
-  }
-}
-```
-
-### AI Controller
-
-```typescript
-// ai.controller.ts
-import { Controller, Post, Body } from '@nestjs/common'
-import { LangChainService } from './langchain.service'
-
-@Controller('ai')
-export class AIController {
-  constructor(private readonly langChainService: LangChainService) {}
-
-  @Post('chat')
-  async chat(@Body() body: { message: string }) {
-    const response = await this.langChainService.generateResponse(body.message)
-    return { response }
-  }
-}
-```
-
-### AI Module
-
-```typescript
-// ai.module.ts
-import { Module } from '@nestjs/common'
-import { LangChainService } from './langchain.service'
-import { AIController } from './ai.controller'
-
-@Module({
-  providers: [LangChainService],
-  controllers: [AIController],
-  exports: [LangChainService]
-})
-export class AIModule {}
-```
-
-## 🎯 Testing and Debugging
-
-### Unit Tests
-
-```typescript
-// langchain.service.spec.ts
-import { Test, TestingModule } from '@nestjs/testing'
-import { LangChainService } from './langchain.service'
-
-describe('LangChainService', () => {
-  let service: LangChainService
-
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [LangChainService]
-    }).compile()
-
-    service = module.get<LangChainService>(LangChainService)
-  })
-
-  it('should generate response', async () => {
-    const question = 'What is the capital of France?'
-    const response = await service.generateResponse(question)
-    
-    expect(response).toBeDefined()
-    expect(typeof response).toBe('string')
-  })
-})
-```
-
-### Debugging with Callbacks
-
-```typescript
-import { ConsoleCallbackHandler } from 'langchain/callbacks'
+import { initializeAgent, AgentType } from "langchain/agents";
+import { ChatOpenAI } from "langchain/chat_models/openai";
+import { Calculator } from "langchain/tools";
+import { SerpAPI } from "langchain/tools";
 
 const llm = new ChatOpenAI({
+  temperature: 0,
   openAIApiKey: process.env.OPENAI_API_KEY,
-  callbacks: [new ConsoleCallbackHandler()]
-})
+});
 
-const response = await llm.call([
-  new HumanMessage("What is the capital of France?")
-])
+const tools = [
+  new Calculator(),
+  new SerpAPI({
+    apiKey: process.env.SERPAPI_API_KEY,
+  }),
+];
+
+const agent = initializeAgent(tools, llm, AgentType.ZERO_SHOT_REACT_DESCRIPTION);
+
+const response = await agent.call({
+  input: "What is 25 * 4, and what's the current weather in Paris?",
+});
+
+console.log(response.output);
 ```
 
-## 🎯 Optimization and Performance
+## 🎯 Best Practices
 
-### Token Management
+### Performance Optimization
 
-```typescript
-import { TokenTextSplitter } from 'langchain/text_splitter'
+1. **Use appropriate models** for your use case
+2. **Implement caching** for repeated queries
+3. **Batch requests** when possible
+4. **Use streaming** for long responses
+5. **Monitor token usage** and costs
 
-const textSplitter = new TokenTextSplitter({
-  chunkSize: 1000,
-  chunkOverlap: 100
-})
-
-const texts = await textSplitter.splitDocuments(documents)
-```
-
-### Embedding Cache
+### Error Handling
 
 ```typescript
-import { CacheBackedEmbeddings } from 'langchain/embeddings/cache_backed'
-import { LocalFileStore } from 'langchain/storage/file_system'
+import { OpenAI } from "langchain/llms/openai";
 
-const store = new LocalFileStore('./cache')
-const embeddings = new CacheBackedEmbeddings(
-  new OpenAIEmbeddings(),
-  store
-)
-```
-
-### Response Streaming
-
-```typescript
-import { ChatOpenAI } from 'langchain/chat_models/openai'
-
-const llm = new ChatOpenAI({
+const llm = new OpenAI({
+  temperature: 0.7,
   openAIApiKey: process.env.OPENAI_API_KEY,
-  streaming: true
-})
+});
 
-const stream = await llm.stream([
-  new HumanMessage("Tell me a story")
-])
-
-for await (const chunk of stream) {
-  console.log(chunk.content)
+try {
+  const response = await llm.predict("Your question here");
+  console.log(response);
+} catch (error) {
+  if (error.message.includes("rate limit")) {
+    console.log("Rate limit exceeded, retrying...");
+    // Implement retry logic
+  } else if (error.message.includes("authentication")) {
+    console.log("Authentication failed");
+    // Handle auth error
+  } else {
+    console.log("Unexpected error:", error.message);
+  }
 }
+```
+
+### Cost Management
+
+```typescript
+import { ChatOpenAI } from "langchain/chat_models/openai";
+
+// Use cheaper models for simple tasks
+const simpleLLM = new ChatOpenAI({
+  modelName: "gpt-3.5-turbo",
+  temperature: 0,
+});
+
+// Use more expensive models for complex tasks
+const complexLLM = new ChatOpenAI({
+  modelName: "gpt-4",
+  temperature: 0.7,
+});
 ```
 
 ## 📚 Resources
 
-### Official Documentation
 - [LangChain.js Documentation](https://js.langchain.com/)
-- [LangChain Python Documentation](https://python.langchain.com/)
-- [LangSmith Documentation](https://docs.smith.langchain.com/)
-
-### Examples and Tutorials
-- [LangChain Examples](https://github.com/langchain-ai/langchain/tree/master/examples)
+- [LangSmith Platform](https://smith.langchain.com/)
 - [LangChain Templates](https://github.com/langchain-ai/langchain/tree/master/templates)
-- [LangChain Community](https://github.com/langchain-ai/langchain/tree/master/libs/community)
-
-### Tools and Integrations
-- [LangSmith](https://smith.langchain.com/) - Debugging and monitoring
-- [LangGraph](https://github.com/langchain-ai/langgraph) - Graph-based workflows
-- [LangServe](https://github.com/langchain-ai/langserve) - LangChain server
+- [LangChain Hub](https://github.com/langchain-ai/langchain/tree/master/langchain)
 
 ---
 

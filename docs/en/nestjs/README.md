@@ -6,19 +6,24 @@
 - [Best Practices](#best-practices)
 - [Design Patterns](#design-patterns)
 - [SOLID Principles](#solid-principles)
-- [Useful Snippets](#useful-snippets)
+- [Modules and Dependency Injection](#modules-and-dependency-injection)
+- [Testing](#testing)
+- [Guards](#guards)
+- [Interceptors](#interceptors)
+- [Pipes](#pipes)
+- [Advanced Snippets](#advanced-snippets)
 - [Resources](#resources)
 
 ## 🚀 Introduction
 
-NestJS is a progressive Node.js framework for building efficient and scalable server applications. It uses TypeScript by default and combines elements of object-oriented programming, functional programming, and reactive programming.
+NestJS is a progressive Node.js framework for building efficient and scalable server-side applications. It uses TypeScript by default and combines elements of object-oriented programming, functional programming, and reactive programming.
 
 ### Key Advantages
 - **Modular Architecture** - Clear and organized structure
-- **Native TypeScript** - Complete support for static typing
+- **Native TypeScript** - Full support for static typing
 - **Decorators** - Elegant and expressive syntax
 - **Dependency Injection** - Automatic dependency management
-- **Microservices ready** - Native microservices support
+- **Microservices Ready** - Native microservices support
 
 ## 🏛️ Hexagonal Architecture
 
@@ -475,7 +480,7 @@ export class UserCreatedHandler implements IEventHandler<UserCreatedEvent> {
     // Send welcome email
     await this.emailService.sendWelcomeEmail(event.email)
     
-    // Track the event
+    // Track event
     await this.analyticsService.trackUserRegistration(event.userId)
   }
 }
@@ -491,7 +496,7 @@ export class UserService {
     const user = new User(this.generateId(), email, name, new Date())
     const savedUser = await this.userRepository.save(user)
     
-    // Publish the event
+    // Publish event
     await this.eventBus.publish(
       new UserCreatedEvent(savedUser.getId(), savedUser.getEmail(), new Date())
     )
@@ -610,7 +615,7 @@ class UserEventHandler {
 ### 2. Open/Closed Principle (OCP)
 
 ```typescript
-// Interface for different types of notifications
+// Interface for different notification types
 interface NotificationStrategy {
   send(message: string, recipient: string): Promise<void>
 }
@@ -634,7 +639,7 @@ class PushNotificationStrategy implements NotificationStrategy {
   }
 }
 
-// Service open to extension, closed to modification
+// Service open for extension, closed for modification
 class NotificationService {
   constructor(private readonly strategies: NotificationStrategy[]) {}
 
@@ -788,7 +793,7 @@ class UserService {
   }
 }
 
-// Dependency injection in the module
+// Dependency injection in module
 @Module({
   providers: [
     UserService,
@@ -805,7 +810,650 @@ class UserService {
 export class UserModule {}
 ```
 
-## 💡 Useful Snippets
+## 🧩 Modules and Dependency Injection
+
+### Modules
+
+```typescript
+// users.module.ts
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersController } from './users.controller';
+import { UsersService } from './users.service';
+import { User } from './entities/user.entity';
+
+@Module({
+  imports: [TypeOrmModule.forFeature([User])],
+  controllers: [UsersController],
+  providers: [UsersService],
+  exports: [UsersService], // Exported to be used in other modules
+})
+export class UsersModule {}
+
+// app.module.ts
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
+import { UsersModule } from './users/users.module';
+
+@Module({
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true, // Available throughout the application
+    }),
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: process.env.DB_HOST,
+      port: parseInt(process.env.DB_PORT),
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
+      entities: [User],
+      synchronize: process.env.NODE_ENV === 'development',
+    }),
+    UsersModule,
+  ],
+})
+export class AppModule {}
+```
+
+### Dependency Injection
+
+```typescript
+// Constructor Injection (recommended)
+@Injectable()
+export class UsersService {
+  constructor(
+    @InjectRepository(User)
+    private readonly userRepository: Repository<User>,
+    @Inject('CONFIG_OPTIONS')
+    private readonly configOptions: ConfigOptions,
+    @Optional() @Inject('CACHE_MANAGER')
+    private readonly cacheManager: Cache,
+  ) {}
+}
+
+// Property Injection
+@Injectable()
+export class UsersService {
+  @InjectRepository(User)
+  private readonly userRepository: Repository<User>;
+}
+
+// Method Injection
+@Injectable()
+export class UsersService {
+  private userRepository: Repository<User>;
+
+  @InjectRepository(User)
+  setUserRepository(repository: Repository<User>) {
+    this.userRepository = repository;
+  }
+}
+```
+
+### Custom Providers
+
+```typescript
+// Factory Provider
+@Module({
+  providers: [
+    {
+      provide: 'DATABASE_CONNECTION',
+      useFactory: async (): Promise<Connection> => {
+        return await createConnection({
+          type: 'postgres',
+          host: process.env.DB_HOST,
+          port: parseInt(process.env.DB_PORT),
+          username: process.env.DB_USERNAME,
+          password: process.env.DB_PASSWORD,
+          database: process.env.DB_DATABASE,
+        });
+      },
+    },
+  ],
+})
+export class DatabaseModule {}
+
+// Value Provider
+@Module({
+  providers: [
+    {
+      provide: 'API_KEY',
+      useValue: process.env.API_KEY,
+    },
+  ],
+})
+export class ConfigModule {}
+
+// Class Provider
+@Module({
+  providers: [
+    {
+      provide: 'UserRepository',
+      useClass: TypeOrmUserRepository,
+    },
+  ],
+})
+export class UsersModule {}
+```
+
+## 🧪 Testing
+
+### Unit Tests
+
+```typescript
+// users.service.spec.ts
+import { Test, TestingModule } from '@nestjs/testing';
+import { getRepositoryToken } from '@nestjs/typeorm';
+import { UsersService } from './users.service';
+import { User } from './entities/user.entity';
+
+describe('UsersService', () => {
+  let service: UsersService;
+  let repository: Repository<User>;
+
+  const mockRepository = {
+    find: jest.fn(),
+    findOne: jest.fn(),
+    save: jest.fn(),
+    update: jest.fn(),
+    delete: jest.fn(),
+  };
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      providers: [
+        UsersService,
+        {
+          provide: getRepositoryToken(User),
+          useValue: mockRepository,
+        },
+      ],
+    }).compile();
+
+    service = module.get<UsersService>(UsersService);
+    repository = module.get<Repository<User>>(getRepositoryToken(User));
+  });
+
+  it('should be defined', () => {
+    expect(service).toBeDefined();
+  });
+
+  describe('findAll', () => {
+    it('should return an array of users', async () => {
+      const users = [{ id: 1, name: 'John', email: 'john@example.com' }];
+      mockRepository.find.mockResolvedValue(users);
+
+      const result = await service.findAll();
+      expect(result).toEqual(users);
+      expect(mockRepository.find).toHaveBeenCalled();
+    });
+  });
+
+  describe('create', () => {
+    it('should create a user', async () => {
+      const createUserDto = { name: 'John', email: 'john@example.com' };
+      const user = { id: 1, ...createUserDto };
+      mockRepository.save.mockResolvedValue(user);
+
+      const result = await service.create(createUserDto);
+      expect(result).toEqual(user);
+      expect(mockRepository.save).toHaveBeenCalledWith(createUserDto);
+    });
+  });
+});
+```
+
+### Integration Tests
+
+```typescript
+// users.e2e-spec.ts
+import { Test, TestingModule } from '@nestjs/testing';
+import { INestApplication } from '@nestjs/common';
+import * as request from 'supertest';
+import { AppModule } from '../src/app.module';
+
+describe('UsersController (e2e)', () => {
+  let app: INestApplication;
+
+  beforeEach(async () => {
+    const moduleFixture: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
+
+    app = moduleFixture.createNestApplication();
+    await app.init();
+  });
+
+  afterEach(async () => {
+    await app.close();
+  });
+
+  it('/users (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/users')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toBeInstanceOf(Array);
+      });
+  });
+
+  it('/users (POST)', () => {
+    const createUserDto = {
+      name: 'John',
+      email: 'john@example.com',
+    };
+
+    return request(app.getHttpServer())
+      .post('/users')
+      .send(createUserDto)
+      .expect(201)
+      .expect((res) => {
+        expect(res.body.name).toBe(createUserDto.name);
+        expect(res.body.email).toBe(createUserDto.email);
+      });
+  });
+});
+```
+
+### Controller Tests
+
+```typescript
+// users.controller.spec.ts
+import { Test, TestingModule } from '@nestjs/testing';
+import { UsersController } from './users.controller';
+import { UsersService } from './users.service';
+
+describe('UsersController', () => {
+  let controller: UsersController;
+  let service: UsersService;
+
+  const mockUsersService = {
+    findAll: jest.fn(),
+    findOne: jest.fn(),
+    create: jest.fn(),
+    update: jest.fn(),
+    remove: jest.fn(),
+  };
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      controllers: [UsersController],
+      providers: [
+        {
+          provide: UsersService,
+          useValue: mockUsersService,
+        },
+      ],
+    }).compile();
+
+    controller = module.get<UsersController>(UsersController);
+    service = module.get<UsersService>(UsersService);
+  });
+
+  it('should be defined', () => {
+    expect(controller).toBeDefined();
+  });
+
+  describe('findAll', () => {
+    it('should return an array of users', async () => {
+      const users = [{ id: 1, name: 'John', email: 'john@example.com' }];
+      mockUsersService.findAll.mockResolvedValue(users);
+
+      const result = await controller.findAll();
+      expect(result).toEqual(users);
+      expect(service.findAll).toHaveBeenCalled();
+    });
+  });
+});
+```
+
+## 🛡️ Guards
+
+### Authentication Guard
+
+```typescript
+// auth.guard.ts
+import { Injectable, CanActivate, ExecutionContext, UnauthorizedException } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
+import { Request } from 'express';
+
+@Injectable()
+export class AuthGuard implements CanActivate {
+  constructor(private readonly jwtService: JwtService) {}
+
+  async canActivate(context: ExecutionContext): Promise<boolean> {
+    const request = context.switchToHttp().getRequest<Request>();
+    const token = this.extractTokenFromHeader(request);
+
+    if (!token) {
+      throw new UnauthorizedException('Token not found');
+    }
+
+    try {
+      const payload = await this.jwtService.verifyAsync(token);
+      request['user'] = payload;
+    } catch {
+      throw new UnauthorizedException('Invalid token');
+    }
+
+    return true;
+  }
+
+  private extractTokenFromHeader(request: Request): string | undefined {
+    const [type, token] = request.headers.authorization?.split(' ') ?? [];
+    return type === 'Bearer' ? token : undefined;
+  }
+}
+```
+
+### Roles Guard
+
+```typescript
+// roles.guard.ts
+import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
+
+@Injectable()
+export class RolesGuard implements CanActivate {
+  constructor(private reflector: Reflector) {}
+
+  canActivate(context: ExecutionContext): boolean {
+    const requiredRoles = this.reflector.getAllAndOverride<string[]>('roles', [
+      context.getHandler(),
+      context.getClass(),
+    ]);
+
+    if (!requiredRoles) {
+      return true;
+    }
+
+    const { user } = context.switchToHttp().getRequest();
+    return requiredRoles.some((role) => user.roles?.includes(role));
+  }
+}
+
+// Roles decorator
+import { SetMetadata } from '@nestjs/common';
+
+export const Roles = (...roles: string[]) => SetMetadata('roles', roles);
+
+// Usage
+@Post()
+@Roles('admin', 'user')
+@UseGuards(AuthGuard, RolesGuard)
+async create(@Body() createUserDto: CreateUserDto) {
+  return this.usersService.create(createUserDto);
+}
+```
+
+### Throttling Guard
+
+```typescript
+// throttler.guard.ts
+import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
+import { ThrottlerGuard } from '@nestjs/throttler';
+
+@Injectable()
+export class CustomThrottlerGuard extends ThrottlerGuard {
+  protected async getTracker(req: Record<string, any>): Promise<string> {
+    return req.user?.id || req.ip;
+  }
+}
+
+// Usage
+@UseGuards(CustomThrottlerGuard)
+@Throttle(10, 60) // 10 requests per minute
+@Get()
+async findAll() {
+  return this.usersService.findAll();
+}
+```
+
+## 🔄 Interceptors
+
+### Logging Interceptor
+
+```typescript
+// logging.interceptor.ts
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler, Logger } from '@nestjs/common';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+
+@Injectable()
+export class LoggingInterceptor implements NestInterceptor {
+  private readonly logger = new Logger(LoggingInterceptor.name);
+
+  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+    const request = context.switchToHttp().getRequest();
+    const { method, url } = request;
+    const now = Date.now();
+
+    return next.handle().pipe(
+      tap(() => {
+        const response = context.switchToHttp().getResponse();
+        const { statusCode } = response;
+        const contentLength = response.get('content-length');
+        
+        this.logger.log(
+          `${method} ${url} ${statusCode} ${contentLength} - ${Date.now() - now}ms`
+        );
+      })
+    );
+  }
+}
+```
+
+### Transform Interceptor
+
+```typescript
+// transform.interceptor.ts
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+export interface Response<T> {
+  data: T;
+  statusCode: number;
+  message: string;
+  timestamp: string;
+}
+
+@Injectable()
+export class TransformInterceptor<T> implements NestInterceptor<T, Response<T>> {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<Response<T>> {
+    const response = context.switchToHttp().getResponse();
+    const statusCode = response.statusCode;
+
+    return next.handle().pipe(
+      map(data => ({
+        data,
+        statusCode,
+        message: 'Success',
+        timestamp: new Date().toISOString(),
+      }))
+    );
+  }
+}
+```
+
+### Cache Interceptor
+
+```typescript
+// cache.interceptor.ts
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';
+import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { Cache } from 'cache-manager';
+import { CACHE_MANAGER, Inject } from '@nestjs/cache-manager';
+
+@Injectable()
+export class CacheInterceptor implements NestInterceptor {
+  constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {}
+
+  async intercept(context: ExecutionContext, next: CallHandler): Promise<Observable<any>> {
+    const request = context.switchToHttp().getRequest();
+    const cacheKey = this.generateCacheKey(request);
+    
+    const cachedData = await this.cacheManager.get(cacheKey);
+    if (cachedData) {
+      return of(cachedData);
+    }
+
+    return next.handle().pipe(
+      tap(async (data) => {
+        await this.cacheManager.set(cacheKey, data, 300); // Cache for 5 minutes
+      })
+    );
+  }
+
+  private generateCacheKey(request: any): string {
+    const { method, url, query } = request;
+    return `${method}:${url}:${JSON.stringify(query)}`;
+  }
+}
+```
+
+### Timeout Interceptor
+
+```typescript
+// timeout.interceptor.ts
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler, RequestTimeoutException } from '@nestjs/common';
+import { Observable, throwError, TimeoutError } from 'rxjs';
+import { timeout, catchError } from 'rxjs/operators';
+
+@Injectable()
+export class TimeoutInterceptor implements NestInterceptor {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+    return next.handle().pipe(
+      timeout(5000), // 5 seconds timeout
+      catchError(err => {
+        if (err instanceof TimeoutError) {
+          return throwError(() => new RequestTimeoutException());
+        }
+        return throwError(() => err);
+      })
+    );
+  }
+}
+```
+
+## 🔧 Pipes
+
+### Custom Validation Pipe
+
+```typescript
+// validation.pipe.ts
+import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
+import { validate } from 'class-validator';
+import { plainToClass } from 'class-transformer';
+
+@Injectable()
+export class CustomValidationPipe implements PipeTransform<any> {
+  async transform(value: any, { metatype }: ArgumentMetadata) {
+    if (!metatype || !this.toValidate(metatype)) {
+      return value;
+    }
+
+    const object = plainToClass(metatype, value);
+    const errors = await validate(object);
+
+    if (errors.length > 0) {
+      const errorMessages = errors.map(error => 
+        Object.values(error.constraints || {}).join(', ')
+      );
+      throw new BadRequestException(errorMessages);
+    }
+
+    return value;
+  }
+
+  private toValidate(metatype: Function): boolean {
+    const types: Function[] = [String, Boolean, Number, Array, Object];
+    return !types.includes(metatype);
+  }
+}
+```
+
+### Transform Pipe
+
+```typescript
+// parse-int.pipe.ts
+import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
+
+@Injectable()
+export class ParseIntPipe implements PipeTransform<string, number> {
+  transform(value: string, metadata: ArgumentMetadata): number {
+    const val = parseInt(value, 10);
+    
+    if (isNaN(val)) {
+      throw new BadRequestException(`Validation failed. "${value}" is not an integer.`);
+    }
+    
+    return val;
+  }
+}
+
+// Usage
+@Get(':id')
+async findOne(@Param('id', ParseIntPipe) id: number) {
+  return this.usersService.findOne(id);
+}
+```
+
+### Date Transform Pipe
+
+```typescript
+// parse-date.pipe.ts
+import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
+
+@Injectable()
+export class ParseDatePipe implements PipeTransform<string, Date> {
+  transform(value: string, metadata: ArgumentMetadata): Date {
+    const date = new Date(value);
+    
+    if (isNaN(date.getTime())) {
+      throw new BadRequestException(`Validation failed. "${value}" is not a valid date.`);
+    }
+    
+    return date;
+  }
+}
+```
+
+### File Validation Pipe
+
+```typescript
+// file-validation.pipe.ts
+import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
+
+@Injectable()
+export class FileValidationPipe implements PipeTransform {
+  constructor(
+    private readonly maxSize: number = 1024 * 1024, // 1MB
+    private readonly allowedTypes: string[] = ['image/jpeg', 'image/png']
+  ) {}
+
+  transform(file: Express.Multer.File, metadata: ArgumentMetadata) {
+    if (!file) {
+      throw new BadRequestException('No file provided');
+    }
+
+    if (file.size > this.maxSize) {
+      throw new BadRequestException(`File size exceeds ${this.maxSize} bytes`);
+    }
+
+    if (!this.allowedTypes.includes(file.mimetype)) {
+      throw new BadRequestException(`File type ${file.mimetype} not allowed`);
+    }
+
+    return file;
+  }
+}
+```
+
+## 💡 Advanced Snippets
 
 ### 1. Logging Interceptor
 
@@ -872,7 +1520,7 @@ export class JwtAuthGuard implements CanActivate {
 }
 ```
 
-### 3. Transformation Pipe
+### 3. Transform Pipe
 
 ```typescript
 // common/pipes/parse-int.pipe.ts
@@ -961,11 +1609,11 @@ export class CacheService {
 
 ## 📚 Complete NestJS Reference
 
-### 🆕 NestJS 2024 Enhancements
+### 🆕 NestJS 2024 Improvements
 
 #### NestJS 10+ - New Features
 ```typescript
-// Enhanced Microservices with gRPC
+// Enhanced microservices with gRPC
 @Controller()
 export class UsersController {
   @GrpcMethod('UsersService', 'FindOne')
@@ -1006,7 +1654,7 @@ export class UsersResolver {
 }
 ```
 
-#### Performance Enhancements
+#### Performance Improvements
 ```typescript
 // Cache with Redis
 @Injectable()
@@ -1315,7 +1963,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 ### 🎯 Controller Decorators
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@Controller** | `@nestjs/common` | Defines a controller | `@Controller('users')` |
 | **@Get** | `@nestjs/common` | GET route | `@Get(':id')` |
 | **@Post** | `@nestjs/common` | POST route | `@Post()` |
@@ -1329,7 +1977,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 ### 🎯 Parameter Decorators
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@Body** | `@nestjs/common` | Request body | `@Body() createUserDto` |
 | **@Param** | `@nestjs/common` | URL parameters | `@Param('id') id: string` |
 | **@Query** | `@nestjs/common` | Query parameters | `@Query() query: FindUsersDto` |
@@ -1339,26 +1987,26 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 | **@Ip** | `@nestjs/common` | IP address | `@Ip() ip: string` |
 | **@Session** | `@nestjs/common` | Session | `@Session() session: any` |
 | **@HostParam** | `@nestjs/common` | Host parameter | `@HostParam('host') host: string` |
-| **@Next** | `@nestjs/common` | next() function | `@Next() next: Function` |
+| **@Next** | `@nestjs/common` | Next function | `@Next() next: Function` |
 
 ### 🎯 Validation Decorators
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@UsePipes** | `@nestjs/common` | Apply pipes | `@UsePipes(ValidationPipe)` |
 | **@UseGuards** | `@nestjs/common` | Apply guards | `@UseGuards(AuthGuard)` |
 | **@UseInterceptors** | `@nestjs/common` | Apply interceptors | `@UseInterceptors(LoggingInterceptor)` |
 | **@UseFilters** | `@nestjs/common` | Apply filters | `@UseFilters(HttpExceptionFilter)` |
 | **@SetMetadata** | `@nestjs/common` | Set metadata | `@SetMetadata('roles', ['admin'])` |
 | **@Render** | `@nestjs/common` | Template rendering | `@Render('index')` |
-| **@Redirect** | `@nestjs/common` | Redirect | `@Redirect('https://example.com')` |
+| **@Redirect** | `@nestjs/common` | Redirection | `@Redirect('https://example.com')` |
 | **@Header** | `@nestjs/common` | Set header | `@Header('Cache-Control', 'no-cache')` |
 | **@HttpCode** | `@nestjs/common` | HTTP status code | `@HttpCode(HttpStatus.OK)` |
 
 ### 🎯 Service Decorators
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@Injectable** | `@nestjs/common` | Injectable service | `@Injectable()` |
 | **@Inject** | `@nestjs/common` | Dependency injection | `@Inject('CONFIG_OPTIONS')` |
 | **@Optional** | `@nestjs/common` | Optional dependency | `@Optional() @Inject('CACHE')` |
@@ -1370,7 +2018,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 ### 🎯 Module Decorators
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@Module** | `@nestjs/common` | Defines a module | `@Module({ imports: [], controllers: [], providers: [] })` |
 | **@Global** | `@nestjs/common` | Global module | `@Global() @Module({})` |
 | **@DynamicModule** | `@nestjs/common` | Dynamic module | `static forRoot(): DynamicModule` |
@@ -1378,7 +2026,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 ### 🎯 Lifecycle Decorators
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **OnModuleInit** | `@nestjs/common` | Module initialization | `implements OnModuleInit` |
 | **OnModuleDestroy** | `@nestjs/common` | Module destruction | `implements OnModuleDestroy` |
 | **OnApplicationBootstrap** | `@nestjs/common` | Application bootstrap | `implements OnApplicationBootstrap` |
@@ -1424,7 +2072,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 | **ExceptionFilter** | `@nestjs/common` | Filter interface | `implements ExceptionFilter` |
 | **HttpExceptionFilter** | Custom | HTTP exception filter | `@UseFilters(HttpExceptionFilter)` |
 | **AllExceptionsFilter** | Custom | All exceptions filter | `@UseFilters(AllExceptionsFilter)` |
-| **ValidationExceptionFilter** | Custom | Validation filter | `@UseFilters(ValidationExceptionFilter)` |
+| **ValidationExceptionFilter** | Custom | Validation exception filter | `@UseFilters(ValidationExceptionFilter)` |
 
 ### 🎯 HTTP Exceptions
 
@@ -1465,7 +2113,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 ### 🎯 Microservices
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@MessagePattern** | `@nestjs/microservices` | Message pattern | `@MessagePattern('user.get')` |
 | **@EventPattern** | `@nestjs/microservices` | Event pattern | `@EventPattern('user.created')` |
 | **@Ctx** | `@nestjs/microservices` | Context | `@Ctx() context: RmqContext` |
@@ -1475,7 +2123,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 ### 🎯 WebSockets
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@WebSocketGateway** | `@nestjs/websockets` | WebSocket gateway | `@WebSocketGateway(3001)` |
 | **@WebSocketServer** | `@nestjs/websockets` | WebSocket server | `@WebSocketServer() server: Server` |
 | **@SubscribeMessage** | `@nestjs/websockets` | Message subscription | `@SubscribeMessage('message')` |
@@ -1485,7 +2133,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 ### 🎯 GraphQL
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@Resolver** | `@nestjs/graphql` | GraphQL resolver | `@Resolver(() => User)` |
 | **@Query** | `@nestjs/graphql` | GraphQL query | `@Query(() => [User])` |
 | **@Mutation** | `@nestjs/graphql` | GraphQL mutation | `@Mutation(() => User)` |
@@ -1496,7 +2144,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 ### 🎯 Cache
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@Cacheable** | `@nestjs/cache-manager` | Cacheable | `@Cacheable('users', 300)` |
 | **@CacheKey** | `@nestjs/cache-manager` | Cache key | `@CacheKey('user')` |
 | **@CacheTTL** | `@nestjs/cache-manager` | Cache TTL | `@CacheTTL(300)` |
@@ -1505,7 +2153,7 @@ export class UsersModule implements OnModuleInit, OnModuleDestroy {
 ### 🎯 File Upload
 
 | Decorator | Import | Description | Example |
-|------------|--------|-------------|---------|
+|-----------|--------|-------------|---------|
 | **@UploadedFile** | `@nestjs/platform-express` | Uploaded file | `@UploadedFile() file: Express.Multer.File` |
 | **@UploadedFiles** | `@nestjs/platform-express` | Uploaded files | `@UploadedFiles() files: Express.Multer.File[]` |
 | **@FileInterceptor** | `@nestjs/platform-express` | File interceptor | `@UseInterceptors(FileInterceptor('file'))` |

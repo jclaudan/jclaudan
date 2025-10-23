@@ -128,6 +128,119 @@ git rebase branche-de-base
 git rebase -i HEAD~3
 ```
 
+#### Merge vs Rebase : Comparaison détaillée
+
+| Aspect | Merge | Rebase |
+|--------|-------|--------|
+| **Historique** | Préserve l'historique complet | Réécrit l'historique linéaire |
+| **Commits** | Crée un commit de merge | Rejoue les commits |
+| **Conflits** | Un seul conflit au point de merge | Conflits potentiels par commit |
+| **Traçabilité** | Facile de voir les branches | Historique linéaire mais perte de contexte |
+| **Sécurité** | Plus sûr sur branches partagées | Risqué sur branches partagées |
+
+#### Quand utiliser Merge
+
+```bash
+# Merge simple
+git checkout main
+git merge feature-branch
+
+# Merge avec stratégie
+git merge -X ours feature-branch    # En cas de conflit, garder nos changements
+git merge -X theirs feature-branch  # En cas de conflit, garder leurs changements
+
+# Merge sans commit automatique
+git merge --no-commit feature-branch
+```
+
+**Avantages :**
+- Préserve l'historique des branches
+- Sécurisé pour les branches partagées
+- Facilite le rollback
+- Traçabilité des features
+
+**Inconvénients :**
+- Historique complexe avec de nombreux merges
+- Commits de merge "polluent" l'historique
+
+#### Quand utiliser Rebase
+
+```bash
+# Rebase simple
+git checkout feature-branch
+git rebase main
+
+# Rebase interactif
+git rebase -i HEAD~3
+
+# Rebase avec stratégie
+git rebase -X ours main
+git rebase -X theirs main
+
+# Rebase avec préservation des merges
+git rebase --preserve-merges main
+```
+
+**Avantages :**
+- Historique linéaire et propre
+- Pas de commits de merge
+- Plus facile à lire l'historique
+- Simulation d'un développement séquentiel
+
+**Inconvénients :**
+- Réécrit l'historique (risqué)
+- Perte du contexte des branches
+- Conflits potentiels multiples
+- Complexe pour les débutants
+
+#### Rebase interactif avancé
+
+```bash
+# Éditer les 3 derniers commits
+git rebase -i HEAD~3
+
+# Options disponibles :
+# pick    : Appliquer le commit
+# reword  : Modifier le message du commit
+# edit    : Modifier le commit
+# squash  : Fusionner avec le commit précédent
+# fixup   : Fusionner sans garder le message
+# drop    : Supprimer le commit
+```
+
+#### Gestion des conflits
+
+```bash
+# Merge conflict
+git status
+# Éditer les fichiers en conflit
+git add fichier-resolu
+git commit
+
+# Rebase conflict
+git status
+# Éditer les fichiers en conflit
+git add fichier-resolu
+git rebase --continue
+
+# Annuler un rebase
+git rebase --abort
+```
+
+#### Bonnes pratiques
+
+**Utiliser Merge quand :**
+- Travailler sur une branche partagée
+- Intégrer une feature complète
+- Vouloir préserver l'historique des branches
+- Collaborer avec d'autres développeurs
+
+**Utiliser Rebase quand :**
+- Nettoyer l'historique avant merge
+- Travailler sur une branche locale
+- Maintenir un historique linéaire
+- Préparer une PR propre
+
 ### Remote
 
 ```bash
@@ -147,6 +260,69 @@ git pull origin main
 git fetch origin
 ```
 
+## Résolution des conflits
+
+### Types de conflits
+
+1. **Conflits de contenu** : Même ligne modifiée différemment
+2. **Conflits d'ajout** : Fichier ajouté dans les deux branches
+3. **Conflits de suppression** : Fichier supprimé dans une branche, modifié dans l'autre
+
+### Processus de résolution
+
+```bash
+# 1. Détecter les conflits
+git status
+
+# 2. Identifier les fichiers en conflit
+git diff --name-only --diff-filter=U
+
+# 3. Éditer les fichiers
+# Résoudre manuellement les marqueurs de conflit :
+# <<<<<<< HEAD
+# Contenu de votre branche
+# =======
+# Contenu de l'autre branche
+# >>>>>>> branch-name
+
+# 4. Marquer comme résolu
+git add fichier-resolu
+
+# 5. Finaliser la résolution
+git commit  # Pour un merge
+git rebase --continue  # Pour un rebase
+```
+
+### Outils de résolution
+
+```bash
+# Ouvrir l'éditeur configuré
+git mergetool
+
+# Configurer un outil externe
+git config --global merge.tool vscode
+git config --global mergetool.vscode.cmd 'code --wait $MERGED'
+
+# Outils populaires
+git config --global merge.tool vimdiff
+git config --global merge.tool meld
+git config --global merge.tool kdiff3
+```
+
+### Stratégies de résolution automatique
+
+```bash
+# Garder notre version
+git checkout --ours fichier-conflit
+
+# Garder leur version
+git checkout --theirs fichier-conflit
+
+# Merge avec stratégie
+git merge -X ours branche-conflit
+git merge -X theirs branche-conflit
+```
+
 ## Workflows courants
 
 ### Git Flow
@@ -162,7 +338,17 @@ release/    # Préparation des releases
 hotfix/     # Corrections urgentes
 ```
 
-### GitHub Flow
+**Avantages :**
+- Structure claire et définie
+- Bon pour les équipes importantes
+- Séparation claire des environnements
+
+**Inconvénients :**
+- Complexité pour les petits projets
+- Beaucoup de branches à maintenir
+- Processus lourd pour les releases
+
+### GitHub Flow (Trunk-based)
 
 ```bash
 # Branche principale
@@ -172,6 +358,23 @@ main
 feature/nom-fonctionnalite
 ```
 
+**Processus :**
+1. Créer une branche depuis `main`
+2. Développer et commiter
+3. Créer une Pull Request
+4. Review et merge dans `main`
+5. Déployer immédiatement
+
+**Avantages :**
+- Simple et rapide
+- Déploiements fréquents
+- Bon pour les équipes agiles
+
+**Inconvénients :**
+- Pas de branche de staging
+- Déploiement direct en production
+- Risqué pour les projets critiques
+
 ### GitLab Flow
 
 ```bash
@@ -180,6 +383,67 @@ main        # Production
 staging     # Tests
 pre-production  # Pré-production
 ```
+
+**Variantes :**
+- **Flow avec environnement** : Branches par environnement
+- **Flow avec release** : Branches de release
+- **Flow avec upstream** : Intégration avec projets upstream
+
+### Trunk-based Development
+
+```bash
+# Branche unique principale
+main
+
+# Branches courtes et éphémères
+feature/feature-name
+bugfix/bug-description
+```
+
+**Caractéristiques :**
+- Branches de courte durée (1-2 jours)
+- Merge fréquent dans `main`
+- Déploiement continu
+- Feature flags pour les fonctionnalités
+
+**Avantages :**
+- Intégration continue
+- Moins de conflits
+- Déploiement rapide
+
+**Inconvénients :**
+- Nécessite une bonne discipline
+- Tests automatisés obligatoires
+- Feature flags complexes
+
+### Comparaison des workflows
+
+| Workflow | Taille équipe | Complexité | Fréquence déploiement | Branches |
+|----------|---------------|------------|----------------------|----------|
+| **Git Flow** | Grande | Élevée | Faible | Nombreuses |
+| **GitHub Flow** | Petite/Moyenne | Faible | Élevée | Peu |
+| **GitLab Flow** | Moyenne/Grande | Moyenne | Moyenne | Modérées |
+| **Trunk-based** | Toute taille | Faible | Très élevée | Minimales |
+
+### Choix du workflow
+
+**Utiliser Git Flow quand :**
+- Équipe importante (>10 développeurs)
+- Projet avec releases planifiées
+- Environnements multiples
+- Besoin de traçabilité stricte
+
+**Utiliser GitHub Flow quand :**
+- Équipe petite/moyenne
+- Déploiements fréquents
+- Développement agile
+- Projet web moderne
+
+**Utiliser Trunk-based quand :**
+- Équipe expérimentée
+- Tests automatisés complets
+- Déploiement continu
+- Feature flags disponibles
 
 ## Commandes avancées
 
@@ -226,6 +490,34 @@ git cherry-pick commit-hash
 
 # Appliquer plusieurs commits
 git cherry-pick commit1 commit2 commit3
+
+# Appliquer une plage de commits
+git cherry-pick commit1..commit3
+
+# Appliquer sans commit automatique
+git cherry-pick --no-commit commit-hash
+
+# Appliquer avec signature
+git cherry-pick -x commit-hash
+```
+
+#### Quand utiliser cherry-pick
+
+- **Correction de bug** : Appliquer un fix d'une branche vers une autre
+- **Feature backport** : Porter une fonctionnalité vers une version antérieure
+- **Réorganisation** : Reconstruire l'historique de manière sélective
+
+#### Gestion des conflits avec cherry-pick
+
+```bash
+# En cas de conflit
+git status
+# Résoudre manuellement les conflits
+git add fichier-conflit
+git cherry-pick --continue
+
+# Annuler un cherry-pick
+git cherry-pick --abort
 ```
 
 ### Reflog

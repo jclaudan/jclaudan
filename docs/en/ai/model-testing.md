@@ -1,682 +1,434 @@
-# 🧪 Models and AI Testing - Complete Guide
+# 🧪 Model Testing - Complete Guide
 
-## 📋 Complete Model and Testing Reference Tables
+## 📋 Complete Model Testing Reference Tables
 
-### 🎯 Language Models
+### 🎯 Testing Types
 
-| Model | Provider | Type | Size | Cost | Performance |
-|-------|----------|------|------|------|-------------|
-| **GPT-4** | OpenAI | Chat | 1.76T | $0.03/1K tokens | Excellent |
-| **GPT-4 Turbo** | OpenAI | Chat | 1.76T | $0.01/1K tokens | Excellent |
-| **GPT-3.5-turbo** | OpenAI | Chat | 175B | $0.002/1K tokens | Very good |
-| **Claude-3 Opus** | Anthropic | Chat | 1.4T | $0.015/1K tokens | Excellent |
-| **Claude-3 Sonnet** | Anthropic | Chat | 1.4T | $0.003/1K tokens | Very good |
-| **Claude-3 Haiku** | Anthropic | Chat | 1.4T | $0.00025/1K tokens | Good |
-| **PaLM-2** | Google | Chat | 540B | $0.0005/1K tokens | Good |
-| **LLaMA-2 70B** | Meta | Completion | 70B | Open source | Good |
-| **LLaMA-2 13B** | Meta | Completion | 13B | Open source | Average |
-| **LLaMA-2 7B** | Meta | Completion | 7B | Open source | Average |
-
-### 🎯 Selection Criteria
-
-| Criteria | Description | Weight | Evaluation |
-|----------|-------------|--------|------------|
-| **Performance** | Quality of responses | 40% | BLEU, ROUGE, Human Eval |
-| **Cost** | Cost per token | 25% | $/1K tokens |
-| **Latency** | Response time | 20% | ms per request |
-| **Availability** | Uptime and reliability | 10% | % availability |
-| **Features** | Tools and capabilities | 5% | Function calling, etc. |
+| Type | Description | Framework | Use Case | Example |
+|------|-------------|-----------|----------|---------|
+| **Unit Tests** | Individual component testing | Jest, Mocha | Function validation | `expect(model.predict("test")).toBe("expected")` |
+| **Integration Tests** | Component interaction testing | Supertest | API testing | `request(app).post("/api/chat").expect(200)` |
+| **E2E Tests** | End-to-end testing | Playwright, Cypress | User workflow testing | `page.click("#send-button")` |
+| **Load Tests** | Performance under load | Artillery, K6 | Scalability testing | `artillery run load-test.yml` |
+| **A/B Tests** | Comparative testing | Custom Framework | Model comparison | `compareModels(modelA, modelB)` |
+| **Regression Tests** | Change impact testing | Jest Snapshot | Version comparison | `expect(output).toMatchSnapshot()` |
 
 ### 🎯 Evaluation Metrics
 
-| Metric | Description | Range | Usage |
-|--------|-------------|-------|-------|
-| **Perplexity** | Confusion measure | 0-∞ | Generation quality |
-| **BLEU Score** | Translation quality | 0-1 | Translation, generation |
-| **ROUGE Score** | Summarization quality | 0-1 | Summarization, Q&A |
-| **Semantic Similarity** | Semantic similarity | 0-1 | Q&A, search |
-| **Human Evaluation** | Human evaluation | 1-5 | General quality |
-| **Accuracy** | Precision | 0-1 | Classification, Q&A |
-| **F1 Score** | F1 Score | 0-1 | Classification |
-| **MRR** | Mean Reciprocal Rank | 0-1 | Search |
-| **NDCG** | Normalized DCG | 0-1 | Ranking |
-| **Cost per Task** | Cost per task | $ | Economics |
+| Metric | Description | Tool | Use Case | Example |
+|--------|-------------|------|----------|---------|
+| **Perplexity** | Model confusion measure | LangChain Evaluator | Language model quality | `evaluator.evaluatePerplexity(model, text)` |
+| **BLEU Score** | Translation quality | BLEU Calculator | Translation tasks | `bleuScore(reference, candidate)` |
+| **ROUGE Score** | Summary quality | ROUGE Calculator | Summarization tasks | `rougeScore(reference, summary)` |
+| **Semantic Similarity** | Semantic similarity | Cosine Similarity | Content similarity | `cosineSimilarity(embedding1, embedding2)` |
+| **Human Evaluation** | Human assessment | A/B Testing | Quality assessment | `humanEvaluation(response1, response2)` |
+| **Cost Analysis** | Token usage analysis | Token Counter | Cost optimization | `tokenCounter.countTokens(prompt)` |
+| **Latency** | Response time | Performance Monitor | Performance testing | `performanceMonitor.measureLatency()` |
 
-### 🎯 Test Types
+### 🎯 Testing Frameworks
 
-| Type | Description | Framework | Usage |
-|------|-------------|-----------|-------|
-| **Unit Tests** | Unit tests | Jest, Mocha | Individual functions |
-| **Integration Tests** | Integration tests | Supertest | Complete flows |
-| **E2E Tests** | End-to-end tests | Playwright, Cypress | User scenarios |
-| **Load Tests** | Load tests | Artillery, K6 | Performance |
-| **A/B Tests** | Comparative tests | Custom | Model comparison |
-| **Regression Tests** | Regression tests | Jest Snapshot | Stability |
-| **Stress Tests** | Stress tests | Custom | Limits |
-| **Security Tests** | Security tests | Custom | Security |
-| **Compliance Tests** | Compliance tests | Custom | Compliance |
-| **Usability Tests** | Usability tests | Custom | User experience |
+| Framework | Description | Best For | Example |
+|-----------|-------------|----------|---------|
+| **Jest** | JavaScript testing framework | Unit testing | `describe("Model", () => { test("should predict", () => {}) })` |
+| **Mocha** | Flexible testing framework | Custom testing | `describe("Model", () => { it("should predict", () => {}) })` |
+| **Playwright** | E2E testing framework | Browser testing | `await page.click("#button")` |
+| **Cypress** | E2E testing framework | User interaction testing | `cy.get("#button").click()` |
+| **Supertest** | HTTP testing library | API testing | `request(app).post("/api").expect(200)` |
+| **Artillery** | Load testing framework | Performance testing | `artillery run load-test.yml` |
+| **K6** | Load testing framework | Scalability testing | `http.post("https://api.example.com")` |
 
-### 🎯 Testing Tools
+### 🎯 Model Comparison
 
-| Tool | Description | Language | Usage |
-|------|-------------|----------|-------|
-| **Jest** | Testing framework | JavaScript | Unit tests |
-| **Mocha** | Testing framework | JavaScript | Unit tests |
-| **Playwright** | E2E tests | JavaScript | Browser tests |
-| **Cypress** | E2E tests | JavaScript | Browser tests |
-| **Artillery** | Load tests | JavaScript | Performance |
-| **K6** | Load tests | JavaScript | Performance |
-| **Supertest** | API tests | JavaScript | API tests |
-| **Puppeteer** | Browser tests | JavaScript | Automated tests |
-| **Selenium** | Browser tests | Multi-language | Automated tests |
-| **Postman** | API tests | GUI | API tests |
+| Aspect | Metric | Tool | Example |
+|--------|--------|------|---------|
+| **Accuracy** | Correct predictions | Custom evaluator | `accuracy = correct / total` |
+| **Precision** | True positives rate | Confusion matrix | `precision = tp / (tp + fp)` |
+| **Recall** | Sensitivity | Confusion matrix | `recall = tp / (tp + fn)` |
+| **F1 Score** | Harmonic mean | Custom calculator | `f1 = 2 * (precision * recall) / (precision + recall)` |
+| **Speed** | Response time | Performance monitor | `speed = endTime - startTime` |
+| **Cost** | Token usage | Token counter | `cost = tokens * pricePerToken` |
 
-### 🎯 Performance Metrics
+## 🚀 Model Testing Implementation Examples
 
-| Metric | Description | Calculation | Usage |
-|--------|-------------|-------------|-------|
-| **Response Time** | Response time | `end_time - start_time` | Performance |
-| **Throughput** | Throughput | `requests_per_second` | Capacity |
-| **Latency** | Latency | `p50, p95, p99` | Performance |
-| **Error Rate** | Error rate | `errors / total_requests` | Reliability |
-| **Success Rate** | Success rate | `successful_requests / total_requests` | Reliability |
-| **CPU Usage** | CPU usage | `current_cpu / max_cpu` | Resources |
-| **Memory Usage** | Memory usage | `current_memory / max_memory` | Resources |
-| **Token Usage** | Token usage | `tokens_per_request` | Cost |
-| **Cost per Request** | Cost per request | `total_cost / requests` | Economics |
-| **Availability** | Availability | `uptime / total_time` | Reliability |
-
-### 🎯 Testing Strategies
-
-| Strategy | Description | Implementation | Usage |
-|----------|-------------|----------------|-------|
-| **Test Pyramid** | Test pyramid | Unit → Integration → E2E | Structure |
-| **TDD** | Test-Driven Development | Red → Green → Refactor | Development |
-| **BDD** | Behavior-Driven Development | Given → When → Then | Behavior |
-| **Property-Based Testing** | Property-based testing | Automatic generation | Robustness |
-| **Mutation Testing** | Mutation testing | Code modification | Quality |
-| **Chaos Engineering** | Chaos engineering | Failure injection | Resilience |
-| **Contract Testing** | Contract testing | API contracts | Integration |
-| **Visual Testing** | Visual testing | Image comparison | UI |
-| **Accessibility Testing** | Accessibility testing | WCAG | Accessibility |
-| **Performance Testing** | Performance testing | Performance metrics | Performance |
-
-### 🎯 Test Environments
-
-| Environment | Description | Usage | Configuration |
-|-------------|-------------|-------|---------------|
-| **Development** | Development | Local tests | Mock, Stub |
-| **Staging** | Pre-production | Integration tests | Test data |
-| **Production** | Production | Live tests | Real data |
-| **Sandbox** | Sandbox | Isolated tests | Isolated environment |
-| **Docker** | Containers | Reproducible tests | Docker images |
-| **Kubernetes** | Orchestration | Distributed tests | K8s clusters |
-| **Cloud** | Cloud | Scalable tests | AWS, GCP, Azure |
-| **Local** | Local | Fast tests | Local machine |
-| **CI/CD** | Continuous integration | Automated tests | Pipeline |
-| **Monitoring** | Monitoring | Continuous tests | Real-time metrics |
-
----
-
-## 🚀 Introduction
-
-Testing and evaluating AI models is essential to ensure the quality, performance, and reliability of artificial intelligence systems. This guide covers best practices for testing and evaluating language models.
-
-## 🎯 Model Selection
-
-### Selection Criteria
+### Unit Testing
 
 ```typescript
-interface ModelSelectionCriteria {
-  performance: number // 0-1
-  cost: number // $ per 1K tokens
-  latency: number // ms
-  availability: number // 0-1
-  features: string[] // Function calling, etc.
-}
+import { ChatOpenAI } from "langchain/chat_models/openai";
+import { PromptTemplate } from "langchain/prompts";
+import { LLMChain } from "langchain/chains";
 
-class ModelSelector {
-  private weights = {
-    performance: 0.4,
-    cost: 0.25,
-    latency: 0.2,
-    availability: 0.1,
-    features: 0.05
-  }
+describe("Language Model Tests", () => {
+  let llm: ChatOpenAI;
+  let chain: LLMChain;
 
-  selectModel(models: Model[], criteria: ModelSelectionCriteria): Model {
-    const scores = models.map(model => this.calculateScore(model, criteria))
-    const bestModelIndex = scores.indexOf(Math.max(...scores))
-    return models[bestModelIndex]
-  }
+  beforeEach(() => {
+    llm = new ChatOpenAI({
+      temperature: 0,
+      openAIApiKey: process.env.OPENAI_API_KEY,
+    });
 
-  private calculateScore(model: Model, criteria: ModelSelectionCriteria): number {
-    const performanceScore = this.normalizeScore(model.performance, 0, 1)
-    const costScore = this.normalizeScore(1 - model.cost, 0, 1)
-    const latencyScore = this.normalizeScore(1 - model.latency, 0, 1)
-    const availabilityScore = model.availability
-    const featuresScore = this.calculateFeaturesScore(model.features, criteria.features)
+    const prompt = PromptTemplate.fromTemplate(`
+      Classify the following text as positive, negative, or neutral:
+      Text: {text}
+      Classification:
+    `);
 
-    return (
-      performanceScore * this.weights.performance +
-      costScore * this.weights.cost +
-      latencyScore * this.weights.latency +
-      availabilityScore * this.weights.availability +
-      featuresScore * this.weights.features
-    )
-  }
+    chain = new LLMChain({
+      llm: llm,
+      prompt: prompt,
+    });
+  });
 
-  private normalizeScore(value: number, min: number, max: number): number {
-    return (value - min) / (max - min)
-  }
+  test("should classify positive text correctly", async () => {
+    const response = await chain.call({
+      text: "I love this product!",
+    });
 
-  private calculateFeaturesScore(modelFeatures: string[], requiredFeatures: string[]): number {
-    const matchingFeatures = modelFeatures.filter(f => requiredFeatures.includes(f))
-    return matchingFeatures.length / requiredFeatures.length
-  }
-}
+    expect(response.text.toLowerCase()).toContain("positive");
+  });
+
+  test("should classify negative text correctly", async () => {
+    const response = await chain.call({
+      text: "This is terrible.",
+    });
+
+    expect(response.text.toLowerCase()).toContain("negative");
+  });
+
+  test("should handle neutral text", async () => {
+    const response = await chain.call({
+      text: "The weather is okay.",
+    });
+
+    expect(response.text.toLowerCase()).toContain("neutral");
+  });
+});
 ```
 
-### Model Comparison
+### Integration Testing
 
 ```typescript
+import request from "supertest";
+import express from "express";
+import { ChatOpenAI } from "langchain/chat_models/openai";
+
+const app = express();
+app.use(express.json());
+
+// Mock API endpoint
+app.post("/api/chat", async (req, res) => {
+  const { message } = req.body;
+  
+  const llm = new ChatOpenAI({
+    temperature: 0,
+    openAIApiKey: process.env.OPENAI_API_KEY,
+  });
+
+  try {
+    const response = await llm.predict(message);
+    res.json({ response });
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+describe("Chat API Integration Tests", () => {
+  test("should respond to chat messages", async () => {
+    const response = await request(app)
+      .post("/api/chat")
+      .send({ message: "Hello, how are you?" })
+      .expect(200);
+
+    expect(response.body.response).toBeDefined();
+    expect(typeof response.body.response).toBe("string");
+  });
+
+  test("should handle empty messages", async () => {
+    const response = await request(app)
+      .post("/api/chat")
+      .send({ message: "" })
+      .expect(400);
+
+    expect(response.body.error).toBeDefined();
+  });
+
+  test("should handle long messages", async () => {
+    const longMessage = "a".repeat(10000);
+    
+    const response = await request(app)
+      .post("/api/chat")
+      .send({ message: longMessage })
+      .expect(200);
+
+    expect(response.body.response).toBeDefined();
+  });
+});
+```
+
+### E2E Testing with Playwright
+
+```typescript
+import { test, expect } from "@playwright/test";
+
+test.describe("Chat Application E2E Tests", () => {
+  test("should send and receive messages", async ({ page }) => {
+    await page.goto("http://localhost:3000");
+
+    // Wait for the chat interface to load
+    await page.waitForSelector("#chat-input");
+
+    // Type a message
+    await page.fill("#chat-input", "Hello, how are you?");
+    
+    // Send the message
+    await page.click("#send-button");
+
+    // Wait for the response
+    await page.waitForSelector("#chat-messages .message:last-child");
+
+    // Check that the message was sent
+    const messages = await page.$$("#chat-messages .message");
+    expect(messages.length).toBeGreaterThan(0);
+
+    // Check that a response was received
+    const lastMessage = await page.textContent("#chat-messages .message:last-child");
+    expect(lastMessage).toBeDefined();
+  });
+
+  test("should handle multiple messages", async ({ page }) => {
+    await page.goto("http://localhost:3000");
+
+    const messages = [
+      "What is the weather like?",
+      "Tell me a joke",
+      "What is 2 + 2?"
+    ];
+
+    for (const message of messages) {
+      await page.fill("#chat-input", message);
+      await page.click("#send-button");
+      await page.waitForSelector("#chat-messages .message:last-child");
+    }
+
+    const messageElements = await page.$$("#chat-messages .message");
+    expect(messageElements.length).toBe(messages.length * 2); // Sent + received
+  });
+});
+```
+
+### Load Testing with Artillery
+
+```yaml
+# load-test.yml
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+    - duration: 120
+      arrivalRate: 20
+    - duration: 60
+      arrivalRate: 10
+
+scenarios:
+  - name: "Chat API Load Test"
+    weight: 100
+    flow:
+      - post:
+          url: "/api/chat"
+          json:
+            message: "Hello, how are you?"
+          capture:
+            - json: "$.response"
+              as: "chatResponse"
+      - think: 2
+```
+
+### Model Comparison Testing
+
+```typescript
+import { ChatOpenAI } from "langchain/chat_models/openai";
+import { ChatAnthropic } from "langchain/chat_models/anthropic";
+
 class ModelComparator {
-  async compareModels(
-    models: Model[],
-    testCases: TestCase[]
-  ): Promise<ComparisonResult> {
-    const results = await Promise.all(
-      models.map(async model => {
-        const modelResults = await this.testModel(model, testCases)
-        return {
-          model: model.name,
-          results: modelResults,
-          metrics: this.calculateMetrics(modelResults)
-        }
-      })
-    )
+  private models: { [key: string]: any } = {};
 
-    return {
-      models: results,
-      bestModel: this.findBestModel(results),
-      summary: this.generateSummary(results)
-    }
+  constructor() {
+    this.models = {
+      "gpt-3.5-turbo": new ChatOpenAI({
+        modelName: "gpt-3.5-turbo",
+        temperature: 0,
+        openAIApiKey: process.env.OPENAI_API_KEY,
+      }),
+      "gpt-4": new ChatOpenAI({
+        modelName: "gpt-4",
+        temperature: 0,
+        openAIApiKey: process.env.OPENAI_API_KEY,
+      }),
+      "claude-3": new ChatAnthropic({
+        modelName: "claude-3-sonnet-20240229",
+        anthropicApiKey: process.env.ANTHROPIC_API_KEY,
+      }),
+    };
   }
 
-  private async testModel(model: Model, testCases: TestCase[]): Promise<ModelResult[]> {
-    const results = []
-    
+  async compareModels(prompt: string) {
+    const results: { [key: string]: any } = {};
+
+    for (const [modelName, model] of Object.entries(this.models)) {
+      const startTime = Date.now();
+      
+      try {
+        const response = await model.predict(prompt);
+        const endTime = Date.now();
+        
+        results[modelName] = {
+          response,
+          latency: endTime - startTime,
+          success: true,
+        };
+      } catch (error) {
+        results[modelName] = {
+          error: error.message,
+          success: false,
+        };
+      }
+    }
+
+    return results;
+  }
+
+  async runBenchmark(testCases: string[]) {
+    const benchmarkResults: { [key: string]: any } = {};
+
     for (const testCase of testCases) {
-      const startTime = Date.now()
-      const response = await model.generate(testCase.input)
-      const endTime = Date.now()
-      
-      results.push({
-        input: testCase.input,
-        expected: testCase.expected,
-        actual: response,
-        latency: endTime - startTime,
-        tokens: this.countTokens(response),
-        cost: this.calculateCost(response, model.costPerToken)
-      })
+      const results = await this.compareModels(testCase);
+      benchmarkResults[testCase] = results;
     }
-    
-    return results
+
+    return benchmarkResults;
+  }
+}
+
+// Usage
+const comparator = new ModelComparator();
+const testCases = [
+  "What is the capital of France?",
+  "Explain quantum computing in simple terms",
+  "Write a short poem about technology",
+];
+
+const results = await comparator.runBenchmark(testCases);
+console.log(JSON.stringify(results, null, 2));
+```
+
+### Performance Testing
+
+```typescript
+import { performance } from "perf_hooks";
+import { ChatOpenAI } from "langchain/chat_models/openai";
+
+class PerformanceMonitor {
+  private llm: ChatOpenAI;
+
+  constructor() {
+    this.llm = new ChatOpenAI({
+      temperature: 0,
+      openAIApiKey: process.env.OPENAI_API_KEY,
+    });
   }
 
-  private calculateMetrics(results: ModelResult[]): ModelMetrics {
-    const latencies = results.map(r => r.latency)
-    const costs = results.map(r => r.cost)
-    const accuracies = results.map(r => this.calculateAccuracy(r.expected, r.actual))
+  async measureLatency(prompt: string, iterations: number = 10) {
+    const latencies: number[] = [];
+
+    for (let i = 0; i < iterations; i++) {
+      const startTime = performance.now();
+      
+      await this.llm.predict(prompt);
+      
+      const endTime = performance.now();
+      latencies.push(endTime - startTime);
+    }
+
+    return {
+      average: latencies.reduce((a, b) => a + b) / latencies.length,
+      min: Math.min(...latencies),
+      max: Math.max(...latencies),
+      median: latencies.sort((a, b) => a - b)[Math.floor(latencies.length / 2)],
+      latencies,
+    };
+  }
+
+  async measureThroughput(prompts: string[]) {
+    const startTime = performance.now();
+    
+    const promises = prompts.map(prompt => this.llm.predict(prompt));
+    await Promise.all(promises);
+    
+    const endTime = performance.now();
+    const totalTime = endTime - startTime;
     
     return {
-      averageLatency: latencies.reduce((a, b) => a + b, 0) / latencies.length,
-      p95Latency: this.percentile(latencies, 95),
-      averageCost: costs.reduce((a, b) => a + b, 0) / costs.length,
-      accuracy: accuracies.reduce((a, b) => a + b, 0) / accuracies.length,
-      totalTokens: results.reduce((sum, r) => sum + r.tokens, 0)
-    }
+      totalTime,
+      throughput: prompts.length / (totalTime / 1000), // requests per second
+      averageTimePerRequest: totalTime / prompts.length,
+    };
   }
 }
+
+// Usage
+const monitor = new PerformanceMonitor();
+
+// Measure latency
+const latencyResults = await monitor.measureLatency("Hello, how are you?", 20);
+console.log("Latency Results:", latencyResults);
+
+// Measure throughput
+const testPrompts = Array(50).fill("What is the weather like?");
+const throughputResults = await monitor.measureThroughput(testPrompts);
+console.log("Throughput Results:", throughputResults);
 ```
 
-## 🎯 Unit Tests
+## 🎯 Best Practices
 
-### Model Tests
+### Test Design
 
-```typescript
-// model.test.ts
-import { describe, it, expect, beforeEach } from '@jest/globals'
-import { ChatOpenAI } from 'langchain/chat_models/openai'
-import { ModelTester } from './model-tester'
+1. **Design comprehensive test cases** covering edge cases
+2. **Use realistic data** for testing
+3. **Implement proper error handling** in tests
+4. **Use appropriate test frameworks** for your use case
+5. **Implement continuous testing** in CI/CD pipelines
 
-describe('Model Tests', () => {
-  let model: ChatOpenAI
-  let tester: ModelTester
+### Performance Testing
 
-  beforeEach(() => {
-    model = new ChatOpenAI({
-      openAIApiKey: process.env.OPENAI_API_KEY,
-      modelName: 'gpt-3.5-turbo',
-      temperature: 0
-    })
-    tester = new ModelTester(model)
-  })
+1. **Test under realistic load** conditions
+2. **Monitor resource usage** during tests
+3. **Implement proper benchmarking** metrics
+4. **Use appropriate load testing tools** for your scale
+5. **Monitor performance regressions** over time
 
-  it('should generate correct responses for classification', async () => {
-    const testCases = [
-      { input: 'I love this product!', expected: 'positive' },
-      { input: 'This is terrible.', expected: 'negative' },
-      { input: 'It is okay.', expected: 'neutral' }
-    ]
+### Quality Assurance
 
-    const results = await tester.testClassification(testCases)
-    
-    expect(results.accuracy).toBeGreaterThan(0.8)
-    expect(results.results.every(r => r.correct)).toBe(true)
-  })
+1. **Implement automated testing** for critical paths
+2. **Use human evaluation** for quality assessment
+3. **Monitor model drift** and performance degradation
+4. **Implement feedback loops** for continuous improvement
+5. **Use A/B testing** for model comparison
 
-  it('should handle edge cases', async () => {
-    const edgeCases = [
-      { input: '', expected: 'error' },
-      { input: 'a'.repeat(10000), expected: 'error' },
-      { input: '!@#$%^&*()', expected: 'neutral' }
-    ]
+### Security Testing
 
-    const results = await tester.testEdgeCases(edgeCases)
-    
-    expect(results.results.every(r => r.handled)).toBe(true)
-  })
-
-  it('should respect temperature settings', async () => {
-    const modelLowTemp = new ChatOpenAI({
-      openAIApiKey: process.env.OPENAI_API_KEY,
-      modelName: 'gpt-3.5-turbo',
-      temperature: 0
-    })
-
-    const modelHighTemp = new ChatOpenAI({
-      openAIApiKey: process.env.OPENAI_API_KEY,
-      modelName: 'gpt-3.5-turbo',
-      temperature: 1
-    })
-
-    const input = 'Write a creative story about a cat'
-    
-    const lowTempResponse = await modelLowTemp.call([new HumanMessage(input)])
-    const highTempResponse = await modelHighTemp.call([new HumanMessage(input)])
-    
-    expect(lowTempResponse.content).not.toBe(highTempResponse.content)
-  })
-})
-```
-
-### Agent Tests
-
-```typescript
-// agent.test.ts
-import { describe, it, expect, beforeEach } from '@jest/globals'
-import { ReActAgent } from './agents/react-agent'
-import { Calculator } from 'langchain/tools'
-
-describe('Agent Tests', () => {
-  let agent: ReActAgent
-
-  beforeEach(() => {
-    const llm = new ChatOpenAI({
-      openAIApiKey: process.env.OPENAI_API_KEY,
-      modelName: 'gpt-3.5-turbo'
-    })
-    
-    const memory = new BufferMemory()
-    const tools = [new Calculator()]
-    
-    agent = new ReActAgent('test-agent', 'Test agent', llm, memory, tools)
-  })
-
-  it('should use tools correctly', async () => {
-    const result = await agent.execute('What is 15 * 3?')
-    
-    expect(result.output).toContain('45')
-    expect(result.actions).toHaveLength(1)
-    expect(result.actions[0].type).toBe('tool_call')
-  })
-
-  it('should maintain conversation context', async () => {
-    await agent.execute('My name is John')
-    const result = await agent.execute('What is my name?')
-    
-    expect(result.output).toContain('John')
-  })
-
-  it('should handle errors gracefully', async () => {
-    const result = await agent.execute('Calculate the square root of -1')
-    
-    expect(result.output).toContain('error')
-    expect(result.state).toBe('completed')
-  })
-})
-```
-
-## 🎯 Integration Tests
-
-### RAG Tests
-
-```typescript
-// rag.test.ts
-import { describe, it, expect, beforeEach } from '@jest/globals'
-import { RAGService } from './rag.service'
-import { Chroma } from 'langchain/vectorstores/chroma'
-import { OpenAIEmbeddings } from 'langchain/embeddings/openai'
-
-describe('RAG Integration Tests', () => {
-  let ragService: RAGService
-  let vectorStore: Chroma
-
-  beforeEach(async () => {
-    const embeddings = new OpenAIEmbeddings()
-    vectorStore = new Chroma(embeddings, { collectionName: 'test' })
-    ragService = new RAGService(vectorStore)
-    
-    // Add test documents
-    await ragService.addDocuments([
-      'Vue.js is a progressive JavaScript framework.',
-      'TypeScript is a typed superset of JavaScript.',
-      'Node.js is a JavaScript runtime built on Chrome\'s V8 engine.'
-    ])
-  })
-
-  it('should retrieve relevant documents', async () => {
-    const results = await ragService.similaritySearch('What is Vue.js?', 3)
-    
-    expect(results).toHaveLength(3)
-    expect(results[0].pageContent).toContain('Vue.js')
-  })
-
-  it('should generate accurate answers', async () => {
-    const answer = await ragService.query('What is Vue.js?')
-    
-    expect(answer).toContain('Vue.js')
-    expect(answer).toContain('framework')
-  })
-
-  it('should handle queries with no relevant context', async () => {
-    const answer = await ragService.query('What is quantum computing?')
-    
-    expect(answer).toContain("don't know")
-  })
-})
-```
-
-### API Tests
-
-```typescript
-// api.test.ts
-import { describe, it, expect, beforeEach } from '@jest/globals'
-import { Test, TestingModule } from '@nestjs/testing'
-import { INestApplication } from '@nestjs/common'
-import * as request from 'supertest'
-import { AppModule } from './app.module'
-
-describe('AI API Tests', () => {
-  let app: INestApplication
-
-  beforeEach(async () => {
-    const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [AppModule]
-    }).compile()
-
-    app = moduleFixture.createNestApplication()
-    await app.init()
-  })
-
-  it('should generate text', async () => {
-    const response = await request(app.getHttpServer())
-      .post('/ai/generate')
-      .send({ prompt: 'Hello, world!' })
-      .expect(200)
-
-    expect(response.body.result).toBeDefined()
-    expect(typeof response.body.result).toBe('string')
-  })
-
-  it('should handle RAG queries', async () => {
-    const response = await request(app.getHttpServer())
-      .post('/rag/query')
-      .send({ question: 'What is Vue.js?' })
-      .expect(200)
-
-    expect(response.body.answer).toBeDefined()
-    expect(typeof response.body.answer).toBe('string')
-  })
-
-  it('should validate input', async () => {
-    const response = await request(app.getHttpServer())
-      .post('/ai/generate')
-      .send({})
-      .expect(400)
-
-    expect(response.body.message).toContain('prompt')
-  })
-})
-```
-
-## 🎯 Performance Tests
-
-### Load Tests
-
-```typescript
-// load.test.ts
-import { test, expect } from '@playwright/test'
-
-test.describe('Load Tests', () => {
-  test('should handle concurrent requests', async ({ page }) => {
-    const promises = []
-    
-    // Simulate 10 concurrent requests
-    for (let i = 0; i < 10; i++) {
-      promises.push(
-        page.request.post('/ai/generate', {
-          data: { prompt: `Test prompt ${i}` }
-        })
-      )
-    }
-    
-    const responses = await Promise.all(promises)
-    
-    // Verify all requests succeeded
-    responses.forEach(response => {
-      expect(response.status()).toBe(200)
-    })
-  })
-
-  test('should maintain response time under load', async ({ page }) => {
-    const startTime = Date.now()
-    
-    const response = await page.request.post('/ai/generate', {
-      data: { prompt: 'Test prompt' }
-    })
-    
-    const endTime = Date.now()
-    const responseTime = endTime - startTime
-    
-    expect(response.status()).toBe(200)
-    expect(responseTime).toBeLessThan(5000) // Less than 5 seconds
-  })
-})
-```
-
-### Stress Tests
-
-```typescript
-// stress.test.ts
-import { test, expect } from '@playwright/test'
-
-test.describe('Stress Tests', () => {
-  test('should handle large inputs', async ({ page }) => {
-    const largeInput = 'a'.repeat(10000)
-    
-    const response = await page.request.post('/ai/generate', {
-      data: { prompt: largeInput }
-    })
-    
-    expect(response.status()).toBe(200)
-  })
-
-  test('should handle rapid requests', async ({ page }) => {
-    const promises = []
-    
-    // Send 100 rapid requests
-    for (let i = 0; i < 100; i++) {
-      promises.push(
-        page.request.post('/ai/generate', {
-          data: { prompt: `Rapid test ${i}` }
-        })
-      )
-    }
-    
-    const responses = await Promise.all(promises)
-    
-    // Verify most requests succeeded
-    const successCount = responses.filter(r => r.status() === 200).length
-    expect(successCount).toBeGreaterThan(90) // At least 90% success
-  })
-})
-```
-
-## 🎯 A/B Tests
-
-### A/B Test Framework
-
-```typescript
-class ABTestFramework {
-  async runABTest(
-    modelA: Model,
-    modelB: Model,
-    testCases: TestCase[],
-    metrics: string[]
-  ): Promise<ABTestResult> {
-    const resultsA = await this.testModel(modelA, testCases)
-    const resultsB = await this.testModel(modelB, testCases)
-    
-    const comparison = this.compareResults(resultsA, resultsB, metrics)
-    
-    return {
-      modelA: { name: modelA.name, results: resultsA },
-      modelB: { name: modelB.name, results: resultsB },
-      comparison,
-      winner: this.determineWinner(comparison)
-    }
-  }
-
-  private compareResults(
-    resultsA: ModelResult[],
-    resultsB: ModelResult[],
-    metrics: string[]
-  ): ComparisonResult {
-    const comparison: ComparisonResult = {}
-    
-    for (const metric of metrics) {
-      const valuesA = resultsA.map(r => r[metric])
-      const valuesB = resultsB.map(r => r[metric])
-      
-      comparison[metric] = {
-        modelA: this.calculateStatistic(valuesA),
-        modelB: this.calculateStatistic(valuesB),
-        difference: this.calculateDifference(valuesA, valuesB),
-        significance: this.calculateSignificance(valuesA, valuesB)
-      }
-    }
-    
-    return comparison
-  }
-
-  private determineWinner(comparison: ComparisonResult): string {
-    const metrics = Object.keys(comparison)
-    let scoreA = 0
-    let scoreB = 0
-    
-    for (const metric of metrics) {
-      const { modelA, modelB } = comparison[metric]
-      
-      if (modelA.value > modelB.value) {
-        scoreA++
-      } else if (modelB.value > modelA.value) {
-        scoreB++
-      }
-    }
-    
-    return scoreA > scoreB ? 'modelA' : 'modelB'
-  }
-}
-```
-
-## 🎯 Monitoring and Observability
-
-### Real-time Metrics
-
-```typescript
-class ModelMonitor {
-  private metrics: Map<string, Metric[]> = new Map()
-  private alerts: Alert[] = []
-
-  recordMetric(metricName: string, value: number, timestamp: Date = new Date()): void {
-    if (!this.metrics.has(metricName)) {
-      this.metrics.set(metricName, [])
-    }
-    
-    this.metrics.get(metricName)!.push({ value, timestamp })
-    
-    // Check alerts
-    this.checkAlerts(metricName, value)
-  }
-
-  getMetric(metricName: string, timeRange: TimeRange): Metric[] {
-    const metrics = this.metrics.get(metricName) || []
-    return metrics.filter(m => 
-      m.timestamp >= timeRange.start && m.timestamp <= timeRange.end
-    )
-  }
-
-  calculateAverage(metricName: string, timeRange: TimeRange): number {
-    const metrics = this.getMetric(metricName, timeRange)
-    if (metrics.length === 0) return 0
-    
-    const sum = metrics.reduce((acc, m) => acc + m.value, 0)
-    return sum / metrics.length
-  }
-
-  private checkAlerts(metricName: string, value: number): void {
-    const relevantAlerts = this.alerts.filter(a => a.metricName === metricName)
-    
-    for (const alert of relevantAlerts) {
-      if (this.evaluateAlert(alert, value)) {
-        this.triggerAlert(alert, value)
-      }
-    }
-  }
-}
-```
+1. **Test for prompt injection** vulnerabilities
+2. **Validate input sanitization** and output filtering
+3. **Test rate limiting** and abuse prevention
+4. **Monitor for inappropriate content** generation
+5. **Implement proper authentication** and authorization testing
 
 ## 📚 Resources
 
-### Official documentation
-- [OpenAI API Documentation](https://platform.openai.com/docs/guides/production-best-practices)
-- [Anthropic Claude Documentation](https://docs.anthropic.com/claude/docs)
-- [LangChain Testing](https://js.langchain.com/docs/guides/testing)
-
-### Tools and frameworks
-- [Jest](https://jestjs.io/) - Testing framework
-- [Playwright](https://playwright.dev/) - E2E tests
-- [Artillery](https://artillery.io/) - Load tests
-- [Prometheus](https://prometheus.io/) - Monitoring
-- [Grafana](https://grafana.com/) - Visualization
-
-### Communities and resources
-- [Testing AI Systems](https://github.com/langchain-ai/langchain/tree/master/templates/rag-evaluation)
-- [AI Testing Best Practices](https://www.promptingguide.ai/techniques/testing)
-- [Model Evaluation](https://openai.com/research/measuring-ai-capabilities)
+- [Jest Testing Framework](https://jestjs.io/)
+- [Playwright E2E Testing](https://playwright.dev/)
+- [Artillery Load Testing](https://artillery.io/)
+- [Model Evaluation Best Practices](https://www.promptingguide.ai/techniques/evaluation)
 
 ---
 

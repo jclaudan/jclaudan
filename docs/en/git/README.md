@@ -128,6 +128,119 @@ git rebase base-branch
 git rebase -i HEAD~3
 ```
 
+#### Merge vs Rebase: Detailed Comparison
+
+| Aspect | Merge | Rebase |
+|--------|-------|--------|
+| **History** | Preserves complete history | Rewrites linear history |
+| **Commits** | Creates a merge commit | Replays commits |
+| **Conflicts** | Single conflict at merge point | Potential conflicts per commit |
+| **Traceability** | Easy to see branches | Linear history but loss of context |
+| **Safety** | Safer on shared branches | Risky on shared branches |
+
+#### When to use Merge
+
+```bash
+# Simple merge
+git checkout main
+git merge feature-branch
+
+# Merge with strategy
+git merge -X ours feature-branch    # In case of conflict, keep our changes
+git merge -X theirs feature-branch  # In case of conflict, keep their changes
+
+# Merge without automatic commit
+git merge --no-commit feature-branch
+```
+
+**Advantages:**
+- Preserves branch history
+- Safe for shared branches
+- Facilitates rollback
+- Feature traceability
+
+**Disadvantages:**
+- Complex history with many merges
+- Merge commits "pollute" history
+
+#### When to use Rebase
+
+```bash
+# Simple rebase
+git checkout feature-branch
+git rebase main
+
+# Interactive rebase
+git rebase -i HEAD~3
+
+# Rebase with strategy
+git rebase -X ours main
+git rebase -X theirs main
+
+# Rebase preserving merges
+git rebase --preserve-merges main
+```
+
+**Advantages:**
+- Linear and clean history
+- No merge commits
+- Easier to read history
+- Simulates sequential development
+
+**Disadvantages:**
+- Rewrites history (risky)
+- Loss of branch context
+- Multiple potential conflicts
+- Complex for beginners
+
+#### Advanced Interactive Rebase
+
+```bash
+# Edit the last 3 commits
+git rebase -i HEAD~3
+
+# Available options:
+# pick    : Apply the commit
+# reword  : Modify the commit message
+# edit    : Modify the commit
+# squash  : Merge with the previous commit
+# fixup   : Merge without keeping the message
+# drop    : Remove the commit
+```
+
+#### Conflict Management
+
+```bash
+# Merge conflict
+git status
+# Edit conflicted files
+git add resolved-file
+git commit
+
+# Rebase conflict
+git status
+# Edit conflicted files
+git add resolved-file
+git rebase --continue
+
+# Abort a rebase
+git rebase --abort
+```
+
+#### Best Practices
+
+**Use Merge when:**
+- Working on a shared branch
+- Integrating a complete feature
+- Want to preserve branch history
+- Collaborating with other developers
+
+**Use Rebase when:**
+- Cleaning history before merge
+- Working on a local branch
+- Maintaining linear history
+- Preparing a clean PR
+
 ### Remote
 
 ```bash
@@ -147,6 +260,69 @@ git pull origin main
 git fetch origin
 ```
 
+## Conflict Resolution
+
+### Types of Conflicts
+
+1. **Content conflicts**: Same line modified differently
+2. **Addition conflicts**: File added in both branches
+3. **Deletion conflicts**: File deleted in one branch, modified in the other
+
+### Resolution Process
+
+```bash
+# 1. Detect conflicts
+git status
+
+# 2. Identify conflicted files
+git diff --name-only --diff-filter=U
+
+# 3. Edit files
+# Manually resolve conflict markers:
+# <<<<<<< HEAD
+# Content from your branch
+# =======
+# Content from other branch
+# >>>>>>> branch-name
+
+# 4. Mark as resolved
+git add resolved-file
+
+# 5. Finalize resolution
+git commit  # For a merge
+git rebase --continue  # For a rebase
+```
+
+### Resolution Tools
+
+```bash
+# Open configured editor
+git mergetool
+
+# Configure external tool
+git config --global merge.tool vscode
+git config --global mergetool.vscode.cmd 'code --wait $MERGED'
+
+# Popular tools
+git config --global merge.tool vimdiff
+git config --global merge.tool meld
+git config --global merge.tool kdiff3
+```
+
+### Automatic Resolution Strategies
+
+```bash
+# Keep our version
+git checkout --ours conflicted-file
+
+# Keep their version
+git checkout --theirs conflicted-file
+
+# Merge with strategy
+git merge -X ours conflicted-branch
+git merge -X theirs conflicted-branch
+```
+
 ## Common Workflows
 
 ### Git Flow
@@ -162,7 +338,17 @@ release/    # Release preparation
 hotfix/     # Urgent fixes
 ```
 
-### GitHub Flow
+**Advantages:**
+- Clear and defined structure
+- Good for large teams
+- Clear separation of environments
+
+**Disadvantages:**
+- Complexity for small projects
+- Many branches to maintain
+- Heavy process for releases
+
+### GitHub Flow (Trunk-based)
 
 ```bash
 # Main branch
@@ -172,6 +358,23 @@ main
 feature/feature-name
 ```
 
+**Process:**
+1. Create a branch from `main`
+2. Develop and commit
+3. Create a Pull Request
+4. Review and merge into `main`
+5. Deploy immediately
+
+**Advantages:**
+- Simple and fast
+- Frequent deployments
+- Good for agile teams
+
+**Disadvantages:**
+- No staging branch
+- Direct deployment to production
+- Risky for critical projects
+
 ### GitLab Flow
 
 ```bash
@@ -180,6 +383,67 @@ main        # Production
 staging     # Tests
 pre-production  # Pre-production
 ```
+
+**Variants:**
+- **Environment flow**: Branches by environment
+- **Release flow**: Release branches
+- **Upstream flow**: Integration with upstream projects
+
+### Trunk-based Development
+
+```bash
+# Single main branch
+main
+
+# Short and ephemeral branches
+feature/feature-name
+bugfix/bug-description
+```
+
+**Characteristics:**
+- Short-lived branches (1-2 days)
+- Frequent merge into `main`
+- Continuous deployment
+- Feature flags for features
+
+**Advantages:**
+- Continuous integration
+- Fewer conflicts
+- Fast deployment
+
+**Disadvantages:**
+- Requires good discipline
+- Mandatory automated tests
+- Complex feature flags
+
+### Workflow Comparison
+
+| Workflow | Team Size | Complexity | Deployment Frequency | Branches |
+|----------|-----------|------------|---------------------|----------|
+| **Git Flow** | Large | High | Low | Many |
+| **GitHub Flow** | Small/Medium | Low | High | Few |
+| **GitLab Flow** | Medium/Large | Medium | Medium | Moderate |
+| **Trunk-based** | Any size | Low | Very High | Minimal |
+
+### Workflow Selection
+
+**Use Git Flow when:**
+- Large team (>10 developers)
+- Project with planned releases
+- Multiple environments
+- Need for strict traceability
+
+**Use GitHub Flow when:**
+- Small/medium team
+- Frequent deployments
+- Agile development
+- Modern web project
+
+**Use Trunk-based when:**
+- Experienced team
+- Complete automated tests
+- Continuous deployment
+- Feature flags available
 
 ## Advanced Commands
 
@@ -226,6 +490,34 @@ git cherry-pick commit-hash
 
 # Apply multiple commits
 git cherry-pick commit1 commit2 commit3
+
+# Apply a range of commits
+git cherry-pick commit1..commit3
+
+# Apply without automatic commit
+git cherry-pick --no-commit commit-hash
+
+# Apply with signature
+git cherry-pick -x commit-hash
+```
+
+#### When to use cherry-pick
+
+- **Bug fix**: Apply a fix from one branch to another
+- **Feature backport**: Port a feature to an earlier version
+- **Reorganization**: Rebuild history selectively
+
+#### Managing conflicts with cherry-pick
+
+```bash
+# In case of conflict
+git status
+# Resolve conflicts manually
+git add conflicted-file
+git cherry-pick --continue
+
+# Abort a cherry-pick
+git cherry-pick --abort
 ```
 
 ### Reflog

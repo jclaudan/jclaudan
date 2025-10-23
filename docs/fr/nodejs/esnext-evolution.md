@@ -778,6 +778,332 @@ async function safeFetchUser(id) {
 
 ---
 
+## 🔍 Concepts Avancés
+
+### ⬆️ Hoisting (Remontée)
+
+Le hoisting est un comportement de JavaScript où les déclarations de variables et de fonctions sont "remontées" au début de leur scope.
+
+#### Hoisting des Variables
+
+```javascript
+// ✅ Bon : Comportement avec var
+console.log(x); // undefined (pas d'erreur)
+var x = 5;
+
+// Équivaut à :
+var x;
+console.log(x); // undefined
+x = 5;
+
+// ❌ Erreur : Comportement avec let/const
+console.log(y); // ReferenceError: Cannot access 'y' before initialization
+let y = 10;
+
+console.log(z); // ReferenceError: Cannot access 'z' before initialization
+const z = 15;
+```
+
+#### Hoisting des Fonctions
+
+```javascript
+// ✅ Fonction déclarée (hoisted)
+console.log(greet("John")); // "Hello, John"
+
+function greet(name) {
+  return "Hello, " + name;
+}
+
+// ❌ Fonction expression (pas hoisted)
+console.log(sayHi("Jane")); // TypeError: sayHi is not a function
+
+var sayHi = function(name) {
+  return "Hi, " + name;
+};
+
+// ❌ Arrow function (pas hoisted)
+console.log(wave("Bob")); // TypeError: wave is not a function
+
+var wave = (name) => {
+  return "Wave to " + name;
+};
+```
+
+#### Temporal Dead Zone (TDZ)
+
+```javascript
+// Zone morte temporelle avec let/const
+function example() {
+  console.log(typeof x); // ReferenceError: Cannot access 'x' before initialization
+  
+  let x = 42;
+  console.log(x); // 42
+}
+
+// Comparaison avec var
+function exampleVar() {
+  console.log(typeof y); // "undefined" (pas d'erreur)
+  
+  var y = 42;
+  console.log(y); // 42
+}
+```
+
+### 🎯 Scoping (Portée des Variables)
+
+#### Function Scope (var)
+
+```javascript
+function example() {
+  if (true) {
+    var x = 10;
+    console.log(x); // 10
+  }
+  console.log(x); // 10 (accessible dans toute la fonction)
+}
+
+// Fonction scope avec boucles
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i); // 3, 3, 3 (problème classique)
+  }, 100);
+}
+```
+
+#### Block Scope (let/const)
+
+```javascript
+function example() {
+  if (true) {
+    let x = 10;
+    const y = 20;
+    console.log(x, y); // 10, 20
+  }
+  console.log(x); // ReferenceError: x is not defined
+  console.log(y); // ReferenceError: y is not defined
+}
+
+// Block scope avec boucles
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i); // 0, 1, 2 (comportement attendu)
+  }, 100);
+}
+```
+
+#### Lexical Scope (Portée Lexicale)
+
+```javascript
+function outer() {
+  const outerVar = "I'm outer";
+  
+  function inner() {
+    const innerVar = "I'm inner";
+    console.log(outerVar); // Accès à la variable externe
+    console.log(innerVar); // Accès à la variable locale
+  }
+  
+  inner();
+}
+
+// Closure avec lexical scope
+function createCounter() {
+  let count = 0;
+  
+  return function() {
+    count++;
+    return count;
+  };
+}
+
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+```
+
+### 📊 Comparaison des Méthodes de Tableau
+
+#### forEach vs map vs reduce
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+
+// forEach - Exécute une fonction pour chaque élément
+// Retourne : undefined
+numbers.forEach(num => {
+  console.log(num * 2); // 2, 4, 6, 8, 10
+});
+
+// map - Transforme chaque élément
+// Retourne : nouveau tableau
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]
+
+// reduce - Réduit le tableau à une valeur unique
+// Retourne : valeur accumulée
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log(sum); // 15
+```
+
+#### filter vs find vs some/every
+
+```javascript
+const users = [
+  { id: 1, name: "John", age: 25, active: true },
+  { id: 2, name: "Jane", age: 30, active: false },
+  { id: 3, name: "Bob", age: 35, active: true }
+];
+
+// filter - Filtre les éléments qui passent le test
+// Retourne : nouveau tableau
+const activeUsers = users.filter(user => user.active);
+console.log(activeUsers); // [{ id: 1, name: "John", age: 25, active: true }, { id: 3, name: "Bob", age: 35, active: true }]
+
+// find - Trouve le premier élément qui passe le test
+// Retourne : élément ou undefined
+const user = users.find(user => user.age > 30);
+console.log(user); // { id: 2, name: "Jane", age: 30, active: false }
+
+// some - Vérifie si au moins un élément passe le test
+// Retourne : boolean
+const hasActiveUser = users.some(user => user.active);
+console.log(hasActiveUser); // true
+
+// every - Vérifie si tous les éléments passent le test
+// Retourne : boolean
+const allAdults = users.every(user => user.age >= 18);
+console.log(allAdults); // true
+```
+
+#### Performance et Cas d'Usage
+
+```javascript
+const largeArray = Array.from({ length: 1000000 }, (_, i) => i);
+
+// Performance : for > forEach > map > filter > reduce
+console.time('for loop');
+for (let i = 0; i < largeArray.length; i++) {
+  largeArray[i] * 2;
+}
+console.timeEnd('for loop'); // ~2ms
+
+console.time('forEach');
+largeArray.forEach(num => num * 2);
+console.timeEnd('forEach'); // ~15ms
+
+console.time('map');
+largeArray.map(num => num * 2);
+console.timeEnd('map'); // ~20ms
+
+// Quand utiliser chaque méthode
+const data = [1, 2, 3, 4, 5];
+
+// forEach - Side effects uniquement
+data.forEach(num => console.log(num));
+
+// map - Transformation de données
+const squared = data.map(num => num * num);
+
+// filter - Sélection de données
+const evenNumbers = data.filter(num => num % 2 === 0);
+
+// reduce - Agrégation de données
+const total = data.reduce((sum, num) => sum + num, 0);
+
+// find - Recherche d'un élément
+const found = data.find(num => num > 3);
+
+// some/every - Tests de condition
+const hasEven = data.some(num => num % 2 === 0);
+const allPositive = data.every(num => num > 0);
+```
+
+### 🔄 Patterns Asynchrones Avancés
+
+#### Gestion d'Erreurs avec Async/Await
+
+```javascript
+// Pattern avec try/catch
+async function fetchUserData(userId) {
+  try {
+    const response = await fetch(`/api/users/${userId}`);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const userData = await response.json();
+    return userData;
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    throw error; // Re-throw pour que l'appelant puisse gérer
+  }
+}
+
+// Pattern avec Promise.allSettled
+async function fetchMultipleUsers(userIds) {
+  const promises = userIds.map(id => fetchUserData(id));
+  const results = await Promise.allSettled(promises);
+  
+  const successful = results
+    .filter(result => result.status === 'fulfilled')
+    .map(result => result.value);
+    
+  const failed = results
+    .filter(result => result.status === 'rejected')
+    .map(result => result.reason);
+    
+  return { successful, failed };
+}
+
+// Pattern avec retry
+async function fetchWithRetry(url, maxRetries = 3) {
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      const response = await fetch(url);
+      return await response.json();
+    } catch (error) {
+      if (i === maxRetries - 1) throw error;
+      
+      // Attendre avant de réessayer
+      await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1)));
+    }
+  }
+}
+```
+
+#### Gestion des Timeouts
+
+```javascript
+// Promise avec timeout
+function fetchWithTimeout(url, timeout = 5000) {
+  return Promise.race([
+    fetch(url),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('Timeout')), timeout)
+    )
+  ]);
+}
+
+// Async/await avec timeout
+async function getDataWithTimeout(url) {
+  try {
+    const response = await fetchWithTimeout(url, 3000);
+    return await response.json();
+  } catch (error) {
+    if (error.message === 'Timeout') {
+      console.log('Request timed out');
+    } else {
+      console.log('Other error:', error);
+    }
+    throw error;
+  }
+}
+```
+
+---
+
 ## ✅ Checklist de migration
 
 ### 🎯 Objectif
