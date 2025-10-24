@@ -79,20 +79,12 @@
 
 ### 🎯 **Cas d'Usage Couverts :**
 
-- **🛒 E-commerce** : Paiements, gestion des stocks, catalogues
-- **🏢 SaaS B2B** : Multi-tenancy, facturation, intégrations
-- **📱 Mobile Backend** : API, notifications push, synchronisation
-- **📄 Plateforme de Contenu** : CMS headless, SEO, performance
-- **💰 Fintech** : Conformité, sécurité renforcée, audit
-- **🚀 Startup MVP** : Rapidité, coûts optimisés, scalabilité
-
-### 🚀 **Démarrage Rapide :**
-
-1. **Identifiez votre contexte** : Consultez les [cas d'usage](./docs/fr/methodology/05-use-cases/)
-2. **Recueillez les besoins** : Suivez le [guide de recueil](./docs/fr/methodology/01-conception/requirements-gathering.md)
-3. **Prenez vos décisions** : Utilisez les [arbres de décision](./docs/fr/methodology/02-decision-trees/)
-4. **Concevez l'architecture** : Consultez les [guides d'architecture](./docs/fr/methodology/03-architecture/)
-5. **Implémentez** : Suivez les [guides d'implémentation](./docs/fr/methodology/04-implementation/)
+- **🛒 [E-commerce](./docs/fr/methodology/05-use-cases/ecommerce.md)** : Paiements, gestion des stocks, catalogues
+- **🏢 [SaaS B2B](./docs/fr/methodology/05-use-cases/saas-b2b.md)** : Multi-tenancy, facturation, intégrations
+- **📱 [Mobile Backend](./docs/fr/methodology/05-use-cases/mobile-backend.md)** : API, notifications push, synchronisation
+- **📄 [Plateforme de Contenu](./docs/fr/methodology/05-use-cases/content-platform.md)** : CMS headless, SEO, performance
+- **💰 [Fintech](./docs/fr/methodology/05-use-cases/fintech.md)** : Conformité, sécurité renforcée, audit
+- **🚀 [Startup MVP](./docs/fr/methodology/05-use-cases/startup-mvp.md)** : Rapidité, coûts optimisés, scalabilité
 
 <div align="center">
 
@@ -293,6 +285,20 @@
 - **Microservices** : [Communication](./docs/fr/architecture/microservices-complete-guide.md#communication), [service discovery](./docs/fr/architecture/microservices-complete-guide.md#service-discovery), [circuit breaker](./docs/fr/architecture/microservices-complete-guide.md#circuit-breaker)
 - **DevOps** : [Docker](./docs/fr/docker/README.md), [Ansible](./docs/fr/devops/ansible.md), [Terraform](./docs/fr/devops/terraform.md), [CI/CD](./docs/fr/devops/gitlab-ci.md)
 - **Monitoring** : [Logs](./docs/fr/nodejs/README.md#logging), [métriques](./docs/fr/nodejs/README.md#metrics), [tracing](./docs/fr/nodejs/README.md#tracing), [alerting](./docs/fr/nodejs/README.md#alerting)
+
+### 🚀 **Démarrage Rapide :**
+
+1. **Identifiez votre contexte** : Consultez les [cas d'usage](./docs/fr/methodology/05-use-cases/)
+2. **Recueillez les besoins** : Suivez le [guide de recueil](./docs/fr/methodology/01-conception/requirements-gathering.md)
+3. **Prenez vos décisions** : Utilisez les [arbres de décision](./docs/fr/methodology/02-decision-trees/)
+4. **Concevez l'architecture** : Consultez les [guides d'architecture](./docs/fr/methodology/03-architecture/)
+5. **Implémentez** : Suivez les [guides d'implémentation](./docs/fr/methodology/04-implementation/)
+
+<div align="center">
+
+[![Commencer maintenant](./docs/fr/methodology/README.md)](./docs/fr/methodology/README.md)
+
+</div>
 
 ---
 
