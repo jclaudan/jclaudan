@@ -9,6 +9,8 @@
 - [NestJS Patterns](#nestjs-patterns)
 - [Patterns Fonctionnels](#patterns-fonctionnels)
 - [Patterns Orientés Objet](#patterns-orientés-objet)
+- [Patterns Classiques (Gang of Four)](#patterns-classiques-gang-of-four)
+- [Génériques TypeScript Avancés](#génériques-typescript-avancés)
 - [Ressources](#ressources)
 
 ## 🚀 Introduction
@@ -634,6 +636,64 @@ bird.fly() // Flying...
 bird.swim() // Swimming...
 bird.walk() // Walking...
 ```
+
+## 🎯 Patterns Classiques (Gang of Four)
+
+### Tableau de Référence Patterns Classiques
+
+| Pattern | Catégorie | Description | Usage | Avantages |
+|---------|-----------|-------------|-------|-----------|
+| **Singleton** | Création | Instance unique | Services, caches | Consistance, performance |
+| **Factory** | Création | Création d'objets | Objets complexes | Flexibilité, extensibilité |
+| **Abstract Factory** | Création | Familles d'objets | Interfaces multi-plateformes | Cohérence, extensibilité |
+| **Builder** | Création | Construction d'objets | Objets complexes | Lisibilité, flexibilité |
+| **Prototype** | Création | Clonage d'objets | Coût de création élevé | Performance, flexibilité |
+| **Object Pool** | Création | Réutilisation d'objets | Ressources coûteuses | Performance, mémoire |
+| **Variadic Functions** | Création | Fonctions flexibles | Paramètres variables | Flexibilité, simplicité |
+| **Adapter** | Structure | Interface commune | Intégrations | Compatibilité, réutilisabilité |
+| **Bridge** | Structure | Séparation abstraction/implémentation | Multi-plateformes | Flexibilité, extensibilité |
+| **Composite** | Structure | Traitement uniforme | Structures hiérarchiques | Simplicité, extensibilité |
+| **Decorator** | Structure | Enrichissement dynamique | Fonctionnalités additionnelles | Modularité, réutilisabilité |
+| **Facade** | Structure | Interface simplifiée | Systèmes complexes | Simplicité, maintenabilité |
+| **Flyweight** | Structure | Partage d'objets | Objets similaires | Performance, mémoire |
+| **Proxy** | Structure | Contrôle d'accès | Validation, cache | Contrôle, sécurité |
+| **Observer** | Comportement | Notification de changements | Événements | Découplage, réactivité |
+| **Strategy** | Comportement | Algorithmes interchangeables | Logique conditionnelle | Extensibilité, testabilité |
+| **Command** | Comportement | Encapsulation d'actions | Undo/Redo, queues | Flexibilité, extensibilité |
+| **State Machine** | Comportement | Gestion d'états | Machines à états | Clarté, maintenabilité |
+| **Template Method** | Comportement | Squelette d'algorithme | Algorithmes similaires | Réutilisabilité, extensibilité |
+| **Chain of Responsibility** | Comportement | Chaîne de traitement | Validation, logging | Découplage, flexibilité |
+| **Mediator** | Comportement | Communication centralisée | Interactions complexes | Découplage, maintenabilité |
+| **Memento** | Comportement | Sauvegarde d'état | Undo/Redo | Récupération, historique |
+| **Iterator** | Comportement | Parcours de collections | Collections | Abstraction, flexibilité |
+| **Visitor** | Comportement | Opérations sur structures | Structures complexes | Extensibilité, séparation |
+| **Reactive Programming** | Comportement | Programmation réactive | Flux de données | Performance, réactivité |
+| **Saga** | Comportement | Transactions distribuées | Microservices | Consistance, résilience |
+| **Sentinel** | Comportement | Valeurs sentinelles | Terminaison, validation | Simplicité, performance |
+
+### Fichiers de Documentation
+
+- **[Patterns de Création](oop-functional/creational-patterns.md)** - Singleton, Factory, Abstract Factory, Builder, Prototype, Object Pool, Variadic Functions
+- **[Patterns de Structure](oop-functional/structural-patterns.md)** - Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
+- **[Patterns de Comportement](oop-functional/behavioral-patterns.md)** - Observer, Strategy, Command, State Machine, Template Method, Chain of Responsibility, Mediator, Memento, Iterator, Visitor, Reactive Programming, Saga, Sentinel
+
+## 🎯 Génériques TypeScript Avancés
+
+### Tableau de Référence Génériques Avancés
+
+| Concept | Description | Usage | Avantages |
+|---------|-------------|-------|-----------|
+| **Génériques de Base** | Paramètres de type | Fonctions, classes, interfaces | Réutilisabilité, type safety |
+| **Contraintes** | Limitation des types | Validation de types | Sécurité, flexibilité |
+| **Types Conditionnels** | Types dépendants | Logique de types | Flexibilité, expressivité |
+| **Types Mappés** | Transformation de types | Utility types | Productivité, réutilisabilité |
+| **Génériques Variadiques** | Types de longueur variable | Tuples, rest parameters | Flexibilité, expressivité |
+| **Contraintes Multiples** | Plusieurs contraintes | Types complexes | Sécurité, expressivité |
+| **Utility Types Personnalisés** | Types utilitaires | Réutilisabilité | Productivité, maintenabilité |
+
+### Fichier de Documentation
+
+- **[Génériques TypeScript Avancés](typescript/generics-advanced.md)** - Génériques de base, contraintes, types conditionnels, types mappés, génériques variadiques, contraintes multiples, utility types personnalisés
 
 ## 📚 Ressources
 

@@ -50,10 +50,15 @@ Ce dossier contient tous les design patterns classiques et les patterns de progr
 
 ## Fichiers
 
-- `creational-patterns.md` - Patterns de création
-- `structural-patterns.md` - Patterns de structure
-- `behavioral-patterns.md` - Patterns de comportement
-- `functional-patterns.md` - Patterns fonctionnels
+### Patterns Classiques (Gang of Four)
+- `creational-patterns.md` - Patterns de création (Singleton, Factory, Builder, Prototype, Abstract Factory, Object Pool, Variadic Functions)
+- `structural-patterns.md` - Patterns de structure (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy)
+- `behavioral-patterns.md` - Patterns de comportement (Observer, Strategy, Command, State Machine, Template Method, Chain of Responsibility, Mediator, Memento, Iterator, Visitor, Reactive Programming, Saga, Sentinel)
+
+### Patterns Fonctionnels
+- `functional-patterns.md` - Patterns fonctionnels (Pure Functions, Higher-Order Functions, Currying, Partial Application, Monads, Functors, Function Composition)
+
+### Patterns Avancés
 - `architecture-patterns.md` - Patterns d'architecture
 - `concurrency-patterns.md` - Patterns de concurrence
 

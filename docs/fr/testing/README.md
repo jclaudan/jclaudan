@@ -8,6 +8,7 @@
 - [⚡ Vitest - Tests Rapides](#-vitest---tests-rapides)
 - [🎭 Playwright - Tests E2E](#-playwright---tests-e2e)
 - [🎯 Cypress - Tests Interactifs](#-cypress---tests-interactifs)
+- [📋 Méthodologies de Développement](#-méthodologies-de-développement)
 - [📚 Ressources](#-ressources)
 
 ---
@@ -133,6 +134,29 @@ Cette section regroupe tous les outils et frameworks de test essentiels pour le 
 ### 📖 Documentation
 - [Guide Complet Cypress](./cypress.md) - Documentation complète avec exemples
 - [Cypress Documentation](https://docs.cypress.io/) - Documentation officielle
+
+---
+
+## 📋 Méthodologies de Développement
+
+**Méthodologies** - Approches et pratiques de développement qui guident la création de logiciels de qualité, du test-driven development au domain-driven design.
+
+### 🎯 Caractéristiques
+- **TDD (Test-Driven Development)** : Développement guidé par les tests
+- **BDD (Behavior-Driven Development)** : Développement guidé par le comportement
+- **DDD (Domain-Driven Design)** : Conception guidée par le domaine
+- **ATDD (Acceptance Test-Driven Development)** : Tests d'acceptation
+- **Property-Based Testing** : Tests basés sur les propriétés
+
+### 🎯 Cas d'usage
+- Développement de nouvelles fonctionnalités
+- Collaboration avec les parties prenantes
+- Modélisation de domaines complexes
+- Validation des exigences
+- Tests exhaustifs et automatisés
+
+### 📖 Documentation
+- [Guide Complet des Méthodologies](./methodologies.md) - TDD, BDD, DDD, ATDD, Property-Based Testing
 
 ---
 
