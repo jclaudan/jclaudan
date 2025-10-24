@@ -1753,6 +1753,12 @@ type Password = Nominal<string, 'Password'>;
 | **Recursive Interface** | `interface I { prop: I }` | Interface récursive | `interface Node { children: Node[] }` |
 | **Recursive Generic** | `type T<U> = U extends infer V ? T<V> : never` | Générique récursif | `type DeepPartial<T> = { [K in keyof T]?: DeepPartial<T[K]> }` |
 
+## 📚 Documentation Disponible
+
+### TypeScript
+
+- **[TypeScript Expert](./typescript-expert.md)** - Guide expert TypeScript (compiler API, transformers, types avancés)
+
 ### 📚 Ressources
 
 ### Documentation officielle

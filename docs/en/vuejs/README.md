@@ -1916,6 +1916,21 @@ app.directive('pin', {
 | **Mode** | `mode="out-in"` | Transition mode | `<transition mode="out-in">` |
 | **Appear** | `appear` | Appear transition | `<transition appear>` |
 
+## 📚 Available Documentation
+
+### Vue.js
+
+- **[Vue 3 npm Modules](./npm-modules.md)** - Complete guide to essential npm modules for Vue 3
+- **[Vue 3 Composition API](./vue3-composition-api-patterns.md)** - Patterns and best practices
+- **[Vue 3 Advanced](./vue3-advanced.md)** - Expert Vue 3 guide (PWA, Performance, Testing, i18n, Security, Monitoring)
+- **[CMS Integration](./cms-integration.md)** - CMS integration with Vue 3
+- **[Pinia](./pinia.md)** - State management with Pinia
+- **[Pinia Advanced](./pinia-advanced.md)** - Expert Pinia guide (Architecture, Plugins, Tests, Performance)
+- **[Vue Router](./vue-router.md)** - Routing with Vue Router
+- **[VueUse](./vueuse.md)** - Vue composable utilities
+- **[Zod](./zod.md)** - TypeScript schema validation
+- **[Zod Advanced](./zod-advanced.md)** - Expert Zod guide (Validation, Transformations, Integration)
+
 ## 📚 Resources
 
 ### Official Documentation

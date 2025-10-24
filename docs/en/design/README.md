@@ -18,9 +18,12 @@ This section groups all essential tools and resources for modern user interface 
 | Category | Tool | Description |
 |----------|------|-------------|
 | **UI/UX Design** | Figma | Online collaborative design tool |
+| **UI/UX Design** | Sketch | Vector design tool for macOS |
 | **Prototyping** | Figma | Creation of interactions and animations |
 | **Design Systems** | Figma | Centralized component management |
+| **Design Systems** | Storybook | Component documentation and development |
 | **Collaboration** | Figma | Real-time team work |
+| **Collaboration** | Storybook | Component sharing and validation |
 
 ### 🎯 Design Workflow
 
@@ -88,7 +91,10 @@ This section groups all essential tools and resources for modern user interface 
 - Innovation and research
 
 ### 📖 Documentation
-- [Complete Figma Guide](./figma.md) - Complete documentation with examples
+- [Complete Figma Guide](./figma.md) - Complete documentation with examples and Vue 3 integration
+- [Storybook for Vue 3](./storybook-vue.md) - Complete Storybook guide with Vue 3
+- [Sketch for Vue 3](./sketch-vue.md) - Sketch guide with Vue 3 and component export
+- [Design Systems Vue 3](./design-systems-vue.md) - Complete design systems guide with Vue 3
 - [Figma Documentation](https://help.figma.com/) - Official documentation
 
 ---

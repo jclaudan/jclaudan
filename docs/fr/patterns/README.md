@@ -695,6 +695,17 @@ bird.walk() // Walking...
 
 - **[Génériques TypeScript Avancés](typescript/generics-advanced.md)** - Génériques de base, contraintes, types conditionnels, types mappés, génériques variadiques, contraintes multiples, utility types personnalisés
 
+## 📚 Documentation Disponible
+
+### Patterns
+
+- **[Patterns Vue 3](./vue3/)** - Patterns Vue 3 Composition API
+- **[Patterns Node.js](./nodejs/)** - Patterns Node.js
+- **[Patterns NestJS](./nestjs/)** - Patterns NestJS
+- **[Patterns TypeScript](./typescript/)** - Patterns TypeScript
+- **[Patterns OOP vs Fonctionnel](./oop-functional/)** - Comparaison des paradigmes
+- **[DTOs et Patterns de Validation](./dto-patterns.md)** - Guide complet des DTOs et validation
+
 ## 📚 Ressources
 
 ### Documentation officielle

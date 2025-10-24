@@ -18,9 +18,12 @@ Cette section regroupe tous les outils et ressources essentiels pour le design d
 | Catégorie | Outil | Description |
 |-----------|-------|-------------|
 | **Design UI/UX** | Figma | Outil de design collaboratif en ligne |
+| **Design UI/UX** | Sketch | Outil de design vectoriel pour macOS |
 | **Prototypage** | Figma | Création d'interactions et animations |
 | **Design Systems** | Figma | Gestion centralisée des composants |
+| **Design Systems** | Storybook | Documentation et développement de composants |
 | **Collaboration** | Figma | Travail en équipe en temps réel |
+| **Collaboration** | Storybook | Partage et validation des composants |
 
 ### 🎯 Workflow de Design
 
@@ -88,7 +91,10 @@ Cette section regroupe tous les outils et ressources essentiels pour le design d
 - Innovation et recherche
 
 ### 📖 Documentation
-- [Guide Complet Figma](./figma.md) - Documentation complète avec exemples
+- [Guide Complet Figma](./figma.md) - Documentation complète avec exemples et intégration Vue 3
+- [Storybook pour Vue 3](./storybook-vue.md) - Guide complet Storybook avec Vue 3
+- [Sketch pour Vue 3](./sketch-vue.md) - Guide Sketch avec Vue 3 et export de composants
+- [Design Systems Vue 3](./design-systems-vue.md) - Guide complet des design systems avec Vue 3
 - [Figma Documentation](https://help.figma.com/) - Documentation officielle
 
 ---

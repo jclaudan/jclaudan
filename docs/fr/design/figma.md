@@ -806,6 +806,510 @@ jobs:
         git push
 ```
 
+## 🎨 Workflow Figma vers Vue 3
+
+### Export de Composants depuis Figma
+
+**1. Préparation des composants** :
+```markdown
+# Étapes de préparation
+
+1. Créer des composants dans Figma
+2. Organiser en variants
+3. Configurer les propriétés
+4. Ajouter les annotations
+5. Exporter les assets
+```
+
+**2. Plugins Figma utiles pour Vue** :
+```markdown
+# Plugins recommandés
+
+- **Figma to Vue** : Export direct vers Vue 3
+- **Figma to Code** : Génération de code
+- **Design Tokens** : Extraction de tokens
+- **Figma to CSS** : Génération de CSS
+- **Figma to HTML** : Export HTML/CSS
+```
+
+**3. Configuration d'export** :
+```typescript
+// Configuration d'export
+const exportConfig = {
+  format: 'vue',
+  framework: 'vue3',
+  styling: 'css-modules',
+  typescript: true,
+  components: {
+    Button: {
+      props: ['variant', 'size', 'disabled'],
+      events: ['click']
+    }
+  }
+}
+```
+
+### Tokens de Design vers CSS/Tailwind
+
+**1. Extraction des tokens** :
+```javascript
+// figma-tokens.js
+// Script pour extraire les tokens depuis Figma
+
+const extractTokens = async (figmaFile) => {
+  const tokens = {
+    colors: {},
+    typography: {},
+    spacing: {},
+    shadows: {}
+  }
+  
+  // Extraction des couleurs
+  const colorStyles = figmaFile.styles.filter(style => 
+    style.styleType === 'FILL'
+  )
+  
+  colorStyles.forEach(style => {
+    tokens.colors[style.name] = {
+      value: style.fills[0].color,
+      type: 'color'
+    }
+  })
+  
+  return tokens
+}
+```
+
+**2. Génération de CSS Variables** :
+```css
+/* design-tokens.css */
+:root {
+  /* Colors from Figma */
+  --color-primary: #3b82f6;
+  --color-secondary: #6b7280;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  
+  /* Typography from Figma */
+  --font-family-primary: 'Inter', sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  
+  /* Spacing from Figma */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+}
+```
+
+**3. Configuration Tailwind** :
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#3b82f6',
+          900: '#1e3a8a'
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif']
+      },
+      spacing: {
+        'xs': '0.25rem',
+        'sm': '0.5rem',
+        'md': '1rem',
+        'lg': '1.5rem'
+      }
+    }
+  }
+}
+```
+
+### Variables CSS depuis Figma
+
+**1. Configuration des variables** :
+```markdown
+# Variables Figma
+
+1. Créer des variables dans Figma
+2. Organiser par catégories
+3. Exporter vers CSS
+4. Intégrer dans Vue 3
+```
+
+**2. Utilisation dans Vue** :
+```vue
+<template>
+  <div class="component">
+    <h1 class="title">Titre</h1>
+    <p class="description">Description</p>
+  </div>
+</template>
+
+<style scoped>
+.component {
+  background-color: var(--color-primary);
+  padding: var(--spacing-md);
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+}
+
+.description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+</style>
+```
+
+## 🔌 Intégration avec Storybook
+
+### Plugin Figma pour Storybook
+
+**1. Installation** :
+```bash
+npm install --save-dev storybook-addon-designs
+```
+
+**2. Configuration** :
+```javascript
+// .storybook/main.js
+module.exports = {
+  addons: [
+    'storybook-addon-designs'
+  ]
+}
+```
+
+**3. Utilisation dans les stories** :
+```typescript
+// Button.stories.ts
+export const WithFigmaDesign: Story = {
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/abc123/Design-System?node-id=1%3A2'
+    }
+  }
+}
+```
+
+### Embed de Designs dans Stories
+
+**1. Designs multiples** :
+```typescript
+// Button.stories.ts
+export const AllVariants: Story = {
+  parameters: {
+    design: {
+      type: 'figma',
+      url: [
+        'https://www.figma.com/file/.../Primary',
+        'https://www.figma.com/file/.../Secondary',
+        'https://www.figma.com/file/.../Danger'
+      ]
+    }
+  }
+}
+```
+
+**2. Comparaison design-code** :
+```typescript
+// Button.stories.ts
+export const DesignComparison: Story = {
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/.../Button',
+      allowFullscreen: true
+    }
+  }
+}
+```
+
+### Workflow de Validation
+
+**1. Processus de review** :
+```markdown
+# Workflow de validation
+
+1. Designer crée le composant dans Figma
+2. Export vers Storybook
+3. Développeur implémente le composant Vue
+4. Comparaison côte à côte dans Storybook
+5. Validation et ajustements
+6. Mise à jour du design system
+```
+
+**2. Documentation des écarts** :
+```typescript
+// Button.stories.ts
+export const DesignNotes: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+          **Écarts avec le design Figma :**
+          - Border radius ajusté de 6px à 8px pour l'accessibilité
+          - Couleur hover ajoutée pour l'interactivité
+          - Focus ring ajouté pour l'accessibilité
+        `
+      }
+    }
+  }
+}
+```
+
+## 🛠️ Figma Dev Mode
+
+### Inspection de Code
+
+**1. Activation du Dev Mode** :
+```markdown
+# Utilisation du Dev Mode
+
+1. Ouvrir le fichier Figma
+2. Cliquer sur "Dev Mode" en haut à droite
+3. Sélectionner un élément
+4. Inspecter les propriétés CSS
+5. Copier le code généré
+```
+
+**2. Propriétés CSS générées** :
+```css
+/* CSS généré par Figma Dev Mode */
+.button {
+  width: 120px;
+  height: 40px;
+  background-color: #3b82f6;
+  border-radius: 8px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+```
+
+### Export de Propriétés CSS
+
+**1. Configuration d'export** :
+```markdown
+# Configuration d'export
+
+1. Sélectionner l'élément
+2. Cliquer sur "Export" dans le Dev Mode
+3. Choisir le format (CSS, React, Vue)
+4. Copier le code généré
+5. Adapter pour Vue 3
+```
+
+**2. Adaptation pour Vue** :
+```vue
+<template>
+  <button :class="buttonClasses" @click="handleClick">
+    <slot>{{ label }}</slot>
+  </button>
+</template>
+
+<script setup lang="ts">
+interface Props {
+  variant?: 'primary' | 'secondary'
+  size?: 'small' | 'medium' | 'large'
+  disabled?: boolean
+  label?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  variant: 'primary',
+  size: 'medium',
+  disabled: false
+})
+
+const buttonClasses = computed(() => [
+  'btn',
+  `btn--${props.variant}`,
+  `btn--${props.size}`,
+  {
+    'btn--disabled': props.disabled
+  }
+])
+</script>
+
+<style scoped>
+.btn {
+  @apply font-semibold border-none cursor-pointer transition-colors;
+}
+
+.btn--primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn--secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+.btn--small {
+  @apply px-3 py-1.5 text-sm rounded-md;
+}
+
+.btn--medium {
+  @apply px-4 py-2 text-base rounded-lg;
+}
+
+.btn--large {
+  @apply px-6 py-3 text-lg rounded-lg;
+}
+
+.btn--disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+</style>
+```
+
+### Variables et Tokens
+
+**1. Extraction des variables** :
+```javascript
+// figma-variables.js
+// Script pour extraire les variables Figma
+
+const extractVariables = async (figmaFile) => {
+  const variables = {
+    colors: {},
+    typography: {},
+    spacing: {},
+    effects: {}
+  }
+  
+  // Extraction des variables de couleur
+  const colorVariables = figmaFile.variables.filter(variable => 
+    variable.resolvedType === 'COLOR'
+  )
+  
+  colorVariables.forEach(variable => {
+    variables.colors[variable.name] = {
+      value: variable.valuesByMode,
+      type: 'color'
+    }
+  })
+  
+  return variables
+}
+```
+
+**2. Génération de tokens** :
+```typescript
+// design-tokens.ts
+export const tokens = {
+  colors: {
+    primary: {
+      50: '#eff6ff',
+      100: '#dbeafe',
+      500: '#3b82f6',
+      900: '#1e3a8a'
+    }
+  },
+  typography: {
+    fontFamily: {
+      primary: 'Inter, system-ui, sans-serif'
+    },
+    fontSize: {
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem'
+    }
+  },
+  spacing: {
+    xs: '0.25rem',
+    sm: '0.5rem',
+    md: '1rem',
+    lg: '1.5rem'
+  }
+}
+```
+
+### Composants et Variants
+
+**1. Mapping des variants** :
+```typescript
+// component-mapping.ts
+// Mapping des variants Figma vers Vue
+
+const mapFigmaVariants = (figmaComponent) => {
+  const variants = {
+    Button: {
+      variant: ['primary', 'secondary', 'ghost', 'danger'],
+      size: ['small', 'medium', 'large'],
+      state: ['default', 'hover', 'active', 'disabled']
+    }
+  }
+  
+  return variants[figmaComponent.name] || {}
+}
+```
+
+**2. Génération de composants** :
+```vue
+<!-- Button.vue généré depuis Figma -->
+<template>
+  <button
+    :class="buttonClasses"
+    :disabled="disabled"
+    @click="handleClick"
+  >
+    <slot>{{ label }}</slot>
+  </button>
+</template>
+
+<script setup lang="ts">
+// Props générées depuis les variants Figma
+interface Props {
+  variant?: 'primary' | 'secondary' | 'ghost' | 'danger'
+  size?: 'small' | 'medium' | 'large'
+  disabled?: boolean
+  label?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  variant: 'primary',
+  size: 'medium',
+  disabled: false
+})
+
+const emit = defineEmits<{
+  click: [event: MouseEvent]
+}>()
+
+const buttonClasses = computed(() => [
+  'btn',
+  `btn--${props.variant}`,
+  `btn--${props.size}`,
+  {
+    'btn--disabled': props.disabled
+  }
+])
+
+const handleClick = (event: MouseEvent) => {
+  if (!props.disabled) {
+    emit('click', event)
+  }
+}
+</script>
+```
+
 ---
 
 ## 📚 Ressources
@@ -814,6 +1318,7 @@ jobs:
 - [Figma Documentation](https://help.figma.com/)
 - [Figma API](https://www.figma.com/developers/api)
 - [Figma Plugin API](https://www.figma.com/plugin-docs/)
+- [Figma Dev Mode](https://www.figma.com/dev-mode/)
 
 ### Outils et plugins
 - [Figma Community](https://www.figma.com/community)
@@ -829,6 +1334,11 @@ jobs:
 - [Figma Integrations](https://www.figma.com/integrations/)
 - [Figma for Developers](https://www.figma.com/developers/)
 - [Figma for Teams](https://www.figma.com/teams/)
+
+### Patterns et bonnes pratiques
+- [Design System Best Practices](https://www.figma.com/blog/design-systems-at-figma/)
+- [Figma to Code Workflows](https://www.figma.com/blog/figma-to-code/)
+- [Dev Mode Best Practices](https://www.figma.com/blog/dev-mode-best-practices/)
 
 ---
 
