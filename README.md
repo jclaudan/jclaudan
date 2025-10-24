@@ -55,44 +55,6 @@
 </table>
 </div>
 
-## 🎯 **Méthodologie Complète de Conception et d'Architecture**
-
-### 🚀 **Guide Complet pour Créer, Implémenter et Architecturer une Stack Technique**
-
-<div align="center">
-
-[![Méthodologie](https://img.shields.io/badge/📋_Méthodologie_Complète-00D4FF?style=for-the-badge&logo=book&logoColor=white)](./docs/fr/methodology/README.md)
-
-**Une méthodologie complète qui vous guide de la conception à l'implémentation d'une stack technique robuste et évolutive.**
-
-</div>
-
-### 📋 **Ce que vous trouverez dans cette méthodologie :**
-
-| Phase | Description | Livrables |
-|-------|-------------|-----------|
-| **🎯 Conception** | Recueil des besoins, analyse et user stories | Documents de spécifications, backlog priorisé |
-| **🌳 Arbres de Décision** | Guides pour choisir paradigme, DB, backend, frontend, infrastructure | Choix techniques justifiés |
-| **🏗️ Architecture** | Conception globale, backend, frontend, base de données | Schémas d'architecture, patterns |
-| **⚙️ Implémentation** | Setup projet, standards, tests, sécurité | Code structuré, tests automatisés |
-| **🎯 Cas d'Usage** | E-commerce, SaaS B2B, Mobile, Content, Fintech, Startup MVP | Architectures adaptées au contexte |
-
-### 🎯 **Cas d'Usage Couverts :**
-
-- **🛒 [E-commerce](./docs/fr/methodology/05-use-cases/ecommerce.md)** : Paiements, gestion des stocks, catalogues
-- **🏢 [SaaS B2B](./docs/fr/methodology/05-use-cases/saas-b2b.md)** : Multi-tenancy, facturation, intégrations
-- **📱 [Mobile Backend](./docs/fr/methodology/05-use-cases/mobile-backend.md)** : API, notifications push, synchronisation
-- **📄 [Plateforme de Contenu](./docs/fr/methodology/05-use-cases/content-platform.md)** : CMS headless, SEO, performance
-- **💰 [Fintech](./docs/fr/methodology/05-use-cases/fintech.md)** : Conformité, sécurité renforcée, audit
-- **🚀 [Startup MVP](./docs/fr/methodology/05-use-cases/startup-mvp.md)** : Rapidité, coûts optimisés, scalabilité
-
-<div align="center">
-
-[![Commencer maintenant](./docs/fr/methodology/README.md)](./docs/fr/methodology/README.md)
-
-</div>
-
-
 <p align="center">
   <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api?username=jclaudan&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide=issues,contribs&bg_color=00000000">
   <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jclaudan&layout=compact&hide_border=true&theme=tokyonight&bg_color=00000000&langs_count=8">
@@ -294,11 +256,45 @@
 4. **Concevez l'architecture** : Consultez les [guides d'architecture](./docs/fr/methodology/03-architecture/)
 5. **Implémentez** : Suivez les [guides d'implémentation](./docs/fr/methodology/04-implementation/)
 
+
+## 🎯 **Méthodologie de Conception et d'Architecture**
+
+### 🚀 **Implémenter et Architecturer une Stack Technique**
+
+<div align="center">
+
+[![Méthodologie](https://img.shields.io/badge/📋_Méthodologie_Complète-00D4FF?style=for-the-badge&logo=book&logoColor=white)](./docs/fr/methodology/README.md)
+
+**Une méthodologie complète qui vous guide de la conception à l'implémentation d'une stack technique robuste et évolutive.**
+
+</div>
+
+### 📋 **Ce que vous trouverez dans cette méthodologie :**
+
+| Phase | Description | Livrables |
+|-------|-------------|-----------|
+| **🎯 Conception** | Recueil des besoins, analyse et user stories | Documents de spécifications, backlog priorisé |
+| **🌳 Arbres de Décision** | Guides pour choisir paradigme, DB, backend, frontend, infrastructure | Choix techniques justifiés |
+| **🏗️ Architecture** | Conception globale, backend, frontend, base de données | Schémas d'architecture, patterns |
+| **⚙️ Implémentation** | Setup projet, standards, tests, sécurité | Code structuré, tests automatisés |
+| **🎯 Cas d'Usage** | E-commerce, SaaS B2B, Mobile, Content, Fintech, Startup MVP | Architectures adaptées au contexte |
+
+### 🎯 **Cas d'Usage Couverts :**
+
+- **🛒 [E-commerce](./docs/fr/methodology/05-use-cases/ecommerce.md)** : Paiements, gestion des stocks, catalogues
+- **🏢 [SaaS B2B](./docs/fr/methodology/05-use-cases/saas-b2b.md)** : Multi-tenancy, facturation, intégrations
+- **📱 [Mobile Backend](./docs/fr/methodology/05-use-cases/mobile-backend.md)** : API, notifications push, synchronisation
+- **📄 [Plateforme de Contenu](./docs/fr/methodology/05-use-cases/content-platform.md)** : CMS headless, SEO, performance
+- **💰 [Fintech](./docs/fr/methodology/05-use-cases/fintech.md)** : Conformité, sécurité renforcée, audit
+- **🚀 [Startup MVP](./docs/fr/methodology/05-use-cases/startup-mvp.md)** : Rapidité, coûts optimisés, scalabilité
+
 <div align="center">
 
 [![Commencer maintenant](./docs/fr/methodology/README.md)](./docs/fr/methodology/README.md)
 
 </div>
+
+
 
 ---
 
