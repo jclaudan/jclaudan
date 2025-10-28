@@ -148,67 +148,15 @@ Ce cas d'usage présente l'architecture complète d'une startup MVP avec stack l
 
 ### 📊 Schéma d'architecture
 
-```mermaid
-graph TD
-    A[Client] --> B[Next.js Frontend]
-    B --> C[NestJS Backend]
-    C --> D[PostgreSQL]
-    C --> E[Redis Cache]
-    C --> F[AWS S3]
-    
-    G[Vercel] --> H[Frontend Deployment]
-    I[Docker] --> J[Backend Deployment]
-    
-    K[GitHub Actions] --> L[CI/CD Pipeline]
-    L --> G
-    L --> I
-    
-    M[Analytics] --> N[Vercel Analytics]
-    O[Monitoring] --> P[Winston Logs]
-    
-    Q[CDN] --> R[CloudFront]
-    R --> B
-    R --> F
-```
+![Diagramme Mermaid](assets/mermaid/startup-mvp-0-fr-methodology-05-use-cases-startup-mvp.png)
 
 ### 🔄 Flux de données
 
 #### Flux de développement
-```mermaid
-sequenceDiagram
-    participant D as Developer
-    participant G as GitHub
-    participant A as GitHub Actions
-    participant V as Vercel
-    participant B as Backend
-    participant DB as Database
-    
-    D->>G: Push code
-    G->>A: Trigger CI/CD
-    A->>A: Run tests
-    A->>V: Deploy frontend
-    A->>B: Deploy backend
-    B->>DB: Run migrations
-    B-->>A: Deployment success
-    A-->>D: Notification
-```
+![Diagramme Mermaid](assets/mermaid/startup-mvp-1-fr-methodology-05-use-cases-startup-mvp.png)
 
 #### Flux de validation
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant F as Frontend
-    participant B as Backend
-    participant A as Analytics
-    participant M as Metrics
-    
-    U->>F: Use feature
-    F->>B: API call
-    B-->>F: Response
-    F->>A: Track event
-    A->>M: Update metrics
-    M-->>F: Analytics data
-```
+![Diagramme Mermaid](assets/mermaid/startup-mvp-2-fr-methodology-05-use-cases-startup-mvp.png)
 
 ---
 

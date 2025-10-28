@@ -143,28 +143,7 @@ Combinaison intelligente de différents types d'architectures.
 **Principe**
 Organisation du système en couches hiérarchiques avec des responsabilités distinctes.
 
-```mermaid
-graph TD
-    A[Présentation] --> B[Métier]
-    B --> C[Données]
-    C --> D[Infrastructure]
-    
-    A --> A1[Controllers]
-    A --> A2[Views]
-    A --> A3[API Routes]
-    
-    B --> B1[Services]
-    B --> B2[Business Logic]
-    B --> B3[Domain Models]
-    
-    C --> C1[Repositories]
-    C --> C2[Data Access]
-    C --> C3[Entities]
-    
-    D --> D1[Database]
-    D --> D2[External APIs]
-    D --> D3[File System]
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-0-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Séparation claire** des responsabilités
@@ -183,28 +162,7 @@ graph TD
 **Principe**
 Isolation du domaine métier avec des ports et adaptateurs pour les interfaces externes.
 
-```mermaid
-graph TD
-    A[Domain Core] --> B[Ports]
-    B --> C[Adapters]
-    
-    A --> A1[Entities]
-    A --> A2[Use Cases]
-    A --> A3[Business Rules]
-    
-    B --> B1[Input Ports]
-    B --> B2[Output Ports]
-    
-    C --> C1[Web Controllers]
-    C --> C2[Database]
-    C --> C3[External APIs]
-    C --> C4[Message Queue]
-    
-    C1 --> B1
-    B2 --> C2
-    B2 --> C3
-    B2 --> C4
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-1-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Isolation** du domaine métier
@@ -223,26 +181,7 @@ graph TD
 **Principe**
 Organisation en cercles concentriques avec dépendances vers l'intérieur.
 
-```mermaid
-graph TD
-    A[Entities] --> B[Use Cases]
-    B --> C[Interface Adapters]
-    C --> D[Frameworks & Drivers]
-    
-    A --> A1[Business Objects]
-    A --> A2[Enterprise Rules]
-    
-    B --> B1[Application Logic]
-    B --> B2[Business Rules]
-    
-    C --> C1[Controllers]
-    C --> C2[Gateways]
-    C --> C3[Presenters]
-    
-    D --> D1[Web]
-    D --> D2[Database]
-    D --> D3[External Interfaces]
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-2-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Indépendance** du framework
@@ -261,29 +200,7 @@ graph TD
 **Principe**
 Conception centrée sur le domaine métier avec modélisation explicite.
 
-```mermaid
-graph TD
-    A[Domain Layer] --> B[Application Layer]
-    B --> C[Infrastructure Layer]
-    C --> D[Presentation Layer]
-    
-    A --> A1[Entities]
-    A --> A2[Value Objects]
-    A --> A3[Domain Services]
-    A --> A4[Aggregates]
-    
-    B --> B1[Use Cases]
-    B --> B2[Application Services]
-    B --> B3[DTOs]
-    
-    C --> C1[Repositories]
-    C --> C2[External Services]
-    C --> C3[Persistence]
-    
-    D --> D1[Controllers]
-    D --> D2[Views]
-    D --> D3[APIs]
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-3-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Modélisation** du domaine métier
@@ -304,18 +221,7 @@ graph TD
 **Principe**
 Communication asynchrone basée sur des événements.
 
-```mermaid
-graph LR
-    A[Service A] --> B[Event Bus]
-    B --> C[Service B]
-    B --> D[Service C]
-    B --> E[Service D]
-    
-    A --> A1[Publishes Events]
-    C --> C1[Subscribes to Events]
-    D --> D1[Subscribes to Events]
-    E --> E1[Subscribes to Events]
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-4-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Découplage** maximal
@@ -334,23 +240,7 @@ graph LR
 **Principe**
 Séparation des opérations de lecture et d'écriture.
 
-```mermaid
-graph TD
-    A[Client] --> B[Command Side]
-    A --> C[Query Side]
-    
-    B --> B1[Commands]
-    B --> B2[Command Handlers]
-    B --> B3[Write Database]
-    
-    C --> C1[Queries]
-    C --> C2[Query Handlers]
-    C --> C3[Read Database]
-    
-    B3 --> D[Event Store]
-    D --> E[Projections]
-    E --> C3
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-5-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Optimisation** des lectures
@@ -375,23 +265,7 @@ graph TD
 **Principe**
 Communication directe avec attente de réponse.
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant A as API Gateway
-    participant S1 as Service 1
-    participant S2 as Service 2
-    participant DB as Database
-    
-    C->>A: Request
-    A->>S1: Process
-    S1->>DB: Query
-    DB-->>S1: Response
-    S1->>S2: Call
-    S2-->>S1: Response
-    S1-->>A: Response
-    A-->>C: Response
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-6-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Simplicité** de gestion
@@ -410,25 +284,7 @@ sequenceDiagram
 **Principe**
 Communication sans attente de réponse immédiate.
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant A as API Gateway
-    participant S1 as Service 1
-    participant Q as Message Queue
-    participant S2 as Service 2
-    participant DB as Database
-    
-    C->>A: Request
-    A->>S1: Process
-    S1->>Q: Publish Event
-    S1-->>A: Response
-    A-->>C: Response
-    
-    Q->>S2: Consume Event
-    S2->>DB: Update
-    DB-->>S2: Response
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-7-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Découplage** des services
@@ -447,19 +303,7 @@ sequenceDiagram
 **Principe**
 Combinaison de flux synchrones et asynchrones selon le contexte.
 
-```mermaid
-graph TD
-    A[Client Request] --> B{Synchronous?}
-    B -->|Yes| C[Direct Call]
-    B -->|No| D[Async Queue]
-    
-    C --> E[Immediate Response]
-    D --> F[Event Processing]
-    F --> G[Callback/Webhook]
-    
-    E --> H[Client]
-    G --> H
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-8-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Optimisation** par contexte
@@ -1453,30 +1297,7 @@ healthCheckService.registerCheck('external-api', async () => {
 
 ### 🏗️ Template d'architecture monolithe
 
-```mermaid
-graph TD
-    A[Client] --> B[Load Balancer]
-    B --> C[Application Server]
-    C --> D[Database]
-    C --> E[Cache]
-    C --> F[File Storage]
-    
-    C --> C1[Controllers]
-    C --> C2[Services]
-    C --> C3[Repositories]
-    C --> C4[Models]
-    
-    D --> D1[User Table]
-    D --> D2[Product Table]
-    D --> D3[Order Table]
-    
-    E --> E1[Session Cache]
-    E --> E2[Query Cache]
-    
-    F --> F1[Images]
-    F --> F2[Documents]
-    F --> F3[Logs]
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-9-fr-methodology-03-architecture-global-architecture.png)
 
 **Structure de dossiers**
 ```
@@ -1493,28 +1314,7 @@ src/
 
 ### 🏗️ Template d'architecture microservices
 
-```mermaid
-graph TD
-    A[Client] --> B[API Gateway]
-    B --> C[User Service]
-    B --> D[Product Service]
-    B --> E[Order Service]
-    B --> F[Payment Service]
-    
-    C --> C1[User Database]
-    D --> D1[Product Database]
-    E --> E1[Order Database]
-    F --> F1[Payment Database]
-    
-    C --> G[Message Queue]
-    D --> G
-    E --> G
-    F --> G
-    
-    G --> H[Event Processor]
-    H --> I[Analytics Service]
-    H --> J[Notification Service]
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-10-fr-methodology-03-architecture-global-architecture.png)
 
 **Structure de dossiers**
 ```
@@ -1539,26 +1339,7 @@ services/
 
 ### 🏗️ Template d'architecture serverless
 
-```mermaid
-graph TD
-    A[Client] --> B[API Gateway]
-    B --> C[Lambda Functions]
-    
-    C --> C1[User Function]
-    C --> C2[Product Function]
-    C --> C3[Order Function]
-    
-    C1 --> D[DynamoDB]
-    C2 --> D
-    C3 --> D
-    
-    C --> E[S3 Storage]
-    C --> F[SQS Queue]
-    C --> G[SNS Topic]
-    
-    F --> H[Background Processor]
-    G --> I[Notification Service]
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-11-fr-methodology-03-architecture-global-architecture.png)
 
 **Structure de dossiers**
 ```
@@ -1579,29 +1360,7 @@ functions/
 
 ### 🏗️ Template d'architecture hybride
 
-```mermaid
-graph TD
-    A[Client] --> B[CDN]
-    B --> C[Load Balancer]
-    C --> D[Monolith Core]
-    C --> E[Microservices]
-    
-    D --> D1[Legacy Features]
-    D --> D2[Core Business Logic]
-    
-    E --> E1[New Features]
-    E --> E2[External Integrations]
-    
-    D --> F[Shared Database]
-    E --> G[Service Databases]
-    
-    D --> H[Message Queue]
-    E --> H
-    
-    H --> I[Event Processing]
-    I --> J[Analytics]
-    I --> K[Notifications]
-```
+![Diagramme Mermaid](assets/mermaid/global-architecture-12-fr-methodology-03-architecture-global-architecture.png)
 
 **Structure de dossiers**
 ```

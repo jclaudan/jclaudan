@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-10-28T23:41:43.552Z",
+  "config": {
+    "docsPath": "C:\\Users\\shinsekai\\workspace\\jclaudan\\docs",
+    "outputPath": "C:\\Users\\shinsekai\\workspace\\jclaudan\\assets\\mermaid",
+    "mermaidCDN": "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js",
+    "imageFormat": "png",
+    "imageScale": 2,
+    "theme": "default"
+  },
+  "processedFiles": 0,
+  "generatedImages": 0,
+  "details": []
+}

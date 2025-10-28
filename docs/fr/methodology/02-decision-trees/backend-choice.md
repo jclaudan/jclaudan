@@ -263,99 +263,11 @@ Le choix du backend est une décision architecturale fondamentale qui détermine
 
 ### 🎯 Arbre principal
 
-```mermaid
-graph TD
-    A[Quelle est la complexité de votre application ?] --> B{Complexité}
-    B -->|Simple| C[Avez-vous besoin de scalabilité ?]
-    B -->|Complexe| D[Avez-vous une grande équipe ?]
-    B -->|Moyenne| E[Considérez une approche HYBRIDE]
-    
-    C -->|NON| F[Monolithe recommandé]
-    C -->|OUI| G[Avez-vous besoin de performance ?]
-    
-    D -->|OUI| H[Microservices recommandés]
-    D -->|NON| I[Avez-vous besoin de scalabilité ?]
-    
-    G -->|NON| J[Serverless recommandé]
-    G -->|OUI| K[JAMstack recommandé]
-    
-    I -->|OUI| L[Microservices recommandés]
-    I -->|NON| M[Monolithe recommandé]
-    
-    F --> N[Express/NestJS]
-    M --> N
-    
-    H --> O[NestJS/FastAPI]
-    L --> O
-    
-    J --> P[AWS Lambda/Vercel]
-    K --> Q[Next.js/Nuxt.js]
-    
-    E --> R[Architecture hybride]
-```
+![Diagramme Mermaid](assets/mermaid/backend-choice-0-fr-methodology-02-decision-trees-backend-choice.png)
 
 ### 🔍 Arbre détaillé
 
-```mermaid
-graph TD
-    A[Analyse du projet] --> B{Type d'application}
-    
-    B -->|Simple| C{Équipe petite ?}
-    B -->|Complexe| D{Équipe grande ?}
-    B -->|Événementielle| E{Charge variable ?}
-    B -->|Statique| F{Performance critique ?}
-    B -->|Globale| G{Latence critique ?}
-    
-    C -->|OUI| H[Monolithe recommandé]
-    C -->|NON| I{Performance requise ?}
-    
-    D -->|OUI| J[Microservices recommandés]
-    D -->|NON| K{Complexité technique ?}
-    
-    E -->|OUI| L[Serverless recommandé]
-    E -->|NON| M{Maintenance simple ?}
-    
-    F -->|OUI| N[JAMstack recommandé]
-    F -->|NON| O{Coût réduit ?}
-    
-    G -->|OUI| P[Edge Computing recommandé]
-    G -->|NON| Q{Distribution mondiale ?}
-    
-    I -->|OUI| R[JAMstack recommandé]
-    I -->|NON| S[Monolithe recommandé]
-    
-    K -->|OUI| T[Microservices recommandés]
-    K -->|NON| U[Monolithe recommandé]
-    
-    M -->|OUI| V[Monolithe recommandé]
-    M -->|NON| W[Microservices recommandés]
-    
-    O -->|OUI| X[JAMstack recommandé]
-    O -->|NON| Y[Monolithe recommandé]
-    
-    Q -->|OUI| Z[Edge Computing recommandé]
-    Q -->|NON| AA[Serverless recommandé]
-    
-    H --> BB[Validation des contraintes]
-    J --> BB
-    L --> BB
-    N --> BB
-    P --> BB
-    R --> BB
-    S --> BB
-    T --> BB
-    U --> BB
-    V --> BB
-    W --> BB
-    X --> BB
-    Y --> BB
-    Z --> BB
-    AA --> BB
-    
-    BB --> CC{Contraintes respectées ?}
-    CC -->|OUI| DD[Choix validé]
-    CC -->|NON| EE[Reconsidérer le choix]
-```
+![Diagramme Mermaid](assets/mermaid/backend-choice-1-fr-methodology-02-decision-trees-backend-choice.png)
 
 ### 📋 Tableau de décision détaillé
 

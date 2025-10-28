@@ -147,79 +147,15 @@ Ce cas d'usage présente l'architecture complète d'un backend mobile avec API R
 
 ### 📊 Schéma d'architecture
 
-```mermaid
-graph TD
-    A[Mobile App] --> B[API Gateway]
-    B --> C[Auth Service]
-    B --> D[User Service]
-    B --> E[Notification Service]
-    B --> F[Data Sync Service]
-    B --> G[Analytics Service]
-    
-    C --> H[PostgreSQL Auth]
-    D --> I[PostgreSQL Users]
-    E --> J[PostgreSQL Notifications]
-    F --> K[PostgreSQL Data]
-    G --> L[PostgreSQL Analytics]
-    
-    C --> M[Redis Cache]
-    D --> M
-    E --> M
-    F --> M
-    G --> M
-    
-    E --> N[Firebase FCM]
-    E --> O[Apple APNs]
-    
-    F --> P[RabbitMQ]
-    G --> P
-    
-    Q[Admin Dashboard] --> B
-    R[Monitoring] --> S[Prometheus]
-    R --> T[Grafana]
-    R --> U[ELK Stack]
-```
+![Diagramme Mermaid](assets/mermaid/mobile-backend-0-fr-methodology-05-use-cases-mobile-backend.png)
 
 ### 🔄 Flux de données
 
 #### Flux d'authentification
-```mermaid
-sequenceDiagram
-    participant M as Mobile App
-    participant G as API Gateway
-    participant A as Auth Service
-    participant DB as Database
-    participant R as Redis
-    
-    M->>G: Login request
-    G->>A: Authenticate user
-    A->>DB: Verify credentials
-    DB-->>A: User found
-    A->>A: Generate JWT
-    A->>R: Store session
-    A-->>G: JWT token
-    G-->>M: Authentication success
-```
+![Diagramme Mermaid](assets/mermaid/mobile-backend-1-fr-methodology-05-use-cases-mobile-backend.png)
 
 #### Flux de notification push
-```mermaid
-sequenceDiagram
-    participant A as Admin
-    participant G as API Gateway
-    participant N as Notification Service
-    participant F as Firebase FCM
-    participant M as Mobile App
-    
-    A->>G: Send notification
-    G->>N: Create notification
-    N->>N: Prepare message
-    N->>F: Send push notification
-    F-->>M: Push notification
-    M-->>F: Delivery confirmation
-    F-->>N: Delivery status
-    N-->>G: Notification sent
-    G-->>A: Success response
-```
+![Diagramme Mermaid](assets/mermaid/mobile-backend-2-fr-methodology-05-use-cases-mobile-backend.png)
 
 ---
 

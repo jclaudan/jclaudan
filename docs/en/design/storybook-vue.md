@@ -31,14 +31,7 @@ Storybook is a workshop for developing UI components in isolation. It allows you
 
 ### 🎯 Storybook Workflow
 
-```mermaid
-graph LR
-    A[Vue Component] --> B[Story]
-    B --> C[Storybook]
-    C --> D[Documentation]
-    C --> E[Testing]
-    C --> F[Design Review]
-```
+![Diagramme Mermaid](assets/mermaid/storybook-vue-0-en-design-storybook-vue.png)
 
 ---
 

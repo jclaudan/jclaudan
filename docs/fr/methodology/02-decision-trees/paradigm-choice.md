@@ -146,70 +146,11 @@ Le choix entre la Programmation Orientée Objet (POO) et la Programmation Foncti
 
 ### 🎯 Arbre principal
 
-```mermaid
-graph TD
-    A[Votre projet a-t-il besoin de gestion d'état complexe ?] --> B{État complexe}
-    B -->|OUI| C[L'état change-t-il fréquemment ?]
-    B -->|NON| D[Avez-vous besoin de parallélisme ?]
-    B -->|MIXTE| E[Utilisez une APPROCHE HYBRIDE]
-    
-    C -->|OUI| F[POO avec état mutable encapsulé]
-    C -->|NON| G[PF avec état immutable]
-    
-    D -->|OUI| H[PF pour calculs parallèles]
-    D -->|NON| I[POO pour logique métier complexe]
-    
-    F --> J[Architecture POO]
-    G --> K[Architecture PF]
-    H --> L[Architecture PF]
-    I --> M[Architecture POO]
-    E --> N[Architecture Hybride]
-```
+![Diagramme Mermaid](assets/mermaid/paradigm-choice-0-fr-methodology-02-decision-trees-paradigm-choice.png)
 
 ### 🔍 Arbre détaillé
 
-```mermaid
-graph TD
-    A[Analyse du projet] --> B{Type de projet}
-    
-    B -->|Système de gestion| C{État complexe ?}
-    B -->|Traitement de données| D{Parallélisme requis ?}
-    B -->|Application métier| E{Modèle métier riche ?}
-    B -->|Calculs scientifiques| F[PF recommandée]
-    
-    C -->|OUI| G{État mutable ?}
-    C -->|NON| H[PF recommandée]
-    
-    D -->|OUI| I[PF recommandée]
-    D -->|NON| J{Complexité logique ?}
-    
-    E -->|OUI| K[POO recommandée]
-    E -->|NON| L{Parallélisme requis ?}
-    
-    G -->|OUI| M[POO recommandée]
-    G -->|NON| N[PF recommandée]
-    
-    J -->|OUI| O[POO recommandée]
-    J -->|NON| P[PF recommandée]
-    
-    L -->|OUI| Q[PF recommandée]
-    L -->|NON| R[POO recommandée]
-    
-    F --> S[Validation des contraintes]
-    H --> S
-    I --> S
-    K --> S
-    M --> S
-    N --> S
-    O --> S
-    P --> S
-    Q --> S
-    R --> S
-    
-    S --> T{Contraintes respectées ?}
-    T -->|OUI| U[Choix validé]
-    T -->|NON| V[Reconsidérer le choix]
-```
+![Diagramme Mermaid](assets/mermaid/paradigm-choice-1-fr-methodology-02-decision-trees-paradigm-choice.png)
 
 ### 📋 Tableau de décision détaillé
 

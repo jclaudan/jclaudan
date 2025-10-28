@@ -29,30 +29,7 @@ A design system is a collection of reusable components, rules, and tools that en
 
 ### 🎯 Design System Architecture
 
-```mermaid
-graph TB
-    A[Design System] --> B[Foundation]
-    A --> C[Components]
-    A --> D[Patterns]
-    A --> E[Documentation]
-    
-    B --> B1[Colors]
-    B --> B2[Typography]
-    B --> B3[Spacing]
-    B --> B4[Icons]
-    
-    C --> C1[Atoms]
-    C --> C2[Molecules]
-    C --> C3[Organisms]
-    
-    D --> D1[Layouts]
-    D --> D2[Templates]
-    D --> D3[Pages]
-    
-    E --> E1[Storybook]
-    E --> E2[Guidelines]
-    E --> E3[Examples]
-```
+![Diagramme Mermaid](assets/mermaid/design-systems-vue-0-en-design-design-systems-vue.png)
 
 ---
 

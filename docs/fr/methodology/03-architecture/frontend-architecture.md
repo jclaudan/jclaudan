@@ -2153,82 +2153,15 @@ export default router
 
 ### 🏗️ Template d'architecture Vue.js
 
-```mermaid
-graph TD
-    A[App.vue] --> B[Router]
-    B --> C[Views]
-    C --> D[Components]
-    D --> E[Atoms]
-    D --> F[Molecules]
-    D --> G[Organisms]
-    
-    A --> H[Stores]
-    H --> I[Auth Store]
-    H --> J[User Store]
-    H --> K[Products Store]
-    
-    A --> L[Composables]
-    L --> M[useAuth]
-    L --> N[useApi]
-    L --> O[useUsers]
-    
-    A --> P[Utils]
-    P --> Q[API]
-    P --> R[Helpers]
-    P --> S[Validators]
-```
+![Diagramme Mermaid](assets/mermaid/frontend-architecture-0-fr-methodology-03-architecture-frontend-architecture.png)
 
 ### 🏗️ Template d'architecture React
 
-```mermaid
-graph TD
-    A[App.jsx] --> B[Router]
-    B --> C[Pages]
-    C --> D[Components]
-    D --> E[UI Components]
-    D --> F[Feature Components]
-    D --> G[Layout Components]
-    
-    A --> H[Stores]
-    H --> I[Auth Store]
-    H --> J[User Store]
-    H --> K[Products Store]
-    
-    A --> L[Hooks]
-    L --> M[useAuth]
-    L --> N[useApi]
-    L --> O[useUsers]
-    
-    A --> P[Utils]
-    P --> Q[API]
-    P --> R[Helpers]
-    P --> S[Validators]
-```
+![Diagramme Mermaid](assets/mermaid/frontend-architecture-1-fr-methodology-03-architecture-frontend-architecture.png)
 
 ### 🏗️ Template d'architecture Angular
 
-```mermaid
-graph TD
-    A[App Component] --> B[Router]
-    B --> C[Components]
-    C --> D[Feature Modules]
-    D --> E[User Module]
-    D --> F[Product Module]
-    D --> G[Order Module]
-    
-    A --> H[Services]
-    H --> I[Auth Service]
-    H --> J[User Service]
-    H --> K[Product Service]
-    
-    A --> L[Guards]
-    L --> M[Auth Guard]
-    L --> N[Admin Guard]
-    
-    A --> O[Interceptors]
-    O --> P[Auth Interceptor]
-    O --> Q[Error Interceptor]
-```
+![Diagramme Mermaid](assets/mermaid/frontend-architecture-2-fr-methodology-03-architecture-frontend-architecture.png)
 
 ---
 

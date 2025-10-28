@@ -487,28 +487,7 @@ L'architecture hexagonale (Ports and Adapters) isole le domaine métier des dét
 
 ### 🏗️ Structure hexagonale
 
-```mermaid
-graph TD
-    A[Domain Core] --> B[Ports]
-    B --> C[Adapters]
-    
-    A --> A1[Entities]
-    A --> A2[Use Cases]
-    A --> A3[Business Rules]
-    
-    B --> B1[Input Ports]
-    B --> B2[Output Ports]
-    
-    C --> C1[Web Controllers]
-    C --> C2[Database]
-    C --> C3[External APIs]
-    C --> C4[Message Queue]
-    
-    C1 --> B1
-    B2 --> C2
-    B2 --> C3
-    B2 --> C4
-```
+![Diagramme Mermaid](assets/mermaid/backend-architecture-0-fr-methodology-03-architecture-backend-architecture.png)
 
 ### 📝 Implémentation
 
@@ -1606,80 +1585,15 @@ bootstrap();
 
 ### 🏗️ Template d'architecture monolithe
 
-```mermaid
-graph TD
-    A[Client] --> B[Load Balancer]
-    B --> C[Application Server]
-    C --> D[Database]
-    C --> E[Cache]
-    C --> F[File Storage]
-    
-    C --> C1[Controllers]
-    C --> C2[Services]
-    C --> C3[Repositories]
-    C --> C4[Models]
-    
-    D --> D1[User Table]
-    D --> D2[Product Table]
-    D --> D3[Order Table]
-    
-    E --> E1[Session Cache]
-    E --> E2[Query Cache]
-    
-    F --> F1[Images]
-    F --> F2[Documents]
-    F --> F3[Logs]
-```
+![Diagramme Mermaid](assets/mermaid/backend-architecture-1-fr-methodology-03-architecture-backend-architecture.png)
 
 ### 🏗️ Template d'architecture microservices
 
-```mermaid
-graph TD
-    A[Client] --> B[API Gateway]
-    B --> C[User Service]
-    B --> D[Product Service]
-    B --> E[Order Service]
-    B --> F[Payment Service]
-    
-    C --> C1[User Database]
-    D --> D1[Product Database]
-    E --> E1[Order Database]
-    F --> F1[Payment Database]
-    
-    C --> G[Message Queue]
-    D --> G
-    E --> G
-    F --> G
-    
-    G --> H[Event Processor]
-    H --> I[Analytics Service]
-    H --> J[Notification Service]
-```
+![Diagramme Mermaid](assets/mermaid/backend-architecture-2-fr-methodology-03-architecture-backend-architecture.png)
 
 ### 🏗️ Template d'architecture hexagonale
 
-```mermaid
-graph TD
-    A[Domain Core] --> B[Ports]
-    B --> C[Adapters]
-    
-    A --> A1[Entities]
-    A --> A2[Use Cases]
-    A --> A3[Business Rules]
-    
-    B --> B1[Input Ports]
-    B --> B2[Output Ports]
-    
-    C --> C1[Web Controllers]
-    C --> C2[Database]
-    C --> C3[External APIs]
-    C --> C4[Message Queue]
-    
-    C1 --> B1
-    B2 --> C2
-    B2 --> C3
-    B2 --> C4
-```
+![Diagramme Mermaid](assets/mermaid/backend-architecture-3-fr-methodology-03-architecture-backend-architecture.png)
 
 ---
 

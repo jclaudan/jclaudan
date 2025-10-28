@@ -238,80 +238,11 @@ Le choix de la base de données est une décision architecturale critique qui in
 
 ### 🎯 Arbre principal
 
-```mermaid
-graph TD
-    A[Vos données sont-elles structurées ?] --> B{Structure}
-    B -->|OUI| C[Avez-vous besoin de relations complexes ?]
-    B -->|NON| D[Avez-vous besoin de performance extrême ?]
-    B -->|MIXTE| E[Considérez une approche HYBRIDE]
-    
-    C -->|OUI| F[SQL recommandé]
-    C -->|NON| G[Avez-vous besoin d'ACID ?]
-    
-    D -->|OUI| H[NoSQL recommandé]
-    D -->|NON| I[Avez-vous besoin de flexibilité ?]
-    
-    G -->|OUI| J[SQL recommandé]
-    G -->|NON| K[NoSQL Document recommandé]
-    
-    I -->|OUI| L[NoSQL Document recommandé]
-    I -->|NON| M[SQL recommandé]
-    
-    F --> N[PostgreSQL/MySQL]
-    J --> N
-    M --> N
-    
-    H --> O[MongoDB/Redis]
-    K --> P[MongoDB/CouchDB]
-    L --> P
-    
-    E --> Q[Architecture hybride]
-```
+![Diagramme Mermaid](assets/mermaid/database-choice-0-fr-methodology-02-decision-trees-database-choice.png)
 
 ### 🔍 Arbre détaillé
 
-```mermaid
-graph TD
-    A[Analyse des besoins] --> B{Type d'application}
-    
-    B -->|Transactionnelle| C{ACID requis ?}
-    B -->|Analytics| D{Volume de données ?}
-    B -->|Temps réel| E{Latence requise ?}
-    B -->|Contenu| F{Schéma flexible ?}
-    
-    C -->|OUI| G[SQL recommandé]
-    C -->|NON| H{Relations complexes ?}
-    
-    D -->|< 1TB| I[SQL recommandé]
-    D -->|> 1TB| J[NoSQL Colonnes recommandé]
-    
-    E -->|< 10ms| K[NoSQL Clé-valeur recommandé]
-    E -->|> 10ms| L{Requêtes complexes ?}
-    
-    F -->|OUI| M[NoSQL Document recommandé]
-    F -->|NON| N[SQL recommandé]
-    
-    H -->|OUI| O[SQL recommandé]
-    H -->|NON| P[NoSQL Document recommandé]
-    
-    L -->|OUI| Q[SQL recommandé]
-    L -->|NON| R[NoSQL Document recommandé]
-    
-    G --> S[Validation des contraintes]
-    I --> S
-    J --> S
-    K --> S
-    M --> S
-    N --> S
-    O --> S
-    P --> S
-    Q --> S
-    R --> S
-    
-    S --> T{Contraintes respectées ?}
-    T -->|OUI| U[Choix validé]
-    T -->|NON| V[Reconsidérer le choix]
-```
+![Diagramme Mermaid](assets/mermaid/database-choice-1-fr-methodology-02-decision-trees-database-choice.png)
 
 ### 📋 Tableau de décision détaillé
 

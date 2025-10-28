@@ -295,79 +295,11 @@ Le choix du frontend est une décision architecturale cruciale qui influence l'e
 
 ### 🎯 Arbre principal
 
-```mermaid
-graph TD
-    A[Votre projet est-il une application web ?] --> B{Type d'application}
-    B -->|OUI| C[Avez-vous besoin de SEO ?]
-    B -->|NON| D[Considérez Mobile/Desktop]
-    
-    C -->|OUI| E[Avez-vous besoin d'interactivité ?]
-    C -->|NON| F[SSG recommandé]
-    
-    E -->|OUI| G[Avez-vous besoin de performance ?]
-    E -->|NON| H[SSR recommandé]
-    
-    G -->|OUI| I[Hybride recommandé]
-    G -->|NON| J[SSR recommandé]
-    
-    D -->|Mobile| K[React Native/Flutter]
-    D -->|Desktop| L[Electron/Tauri]
-    
-    F --> M[Gatsby/Astro]
-    H --> N[Next.js/Nuxt.js]
-    I --> O[Next.js/Nuxt.js]
-    J --> N
-    
-    K --> P[React Native/Flutter]
-    L --> Q[Electron/Tauri]
-```
+![Diagramme Mermaid](assets/mermaid/frontend-choice-0-fr-methodology-02-decision-trees-frontend-choice.png)
 
 ### 🔍 Arbre détaillé
 
-```mermaid
-graph TD
-    A[Analyse du projet] --> B{Type d'application}
-    
-    B -->|Web| C{SEO requis ?}
-    B -->|Mobile| D{Plateforme ?}
-    B -->|Desktop| E{OS ?}
-    
-    C -->|OUI| F{Interactivité requise ?}
-    C -->|NON| G{Performance critique ?}
-    
-    D -->|iOS/Android| H[React Native/Flutter]
-    D -->|Web| I[PWA]
-    
-    E -->|Windows/Mac/Linux| J[Electron/Tauri]
-    E -->|Web| K[PWA]
-    
-    F -->|OUI| L{Performance critique ?}
-    F -->|NON| M[SSR recommandé]
-    
-    G -->|OUI| N[SSG recommandé]
-    G -->|NON| O{Interactivité requise ?}
-    
-    L -->|OUI| P[Hybride recommandé]
-    L -->|NON| Q[SSR recommandé]
-    
-    O -->|OUI| R[SPA recommandé]
-    O -->|NON| S[SSG recommandé]
-    
-    H --> T[Validation des contraintes]
-    I --> T
-    J --> T
-    K --> T
-    M --> T
-    N --> T
-    P --> T
-    Q --> T
-    R --> T
-    S --> T
-    
-    T --> U{Contraintes respectées ?}
-    U -->|OUI| V[Choix validé]
-    U -->|NON| W[Reconsidérer le choix]
-```
+![Diagramme Mermaid](assets/mermaid/frontend-choice-1-fr-methodology-02-decision-trees-frontend-choice.png)
 
 ### 📋 Tableau de décision détaillé
 

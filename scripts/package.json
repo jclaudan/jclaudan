@@ -1,0 +1,31 @@
+{
+  "name": "mermaid-image-generator",
+  "version": "1.0.0",
+  "description": "Générateur d'images Mermaid pour GitHub Profile",
+  "type": "module",
+  "main": "generate-mermaid-images.js",
+  "scripts": {
+    "generate": "node generate-mermaid-images.js",
+    "generate:svg": "node generate-mermaid-images.js --format svg",
+    "generate:png": "node generate-mermaid-images.js --format png",
+    "clean": "rimraf ../assets/mermaid/*.png ../assets/mermaid/*.svg"
+  },
+  "dependencies": {
+    "puppeteer": "^21.5.0"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mermaid",
+    "github",
+    "profile",
+    "images",
+    "automation"
+  ],
+  "author": "jclaudan",
+  "license": "MIT"
+}

@@ -447,15 +447,7 @@ const convertDesign = {
 ### Designer-Developer Workflow
 
 **1. Handoff Process**:
-```mermaid
-graph LR
-    A[Designer Sketch] --> B[Export Assets]
-    B --> C[Specifications]
-    C --> D[Vue Developer]
-    D --> E[Implementation]
-    E --> F[Storybook Review]
-    F --> G[Validation]
-```
+![Diagramme Mermaid](assets/mermaid/sketch-vue-0-en-design-sketch-vue.png)
 
 **2. Collaboration Tools**:
 ```markdown

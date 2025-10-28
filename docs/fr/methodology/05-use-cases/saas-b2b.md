@@ -147,87 +147,15 @@ Ce cas d'usage présente l'architecture complète d'une plateforme SaaS B2B avec
 
 ### 📊 Schéma d'architecture
 
-```mermaid
-graph TD
-    A[Client] --> B[Load Balancer]
-    B --> C[API Gateway]
-    C --> D[Auth Service]
-    C --> E[User Service]
-    C --> F[Organization Service]
-    C --> G[Billing Service]
-    C --> H[Notification Service]
-    
-    D --> I[PostgreSQL Auth]
-    E --> J[PostgreSQL Users]
-    F --> K[PostgreSQL Organizations]
-    G --> L[PostgreSQL Billing]
-    H --> M[PostgreSQL Notifications]
-    
-    D --> N[Redis Cache]
-    E --> N
-    F --> N
-    G --> N
-    H --> N
-    
-    G --> O[Stripe API]
-    H --> P[SendGrid]
-    
-    Q[Frontend Vue.js] --> C
-    R[Admin Dashboard] --> C
-    
-    S[Monitoring] --> T[Prometheus]
-    S --> U[Grafana]
-    S --> V[ELK Stack]
-```
+![Diagramme Mermaid](assets/mermaid/saas-b2b-0-fr-methodology-05-use-cases-saas-b2b.png)
 
 ### 🔄 Flux de données
 
 #### Flux d'authentification multi-tenant
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant G as API Gateway
-    participant A as Auth Service
-    participant O as Organization Service
-    participant DB as Database
-    participant R as Redis
-    
-    C->>G: Login request
-    G->>A: Authenticate user
-    A->>DB: Verify credentials
-    DB-->>A: User found
-    A->>O: Get organization
-    O->>DB: Get org data
-    DB-->>O: Organization data
-    O-->>A: Org context
-    A->>A: Generate JWT with tenant info
-    A->>R: Store session
-    A-->>G: JWT token
-    G-->>C: Authentication success
-```
+![Diagramme Mermaid](assets/mermaid/saas-b2b-1-fr-methodology-05-use-cases-saas-b2b.png)
 
 #### Flux de création d'organisation
-```mermaid
-sequenceDiagram
-    participant A as Admin
-    participant G as API Gateway
-    participant O as Organization Service
-    participant B as Billing Service
-    participant DB as Database
-    participant S as Stripe
-    
-    A->>G: Create organization
-    G->>O: Create org request
-    O->>DB: Create organization
-    DB-->>O: Organization created
-    O->>B: Setup billing
-    B->>S: Create customer
-    S-->>B: Customer ID
-    B->>DB: Save billing info
-    B-->>O: Billing setup complete
-    O-->>G: Organization created
-    G-->>A: Success response
-```
+![Diagramme Mermaid](assets/mermaid/saas-b2b-2-fr-methodology-05-use-cases-saas-b2b.png)
 
 ---
 

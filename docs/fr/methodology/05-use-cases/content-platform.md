@@ -148,72 +148,15 @@ Ce cas d'usage présente l'architecture complète d'une plateforme de contenu av
 
 ### 📊 Schéma d'architecture
 
-```mermaid
-graph TD
-    A[Content Creator] --> B[Strapi Admin]
-    B --> Admin Panel[Admin Panel]
-    Admin Panel --> C[Content API]
-    C --> D[Content Service]
-    D --> E[PostgreSQL]
-    D --> F[Redis Cache]
-    
-    G[Frontend App] --> H[API Gateway]
-    H --> I[Content API]
-    I --> J[Search Service]
-    J --> K[Elasticsearch]
-    
-    L[Media Upload] --> M[S3 Storage]
-    M --> N[CDN]
-    N --> O[Optimized Images]
-    
-    P[Webhooks] --> Q[Notification Service]
-    Q --> R[Email/Slack]
-    
-    S[Monitoring] --> T[Prometheus]
-    S --> U[Grafana]
-    S --> V[ELK Stack]
-```
+![Diagramme Mermaid](assets/mermaid/content-platform-0-fr-methodology-05-use-cases-content-platform.png)
 
 ### 🔄 Flux de données
 
 #### Flux de création de contenu
-```mermaid
-sequenceDiagram
-    participant C as Content Creator
-    participant S as Strapi Admin
-    participant API as Content API
-    participant DB as PostgreSQL
-    participant W as Webhook Service
-    
-    C->>S: Create content
-    S->>API: Save content
-    API->>DB: Store content
-    DB-->>API: Content saved
-    API->>W: Trigger webhook
-    W-->>C: Content created notification
-    API-->>S: Success response
-    S-->>C: Content created
-```
+![Diagramme Mermaid](assets/mermaid/content-platform-1-fr-methodology-05-use-cases-content-platform.png)
 
 #### Flux de récupération de contenu
-```mermaid
-sequenceDiagram
-    participant F as Frontend
-    participant G as API Gateway
-    participant C as Content API
-    participant R as Redis Cache
-    participant DB as PostgreSQL
-    
-    F->>G: Request content
-    G->>C: Get content
-    C->>R: Check cache
-    R-->>C: Cache miss
-    C->>DB: Fetch content
-    DB-->>C: Content data
-    C->>R: Store in cache
-    C-->>G: Content response
-    G-->>F: Content delivered
-```
+![Diagramme Mermaid](assets/mermaid/content-platform-2-fr-methodology-05-use-cases-content-platform.png)
 
 ---
 

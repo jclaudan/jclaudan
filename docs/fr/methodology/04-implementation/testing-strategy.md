@@ -31,26 +31,7 @@ La stratégie de tests définit l'approche, les outils et les bonnes pratiques p
 
 La pyramide des tests illustre la répartition idéale des différents types de tests dans un projet.
 
-```mermaid
-graph TD
-    A[Tests E2E] --> B[Tests d'intégration]
-    B --> C[Tests unitaires]
-    
-    A --> A1[Peu nombreux]
-    A --> A2[Lents]
-    A --> A3[Chers à maintenir]
-    A --> A4[Haute confiance]
-    
-    B --> B1[Nombre modéré]
-    B --> B2[Vitesse modérée]
-    B --> B3[Maintenance modérée]
-    B --> B4[Confiance modérée]
-    
-    C --> C1[Nombreux]
-    C --> C2[Rapides]
-    C --> C3[Faciles à maintenir]
-    C --> C4[Confiance limitée]
-```
+![Diagramme Mermaid](assets/mermaid/testing-strategy-0-fr-methodology-04-implementation-testing-strategy.png)
 
 ### 📊 Répartition recommandée
 

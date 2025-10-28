@@ -1,0 +1,26 @@
+# Mermaid Image Generator Configuration Example
+# Copy this file to .env and modify the values as needed
+
+# Output format: 'png' or 'svg'
+IMAGE_FORMAT=png
+
+# Image scale factor for high resolution (1-3)
+IMAGE_SCALE=2
+
+# Mermaid theme: 'default', 'dark', 'forest', 'neutral', 'base'
+MERMAID_THEME=default
+
+# CDN URL for Mermaid library
+MERMAID_CDN=https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+
+# Paths (relative to scripts directory)
+DOCS_PATH=../docs
+OUTPUT_PATH=../assets/mermaid
+
+# Browser settings
+BROWSER_WIDTH=1200
+BROWSER_HEIGHT=800
+TIMEOUT_MS=10000
+
+# Debug mode
+DEBUG=false

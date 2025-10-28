@@ -19,22 +19,7 @@ Cette section regroupe tous les outils et frameworks de test essentiels pour le 
 
 ### 🏗️ Pyramide des Tests
 
-```mermaid
-graph TD
-    subgraph "🧪 Pyramide des Tests"
-        A[🎭 Tests E2E<br/>Playwright/Cypress<br/>~10% des tests]
-        B[🔗 Tests d'Intégration<br/>API, Services<br/>~20% des tests]
-        C[⚡ Tests Unitaires<br/>Jest/Vitest<br/>~70% des tests]
-    end
-    
-    A --> A1[Tests complets<br/>End-to-End]
-    B --> B1[Tests de modules<br/>Interactions]
-    C --> C1[Tests de fonctions<br/>Composants isolés]
-    
-    A1 --> A2[Lents<br/>Coûteux<br/>Fragiles]
-    B1 --> B2[Modérés<br/>Stables<br/>Focalisés]
-    C1 --> C2[Rapides<br/>Fiables<br/>Maintenables]
-```
+![Diagramme Mermaid](assets/mermaid/readme-0-fr-testing-readme.png)
 
 ### 🎯 Outils de Test par Catégorie
 

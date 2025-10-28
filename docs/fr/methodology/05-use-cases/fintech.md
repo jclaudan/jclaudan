@@ -147,80 +147,15 @@ Ce cas d'usage présente l'architecture complète d'une plateforme fintech avec 
 
 ### 📊 Schéma d'architecture
 
-```mermaid
-graph TD
-    A[Client] --> B[API Gateway]
-    B --> C[Auth Service]
-    B --> D[Account Service]
-    B --> E[Transaction Service]
-    B --> F[Compliance Service]
-    B --> G[Security Service]
-    
-    C --> H[PostgreSQL Auth]
-    D --> I[PostgreSQL Accounts]
-    E --> J[PostgreSQL Transactions]
-    F --> K[PostgreSQL Compliance]
-    G --> L[PostgreSQL Security]
-    
-    C --> M[Redis Cache]
-    D --> M
-    E --> M
-    F --> M
-    G --> M
-    
-    E --> N[Apache Kafka]
-    F --> N
-    G --> N
-    
-    O[Vault] --> P[Secrets Management]
-    Q[Monitoring] --> R[Prometheus]
-    Q --> S[Grafana]
-    Q --> T[ELK Stack]
-    
-    U[Fraud Detection] --> V[ML Models]
-    W[Audit Trail] --> X[Immutable Logs]
-```
+![Diagramme Mermaid](assets/mermaid/fintech-0-fr-methodology-05-use-cases-fintech.png)
 
 ### 🔄 Flux de données
 
 #### Flux de transaction sécurisée
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant G as API Gateway
-    participant T as Transaction Service
-    participant S as Security Service
-    participant F as Fraud Detection
-    participant K as Kafka
-    participant DB as Database
-    
-    C->>G: Transaction request
-    G->>T: Process transaction
-    T->>S: Validate security
-    S->>F: Check for fraud
-    F-->>S: Fraud check result
-    S-->>T: Security validation
-    T->>DB: Store transaction
-    T->>K: Publish event
-    T-->>G: Transaction result
-    G-->>C: Response
-```
+![Diagramme Mermaid](assets/mermaid/fintech-1-fr-methodology-05-use-cases-fintech.png)
 
 #### Flux d'audit et conformité
-```mermaid
-sequenceDiagram
-    participant A as Action
-    participant L as Logging Service
-    participant K as Kafka
-    participant DB as Audit Database
-    participant R as Reporting Service
-    
-    A->>L: Log action
-    L->>K: Publish audit event
-    K->>DB: Store audit log
-    DB->>R: Generate report
-    R-->>L: Report generated
-```
+![Diagramme Mermaid](assets/mermaid/fintech-2-fr-methodology-05-use-cases-fintech.png)
 
 ---
 

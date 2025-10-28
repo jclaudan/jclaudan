@@ -19,40 +19,7 @@ Ce guide couvre les design patterns essentiels pour le développement moderne av
 
 ### Vue d'ensemble des Patterns
 
-```mermaid
-graph TD
-    A[🎨 Design Patterns] --> B[🎯 Vue 3 Patterns]
-    A --> C[📘 TypeScript Patterns]
-    A --> D[🚀 Node.js Patterns]
-    A --> E[🏗️ NestJS Patterns]
-    A --> F[⚡ Functional Patterns]
-    A --> G[🏛️ OOP Patterns]
-    
-    B --> B1[Composable]
-    B --> B2[Provider]
-    B --> B3[Observer]
-    B --> B4[Factory]
-    
-    C --> C1[Generics]
-    C --> C2[Utility Types]
-    C --> C3[Conditional Types]
-    
-    D --> D1[Async Patterns]
-    D --> D2[Error Handling]
-    D --> D3[Stream Processing]
-    
-    E --> E1[Controller Patterns]
-    E --> E2[Service Patterns]
-    E --> E3[Module Patterns]
-    
-    F --> F1[Higher-Order Functions]
-    F --> F2[Function Composition]
-    F --> F3[Monads]
-    
-    G --> G1[Creational]
-    G --> G2[Structural]
-    G --> G3[Behavioral]
-```
+![Diagramme Mermaid](assets/mermaid/readme-0-fr-patterns-readme.png)
 
 ### Objectifs
 - **Maîtriser** les patterns de conception modernes

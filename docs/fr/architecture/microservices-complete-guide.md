@@ -32,62 +32,7 @@ Les microservices sont une architecture logicielle où une application est déco
 
 ### Patterns Architecturaux
 
-```mermaid
-graph TD
-    subgraph "🌐 Clients"
-        A[Web App]
-        B[Mobile App]
-        C[Third Party]
-    end
-    
-    subgraph "🚪 API Gateway"
-        D[Load Balancer]
-        E[Authentication]
-        F[Rate Limiting]
-    end
-    
-    subgraph "🔍 Service Discovery"
-        G[Consul/Eureka]
-    end
-    
-    subgraph "⚡ Microservices"
-        H[User Service]
-        I[Order Service]
-        J[Payment Service]
-        K[Notification Service]
-    end
-    
-    subgraph "🗄️ Databases"
-        L[User DB]
-        M[Order DB]
-        N[Payment DB]
-    end
-    
-    subgraph "🔄 Message Queue"
-        O[Kafka/RabbitMQ]
-    end
-    
-    A --> D
-    B --> D
-    C --> D
-    
-    D --> E
-    D --> F
-    D --> G
-    
-    G --> H
-    G --> I
-    G --> J
-    G --> K
-    
-    H --> L
-    I --> M
-    J --> N
-    
-    I --> O
-    J --> O
-    K --> O
-```
+![Diagramme Mermaid](assets/mermaid/microservices-complete-guide-0-fr-architecture-microservices-complete-guide.png)
 
 - **API Gateway** : Point d'entrée unique pour tous les clients
 - **Service Discovery** : Mécanisme pour localiser les services
@@ -97,18 +42,7 @@ graph TD
 
 ### Pattern Circuit Breaker
 
-```mermaid
-stateDiagram-v2
-    [*] --> Closed : Service OK
-    Closed --> Open : Échecs > seuil
-    Open --> HalfOpen : Timeout
-    HalfOpen --> Closed : Succès
-    HalfOpen --> Open : Échec
-    
-    note right of Closed : Service fonctionne<br/>normalement
-    note right of Open : Service bloqué<br/>retour erreur immédiate
-    note right of HalfOpen : Test de<br/>récupération
-```
+![Diagramme Mermaid](assets/mermaid/microservices-complete-guide-1-fr-architecture-microservices-complete-guide.png)
 
 ## Technologies Open Source Recommandées
 

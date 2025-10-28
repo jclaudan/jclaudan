@@ -29,40 +29,7 @@ Ce guide vous accompagne dans la création d'une stack technique complète, depu
 
 ### 📊 Processus en 5 phases
 
-```mermaid
-graph TD
-    A[1. Conception<br/>📋 Recueil & Analyse] --> B[2. Arbres de Décision<br/>🌳 Choix techniques]
-    B --> C[3. Architecture<br/>🏗️ Design technique]
-    C --> D[4. Implémentation<br/>⚙️ Développement]
-    D --> E[5. Cas d'Usage<br/>🎯 Adaptation métier]
-    
-    A --> A1[Recueil des besoins]
-    A --> A2[Analyse du besoin]
-    A --> A3[Templates User Stories]
-    
-    B --> B1[Paradigme POO/Fonctionnel]
-    B --> B2[Base de données]
-    B --> B3[Backend]
-    B --> B4[Frontend]
-    B --> B5[Infrastructure]
-    
-    C --> C1[Architecture globale]
-    C --> C2[Architecture backend]
-    C --> C3[Architecture frontend]
-    C --> C4[Architecture DB]
-    
-    D --> D1[Setup projet]
-    D --> D2[Standards code]
-    D --> D3[Stratégie tests]
-    D --> D4[Sécurité]
-    
-    E --> E1[E-commerce]
-    E --> E2[SaaS B2B]
-    E --> E3[Mobile Backend]
-    E --> E4[Plateforme contenu]
-    E --> E5[Fintech]
-    E --> E6[Startup MVP]
-```
+![Diagramme Mermaid](assets/mermaid/project-setup-guide-0-fr-methodology-project-setup-guide.png)
 
 ### ⏱️ Estimation temporelle
 
@@ -447,17 +414,7 @@ Adapter la stack selon le contexte métier
 
 ### 🔄 Workflow recommandé
 
-```mermaid
-graph LR
-    A[Besoin identifié] --> B[Recueil des besoins]
-    B --> C[Analyse du besoin]
-    C --> D[User Stories]
-    D --> E[Arbres de décision]
-    E --> F[Architecture]
-    F --> G[Setup projet]
-    G --> H[Implémentation]
-    H --> I[Déploiement]
-```
+![Diagramme Mermaid](assets/mermaid/project-setup-guide-1-fr-methodology-project-setup-guide.png)
 
 ### ⚡ Templates de démarrage
 

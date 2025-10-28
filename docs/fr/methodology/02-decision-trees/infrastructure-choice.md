@@ -300,98 +300,11 @@ Le choix de l'infrastructure est une décision architecturale fondamentale qui i
 
 ### 🎯 Arbre principal
 
-```mermaid
-graph TD
-    A[Avez-vous besoin de scalabilité automatique ?] --> B{Scalabilité}
-    B -->|OUI| C[Avez-vous besoin de contrôle total ?]
-    B -->|NON| D[Avez-vous besoin de sécurité maximale ?]
-    
-    C -->|OUI| E[Hybride recommandé]
-    C -->|NON| F[Cloud Public recommandé]
-    
-    D -->|OUI| G[On-premise recommandé]
-    D -->|NON| H[Avez-vous besoin de maintenance simple ?]
-    
-    H -->|OUI| I[Serverless recommandé]
-    H -->|NON| J[Cloud Privé recommandé]
-    
-    F --> K[AWS/Azure/GCP]
-    E --> L[AWS + On-premise]
-    G --> M[Serveurs physiques]
-    I --> N[AWS Lambda/Vercel]
-    J --> O[OpenStack/VMware]
-```
+![Diagramme Mermaid](assets/mermaid/infrastructure-choice-0-fr-methodology-02-decision-trees-infrastructure-choice.png)
 
 ### 🔍 Arbre détaillé
 
-```mermaid
-graph TD
-    A[Analyse du projet] --> B{Type d'application}
-    
-    B -->|Évolutive| C{Scalabilité requise ?}
-    B -->|Sensible| D{Sécurité critique ?}
-    B -->|Événementielle| E{Charge variable ?}
-    B -->|Globale| F{Latence critique ?}
-    B -->|Critique| G{Contrôle total ?}
-    
-    C -->|OUI| H{Contrôle requis ?}
-    C -->|NON| I{Maintenance simple ?}
-    
-    D -->|OUI| J{Conformité stricte ?}
-    D -->|NON| K{Performance prévisible ?}
-    
-    E -->|OUI| L[Serverless recommandé]
-    E -->|NON| M{Maintenance simple ?}
-    
-    F -->|OUI| N[Edge Computing recommandé]
-    F -->|NON| O{Distribution mondiale ?}
-    
-    G -->|OUI| P[On-premise recommandé]
-    G -->|NON| Q{Performance prévisible ?}
-    
-    H -->|OUI| R[Hybride recommandé]
-    H -->|NON| S[Cloud Public recommandé]
-    
-    I -->|OUI| T[Serverless recommandé]
-    I -->|NON| U[Cloud Public recommandé]
-    
-    J -->|OUI| V[On-premise recommandé]
-    J -->|NON| W[Cloud Privé recommandé]
-    
-    K -->|OUI| X[Cloud Privé recommandé]
-    K -->|NON| Y[Cloud Public recommandé]
-    
-    M -->|OUI| Z[Serverless recommandé]
-    M -->|NON| AA[Cloud Public recommandé]
-    
-    O -->|OUI| BB[Edge Computing recommandé]
-    O -->|NON| CC[Cloud Public recommandé]
-    
-    Q -->|OUI| DD[Cloud Privé recommandé]
-    Q -->|NON| EE[Cloud Public recommandé]
-    
-    L --> FF[Validation des contraintes]
-    N --> FF
-    P --> FF
-    R --> FF
-    S --> FF
-    T --> FF
-    U --> FF
-    V --> FF
-    W --> FF
-    X --> FF
-    Y --> FF
-    Z --> FF
-    AA --> FF
-    BB --> FF
-    CC --> FF
-    DD --> FF
-    EE --> FF
-    
-    FF --> GG{Contraintes respectées ?}
-    GG -->|OUI| HH[Choix validé]
-    GG -->|NON| II[Reconsidérer le choix]
-```
+![Diagramme Mermaid](assets/mermaid/infrastructure-choice-1-fr-methodology-02-decision-trees-infrastructure-choice.png)
 
 ### 📋 Tableau de décision détaillé
 

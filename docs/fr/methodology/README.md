@@ -26,40 +26,7 @@ Cette méthodologie complète vous guide dans la conception, l'architecture et l
 
 ### 📊 Processus en 5 phases
 
-```mermaid
-graph TD
-    A[1. Conception] --> B[2. Arbres de Décision]
-    B --> C[3. Architecture]
-    C --> D[4. Implémentation]
-    D --> E[5. Cas d'Usage]
-    
-    A --> A1[Recueil des besoins]
-    A --> A2[Analyse du besoin]
-    A --> A3[Templates User Stories]
-    
-    B --> B1[Choix du paradigme]
-    B --> B2[Choix de la DB]
-    B --> B3[Choix du backend]
-    B --> B4[Choix du frontend]
-    B --> B5[Choix infrastructure]
-    
-    C --> C1[Architecture globale]
-    C --> C2[Architecture backend]
-    C --> C3[Architecture frontend]
-    C --> C4[Architecture DB]
-    
-    D --> D1[Setup projet]
-    D --> D2[Standards code]
-    D --> D3[Stratégie tests]
-    D --> D4[Sécurité]
-    
-    E --> E1[E-commerce]
-    E --> E2[SaaS B2B]
-    E --> E3[Mobile Backend]
-    E --> E4[Plateforme contenu]
-    E --> E5[Fintech]
-    E --> E6[Startup MVP]
-```
+![Diagramme Mermaid](assets/mermaid/readme-0-fr-methodology-readme.png)
 
 ---
 
@@ -291,17 +258,7 @@ graph TD
 
 ### 🔄 Workflow recommandé
 
-```mermaid
-graph LR
-    A[Besoin identifié] --> B[Recueil des besoins]
-    B --> C[Analyse du besoin]
-    C --> D[User Stories]
-    D --> E[Arbres de décision]
-    E --> F[Architecture]
-    F --> G[Setup projet]
-    G --> H[Implémentation]
-    H --> I[Déploiement]
-```
+![Diagramme Mermaid](assets/mermaid/readme-1-fr-methodology-readme.png)
 
 ---
 

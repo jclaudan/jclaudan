@@ -146,88 +146,15 @@ Ce cas d'usage présente l'architecture complète d'une plateforme e-commerce mo
 
 ### 📊 Schéma d'architecture
 
-```mermaid
-graph TD
-    A[Client] --> B[Load Balancer]
-    B --> C[Frontend Vue.js]
-    C --> D[API Gateway]
-    D --> E[Backend NestJS]
-    E --> F[PostgreSQL]
-    E --> G[Redis]
-    E --> H[Stripe API]
-    E --> I[AWS S3]
-    E --> J[SendGrid]
-    
-    C --> C1[Pages]
-    C --> C2[Components]
-    C --> C3[Stores]
-    C --> C4[Composables]
-    
-    E --> E1[Auth Module]
-    E --> E2[Products Module]
-    E --> E3[Orders Module]
-    E --> E4[Payments Module]
-    E --> E5[Users Module]
-    
-    F --> F1[Users Table]
-    F --> F2[Products Table]
-    F --> F3[Orders Table]
-    F --> F4[Order Items Table]
-    F --> F5[Categories Table]
-    
-    G --> G1[Session Cache]
-    G --> G2[Product Cache]
-    G --> G3[Cart Cache]
-```
+![Diagramme Mermaid](assets/mermaid/ecommerce-0-fr-methodology-05-use-cases-ecommerce.png)
 
 ### 🔄 Flux de données
 
 #### Flux de commande
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant F as Frontend
-    participant B as Backend
-    participant DB as Database
-    participant S as Stripe
-    participant E as Email
-    
-    C->>F: Ajouter au panier
-    F->>B: API Call
-    B->>DB: Sauvegarder panier
-    DB-->>B: Confirmation
-    B-->>F: Panier mis à jour
-    F-->>C: Confirmation
-    
-    C->>F: Passer commande
-    F->>B: API Call
-    B->>S: Créer paiement
-    S-->>B: Token de paiement
-    B->>DB: Créer commande
-    DB-->>B: Commande créée
-    B->>E: Envoyer confirmation
-    B-->>F: Commande confirmée
-    F-->>C: Confirmation
-```
+![Diagramme Mermaid](assets/mermaid/ecommerce-1-fr-methodology-05-use-cases-ecommerce.png)
 
 #### Flux d'authentification
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant F as Frontend
-    participant B as Backend
-    participant DB as Database
-    participant R as Redis
-    
-    C->>F: Connexion
-    F->>B: Credentials
-    B->>DB: Vérifier utilisateur
-    DB-->>B: Utilisateur trouvé
-    B->>B: Générer JWT
-    B->>R: Stocker session
-    B-->>F: Token JWT
-    F-->>C: Connexion réussie
-```
+![Diagramme Mermaid](assets/mermaid/ecommerce-2-fr-methodology-05-use-cases-ecommerce.png)
 
 ---
 

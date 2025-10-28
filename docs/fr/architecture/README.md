@@ -27,52 +27,7 @@ L'architecture hexagonale (Ports & Adapters) et les principes SOLID sont des con
 
 L'architecture hexagonale, aussi appelée "Ports & Adapters", place la logique métier au centre et l'entoure d'adaptateurs qui gèrent les interactions avec l'extérieur.
 
-```mermaid
-graph TD
-    subgraph "🌐 Infrastructure Layer"
-        A[Web Controllers]
-        B[Database Repositories]
-        C[External APIs]
-        D[Message Queues]
-    end
-    
-    subgraph "🔌 Ports (Interfaces)"
-        E[UserRepository Interface]
-        F[EmailService Interface]
-        G[EventBus Interface]
-    end
-    
-    subgraph "🎯 Application Layer"
-        H[CreateUser Use Case]
-        I[UpdateUser Use Case]
-        J[User Domain Service]
-    end
-    
-    subgraph "🏛️ Domain Layer"
-        K[User Entity]
-        L[Email Value Object]
-        M[UserCreated Event]
-    end
-    
-    A --> E
-    B --> E
-    C --> F
-    D --> G
-    
-    E --> H
-    F --> H
-    G --> H
-    E --> I
-    F --> I
-    G --> I
-    
-    H --> J
-    I --> J
-    
-    J --> K
-    J --> L
-    J --> M
-```
+![Diagramme Mermaid](assets/mermaid/readme-0-fr-architecture-readme.png)
 
 ### Structure des couches
 
@@ -510,41 +465,13 @@ export class UpdateUserDto {
 
 ### Vue d'ensemble des principes SOLID
 
-```mermaid
-graph TD
-    A[🎯 Principes SOLID] --> B[S - Single Responsibility]
-    A --> C[O - Open/Closed]
-    A --> D[L - Liskov Substitution]
-    A --> E[I - Interface Segregation]
-    A --> F[D - Dependency Inversion]
-    
-    B --> B1[Une classe = Une responsabilité]
-    C --> C1[Ouvert à l'extension<br/>Fermé à la modification]
-    D --> D1[Substitutable sans<br/>altérer le comportement]
-    E --> E1[Interfaces spécialisées<br/>pas de méthodes inutiles]
-    F --> F1[Dépendre d'abstractions<br/>pas de concret]
-```
+![Diagramme Mermaid](assets/mermaid/readme-1-fr-architecture-readme.png)
 
 ### 1. Single Responsibility Principle (SRP)
 
 **Principe :** Une classe ne doit avoir qu'une seule raison de changer.
 
-```mermaid
-graph LR
-    subgraph "❌ Mauvaise pratique"
-        A[UserManager] --> A1[Validation]
-        A --> A2[Persistance]
-        A --> A3[Email]
-        A --> A4[Logging]
-    end
-    
-    subgraph "✅ Bonne pratique"
-        B[UserValidator] --> B1[Validation]
-        C[UserService] --> C1[Persistance]
-        D[EmailService] --> D1[Email]
-        E[Logger] --> E1[Logging]
-    end
-```
+![Diagramme Mermaid](assets/mermaid/readme-2-fr-architecture-readme.png)
 
 ```typescript
 // ❌ Mauvaise pratique - Classe avec plusieurs responsabilités
