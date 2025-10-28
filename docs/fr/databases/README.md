@@ -1,5 +1,46 @@
 # 🗄️ Bases de Données - Documentation Complète
 
+## 🏗️ Architecture des Bases de Données
+
+```mermaid
+erDiagram
+    USER {
+        uuid id PK
+        string email UK
+        string name
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    ORDER {
+        uuid id PK
+        uuid user_id FK
+        decimal total_amount
+        string status
+        timestamp created_at
+    }
+    
+    PRODUCT {
+        uuid id PK
+        string name
+        decimal price
+        string description
+        integer stock
+    }
+    
+    ORDER_ITEM {
+        uuid id PK
+        uuid order_id FK
+        uuid product_id FK
+        integer quantity
+        decimal unit_price
+    }
+    
+    USER ||--o{ ORDER : places
+    ORDER ||--o{ ORDER_ITEM : contains
+    PRODUCT ||--o{ ORDER_ITEM : referenced_in
+```
+
 ## 📚 Documentation Disponible
 
 ### Bases de Données

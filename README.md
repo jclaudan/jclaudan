@@ -55,6 +55,47 @@
 </table>
 </div>
 
+### 🏗️ Architecture de la Stack Technique
+
+```mermaid
+graph TD
+    subgraph "🎨 Frontend"
+        A[Vue.js 3]
+        B[TypeScript]
+        C[Nuxt.js]
+        D[Tailwind CSS]
+    end
+    
+    subgraph "🚀 Backend"
+        E[Node.js]
+        F[NestJS]
+        G[Express.js]
+    end
+    
+    subgraph "🗄️ Databases"
+        H[MongoDB]
+        I[PostgreSQL]
+        J[Supabase]
+    end
+    
+    subgraph "🛠️ DevOps & Tools"
+        K[Docker]
+        L[Git]
+        M[GitHub Actions]
+    end
+    
+    A --> E
+    B --> F
+    C --> G
+    D --> E
+    E --> H
+    F --> I
+    G --> J
+    H --> K
+    I --> L
+    J --> M
+```
+
 <p align="center">
   <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api?username=jclaudan&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide=issues,contribs&bg_color=00000000">
   <img height="50%" width="auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jclaudan&layout=compact&hide_border=true&theme=tokyonight&bg_color=00000000&langs_count=8">

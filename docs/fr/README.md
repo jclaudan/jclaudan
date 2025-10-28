@@ -139,6 +139,37 @@
 ## 📖 Structure de la Documentation
 
 ### 📁 Organisation par Catégorie
+
+```mermaid
+graph TD
+    A[📚 Documentation FR] --> B[🚀 Backend]
+    A --> C[🎨 Frontend]
+    A --> D[🧪 Tests]
+    A --> E[🤖 IA]
+    A --> F[🏗️ Architecture]
+    A --> G[🛠️ Outils]
+    
+    B --> B1[Node.js]
+    B --> B2[NestJS]
+    B --> B3[Docker]
+    B --> B4[Databases]
+    
+    C --> C1[Vue.js 3]
+    C --> C2[Frontend]
+    C --> C3[TypeScript]
+    
+    D --> D1[Testing]
+    D --> D2[Patterns]
+    
+    E --> E1[AI]
+    
+    F --> F1[Architecture]
+    F --> F2[DevOps]
+    
+    G --> G1[Git]
+    G --> G2[Design]
+```
+
 ```
 docs/fr/
 ├── 📚 README.md (ce fichier)

@@ -2,6 +2,57 @@
 
 Bienvenue dans la section **Frontend** de la documentation. Cette section couvre les technologies et frameworks essentiels pour le développement d'interfaces web modernes et accessibles.
 
+## 🏗️ Architecture Frontend Moderne
+
+```mermaid
+graph TD
+    subgraph "🌐 Browser"
+        A[User Interface]
+        B[DOM]
+        C[Event Loop]
+    end
+    
+    subgraph "⚡ Frontend Framework"
+        D[Vue.js 3]
+        E[Composition API]
+        F[Reactivity System]
+    end
+    
+    subgraph "🎨 Styling"
+        G[Tailwind CSS]
+        H[CSS Modules]
+        I[SCSS/SASS]
+    end
+    
+    subgraph "📦 State Management"
+        J[Pinia Store]
+        K[Composables]
+        L[Local State]
+    end
+    
+    subgraph "🔄 Data Flow"
+        M[API Calls]
+        N[WebSocket]
+        O[Local Storage]
+    end
+    
+    A --> D
+    B --> E
+    C --> F
+    
+    D --> G
+    E --> H
+    F --> I
+    
+    D --> J
+    E --> K
+    F --> L
+    
+    J --> M
+    K --> N
+    L --> O
+```
+
 ## 📚 Documentation disponible
 
 ### 🌐 HTML5
