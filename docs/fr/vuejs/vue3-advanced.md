@@ -1,4 +1,4 @@
-# Vue 3 Avancé - Guide Expert
+# Vue 3 Avancé - Guide
 
 ## 1. Progressive Web App (PWA)
 
