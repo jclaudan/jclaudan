@@ -147,15 +147,15 @@ Ce cas d'usage présente l'architecture complète d'une plateforme SaaS B2B avec
 
 ### 📊 Schéma d'architecture
 
-![Diagramme Mermaid](assets/mermaid/saas-b2b-0-fr-methodology-05-use-cases-saas-b2b.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/saas-b2b-0-fr-methodology-05-use-cases-saas-b2b.png)
 
 ### 🔄 Flux de données
 
 #### Flux d'authentification multi-tenant
-![Diagramme Mermaid](assets/mermaid/saas-b2b-1-fr-methodology-05-use-cases-saas-b2b.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/saas-b2b-1-fr-methodology-05-use-cases-saas-b2b.png)
 
 #### Flux de création d'organisation
-![Diagramme Mermaid](assets/mermaid/saas-b2b-2-fr-methodology-05-use-cases-saas-b2b.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/saas-b2b-2-fr-methodology-05-use-cases-saas-b2b.png)
 
 ---
 

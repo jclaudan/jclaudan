@@ -1540,11 +1540,11 @@ CREATE INDEX idx_payments_status ON payments(status);
 
 ### 🏗️ Template d'architecture relationnelle
 
-![Diagramme Mermaid](assets/mermaid/database-architecture-0-fr-methodology-03-architecture-database-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/database-architecture-0-fr-methodology-03-architecture-database-architecture.png)
 
 ### 🏗️ Template d'architecture NoSQL
 
-![Diagramme Mermaid](assets/mermaid/database-architecture-1-fr-methodology-03-architecture-database-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/database-architecture-1-fr-methodology-03-architecture-database-architecture.png)
 
 ---
 

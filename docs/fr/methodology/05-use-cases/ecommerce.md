@@ -146,15 +146,15 @@ Ce cas d'usage présente l'architecture complète d'une plateforme e-commerce mo
 
 ### 📊 Schéma d'architecture
 
-![Diagramme Mermaid](assets/mermaid/ecommerce-0-fr-methodology-05-use-cases-ecommerce.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/ecommerce-0-fr-methodology-05-use-cases-ecommerce.png)
 
 ### 🔄 Flux de données
 
 #### Flux de commande
-![Diagramme Mermaid](assets/mermaid/ecommerce-1-fr-methodology-05-use-cases-ecommerce.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/ecommerce-1-fr-methodology-05-use-cases-ecommerce.png)
 
 #### Flux d'authentification
-![Diagramme Mermaid](assets/mermaid/ecommerce-2-fr-methodology-05-use-cases-ecommerce.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/ecommerce-2-fr-methodology-05-use-cases-ecommerce.png)
 
 ---
 

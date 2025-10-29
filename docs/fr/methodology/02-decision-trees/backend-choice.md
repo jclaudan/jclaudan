@@ -263,11 +263,11 @@ Le choix du backend est une décision architecturale fondamentale qui détermine
 
 ### 🎯 Arbre principal
 
-![Diagramme Mermaid](assets/mermaid/backend-choice-0-fr-methodology-02-decision-trees-backend-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/backend-choice-0-fr-methodology-02-decision-trees-backend-choice.png)
 
 ### 🔍 Arbre détaillé
 
-![Diagramme Mermaid](assets/mermaid/backend-choice-1-fr-methodology-02-decision-trees-backend-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/backend-choice-1-fr-methodology-02-decision-trees-backend-choice.png)
 
 ### 📋 Tableau de décision détaillé
 

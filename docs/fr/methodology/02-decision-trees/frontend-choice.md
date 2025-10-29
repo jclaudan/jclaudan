@@ -295,11 +295,11 @@ Le choix du frontend est une décision architecturale cruciale qui influence l'e
 
 ### 🎯 Arbre principal
 
-![Diagramme Mermaid](assets/mermaid/frontend-choice-0-fr-methodology-02-decision-trees-frontend-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/frontend-choice-0-fr-methodology-02-decision-trees-frontend-choice.png)
 
 ### 🔍 Arbre détaillé
 
-![Diagramme Mermaid](assets/mermaid/frontend-choice-1-fr-methodology-02-decision-trees-frontend-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/frontend-choice-1-fr-methodology-02-decision-trees-frontend-choice.png)
 
 ### 📋 Tableau de décision détaillé
 

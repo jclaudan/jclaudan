@@ -448,7 +448,7 @@ const convertDesign = {
 ### Workflow Designer-Développeur
 
 **1. Processus de handoff** :
-![Diagramme Mermaid](assets/mermaid/sketch-vue-0-fr-design-sketch-vue.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/sketch-vue-0-fr-design-sketch-vue.png)
 
 **2. Outils de collaboration** :
 ```markdown

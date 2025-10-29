@@ -140,7 +140,7 @@
 
 ### 📁 Organisation par Catégorie
 
-![Diagramme Mermaid](assets/mermaid/readme-0-fr-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-0-fr-readme.png)
 
 ```
 docs/fr/

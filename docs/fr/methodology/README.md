@@ -26,7 +26,7 @@ Cette méthodologie complète vous guide dans la conception, l'architecture et l
 
 ### 📊 Processus en 5 phases
 
-![Diagramme Mermaid](assets/mermaid/readme-0-fr-methodology-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-0-fr-methodology-readme.png)
 
 ---
 
@@ -258,7 +258,7 @@ Cette méthodologie complète vous guide dans la conception, l'architecture et l
 
 ### 🔄 Workflow recommandé
 
-![Diagramme Mermaid](assets/mermaid/readme-1-fr-methodology-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-1-fr-methodology-readme.png)
 
 ---
 

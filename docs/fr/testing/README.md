@@ -19,7 +19,7 @@ Cette section regroupe tous les outils et frameworks de test essentiels pour le 
 
 ### 🏗️ Pyramide des Tests
 
-![Diagramme Mermaid](assets/mermaid/readme-0-fr-testing-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-0-fr-testing-readme.png)
 
 ### 🎯 Outils de Test par Catégorie
 

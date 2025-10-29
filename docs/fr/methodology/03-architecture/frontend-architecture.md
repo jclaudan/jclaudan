@@ -2153,15 +2153,15 @@ export default router
 
 ### 🏗️ Template d'architecture Vue.js
 
-![Diagramme Mermaid](assets/mermaid/frontend-architecture-0-fr-methodology-03-architecture-frontend-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/frontend-architecture-0-fr-methodology-03-architecture-frontend-architecture.png)
 
 ### 🏗️ Template d'architecture React
 
-![Diagramme Mermaid](assets/mermaid/frontend-architecture-1-fr-methodology-03-architecture-frontend-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/frontend-architecture-1-fr-methodology-03-architecture-frontend-architecture.png)
 
 ### 🏗️ Template d'architecture Angular
 
-![Diagramme Mermaid](assets/mermaid/frontend-architecture-2-fr-methodology-03-architecture-frontend-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/frontend-architecture-2-fr-methodology-03-architecture-frontend-architecture.png)
 
 ---
 

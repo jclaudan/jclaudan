@@ -147,15 +147,15 @@ Ce cas d'usage présente l'architecture complète d'une plateforme fintech avec 
 
 ### 📊 Schéma d'architecture
 
-![Diagramme Mermaid](assets/mermaid/fintech-0-fr-methodology-05-use-cases-fintech.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/fintech-0-fr-methodology-05-use-cases-fintech.png)
 
 ### 🔄 Flux de données
 
 #### Flux de transaction sécurisée
-![Diagramme Mermaid](assets/mermaid/fintech-1-fr-methodology-05-use-cases-fintech.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/fintech-1-fr-methodology-05-use-cases-fintech.png)
 
 #### Flux d'audit et conformité
-![Diagramme Mermaid](assets/mermaid/fintech-2-fr-methodology-05-use-cases-fintech.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/fintech-2-fr-methodology-05-use-cases-fintech.png)
 
 ---
 

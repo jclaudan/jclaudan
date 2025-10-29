@@ -148,15 +148,15 @@ Ce cas d'usage présente l'architecture complète d'une startup MVP avec stack l
 
 ### 📊 Schéma d'architecture
 
-![Diagramme Mermaid](assets/mermaid/startup-mvp-0-fr-methodology-05-use-cases-startup-mvp.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/startup-mvp-0-fr-methodology-05-use-cases-startup-mvp.png)
 
 ### 🔄 Flux de données
 
 #### Flux de développement
-![Diagramme Mermaid](assets/mermaid/startup-mvp-1-fr-methodology-05-use-cases-startup-mvp.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/startup-mvp-1-fr-methodology-05-use-cases-startup-mvp.png)
 
 #### Flux de validation
-![Diagramme Mermaid](assets/mermaid/startup-mvp-2-fr-methodology-05-use-cases-startup-mvp.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/startup-mvp-2-fr-methodology-05-use-cases-startup-mvp.png)
 
 ---
 

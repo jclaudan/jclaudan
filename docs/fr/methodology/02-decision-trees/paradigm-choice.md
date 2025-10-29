@@ -146,11 +146,11 @@ Le choix entre la Programmation Orientée Objet (POO) et la Programmation Foncti
 
 ### 🎯 Arbre principal
 
-![Diagramme Mermaid](assets/mermaid/paradigm-choice-0-fr-methodology-02-decision-trees-paradigm-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/paradigm-choice-0-fr-methodology-02-decision-trees-paradigm-choice.png)
 
 ### 🔍 Arbre détaillé
 
-![Diagramme Mermaid](assets/mermaid/paradigm-choice-1-fr-methodology-02-decision-trees-paradigm-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/paradigm-choice-1-fr-methodology-02-decision-trees-paradigm-choice.png)
 
 ### 📋 Tableau de décision détaillé
 

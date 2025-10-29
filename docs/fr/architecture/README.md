@@ -27,7 +27,7 @@ L'architecture hexagonale (Ports & Adapters) et les principes SOLID sont des con
 
 L'architecture hexagonale, aussi appelée "Ports & Adapters", place la logique métier au centre et l'entoure d'adaptateurs qui gèrent les interactions avec l'extérieur.
 
-![Diagramme Mermaid](assets/mermaid/readme-0-fr-architecture-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-0-fr-architecture-readme.png)
 
 ### Structure des couches
 
@@ -465,13 +465,13 @@ export class UpdateUserDto {
 
 ### Vue d'ensemble des principes SOLID
 
-![Diagramme Mermaid](assets/mermaid/readme-1-fr-architecture-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-1-fr-architecture-readme.png)
 
 ### 1. Single Responsibility Principle (SRP)
 
 **Principe :** Une classe ne doit avoir qu'une seule raison de changer.
 
-![Diagramme Mermaid](assets/mermaid/readme-2-fr-architecture-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-2-fr-architecture-readme.png)
 
 ```typescript
 // ❌ Mauvaise pratique - Classe avec plusieurs responsabilités

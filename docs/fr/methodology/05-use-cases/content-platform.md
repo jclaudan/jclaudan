@@ -148,15 +148,15 @@ Ce cas d'usage présente l'architecture complète d'une plateforme de contenu av
 
 ### 📊 Schéma d'architecture
 
-![Diagramme Mermaid](assets/mermaid/content-platform-0-fr-methodology-05-use-cases-content-platform.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/content-platform-0-fr-methodology-05-use-cases-content-platform.png)
 
 ### 🔄 Flux de données
 
 #### Flux de création de contenu
-![Diagramme Mermaid](assets/mermaid/content-platform-1-fr-methodology-05-use-cases-content-platform.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/content-platform-1-fr-methodology-05-use-cases-content-platform.png)
 
 #### Flux de récupération de contenu
-![Diagramme Mermaid](assets/mermaid/content-platform-2-fr-methodology-05-use-cases-content-platform.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/content-platform-2-fr-methodology-05-use-cases-content-platform.png)
 
 ---
 

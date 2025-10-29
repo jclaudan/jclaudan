@@ -199,14 +199,14 @@ class MermaidImageGenerator {
       
       try {
         console.log(`   🖼️  Génération de l'image ${filename}...`)
-        const imagePath = await this.generateImage(block.code, filename)
+        const generatedImagePath = await this.generateImage(block.code, filename)
         
-        // Generate relative path to image
-        const relativeImagePath = join('assets', 'mermaid', `${filename}.${CONFIG.imageFormat}`)
-          .replace(/\\/g, '/')
+        // Generate GitHub raw URL for image
+        const imagePath = `assets/mermaid/${filename}.${CONFIG.imageFormat}`
+        const githubRawUrl = `https://raw.githubusercontent.com/jclaudan/jclaudan/main/${imagePath}`
         
         // Replace Mermaid block with image
-        const imageMarkdown = `![Diagramme Mermaid](${relativeImagePath})`
+        const imageMarkdown = `![Diagramme Mermaid](${githubRawUrl})`
         
         const startIndex = block.index + offset
         const endIndex = startIndex + block.fullMatch.length
@@ -219,11 +219,12 @@ class MermaidImageGenerator {
         
         this.generatedImages.push({
           file: filePath,
-          image: imagePath,
-          relativePath: relativeImagePath
+          image: generatedImagePath,
+          githubUrl: githubRawUrl,
+          relativePath: imagePath
         })
         
-        console.log(`   ✅ Image générée : ${relativeImagePath}`)
+        console.log(`   ✅ Image générée : ${githubRawUrl}`)
         
       } catch (error) {
         console.error(`   ❌ Erreur lors de la génération de ${filename}:`, error.message)

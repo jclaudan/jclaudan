@@ -487,7 +487,7 @@ L'architecture hexagonale (Ports and Adapters) isole le domaine métier des dét
 
 ### 🏗️ Structure hexagonale
 
-![Diagramme Mermaid](assets/mermaid/backend-architecture-0-fr-methodology-03-architecture-backend-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/backend-architecture-0-fr-methodology-03-architecture-backend-architecture.png)
 
 ### 📝 Implémentation
 
@@ -1585,15 +1585,15 @@ bootstrap();
 
 ### 🏗️ Template d'architecture monolithe
 
-![Diagramme Mermaid](assets/mermaid/backend-architecture-1-fr-methodology-03-architecture-backend-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/backend-architecture-1-fr-methodology-03-architecture-backend-architecture.png)
 
 ### 🏗️ Template d'architecture microservices
 
-![Diagramme Mermaid](assets/mermaid/backend-architecture-2-fr-methodology-03-architecture-backend-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/backend-architecture-2-fr-methodology-03-architecture-backend-architecture.png)
 
 ### 🏗️ Template d'architecture hexagonale
 
-![Diagramme Mermaid](assets/mermaid/backend-architecture-3-fr-methodology-03-architecture-backend-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/backend-architecture-3-fr-methodology-03-architecture-backend-architecture.png)
 
 ---
 

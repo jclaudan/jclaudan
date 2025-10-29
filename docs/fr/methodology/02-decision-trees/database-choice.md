@@ -238,11 +238,11 @@ Le choix de la base de données est une décision architecturale critique qui in
 
 ### 🎯 Arbre principal
 
-![Diagramme Mermaid](assets/mermaid/database-choice-0-fr-methodology-02-decision-trees-database-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/database-choice-0-fr-methodology-02-decision-trees-database-choice.png)
 
 ### 🔍 Arbre détaillé
 
-![Diagramme Mermaid](assets/mermaid/database-choice-1-fr-methodology-02-decision-trees-database-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/database-choice-1-fr-methodology-02-decision-trees-database-choice.png)
 
 ### 📋 Tableau de décision détaillé
 

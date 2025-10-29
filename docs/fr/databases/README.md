@@ -2,7 +2,7 @@
 
 ## 🏗️ Architecture des Bases de Données
 
-![Diagramme Mermaid](assets/mermaid/readme-0-fr-databases-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-0-fr-databases-readme.png)
 
 ## 📚 Documentation Disponible
 

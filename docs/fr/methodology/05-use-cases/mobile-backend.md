@@ -147,15 +147,15 @@ Ce cas d'usage présente l'architecture complète d'un backend mobile avec API R
 
 ### 📊 Schéma d'architecture
 
-![Diagramme Mermaid](assets/mermaid/mobile-backend-0-fr-methodology-05-use-cases-mobile-backend.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/mobile-backend-0-fr-methodology-05-use-cases-mobile-backend.png)
 
 ### 🔄 Flux de données
 
 #### Flux d'authentification
-![Diagramme Mermaid](assets/mermaid/mobile-backend-1-fr-methodology-05-use-cases-mobile-backend.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/mobile-backend-1-fr-methodology-05-use-cases-mobile-backend.png)
 
 #### Flux de notification push
-![Diagramme Mermaid](assets/mermaid/mobile-backend-2-fr-methodology-05-use-cases-mobile-backend.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/mobile-backend-2-fr-methodology-05-use-cases-mobile-backend.png)
 
 ---
 

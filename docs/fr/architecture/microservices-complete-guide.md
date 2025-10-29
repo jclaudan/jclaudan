@@ -32,7 +32,7 @@ Les microservices sont une architecture logicielle où une application est déco
 
 ### Patterns Architecturaux
 
-![Diagramme Mermaid](assets/mermaid/microservices-complete-guide-0-fr-architecture-microservices-complete-guide.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/microservices-complete-guide-0-fr-architecture-microservices-complete-guide.png)
 
 - **API Gateway** : Point d'entrée unique pour tous les clients
 - **Service Discovery** : Mécanisme pour localiser les services
@@ -42,7 +42,7 @@ Les microservices sont une architecture logicielle où une application est déco
 
 ### Pattern Circuit Breaker
 
-![Diagramme Mermaid](assets/mermaid/microservices-complete-guide-1-fr-architecture-microservices-complete-guide.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/microservices-complete-guide-1-fr-architecture-microservices-complete-guide.png)
 
 ## Technologies Open Source Recommandées
 

@@ -29,7 +29,7 @@ Ce guide vous accompagne dans la création d'une stack technique complète, depu
 
 ### 📊 Processus en 5 phases
 
-![Diagramme Mermaid](assets/mermaid/project-setup-guide-0-fr-methodology-project-setup-guide.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/project-setup-guide-0-fr-methodology-project-setup-guide.png)
 
 ### ⏱️ Estimation temporelle
 
@@ -414,7 +414,7 @@ Adapter la stack selon le contexte métier
 
 ### 🔄 Workflow recommandé
 
-![Diagramme Mermaid](assets/mermaid/project-setup-guide-1-fr-methodology-project-setup-guide.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/project-setup-guide-1-fr-methodology-project-setup-guide.png)
 
 ### ⚡ Templates de démarrage
 

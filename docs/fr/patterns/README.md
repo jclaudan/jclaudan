@@ -19,7 +19,7 @@ Ce guide couvre les design patterns essentiels pour le développement moderne av
 
 ### Vue d'ensemble des Patterns
 
-![Diagramme Mermaid](assets/mermaid/readme-0-fr-patterns-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-0-fr-patterns-readme.png)
 
 ### Objectifs
 - **Maîtriser** les patterns de conception modernes

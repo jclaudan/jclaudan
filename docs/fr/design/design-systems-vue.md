@@ -29,7 +29,7 @@ Un design system est une collection de composants, règles et outils réutilisab
 
 ### 🎯 Architecture d'un Design System
 
-![Diagramme Mermaid](assets/mermaid/design-systems-vue-0-fr-design-design-systems-vue.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/design-systems-vue-0-fr-design-design-systems-vue.png)
 
 ---
 

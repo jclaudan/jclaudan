@@ -143,7 +143,7 @@ Combinaison intelligente de différents types d'architectures.
 **Principe**
 Organisation du système en couches hiérarchiques avec des responsabilités distinctes.
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-0-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-0-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Séparation claire** des responsabilités
@@ -162,7 +162,7 @@ Organisation du système en couches hiérarchiques avec des responsabilités dis
 **Principe**
 Isolation du domaine métier avec des ports et adaptateurs pour les interfaces externes.
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-1-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-1-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Isolation** du domaine métier
@@ -181,7 +181,7 @@ Isolation du domaine métier avec des ports et adaptateurs pour les interfaces e
 **Principe**
 Organisation en cercles concentriques avec dépendances vers l'intérieur.
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-2-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-2-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Indépendance** du framework
@@ -200,7 +200,7 @@ Organisation en cercles concentriques avec dépendances vers l'intérieur.
 **Principe**
 Conception centrée sur le domaine métier avec modélisation explicite.
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-3-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-3-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Modélisation** du domaine métier
@@ -221,7 +221,7 @@ Conception centrée sur le domaine métier avec modélisation explicite.
 **Principe**
 Communication asynchrone basée sur des événements.
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-4-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-4-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Découplage** maximal
@@ -240,7 +240,7 @@ Communication asynchrone basée sur des événements.
 **Principe**
 Séparation des opérations de lecture et d'écriture.
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-5-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-5-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Optimisation** des lectures
@@ -265,7 +265,7 @@ Séparation des opérations de lecture et d'écriture.
 **Principe**
 Communication directe avec attente de réponse.
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-6-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-6-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Simplicité** de gestion
@@ -284,7 +284,7 @@ Communication directe avec attente de réponse.
 **Principe**
 Communication sans attente de réponse immédiate.
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-7-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-7-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Découplage** des services
@@ -303,7 +303,7 @@ Communication sans attente de réponse immédiate.
 **Principe**
 Combinaison de flux synchrones et asynchrones selon le contexte.
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-8-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-8-fr-methodology-03-architecture-global-architecture.png)
 
 **Avantages**
 - **Optimisation** par contexte
@@ -1297,7 +1297,7 @@ healthCheckService.registerCheck('external-api', async () => {
 
 ### 🏗️ Template d'architecture monolithe
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-9-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-9-fr-methodology-03-architecture-global-architecture.png)
 
 **Structure de dossiers**
 ```
@@ -1314,7 +1314,7 @@ src/
 
 ### 🏗️ Template d'architecture microservices
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-10-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-10-fr-methodology-03-architecture-global-architecture.png)
 
 **Structure de dossiers**
 ```
@@ -1339,7 +1339,7 @@ services/
 
 ### 🏗️ Template d'architecture serverless
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-11-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-11-fr-methodology-03-architecture-global-architecture.png)
 
 **Structure de dossiers**
 ```
@@ -1360,7 +1360,7 @@ functions/
 
 ### 🏗️ Template d'architecture hybride
 
-![Diagramme Mermaid](assets/mermaid/global-architecture-12-fr-methodology-03-architecture-global-architecture.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/global-architecture-12-fr-methodology-03-architecture-global-architecture.png)
 
 **Structure de dossiers**
 ```

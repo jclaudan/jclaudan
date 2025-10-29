@@ -31,7 +31,7 @@ Storybook is a workshop for developing UI components in isolation. It allows you
 
 ### 🎯 Storybook Workflow
 
-![Diagramme Mermaid](assets/mermaid/storybook-vue-0-en-design-storybook-vue.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/storybook-vue-0-en-design-storybook-vue.png)
 
 ---
 

@@ -31,7 +31,7 @@ La stratégie de tests définit l'approche, les outils et les bonnes pratiques p
 
 La pyramide des tests illustre la répartition idéale des différents types de tests dans un projet.
 
-![Diagramme Mermaid](assets/mermaid/testing-strategy-0-fr-methodology-04-implementation-testing-strategy.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/testing-strategy-0-fr-methodology-04-implementation-testing-strategy.png)
 
 ### 📊 Répartition recommandée
 

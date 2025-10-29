@@ -4,7 +4,7 @@ Bienvenue dans la section **Frontend** de la documentation. Cette section couvre
 
 ## 🏗️ Architecture Frontend Moderne
 
-![Diagramme Mermaid](assets/mermaid/readme-0-fr-frontend-readme.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/readme-0-fr-frontend-readme.png)
 
 ## 📚 Documentation disponible
 

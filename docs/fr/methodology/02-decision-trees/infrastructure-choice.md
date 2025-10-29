@@ -300,11 +300,11 @@ Le choix de l'infrastructure est une décision architecturale fondamentale qui i
 
 ### 🎯 Arbre principal
 
-![Diagramme Mermaid](assets/mermaid/infrastructure-choice-0-fr-methodology-02-decision-trees-infrastructure-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/infrastructure-choice-0-fr-methodology-02-decision-trees-infrastructure-choice.png)
 
 ### 🔍 Arbre détaillé
 
-![Diagramme Mermaid](assets/mermaid/infrastructure-choice-1-fr-methodology-02-decision-trees-infrastructure-choice.png)
+![Diagramme Mermaid](https://raw.githubusercontent.com/jclaudan/jclaudan/main/assets/mermaid/infrastructure-choice-1-fr-methodology-02-decision-trees-infrastructure-choice.png)
 
 ### 📋 Tableau de décision détaillé
 
