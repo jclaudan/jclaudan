@@ -101,17 +101,6 @@ Ce dépôt contient une documentation technique complète couvrant les technolog
 
 3. **Search for specific topics** / **Recherchez des sujets spécifiques**: Each section contains detailed guides and examples
 
-## 🔄 Contribution / Contributing
-
-### 🤝 Comment contribuer / How to contribute
-- **Issues** : Signaler des erreurs ou proposer des améliorations / Report errors or suggest improvements
-- **Pull Requests** : Proposer des modifications / Propose changes
-- **Discussions** : Échanger sur les technologies / Discuss technologies
-
-### 📞 Contact / Contact
-- **GitHub** : [@Web](https://github.com/Web)
-- **Email** : Pour les demandes privées / For private requests
-
 ---
 
 *Ce dépôt est une ressource évolutive. N'hésitez pas à explorer et à contribuer ! / This repository is an evolving resource. Feel free to explore and contribute!*
